@@ -2,19 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
 use Session;
 use DB;
 use Redirect;
 use Mail;
-use App\User;
-use App\MailTemplate;
-use App\UserLog;
 use Input;
-use App\Blog;
-use App\ContactMails;
-use App\Tag;
-use App\BlogTag;
 use Validator;
 
 class AppController extends Controller {
@@ -23,71 +15,82 @@ class AppController extends Controller {
         $this->middleware('guest');
     }
 
-	public function getToken()
-	{
-		$token = csrf_token();
-		$Response = array('success' => '1', '_token' => $token);
-		return $Response;
-	}
-	
-    public function Login() {
+#Start of Views
+    #Index    
 
-        if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))) {
-			$token = csrf_token();
-            $Response = array('success' => '1', 'userId' => Auth::user()->id, 'userName' => Auth::user()->name, 'token' => $token);
-        } else {
-            $Response = array('success' => '0');
-        }
-            return $Response;
+    public function index() {
+        return view('public.index');
     }
-	
-	public function getDashboardData()
-	{
-		$blogCount = Blog::all()->count();
-        $tagCount = Tag::all()->count();
-        $contactCount = ContactMails::where('messageStatus',0)->count();
-		$totalCount = ContactMails::all()->count();
-        $totalHit = UserLog::all()->count();
-		return 1;
-		#$Response = array('success' => '1', 'blogCount' => $blogCount, 'tagCount' => $tagCount , 'contactCount' => $contactCount, 'totalCount' => 'totalHit' => $totalHit);
-	}
-	
-	public function sendPush()
-	{
-	$allUser = User::all();
-	foreach($allUser as $user)
-	{	
-	$PushMessage = '{"title" : "ActivationCode", "message" : "MTI Activation Code"}'; 
-    $DeviceId = array($user->gcm_id);
-    $Message = array("price"=>urldecode($PushMessage));
-    $this->PushNotification($DeviceId, $Message);       
-	}
-	}
-	
-	public function PushNotification($DeviceId,$Message) 
-    {
-    $url = 'https://android.googleapis.com/gcm/send';
-    $fields = array(
-            'registration_ids' => $DeviceId,
-            'data' => $Message
-        );
-    $headers = array(
-        'Authorization: key = AIzaSyDTL6-ORUx5arAi1M9el1VzZ7pefr9Ji9U',
-        'Content-Type: application/json'
-                      );
-    $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
-    $result = curl_exec($ch);
-    if ($result === FALSE) {
-        die('Curl failed: ' . curl_error($ch));
+
+    #Blog Full Listing
+
+    public function blog() {
+        return view('public.bloghome')->with('posts', $this->getBlogs()['data'])->with('tags', $this->getTags()['data']);
+    }
+
+    #Blog Individual Page
+
+    public function blogData($url) {
+        return view('public.blog')->with('data', $this->getBlog($url)['data'])->with('tags', $this->getTags()['data']);
+    }
+
+    #Search Blog
+
+    public function searchBlog() {
+        $blogResult = $this->searchBlogByQuery(Input::get('searchQuery'));
+        return $blogResult;
+        $blogResult = Blog::where('blogTitle', 'LIKE', '%' . $searchQuery . '%')->get();
+        if (count($blogResult) == 0) {
+            $resultData = '<div class="alert alert-danger" role="alert"><strong>Searching for the Posts contains the word "' . $searchQuery . '" ( ' . count($blogResult) . ' Results )</div>';
+        } else {
+            $resultData = '<div class="alert alert-success" role="alert"><strong>Searching for the Posts contains the word "' . $searchQuery . '" ( ' . count($blogResult) . ' Result )</div>';
         }
-        curl_close($ch);
-    
+
+        foreach ($blogResult as $key) {
+            $resultData .= '<h2><a href="' . asset("/") . 'blog/' . $key["blogUrl"] . '" style="text-decoration:none">' . $key["blogTitle"] . '</a></h2>
+				<p class="lead">by <a style="text-decoration:none">Sulthan Allaudeen</a></p>
+				<p style="float:right"><span class="glyphicon glyphicon-time"></span> Posted on 01 Sep 2015 </p>';
+        }
+        return $resultData;
+    }
+
+    #Get CSRF Token
+
+    public function getToken() {
+        $token = csrf_token();
+        $Response = array('success' => '1', '_token' => $token);
+        return $Response;
+    }
+
+#End of Views
+    #Do Login
+
+    public function doLogin() {
+        return $this->loginUser(Input::get('email'), Input::get('password'));
+    }
+
+    #Send Push Notification
+
+    public function sendPush() {
+        $allUser = User::all();
+        foreach ($allUser as $user) {
+            $PushMessage = '{"title" : "Title of Push", "message" : "Push Message"}';
+            $DeviceId = array($user->gcm_id);
+            $Message = array("content" => urldecode($PushMessage));
+            $this->sendPushNotification($DeviceId, $Message);
+        }
+    }
+
+    #Get Feeds
+
+    public function getAllCount() {
+        return $this->getTotalCount();
+    }
+
+    #Get Platform
+
+    public function getPlatform() {
+        return $this->getPlatform();
     }
 
 }

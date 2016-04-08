@@ -56,73 +56,15 @@ class PublicController extends Controller {
     #Public Home Page
 	public function index() 
 	{
-        #return '';
         return view('public.index');
-	$platform = $this->getPlatform();
-        $browser = $this->getBrowser('browser');
-        $version = $this->getBrowser('version');
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $date = date('Y-m-d H:i:s');
-        $currentUrl = $_SERVER['HTTP_HOST'];
-		$data['platform'] = $platform;
-        $data['browser'] = $browser;
-        $data['version'] = $version;
-        $data['ip'] = $ip;
-        UserLog::create($data);
-       	return view('public.index');
 	}
 	
 	
 	
-    public function indexLog() {
-        return view('public.index');
-        exit;
-        $platform = $this->getPlatform();
-        $browser = $this->getBrowser('browser');
-        $version = $this->getBrowser('version');
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $date = date('Y-m-d H:i:s');
-        $currentUrl = $_SERVER['HTTP_HOST'];
-        if ($currentUrl == 'sysaxiom.com') {
-            Mail::send([], array('platform' => $platform, 'browser' => $browser, 'version' => $version, 'date' => $date, 'ip' => $ip), function($message) use ($platform, $browser, $version, $date, $ip) {
-                #Getting content from the Mail Template and Triggering the Email to the User with Activation Code
-                $MailContent = MailTemplate::find(1);
-                $MailBody = $MailContent->content;
-                $MailBody = str_replace("{{os}}", $platform, $MailBody);
-                $MailBody = str_replace("{{browser}}", $browser, $MailBody);
-                $MailBody = str_replace("{{version}}", $version, $MailBody);
-                $MailBody = str_replace("{{ip}}", $ip, $MailBody);
-                $MailBody = str_replace("{{date}}", $date, $MailBody);
-                $message->setBody($MailBody, 'text/html');
-                $message->to('logs@sysaxiom.com');
-                $message->subject($MailContent->subject);
-            });
-            $data['platform'] = $platform;
-            $data['browser'] = $browser;
-            $data['version'] = $version;
-            $data['ip'] = $ip;
-            UserLog::create($data);
-            return view('public.index');
-        } else {
-            return view('public.index');
-        }
-    }
-
+    
     #Blog Full Listing
 
-    public function blog() {
-        $posts = Blog::where('blogStatus', 1)->orderBy('id', 'desc')->paginate(10);
-        $tags = Tag::where('tagStatus', 1)->get();
-        return view('public.bloghome')->with('posts', $posts)->with('tags', $tags);
-    }
-
-    #Blog Individual Page
-
-    public function blogData($url) {
-        $blogData = Blog::where('blogUrl', $url)->first();
-        $tags = Tag::where('tagStatus', 1)->get();
-        return view('public.blog')->with('data', $blogData)->with('tags', $tags);
-    }
+    
 
     #Blog Live Search
 
@@ -248,69 +190,7 @@ class PublicController extends Controller {
     #System Utils
     #Getting Browser Details
 
-    public function getBrowser($param) {
-        $u_agent = $_SERVER['HTTP_USER_AGENT'];
-        $bname = 'Unknown';
-        $platform = 'Unknown';
-        $version = "";
-        if (preg_match('/linux/i', $u_agent)) {
-            $platform = 'linux';
-        } elseif (preg_match('/macintosh|mac os x/i', $u_agent)) {
-            $platform = 'mac';
-        } elseif (preg_match('/windows|win32/i', $u_agent)) {
-            $platform = 'windows';
-        }
-        if (preg_match('/MSIE/i', $u_agent) && !preg_match('/Opera/i', $u_agent)) {
-            $bname = 'Internet Explorer';
-            $ub = "MSIE";
-        } elseif (preg_match('/Firefox/i', $u_agent)) {
-            $bname = 'Mozilla Firefox';
-            $ub = "Firefox";
-        } elseif (preg_match('/Chrome/i', $u_agent)) {
-            $bname = 'Google Chrome';
-            $ub = "Chrome";
-        } elseif (preg_match('/Safari/i', $u_agent)) {
-            $bname = 'Apple Safari';
-            $ub = "Safari";
-        } elseif (preg_match('/Opera/i', $u_agent)) {
-            $bname = 'Opera';
-            $ub = "Opera";
-        } elseif (preg_match('/Netscape/i', $u_agent)) {
-            $bname = 'Netscape';
-            $ub = "Netscape";
-        }
-        $known = array('Version', $ub, 'other');
-        $pattern = '#(?<browser>' . join('|', $known) .
-                ')[/ ]+(?<version>[0-9.|a-zA-Z.]*)#';
-        if (!preg_match_all($pattern, $u_agent, $matches)) {
-            
-        }
-        $i = count($matches['browser']);
-        if ($i != 1) {
-            if (strripos($u_agent, "Version") < strripos($u_agent, $ub)) {
-                $version = $matches['version'][0];
-            } else {
-                $version = $matches['version'][1];
-            }
-        } else {
-            $version = $matches['version'][0];
-        }
-        if ($version == null || $version == "") {
-            $version = "?";
-        }
-        if ($param == 'browser') {
-            return $bname;
-        } else if ($param == 'version') {
-            return $version;
-        } else {
-            return $this->lol();
-        }
-    }
-
-    public function lol() {
-        return '<h1 align="center">lol :p <br>Never Think of Hack Here !!</h1>';
-    }
-
+    
     #Getting OS Details
 
     public function getPlatform() {
@@ -443,13 +323,6 @@ class PublicController extends Controller {
 	}
 	}
 
-    public function sendPushNotification()
-    {
-
-        $userData['gcm_id'] = Input::get('gcmId'); 
-        User::where('id', '1')->update($userData);
-        return 1;
-    }
 	
 	public function PushNotificationLocal($DeviceId,$Message) 
     {

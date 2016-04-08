@@ -11,21 +11,36 @@
   |
  */
 
-
-
-#Public Controller
-
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/', 'PublicController@index');
+#Under Middleware
 Route::group(['middleware' => ['web']], function () {
+#Public Resources
+Route::get('/', 'AppController@index');
+#Login
+Route::post('doLogin', 'AppController@doLogin');
+#Get CSRF Token
+Route::get('getToken', 'AppController@getToken');
+#App Configuration
+Route::any('getAppConfig', 'Controller@getAppConfig');
+#Access Info
+Route::any('getDetails', 'Controller@getDetails');
+#Views
+#Blog
+Route::get('blog', 'AppController@blog');
+Route::post('blog', 'Controller@getBlogs');
+Route::get('blog/{id}', 'AppController@blogData');
+Route::post('blog/', 'Controller@getBlog');
+Route::post('tag', 'Controller@tagData');
+
+#Route::post('tag', 'Controller@tagData');
+#Feeds
+Route::any('getAllCount', 'AppController@getAllCount');
 
 
-Route::get('/log', 'PublicController@indexLog');
-Route::get('blog', 'PublicController@blog');
-Route::get('blog/{id}', 'PublicController@blogData');
-Route::get('tag/{id}', 'PublicController@tagData');
+
+
+
+
+
 Route::get('tag/{id}/about', 'PublicController@tagAbout');
 Route::get('contact', 'PublicController@contact');
 Route::post('sendMail', 'PublicController@sendMail');
@@ -34,12 +49,7 @@ Route::get('gallery/{dir}', 'PublicController@galleryExplorer');
 Route::get('project', 'PublicController@project');
 Route::get('technology', 'PublicController@technology');
 Route::post('searchBlog', 'PublicController@searchBlog');
-#Access Info
-Route::any('getPlatform', 'PublicController@getPlatform');
-Route::any('getBrowser/{data}', 'PublicController@getBrowser');
-Route::any('getIp', 'PublicController@getIp');
-Route::any('getTime', 'PublicController@getTime');
-Route::any('accessLog/{way}', 'PublicController@accessLog');
+
 #Admin Controller
 Route::get('sa', 'PublicController@adminLogin');
 Route::post('authAdmin', 'PublicController@authAdminLogin');
@@ -88,16 +98,12 @@ Route::post('updateAdminEmail', 'HomeController@updateAdminEmail');
 Route::post('updateAdminPassword', 'HomeController@updateAdminPassword');
 #Logout
 Route::get('logout', 'HomeController@logout');
-#App Configuration
-Route::get('appconfig', 'HomeController@appConfig');
-#New Web Services :: 
-Route::get('getToken', 'AppController@getToken');
-Route::post('appLogin', 'AppController@Login');
-Route::post('getDashboardData', 'AppController@getDashboardData');
-Route::post('sendPushNotification', 'PublicController@sendPushNotification');
-Route::get('sendPush', 'PublicController@sendPush');
-Route::get('sendPushMsg', 'AppController@sendPush');
 
+//#New Web Services :: 
+//Route::post('appLogin', 'AppController@Login');
+//Route::post('getDashboardData', 'AppController@getDashboardData');
+//Route::get('sendPush', 'PublicController@sendPush');
+//Route::get('sendPushMsg', 'AppController@sendPush');
 
   });
 

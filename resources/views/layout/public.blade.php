@@ -28,12 +28,11 @@
             </div>
             <div id="text-header">
               <h1>Hello,<br> my name is <span>Sulthan Allaudeen</span></h1>
-              <h2 class="home-navlink"><a href="/about/">Home</a> | <a href="/about/">About</a> | <a href="/blog/">Blog</a>
+              <h2 class="home-navlink"><a href="{{ URL::to('/') }}">Home</a> | <a href="{{ URL::to('/blog') }}">Blog</a> | <a href="{{ URL::to('/contact') }}">Contact</a>
             </div>
           </div>
         </div>
-      </div>
-      
+      </div>      
  @yield('content')
  <div class="container panel-footer">
     <footer>
