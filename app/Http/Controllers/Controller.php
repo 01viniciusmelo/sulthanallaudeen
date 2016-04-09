@@ -97,24 +97,13 @@ class Controller extends BaseController {
 
     public function getTag($tag) {
         $tagId = Tag::where('tagTitle', $tag)->pluck('id');
-        return $tagId;
-        $tagData = Blog::find($tag)->getBlogs;
-        return $tagData;
-
-        $tagId = Tag::where('tagTitle', $tag)->pluck('id');
-        $tags = Tag::where('tagStatus', 1)->get();
         $blogTag = BlogTag::where('tag_id', $tagId)->pluck('id');
-        #return $tagId;
         if ($blogTag == '') {
-            return view('public.tag')->with('error', 'No Blog Post related to the Tag <b>' . $tag . '</b>')->with('tags', $tags)->with('tagName', $tag);
+            return 1;
         } else {
             $tagData = Blog::find($tagId)->getBlogs;
-            return view('public.tag')->with('tagData', $tagData)->with('tagList', $tagData)->with('tags', $tags)->with('tagName', $tag);
+            return $tagData;
         }
-
-        $tagId = Tag::where('tagTitle', $tag)->pluck('id');
-        $Response = array('success' => 1, 'data' => $tags = Tag::where('tagTitle', $query)->get());
-        return $Response;
     }
 
     #Feeds

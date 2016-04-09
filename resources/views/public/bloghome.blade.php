@@ -30,7 +30,7 @@ $tag = BlogTag::where('blog_id', $post->id)->get();
 ?>
                 @foreach ($tag as $tagName)
                 <?php $tagName = Tag::where('id', $tagName->tag_id)->pluck('tagTitle'); ?>
-                <a href="{{ URL::to('tag/'.$tagName) }}" title="{{ 'Tags related to : '.$tagName }}">{{ $tagName }}</a>
+                <a href="{{ URL::to('tag/'.$tagName[0]) }}" title="{{ 'Tags related to : '.$tagName[0] }}">{{ $tagName[0] }}</a>
                 @endforeach
 <?php
 $date = date('d M Y', strtotime($post->blogDate));

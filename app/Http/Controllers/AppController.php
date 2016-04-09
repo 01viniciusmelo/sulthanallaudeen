@@ -37,11 +37,7 @@ class AppController extends Controller {
     #Tag
 
     public function tagData($query) {
-        return view('public.tag')->with('tagData', $tagData)->with('tagList', $tagData)->with('tags', $tags)->with('tagName', $tag);
-        return $this->getTag($query);
-        return view('public.tag')->with('tagData', $this->getTag($query))->with('tagName', $query);
-        return view('public.tag')->with('tagData', $tagData)->with('tagList', $tagData)->with('tags', $tags)->with('tagName', $tag);
-        #return view('public.tag')->with('error', $this->getTag($query)['data'])->with('tagName', $this->getTags()['data']);
+        return view('public.tag')->with('tagData', $this->getTag($query))->with('tagList', $this->getTags())->with('tags', $this->getTags()['data'])->with('tagName', $query);
     }
 
     #Search Blog
@@ -59,9 +55,11 @@ class AppController extends Controller {
 
     #End of Views
     #Other Services
+
     public function sendMail() {
-        return $this->triggerMail(Input::get('userEmail'),Input::get('userMessage'));
+        return $this->triggerMail(Input::get('userEmail'), Input::get('userMessage'));
     }
+
     #Get CSRF Token
 
     public function getToken() {

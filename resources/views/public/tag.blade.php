@@ -1,16 +1,12 @@
-<?php namespace App; use App\Blog; use URL?>
+<?php namespace App; use App\Blog; use URL;?>
 @extends('layout.public')
 @section('content')
-    <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Blog Entries Column -->
-            <div class="col-md-8">
+<div class="row">
+        <div class="col-md-8">
 
                 <h1 class="page-header">Post related to "{{ $tagName }}"<small></h1><p align="right" style=""><b>Learn more about <a href="{{ URL::to('tag/'.$tagName.'/about') }}">{{ $tagName }}</a></b></p>
-                <div id="resultArea">
+                <div id="resultArea"></div>
+                <div id="blogArea">
                 <!-- First Blog Post -->
                 <?php
                 if(isset($error))
@@ -36,8 +32,7 @@
                 <?php endloop: ?>
             </div>
             </div>
-            <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
+        <div class="col-md-4">
 
                 <!-- Blog Search Well -->
                 <div class="well">
@@ -77,32 +72,7 @@
                 </div>
 
             </div>
-
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Footer -->
-
+      </div>
     </div>
-
-    <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}"> 
-<script>
-$( document ).ready(function() {
-$("#searchBlog").on("change paste keyup", function() {
-
-var searchQuery = $(this).val();
-var token = $("#_token").val();
-$.post( "../searchBlog", { _token : token, searchQuery : searchQuery })
-  .done(function( data ) {
-    $("#resultArea").html(data);
-  });
-
-
-    
-});
-});
-</script>
-
-    @stop
+<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}"> 
+@stop
