@@ -29,39 +29,30 @@ class Controller extends BaseController {
     #Global Functions
 
     public function getAppConfig() {
-        $Response = array('success' => '1', 'domainUrl' => Config::get('constants.config.URL'));
+        $Response = array('success' => 1, 'domainUrl' => Config::get('constants.config.URL'));
         return $Response;
     }
 
     #Common Functions
 
     public function loginUser($email, $password) {
-
         $userData = User::where('email', $email)->first();
         if ($userData) {
             if (Hash::check($password, $userData['password'])) {
-                $token = csrf_token();
-                $Response = array('success' => '1', 'userId' => $userData['id'], 'userName' => $userData['name'], '_token' => $token);
+                $Response = array('success' => 1, 'userId' => $userData['id'], 'userName' => $userData['name']);
             } else {
-                $Response = array('success' => '0', 'message' => Config::get('constants.error.INVALID_PASSWORD'));
+                $Response = array('success' => 0, 'message' => Config::get('constants.error.INVALID_PASSWORD'));
             }
         } else {
-            $Response = array('success' => '0', 'message' => Config::get('constants.error.USER_NOT_EXIST'));
+            $Response = array('success' => 0, 'message' => Config::get('constants.error.USER_NOT_EXIST'));
         }
-        return $Response;
-    }
-
-    #Get Tag
-
-    public function getTags() {
-        $Response = array('success' => '1', 'data' => $tags = Tag::where('tagStatus', 1)->get());
         return $Response;
     }
 
     #Get All Blog Posts
 
     public function getBlogs() {
-        $Response = array('success' => '1', 'data' => $blogs = Blog::where('blogStatus', 1)->orderBy('id', 'desc')->paginate(10));
+        $Response = array('success' => 1, 'data' => $blogs = Blog::where('blogStatus', 1)->orderBy('id', 'desc')->paginate(10));
         return $Response;
     }
 
@@ -69,18 +60,64 @@ class Controller extends BaseController {
 
     public function getBlog($id = NULL) {
         if ($id == '') {
-            $Response = array('success' => '1', 'data' => Blog::where('blogUrl', Input::get('url'))->first());
+            $blogData = Blog::where('blogUrl', Input::get('url'))->first();
+            if ($blogData) {
+                $Response = array('success' => 1, 'data' => $blogData);
+            } else {
+                $Response = array('success' => 0, 'data' => 'Blog not found');
+            }
         } else {
             $Response = array('success' => '1', 'data' => Blog::where('blogUrl', $id)->first());
         }
-
         return $Response;
     }
 
     #Search Blog
 
     public function searchBlogByQuery($query) {
-        $Response = array('success' => '1', 'data' => Blog::where('blogTitle', 'LIKE', '%' . $query . '%')->get());
+        $blogResult = Blog::where('blogTitle', 'LIKE', '%' . $query . '%')->get();
+        if (count($blogResult) == 0) {
+            $resultData = '<div class="alert alert-danger" role="alert"><strong>Searching for the Posts contains the word "' . $query . '" ( ' . count($blogResult) . ' Results )</div>';
+        } else {
+            $resultData = '<div class="alert alert-success" role="alert"><strong>Searching for the Posts contains the word "' . $query . '" ( ' . count($blogResult) . ' Result )</div>';
+        }
+
+        foreach ($blogResult as $key) {
+            $resultData .= '<h2><a href="' . asset("/") . 'blog/' . $key["blogUrl"] . '" style="text-decoration:none">' . $key["blogTitle"] . '</a></h2>
+				<p class="lead">by <a style="text-decoration:none">Sulthan Allaudeen</a></p>
+				<p style="float:right"><span class="glyphicon glyphicon-time"></span> Posted on 01 Sep 2015 </p>';
+        }
+        return $resultData;
+    }
+
+    #Get Tag
+
+    public function getTags() {
+        $Response = array('success' => 1, 'data' => $tags = Tag::where('tagStatus', 1)->get());
+        return $Response;
+    }
+
+    #Get Particular Tag
+
+    public function getTag($tag) {
+        $tagId = Tag::where('tagTitle', $tag)->pluck('id');
+        return $tagId;
+        $tagData = Blog::find($tag)->getBlogs;
+        return $tagData;
+        
+        $tagId = Tag::where('tagTitle', $tag)->pluck('id');
+        $tags = Tag::where('tagStatus', 1)->get();
+        $blogTag = BlogTag::where('tag_id', $tagId)->pluck('id');
+        #return $tagId;
+        if ($blogTag == '') {
+            return view('public.tag')->with('error', 'No Blog Post related to the Tag <b>' . $tag . '</b>')->with('tags', $tags)->with('tagName', $tag);
+        } else {
+            $tagData = Blog::find($tagId)->getBlogs;
+            return view('public.tag')->with('tagData', $tagData)->with('tagList', $tagData)->with('tags', $tags)->with('tagName', $tag);
+        }
+
+        $tagId = Tag::where('tagTitle', $tag)->pluck('id');
+        $Response = array('success' => 1, 'data' => $tags = Tag::where('tagTitle', $query)->get());
         return $Response;
     }
 

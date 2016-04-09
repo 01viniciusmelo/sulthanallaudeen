@@ -1,13 +1,8 @@
-<?php namespace App; use App\Blog; use URL?>
+<?php namespace App; use App\Blog; use URL;?>
 @extends('layout.public')
 @section('content')
-    <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Blog Post Content Column -->
-            <div class="col-lg-8">
+<div class="row">
+        <div class="col-lg-8">
 
                 <!-- Blog Post -->
 
@@ -75,9 +70,7 @@
             
 
             </div>
-
-            <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
+        <div class="col-md-4">
 
                 <!-- Blog Search Well -->
                 <div class="well">
@@ -116,16 +109,9 @@
                 </div>
 
             </div>
-
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-
+      </div>
     </div>
-
-    <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}"> 
+<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}"> 
 <script>
 $( document ).ready(function() {
 $("#searchBlog").on("change paste keyup", function() {
@@ -142,5 +128,4 @@ $.post( "../searchBlog", { _token : token, searchQuery : searchQuery })
 });
 });
 </script>
-
-    @stop
+@stop

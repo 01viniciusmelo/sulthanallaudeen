@@ -9,9 +9,11 @@
     <meta name="description" content="Sulthan Allaudeen's Personal Site / Portfolio">
     <meta name="author" content="Sulthan Allaudeen">
     <link rel="icon" href="public/img/favicon.png" type="image/gif" sizes="16x16">
-    <link href="public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/css/font-awesome.css" rel="stylesheet">
-    <link href="public/css/main.css" rel="stylesheet">
+    <link href="{{ asset('/').('public/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/').('public/css/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('/').('public/css/main.css') }}" rel="stylesheet">
+    <!-- JQUERY -->
+    <script src="{{ asset('/').('public/js/jquery.min.js') }}"></script>
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
@@ -24,7 +26,7 @@
           <div id="photo-header" class="text-center">
             <!-- PHOTO (AVATAR) -->
             <div id="photo">
-              <img src="public/img/sulthan-allaudeen.jpg" alt="Sulthan Allaudeen">
+              <img src="{{ asset('/').('public/img/sulthan-allaudeen.jpg') }}" alt="Sulthan Allaudeen">
             </div>
             <div id="text-header">
               <h1>Hello,<br> my name is <span>Sulthan Allaudeen</span></h1>
@@ -43,12 +45,10 @@
       <br><i class="fa fa-phone-square fa-fw"></i> 904.244.5010</p>
     </footer>
   </div>
-    <!-- JQUERY -->
-    <script src="public/js/jquery.min.js"></script>
     <!-- BOOTSTRAP -->
-    <script src="public/js/bootstrap.min.js"></script>
+    <script src="{{ asset('/').('public/js/bootstrap.min.js') }}"></script>
     <!-- SCRIPTS -->
-    <script src="public/js/scripts.js"></script>
+    <script src="{{ asset('/').('public/js/scripts.js') }}"></script>
   </body>
 
 </html>

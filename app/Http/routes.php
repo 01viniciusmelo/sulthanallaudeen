@@ -28,8 +28,19 @@ Route::any('getDetails', 'Controller@getDetails');
 Route::get('blog', 'AppController@blog');
 Route::post('blog', 'Controller@getBlogs');
 Route::get('blog/{id}', 'AppController@blogData');
-Route::post('blog/', 'Controller@getBlog');
-Route::post('tag', 'Controller@tagData');
+Route::post('blogData', 'Controller@getBlog');
+#Tag
+Route::get('tag/{query}', 'AppController@tagData');
+Route::post('tag', 'Controller@getTag');
+Route::post('searchBlog', 'AppController@searchBlog');
+#Contact
+Route::get('contact', 'AppController@contact');
+
+
+
+
+Route::get('tag/{id}/about', 'PublicController@tagAbout');
+
 
 #Route::post('tag', 'Controller@tagData');
 #Feeds
@@ -42,13 +53,13 @@ Route::any('getAllCount', 'AppController@getAllCount');
 
 
 Route::get('tag/{id}/about', 'PublicController@tagAbout');
-Route::get('contact', 'PublicController@contact');
+
 Route::post('sendMail', 'PublicController@sendMail');
 Route::get('gallery', 'PublicController@gallery');
 Route::get('gallery/{dir}', 'PublicController@galleryExplorer');
 Route::get('project', 'PublicController@project');
 Route::get('technology', 'PublicController@technology');
-Route::post('searchBlog', 'PublicController@searchBlog');
+
 
 #Admin Controller
 Route::get('sa', 'PublicController@adminLogin');

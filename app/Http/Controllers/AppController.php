@@ -34,26 +34,30 @@ class AppController extends Controller {
         return view('public.blog')->with('data', $this->getBlog($url)['data'])->with('tags', $this->getTags()['data']);
     }
 
+    #Tag
+
+    public function tagData($query) {
+        return view('public.tag')->with('tagData', $tagData)->with('tagList', $tagData)->with('tags', $tags)->with('tagName', $tag);
+        return $this->getTag($query);
+        return view('public.tag')->with('tagData', $this->getTag($query))->with('tagName', $query);
+        return view('public.tag')->with('tagData', $tagData)->with('tagList', $tagData)->with('tags', $tags)->with('tagName', $tag);
+        #return view('public.tag')->with('error', $this->getTag($query)['data'])->with('tagName', $this->getTags()['data']);
+    }
+
     #Search Blog
 
     public function searchBlog() {
         $blogResult = $this->searchBlogByQuery(Input::get('searchQuery'));
         return $blogResult;
-        $blogResult = Blog::where('blogTitle', 'LIKE', '%' . $searchQuery . '%')->get();
-        if (count($blogResult) == 0) {
-            $resultData = '<div class="alert alert-danger" role="alert"><strong>Searching for the Posts contains the word "' . $searchQuery . '" ( ' . count($blogResult) . ' Results )</div>';
-        } else {
-            $resultData = '<div class="alert alert-success" role="alert"><strong>Searching for the Posts contains the word "' . $searchQuery . '" ( ' . count($blogResult) . ' Result )</div>';
-        }
-
-        foreach ($blogResult as $key) {
-            $resultData .= '<h2><a href="' . asset("/") . 'blog/' . $key["blogUrl"] . '" style="text-decoration:none">' . $key["blogTitle"] . '</a></h2>
-				<p class="lead">by <a style="text-decoration:none">Sulthan Allaudeen</a></p>
-				<p style="float:right"><span class="glyphicon glyphicon-time"></span> Posted on 01 Sep 2015 </p>';
-        }
-        return $resultData;
     }
 
+    #Contact 
+
+    public function contact() {
+        return view('public.contact');
+    }
+
+    #End of Views
     #Get CSRF Token
 
     public function getToken() {
@@ -62,7 +66,6 @@ class AppController extends Controller {
         return $Response;
     }
 
-#End of Views
     #Do Login
 
     public function doLogin() {
