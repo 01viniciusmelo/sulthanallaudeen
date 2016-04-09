@@ -7,7 +7,8 @@
                 <!-- Blog Post -->
 
                 <!-- Title -->
-                <div id="resultArea">
+                <div id="resultArea"></div>
+                <div id="blogArea">
                 <h1>{{ $data->blogTitle}}</h1>
 
                 <!-- Author -->

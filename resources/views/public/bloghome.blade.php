@@ -13,7 +13,8 @@ use URL; ?>
             Sysaxiom
             <small>- Blog Posts</small>
         </h1>
-        <div id="resultArea">
+        <div id="resultArea"></div>
+        <div id="blogArea">
             <!-- First Blog Post -->
             @foreach ($posts as $post)
             <h2>

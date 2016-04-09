@@ -18,19 +18,16 @@ $(document).ready(function () {
     }
 
     $("#searchBlog").on("change paste keyup", function () {
-        if (localStorage.getItem("blogContent") === null) {
-            var blogContent = $("#resultArea").html();
-            localStorage.setItem("blogContent", blogContent);
-        }
         var searchQuery = $("#searchBlog").val();
+        console.log(searchQuery);
         console.log(searchQuery.length);
         if (searchQuery.length == 0)
         {
-            $("#resultArea").html(localStorage.getItem("blogContent"));
-            localStorage.removeItem("blogContent");
-            return false;
+            $("#blogArea").show();
+            $("#resultArea").html('');
         } else
         {
+            $("#blogArea").hide();
             var token = $("#_token").val();
             $.post(saUrl+"/searchBlog", {_token: token, searchQuery: searchQuery})
                     .done(function (data) {
