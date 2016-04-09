@@ -58,6 +58,10 @@ class AppController extends Controller {
     }
 
     #End of Views
+    #Other Services
+    public function sendMail() {
+        return $this->triggerMail(Input::get('userEmail'),Input::get('userMessage'));
+    }
     #Get CSRF Token
 
     public function getToken() {

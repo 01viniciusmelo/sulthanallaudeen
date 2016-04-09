@@ -3,9 +3,9 @@
 @section('content')
 <div class="row">
         <div class="col-lg-8">
-<div class="jumbotron" style="background-color: white">
+<div class="jumbotron" style="background-color: #F0563D">
    <p style="text-align:center">     
-I can be reached via email at <br><b>sa (SHIFT+2) sysaxiom (period) com | allaudeen (period) s (SHIFT+2) gmail (period) com </b>*
+I can be reached via email at <br><b>sa (SHIFT+2) sulthanallaudeen (period) com  </b>*
 </p>
 <br>
 

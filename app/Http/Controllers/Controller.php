@@ -10,6 +10,8 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Auth;
 use Hash;
 use Input;
+use Validator;
+use Mail;
 #Models
 use App\User;
 use App\Blog;
@@ -164,6 +166,29 @@ class Controller extends BaseController {
             die('Curl failed: ' . curl_error($ch));
         }
         curl_close($ch);
+    }
+    
+    public function triggerMail($email, $message)
+    {
+        
+        $mailData = Input::except('_token');
+        $validation = Validator::make($mailData, ContactMails::$mailData);
+        if ($validation->passes()) {
+            $email = 'allaudeen.s@gmail.com';
+            $subject = 'Sysaxiom :: Message from : ' . $email;
+            $body = $message;
+            $mailId = ContactMails::create($mailData);
+            Mail::send([], array('Email' => $email, 'body' => $body, 'subject' => $subject), function($message) use ($email, $body, $subject) {
+                $mail_body = $body;
+                $message->setBody($mail_body, 'text/html');
+                $message->to($email);
+                $message->subject($subject);
+            });
+
+            $Response = array('success' => '1', 'mailId' => $mailId->id);
+        } else {
+            $Response = array('success' => '0', 'error' => $validation->messages());
+        }
     }
 
     #Other Functions

@@ -35,7 +35,7 @@ Route::post('tag', 'Controller@getTag');
 Route::post('searchBlog', 'AppController@searchBlog');
 #Contact
 Route::get('contact', 'AppController@contact');
-
+Route::post('sendMail', 'AppController@sendMail');
 
 
 
@@ -54,7 +54,7 @@ Route::any('getAllCount', 'AppController@getAllCount');
 
 Route::get('tag/{id}/about', 'PublicController@tagAbout');
 
-Route::post('sendMail', 'PublicController@sendMail');
+
 Route::get('gallery', 'PublicController@gallery');
 Route::get('gallery/{dir}', 'PublicController@galleryExplorer');
 Route::get('project', 'PublicController@project');
