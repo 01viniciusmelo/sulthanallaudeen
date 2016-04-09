@@ -112,20 +112,4 @@
       </div>
     </div>
 <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}"> 
-<script>
-$( document ).ready(function() {
-$("#searchBlog").on("change paste keyup", function() {
-
-var searchQuery = $(this).val();
-var token = $("#_token").val();
-$.post( "../searchBlog", { _token : token, searchQuery : searchQuery })
-  .done(function( data ) {
-    $("#resultArea").html(data);
-  });
-
-
-    
-});
-});
-</script>
 @stop

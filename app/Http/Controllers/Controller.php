@@ -77,17 +77,11 @@ class Controller extends BaseController {
     public function searchBlogByQuery($query) {
         $blogResult = Blog::where('blogTitle', 'LIKE', '%' . $query . '%')->get();
         if (count($blogResult) == 0) {
-            $resultData = '<div class="alert alert-danger" role="alert"><strong>Searching for the Posts contains the word "' . $query . '" ( ' . count($blogResult) . ' Results )</div>';
+            $Response = array('success' => 0);
         } else {
-            $resultData = '<div class="alert alert-success" role="alert"><strong>Searching for the Posts contains the word "' . $query . '" ( ' . count($blogResult) . ' Result )</div>';
+            $Response = array('success' => 1, 'data' => $blogResult, 'count' => count($blogResult));
         }
-
-        foreach ($blogResult as $key) {
-            $resultData .= '<h2><a href="' . asset("/") . 'blog/' . $key["blogUrl"] . '" style="text-decoration:none">' . $key["blogTitle"] . '</a></h2>
-				<p class="lead">by <a style="text-decoration:none">Sulthan Allaudeen</a></p>
-				<p style="float:right"><span class="glyphicon glyphicon-time"></span> Posted on 01 Sep 2015 </p>';
-        }
-        return $resultData;
+        return $Response;
     }
 
     #Get Tag
@@ -104,7 +98,7 @@ class Controller extends BaseController {
         return $tagId;
         $tagData = Blog::find($tag)->getBlogs;
         return $tagData;
-        
+
         $tagId = Tag::where('tagTitle', $tag)->pluck('id');
         $tags = Tag::where('tagStatus', 1)->get();
         $blogTag = BlogTag::where('tag_id', $tagId)->pluck('id');
