@@ -10,7 +10,7 @@
     <meta name="author" content="Sulthan Allaudeen">
     <link rel="icon" href="public/img/favicon.png" type="image/gif" sizes="16x16">
     <link href="{{ asset('/').('public/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('/').('public/css/font-awesome.css') }}" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="{{ asset('/').('public/css/main.css') }}" rel="stylesheet">
     <!-- JQUERY -->
     <script src="{{ asset('/').('public/js/jquery.min.js') }}"></script>
