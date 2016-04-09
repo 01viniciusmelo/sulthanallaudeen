@@ -24,7 +24,7 @@ $(document).ready(function () {
         }
         var searchQuery = $("#searchBlog").val();
         console.log(searchQuery);
-        if (searchQuery == '')
+        if (searchQuery.length == 0)
         {
             $("#resultArea").html(localStorage.getItem("blogContent"));
             localStorage.removeItem("blogContent");
