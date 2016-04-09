@@ -17,7 +17,7 @@ $(document).ready(function () {
         localStorage.setItem("saUrl", saUrl);
     }
 
-    $("#searchBlog").on("change paste keyup", function () {
+    $("#searchBlog").on("input", function () {
         var searchQuery = $("#searchBlog").val();
         console.log(searchQuery);
         console.log(searchQuery.length);
