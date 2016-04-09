@@ -23,7 +23,7 @@ $(document).ready(function () {
             localStorage.setItem("blogContent", blogContent);
         }
         var searchQuery = $("#searchBlog").val();
-        console.log(searchQuery);
+        console.log(searchQuery.length);
         if (searchQuery.length == 0)
         {
             $("#resultArea").html(localStorage.getItem("blogContent"));
