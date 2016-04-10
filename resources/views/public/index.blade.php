@@ -90,6 +90,14 @@
               <div class="title only pull-right" id="adminemail"></div>
             </div>
             <div class="contact-item">
+              <div class="icon pull-left text-center"><span class="fa fa-github fa-fw"></span></div>
+              <div class="title only pull-right" id="admingithub"></div>
+            </div>
+            <div class="contact-item">
+              <div class="icon pull-left text-center"><span class="fa fa-stack-overflow fa-fw"></span></div>
+              <div class="title only pull-right" id="adminstackoverflow"></div>
+            </div>
+            <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-twitter fa-fw"></span></div>
               <div class="title pull-right">Twitter</div>
               <div class="description pull-right" id='admintwitter'></div>
