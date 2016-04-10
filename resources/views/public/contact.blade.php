@@ -72,6 +72,8 @@ I can be reached via email at <br><b>sa (SHIFT+2) sulthanallaudeen (period) com 
                 <div class="item-skills" data-percent="0.80">MySQL</div>
                 <div class="item-skills" data-percent="0.85">JQuery</div>
                 <div class="item-skills" data-percent="0.75">AngularJS</div>
+                <div class="item-skills" data-percent="0.78">GIT</div>
+                <div class="item-skills" data-percent="0.74">AWS</div>
                 <div class="skills-legend clearfix">
                     <div class="legend-left legend">Beginner</div>
                     <div class="legend-left legend"><span>Proficient</span></div>
