@@ -16,7 +16,7 @@ $(document).ready(function () {
         var saUrl = 'http://sulthanallaudeen.com';
         localStorage.setItem("saUrl", saUrl);
     }
-
+    alert(url);
     $("#searchBlog").on("input", function () {
         var searchQuery = $("#searchBlog").val();
         console.log(searchQuery);
@@ -46,4 +46,25 @@ $(document).ready(function () {
                     });
         }
     });
+
+    //Get Contact Info
+    var _token = $("input[name=_token]").val();
+$.post( "getAdminContactData", { _token : _token})
+  .done(function( data ) {
+    var result = jQuery.parseJSON(JSON.stringify(data));
+    if (result.success==1)
+    {
+    $("#adminemail").val(result.adminData.id);
+    $("#adminmobile").text(result.adminData.mobile);
+    $("#adminemail").text(result.adminData.email);
+    $("#admintwitter").text(result.adminData.twitter);
+    $("#adminskype").text(result.adminData.skype);
+    $("#adminfacebook").text(result.adminData.facebook);
+    }
+    else
+    {
+    $("#adminProfileStatusBarFailure").show();
+    $("#adminProfileStatusBarFailure").html("Error in Fetching Data");
+    }
+  });
 });

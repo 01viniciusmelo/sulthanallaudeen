@@ -5,7 +5,7 @@
                 <div class="col-lg-12">
                     <h1 class="page-header">Profile Settings</h1>
 					<div class="alert alert-success" id="adminProfileStatusBarSuccess" style="display:none"></div>
-					<div class="alert alert-warning" id="adminProfileStatusBarFailure" style="display:none"></div>
+					<div class="alert alert-danger" id="adminProfileStatusBarFailure" style="display:none"></div>
                 </div>
                 <!-- /.col-lg-12 -->						
             </div>

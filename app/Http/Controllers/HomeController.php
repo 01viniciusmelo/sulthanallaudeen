@@ -6,7 +6,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
-
+use Auth;
 use DB;
 use URL;
 use Hash;
@@ -17,6 +17,7 @@ use App\Blog;
 use App\ContactMails;
 use App\Tag;
 use App\Cat;
+use App\Config;
 use App\Task;
 use App\TaskCat;
 use App\BlogTag;
@@ -541,11 +542,19 @@ $messageList = $messageListHead.$messageListBody.$messageListContent;
     public function profileSettings() {
         return view('admin.settings.profile');
     }
+    
 
     #Profile Settings Data
 
     public function adminProfileSettingsData() {
-        $adminData = User::where('id', 1)->first();
+        $adminData = User::where('id', Auth::user()->id)->first();
+        $Response = array('success' => '1', 'adminData' => $adminData);
+        return $Response;
+    }
+
+    #Config Contact Data
+    public function AdminContactData() {
+        $adminData = Config::where('id', 1)->first();
         $Response = array('success' => '1', 'adminData' => $adminData);
         return $Response;
     }
@@ -599,6 +608,23 @@ $messageList = $messageListHead.$messageListBody.$messageListContent;
 
         return $Response;
     }
+
+    #Config Contact 
+    public function configContact()
+    {
+        return view('admin.config.contact');   
+    }
+
+    #Update Admin Contact Data
+
+    public function updateAdminContactData()
+    {
+        $configData[Input::get('updateKey')] = Input::get('updateElement');
+         Config::where('id', 1)->update($configData);
+        $Response = array('success' => '1', 'key' => Input::get('updateKey'));
+        return $Response;
+    }
+
 
     #App Configuration
 

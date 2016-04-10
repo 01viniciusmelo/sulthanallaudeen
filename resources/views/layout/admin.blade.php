@@ -303,13 +303,13 @@
                             <!-- /.nav-second-level -->
                         </li>
 						<li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Util<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Config<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">Sysaxiom<span class="fa arrow"></span></a>
+                                    <a href="#">Site<span class="fa arrow"></span></a>
                                     <ul class="nav nav-third-level">
                                         <li>
-                                            <a href="{{ URL::to('/sys-web-log') }}">Sysaxiom Log</a>
+                                            <a href="{{ URL::to('/config-contact') }}">Contact Details</a>
                                         </li>
                                     </ul>
                                     <!-- /.nav-third-level -->
