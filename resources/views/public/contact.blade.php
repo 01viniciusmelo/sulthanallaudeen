@@ -29,30 +29,30 @@ I can be reached via email at <br><b>sa (SHIFT+2) sulthanallaudeen (period) com 
             </div>
         <div class="col-md-4">
 
-              <div class="box clearfix">
+          <div class="box clearfix">
             <h2>Contact</h2>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-phone fa-fw"></span></div>
-              <div class="title only pull-right">904 244 5010</div>
+              <div class="title only pull-right" id="adminmobile"></div>
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-envelope fa-fw"></span></div>
-              <div class="title only pull-right">hello@sulthanallaudeen.com</div>
+              <div class="title only pull-right" id="adminemail"></div>
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-twitter fa-fw"></span></div>
               <div class="title pull-right">Twitter</div>
-              <div class="description pull-right">https://twitter.com/allaudeens</div>
+              <div class="description pull-right" id='admintwitter'></div>
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-facebook fa-fw"></span></div>
               <div class="title pull-right">Facebook</div>
-              <div class="description pull-right">https://www.facebook.com/allaudeens</div>
+              <div class="description pull-right" id='adminfacebook'></div>
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-skype fa-fw"></span></div>
               <div class="title pull-right">Skype</div>
-              <div class="description pull-right">allaudeens</div>
+              <div class="description pull-right" id="adminskype"></div>
             </div>
           </div>
           <!-- SKILLS -->

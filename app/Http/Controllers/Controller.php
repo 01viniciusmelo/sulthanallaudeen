@@ -19,6 +19,7 @@ use App\Tag;
 use App\BlogTag;
 use App\ContactMails;
 use App\UserLog;
+use App\AdminConfig;
 #Config
 use Config;
 
@@ -104,6 +105,14 @@ class Controller extends BaseController {
             $tagData = Blog::find($tagId)->getBlogs;
             return $tagData;
         }
+    }
+
+    #Config Contact Data
+
+    public function AdminContactData() {
+        $adminData = AdminConfig::where('id', 1)->first();
+        $Response = array('success' => '1', 'adminData' => $adminData);
+        return $Response;
     }
 
     #Feeds

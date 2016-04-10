@@ -5,18 +5,17 @@ $(document).ready(function () {
     } else {
         var mode = 'live';
     }
-    
+
     if (mode == 'local')
     {
         var saUrl = 'http://localhost/sulthanallaudeen';
         localStorage.setItem("saUrl", saUrl);
-    }
-    else
+    } else
     {
         var saUrl = 'http://sulthanallaudeen.com';
         localStorage.setItem("saUrl", saUrl);
     }
-    alert(url);
+
     $("#searchBlog").on("input", function () {
         var searchQuery = $("#searchBlog").val();
         console.log(searchQuery);
@@ -29,7 +28,7 @@ $(document).ready(function () {
         {
             $("#blogArea").hide();
             var token = $("#_token").val();
-            $.post(saUrl+"/searchBlog", {_token: token, searchQuery: searchQuery})
+            $.post(saUrl + "/searchBlog", {_token: token, searchQuery: searchQuery})
                     .done(function (data) {
                         if (data.success == 1)
                         {
@@ -47,24 +46,27 @@ $(document).ready(function () {
         }
     });
 
-    //Get Contact Info
-    var _token = $("input[name=_token]").val();
-$.post( "getAdminContactData", { _token : _token})
-  .done(function( data ) {
-    var result = jQuery.parseJSON(JSON.stringify(data));
-    if (result.success==1)
+    var currentPage = window.location.href.split("/").pop();
+    if (currentPage == '' || currentPage == 'contact')
     {
-    $("#adminemail").val(result.adminData.id);
-    $("#adminmobile").text(result.adminData.mobile);
-    $("#adminemail").text(result.adminData.email);
-    $("#admintwitter").text(result.adminData.twitter);
-    $("#adminskype").text(result.adminData.skype);
-    $("#adminfacebook").text(result.adminData.facebook);
+        //Get Contact Info
+        var _token = $("input[name=_token]").val();
+        $.post("getAdminContactData", {_token: _token})
+                .done(function (data) {
+                    var result = jQuery.parseJSON(JSON.stringify(data));
+                    if (result.success == 1)
+                    {
+                        $("#adminmobile").html(result.adminData.mobile);
+                        $("#adminemail").html(result.adminData.email);
+                        $("#admintwitter").html(result.adminData.twitter);
+                        $("#adminskype").html(result.adminData.skype);
+                        $("#adminfacebook").html(result.adminData.facebook);
+                    } else
+                    {
+                        $("#adminProfileStatusBarFailure").show();
+                        $("#adminProfileStatusBarFailure").html("Error in Fetching Data");
+                    }
+                });
     }
-    else
-    {
-    $("#adminProfileStatusBarFailure").show();
-    $("#adminProfileStatusBarFailure").html("Error in Fetching Data");
-    }
-  });
+
 });

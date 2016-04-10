@@ -17,7 +17,7 @@ use App\Blog;
 use App\ContactMails;
 use App\Tag;
 use App\Cat;
-use App\Config;
+use App\AdminConfig;
 use App\Task;
 use App\TaskCat;
 use App\BlogTag;
@@ -552,12 +552,7 @@ $messageList = $messageListHead.$messageListBody.$messageListContent;
         return $Response;
     }
 
-    #Config Contact Data
-    public function AdminContactData() {
-        $adminData = Config::where('id', 1)->first();
-        $Response = array('success' => '1', 'adminData' => $adminData);
-        return $Response;
-    }
+    
 
     #Updates Admin User Name
 
@@ -620,7 +615,7 @@ $messageList = $messageListHead.$messageListBody.$messageListContent;
     public function updateAdminContactData()
     {
         $configData[Input::get('updateKey')] = Input::get('updateElement');
-         Config::where('id', 1)->update($configData);
+         AdminConfig::where('id', 1)->update($configData);
         $Response = array('success' => '1', 'key' => Input::get('updateKey'));
         return $Response;
     }

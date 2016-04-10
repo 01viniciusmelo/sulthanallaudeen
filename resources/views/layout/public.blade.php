@@ -36,7 +36,8 @@
             </div>
           </div>
         </div>
-      </div>      
+      </div>
+        {{ csrf_field() }}
  @yield('content')
  <div class="container panel-footer">
     <footer>

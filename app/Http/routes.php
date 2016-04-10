@@ -109,7 +109,7 @@ Route::post('updateAdminEmail', 'HomeController@updateAdminEmail');
 Route::post('updateAdminPassword', 'HomeController@updateAdminPassword');
 #Config
 Route::get('config-contact', 'HomeController@configContact');
-Route::post('getAdminContactData', 'HomeController@AdminContactData');
+Route::post('getAdminContactData', 'Controller@AdminContactData');
 Route::post('updateAdminContactData', 'HomeController@updateAdminContactData');
 #Logout
 Route::get('logout', 'HomeController@logout');
