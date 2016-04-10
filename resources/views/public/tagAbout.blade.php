@@ -10,7 +10,8 @@
             <div class="col-md-8">
 
                 <h1 class="page-header">About Tag  "{{ $tagData->tagTitle }}" </h1>
-                <div id="resultArea">
+                <div id="resultArea"></div>
+                <div id="blogArea">
                 <!-- First Blog Post -->
                 <?php echo $tagData->tagContent ?>
                 
