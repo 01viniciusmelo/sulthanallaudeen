@@ -98,7 +98,6 @@ Route::get('sys-web-log', 'PublicController@utilSysaxiomWebLog');
 Route::get('messages', 'HomeController@listMessages');
 Route::post('getMessage', 'HomeController@getMessage');
 Route::post('messageMarkAsRead', 'HomeController@messageMarkAsRead');
-Route::post('messageMarkAsUnRead', 'HomeController@messageMarkAsUnRead');
 Route::post('notificationAreaMessageList', 'HomeController@notificationAreaMessageList');
 Route::post('getMessageCount', 'HomeController@getMessageCount');
 #Settings

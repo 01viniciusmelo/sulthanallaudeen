@@ -40,18 +40,18 @@
 											<td>{{ $mail-> messageStatus}}</td>
 											<td>{{ $mail-> created_at}}</td>
 											<td>
-											<button type="button" class="btn btn-success" id='{{ $mail->id }}' data-toggle="modal" data-target="#myModal">Read</button>
+											<button type="button" class="btn btn-success readMessage" id='{{ $mail->id }}' data-toggle="modal" data-target="#myModal">Read</button>
                                             <?php
                                             if($mail->messageStatus==0)
                                             {
                                             ?>
-                                            <button type="button" class="btnunread btn-info btn-circle" id='{{ $mail->id }}'><i class="fa fa-check"></i></button>
+                                            <button type="button" class="read btn-info btn-circle" id='msg_{{ $mail->id }}'><i class="fa fa-check"></i></button>
                                             <?php
                                             }
                                             else
                                             {
                                             ?>
-                                            <button type="button" class="btnread btn btn-info btn-circle" id='{{ $mail->id }}' style="background-color: grey;border-color:grey"><i class="fa fa-check"></i></button>
+                                            <button type="button" class="read btn btn-info btn-circle messageUnRead" id='msg_{{ $mail->id }}'><i class="fa fa-check"></i></button>
                                             <?php
                                             }
                                             ?>
@@ -98,13 +98,7 @@
     <!-- /#wrapper -->
     <script src="{{ asset('/').('public/admin/bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
      <script src="{{ asset('/').('public/admin/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js') }}"></script>
-    <script>
-    $(document).ready(function() {
-        $('#dataTables-example').DataTable({
-                responsive: true
-        });
-    });
-    </script>
+    
 	
 <script>
 $(document).ready(function() {
@@ -113,7 +107,7 @@ $(document).ready(function() {
 
 
 
-$( ".btn-success" ).click(function() {
+$( ".readMessage" ).click(function() {
 var id = $(this).attr('id')
 var _token = $("input[name=_token]").val();
 $.post( "getMessage", { _token : _token, id : id})
@@ -134,45 +128,32 @@ $.post( "getMessage", { _token : _token, id : id})
 } );
 
 
-$( ".btnunread" ).click(function() {
-var id = $(this).attr('id')
+$( ".read" ).click(function() {
+    
+var id = $(this).attr('id').slice(4);
 var _token = $("input[name=_token]").val();
 $.post( "messageMarkAsRead", { _token : _token, id : id})
   .done(function( data ) {
     var result = jQuery.parseJSON(JSON.stringify(data));
-
     if (result.success==1)
     {
-    $('#dataTables-example').html(result.updatedMessage);
+        
+        if(result.status==1)
+        {
+            $("#msg_"+id).toggleClass('messageUnRead');
+        }
+        else
+        {
+            $("#msg_"+id).toggleClass('messageUnRead');
+            
+        }
     }
     else
     {        
     }
   });
 });
-
-$( ".btnread" ).click(function() {
-var id = $(this).attr('id')
-var _token = $("input[name=_token]").val();
-$.post( "messageMarkAsUnRead", { _token : _token, id : id})
-  .done(function( data ) {
-    var result = jQuery.parseJSON(JSON.stringify(data));
-
-    if (result.success==1)
-    {
-    $('#dataTables-example').html(result.updatedMessage);
-    }
-    else
-    {        
-    }
-  });
-});
-
-
-
 
 });
 </script>
-
-
 @stop

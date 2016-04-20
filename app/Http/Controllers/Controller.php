@@ -179,7 +179,7 @@ class Controller extends BaseController {
                     ->setFrom('allau@sulthanallaudeen.com')
                     ->setSubject('Sysaxiom :: Message from : ' . $email)
                     ->setHtml($message);
-            $sendgrid->send($mail);
+            //$sendgrid->send($mail);
             $mailId = ContactMails::create($mailData);
             $Response = array('success' => '1', 'mailId' => $mailId->id);
         } else {
