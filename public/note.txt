@@ -1,0 +1,8 @@
+Clone : 
+https://github.com/sulthanallaudeen/sulthanallaudeen.git
+Migrate
+php artisan migrate
+Generate Seed :
+php artisan iseed blog,blog_tag,cat,config,contactmail,mailtemplate,tag,task,task_cat,task_status,users,user_log --force
+Load Seed
+php artisan db:seed
