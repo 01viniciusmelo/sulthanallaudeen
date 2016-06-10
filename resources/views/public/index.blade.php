@@ -4,8 +4,8 @@
     <div class="col-xs-12 col-sm-8">
         <!-- ABOUT ME -->
         <div class="box">
-            <h2>Introduction</h2>
-            <p>I am a <b>Full Stack Developer</b>. I live in <b>Chennai</b> - India. I graduated <b>
+        <br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I am a <b>Full Stack Developer</b>. I live in <b>Chennai</b> - India. I graduated <b>
                     Masters in Computer science</b> at Vel Tech Engineering College, Chennai. 
                 At this site you can find information what I do at the moment, what's my current experience and skills and which skills I don't have (yet). 
                 You may also be interested to view my profile at <b><a href="http://stackoverflow.com/users/3282633" target="_new">Stackoverflow</a></b>.</p>
