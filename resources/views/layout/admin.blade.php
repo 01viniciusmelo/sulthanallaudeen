@@ -6,10 +6,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Sysaxiom DashBoard">
+        <meta name="description" content="Sulthan Allaudeen DashBoard">
         <meta name="author" content="Sulthan Allaudeen">
 
-        <title>Sysaxiom - Dashboard</title>
+        <title>Sulthan Allaudeen - Dashboard</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="{{ asset('/').('public/admin/bower_components/bootstrap/dist/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet"/>
@@ -58,7 +58,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ URL::to('/dashboard') }}">Sysaxiom Admin</a>
+                    <a class="navbar-brand" href="{{ URL::to('/dashboard') }}">Sulthan Allaudeen :: Admin</a>
                 </div>
                 <!-- /.navbar-header -->
 
