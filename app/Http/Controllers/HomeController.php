@@ -70,7 +70,7 @@ class HomeController extends Controller {
     #List Blogs
 
     public function listBlog() {
-        $blogs = Blog::all();
+        $blogs = Blog::get(['id', 'blogTitle', 'blogDate', 'blogUrl']);
         return view('admin.blog.listBlog')->with('blogs', $blogs);
     }
 

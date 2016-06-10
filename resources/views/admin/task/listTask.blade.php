@@ -1,7 +1,5 @@
 @extends('layout.admin')
 @section('content')
-<link href="{{ asset('/').('public/admin/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{ asset('/').('public/admin/bower_components/datatables-responsive/css/dataTables.responsive.css') }}" type="text/css" rel="stylesheet"/>
 
         <div id="page-wrapper">
             <div class="row">
@@ -55,14 +53,5 @@
 
     </div>
     <!-- /#wrapper -->
-    <script src="{{ asset('/').('public/admin/bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
-     <script src="{{ asset('/').('public/admin/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js') }}"></script>
-    <script>
-    $(document).ready(function() {
-        $('#dataTables-example').DataTable({
-                responsive: true,
-                aaSorting : [[0, 'desc']],
-        });
-    });
-    </script>
+    
 @stop
