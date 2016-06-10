@@ -1,13 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-
-
-
 use Auth;
 use Session;
 use DB;
@@ -54,18 +52,11 @@ class PublicController extends Controller {
      * @return Response
      */
     #Public Home Page
-	public function index() 
-	{
+    public function index() {
         return view('public.index');
-	}
-	
-	
-	
-    
+    }
+
     #Blog Full Listing
-
-    
-
     #Blog Live Search
 
     public function searchBlog() {
@@ -186,11 +177,8 @@ class PublicController extends Controller {
         }
     }
 
-
     #System Utils
     #Getting Browser Details
-
-    
     #Getting OS Details
 
     public function getPlatform() {
@@ -254,17 +242,16 @@ class PublicController extends Controller {
             return $this->lol();
         }
     }
-	
-	#Util
-	#Sysaxiom WebLog
-	
-	public function utilSysaxiomWebLog() {
-            $sideBar = $this->technologySideBar();
-            $userLog = UserLog::orderBy('id', 'desc')->get();
-            return view('admin.util.sysWebLog')->with('sideBar', $sideBar)->with('userLog', $userLog);
+
+    #Util
+    #Sysaxiom WebLog
+
+    public function utilSysaxiomWebLog() {
+        $sideBar = $this->technologySideBar();
+        $userLog = UserLog::orderBy('id', 'desc')->get();
+        return view('admin.util.sysWebLog')->with('sideBar', $sideBar)->with('userLog', $userLog);
     }
-	
-	
+
     public function technologySideBar() {
 
         $fullUrl = $_SERVER['REQUEST_URI'];
@@ -286,69 +273,63 @@ class PublicController extends Controller {
           </div>
         </div><!--/.sidebar-offcanvas-->';
     }
-	
-	public function PushNotification($DeviceId,$Message) 
-    {
-    $url = 'https://android.googleapis.com/gcm/send';
-    $fields = array(
-            'registration_ids' => $DeviceId,
-            'data' => $Message
-        );
-    $headers = array(
-        'Authorization: key = AIzaSyDTL6-ORUx5arAi1M9el1VzZ7pefr9Ji9U',
-        'Content-Type: application/json'
-                      );
-    $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
-    $result = curl_exec($ch);
-    if ($result === FALSE) {
-        die('Curl failed: ' . curl_error($ch));
-        }
-        curl_close($ch);
-    
-    }
-	public function sendPush()
-	{
-	$allUser = User::all();
-	foreach($allUser as $user)
-	{
-    $DeviceId = array($user->gcm_id);
-    $Message =  array( 'title' => 'Vahitha', 'message' => '@chennai', 'info' => 'super secret info' );
-    $this->PushNotificationLocal($DeviceId, $Message);       
-	}
-	}
 
-	
-	public function PushNotificationLocal($DeviceId,$Message) 
-    {
-	
-    $url = 'https://android.googleapis.com/gcm/send';
-    $fields = array(
+    public function PushNotification($DeviceId, $Message) {
+        $url = 'https://android.googleapis.com/gcm/send';
+        $fields = array(
             'registration_ids' => $DeviceId,
             'data' => $Message
         );
-    $headers = array(
-        'Authorization: key = AIzaSyDTL6-ORUx5arAi1M9el1VzZ7pefr9Ji9U',
-        'Content-Type: application/json'
-                      );
-    $ch = curl_init();
+        $headers = array(
+            'Authorization: key = AIzaSyDTL6-ORUx5arAi1M9el1VzZ7pefr9Ji9U',
+            'Content-Type: application/json'
+        );
+        $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
-    $result = curl_exec($ch);
-    if ($result === FALSE) {
-        die('Curl failed: ' . curl_error($ch));
+        $result = curl_exec($ch);
+        if ($result === FALSE) {
+            die('Curl failed: ' . curl_error($ch));
         }
         curl_close($ch);
-    
+    }
+
+    public function sendPush() {
+        $allUser = User::all();
+        foreach ($allUser as $user) {
+            $DeviceId = array($user->gcm_id);
+            $Message = array('title' => 'Vahitha', 'message' => '@chennai', 'info' => 'super secret info');
+            $this->PushNotificationLocal($DeviceId, $Message);
+        }
+    }
+
+    public function PushNotificationLocal($DeviceId, $Message) {
+
+        $url = 'https://android.googleapis.com/gcm/send';
+        $fields = array(
+            'registration_ids' => $DeviceId,
+            'data' => $Message
+        );
+        $headers = array(
+            'Authorization: key = AIzaSyDTL6-ORUx5arAi1M9el1VzZ7pefr9Ji9U',
+            'Content-Type: application/json'
+        );
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
+        $result = curl_exec($ch);
+        if ($result === FALSE) {
+            die('Curl failed: ' . curl_error($ch));
+        }
+        curl_close($ch);
     }
 
 }
