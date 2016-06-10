@@ -375,12 +375,13 @@ class HomeController extends Controller {
         $newPassword['password'] = Input::get('password');
         $validation = Validator::make($newPassword, User::$adminPassword);
         $adminPassword = User::where('id', Input::get('id'))->pluck('password');
-        if (Hash::check($oldPassword, $adminPassword)) {
+        
+        if (Hash::check($oldPassword, $adminPassword[0])) {
             if ($validation->passes()) {
                 $newPassword['password'] = Hash::make($newPassword['password']);
                 User::where('id', Input::get('id'))->update($newPassword);
                 $Response = array('success' => '1');
-            } else {
+            } else {;
                 $Response = array('success' => '0', 'err' => $validation->messages());
             }
         } else {
