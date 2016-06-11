@@ -1,4 +1,7 @@
-<?php namespace App;
+<?php
+
+namespace App;
+
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
@@ -7,30 +10,31 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
 class Tag extends Model implements AuthenticatableContract, CanResetPasswordContract {
 
-	use Authenticatable, CanResetPassword;
+    use Authenticatable,
+        CanResetPassword;
 
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
-	protected $table = 'tag';
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected $table = 'tag';
 
-	/**
-	 * The attributes that are mass assignable.
-	 *
-	 * @var array
-	 */
-	protected $fillable = ['tagTitle', 'tagContent', 'tagDate', 'tagStatus'];
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['tagTitle', 'tagContent', 'tagDate', 'tagStatus'];
 
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
-	
-	public static $postTag = array(
-		'tagTitle' =>  'required',
-		'tagContent' =>  'required',
-        );
+    /**
+     * The attributes excluded from the model's JSON form.
+     *
+     * @var array
+     */
+    public static $postTag = array(
+        'tagTitle' => 'required',
+        'tagContent' => 'required',
+    );
+
 }

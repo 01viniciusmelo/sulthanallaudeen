@@ -2,13 +2,13 @@
 
 This repo is the personal website of Sulthan Allaudeen.
 
-The website is powered with Laravdl 5.2
+The website is powered with [Laravel 5.2](https://laravel.com/docs/5.2)
 
-Hosted on Hostgator
+Hosted on [GoDaddy](https://in.godaddy.com), SVN'd on [Github](https://github.com)
 
 ## Contact
 
-I can be contacted at [Laravel website](http://www.sulthanallaudeen.com/contact).
+I can be contacted at [Contact Section](http://www.sulthanallaudeen.com/contact).
 
 ## Contributing
 

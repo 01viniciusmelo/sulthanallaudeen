@@ -25,11 +25,9 @@ class AdminConfig extends Model implements AuthenticatableContract, CanResetPass
      *
      * @var array
      */
-
     /**
      * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
-
 }
