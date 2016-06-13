@@ -122,6 +122,12 @@ Route::group(['middleware' => ['web']], function () {
 //Route::get('sendPushMsg', 'AppController@sendPush');
 });
 
+Route::get("/mail", function(){
+   return View::make("admin.mail.gmail");
+});
+
+
+
 #Default Auth Route
 Route::controllers([
     'auth' => 'Auth\AuthController',
