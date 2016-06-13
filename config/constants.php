@@ -14,6 +14,11 @@ return [
     ],
     'config' => [
         'URL' => 'http://www.sulthanallaudeen.com',
+    ],
+    #Credentials
+    'sendgrid' => [
+        'username' => 'sulthanallaudeen',
+        'password' => 'Open@#555',
     ]
 
 ];

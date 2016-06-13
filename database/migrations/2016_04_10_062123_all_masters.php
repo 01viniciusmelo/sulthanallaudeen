@@ -28,11 +28,12 @@ class AllMasters extends Migration
         Schema::create('user_log',function(Blueprint $table){
             $table->engine = "InnoDB";
             $table->increments('id');
+            $table->string('user_id', 110);
             $table->string('ip', 110);
             $table->string('platform', 110);
             $table->string('browser', 110);
             $table->string('version', 110);
-            $table->tinyInteger('status')->default(0);
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
 
         });

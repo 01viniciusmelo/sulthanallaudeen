@@ -131,12 +131,22 @@ class Controller extends BaseController {
 
     public function getDetails() {
         $userDetails['platform'] = $this->getPlatform();
-        $userDetails['ip_address'] = $_SERVER['REMOTE_ADDR'];
-        $userDetails['date_time'] = date('Y-m-d H:i:s');
+        $userDetails['ip'] = $_SERVER['REMOTE_ADDR'];
         $browserDetails = $this->getBrowser();
-        $userDetails['browserName'] = $browserDetails['browser'];
-        $userDetails['browserVersion'] = $browserDetails['version'];
-        $Response = array('success' => 1, 'userDetails' => $userDetails);
+        $userDetails['browser'] = $browserDetails['browser'];
+        $userDetails['version'] = $browserDetails['version'];
+        $Response = array('success' => 1, 'systemDetails' => $userDetails);
+        return $Response;
+    }
+
+    #Log User
+
+    public function logUser($id) {
+        $systemDetails = $this->getDetails();
+        $logData = $systemDetails['systemDetails'];
+        $logData['user_id'] = $id;
+        $mailId = UserLog::create($logData);
+        $Response = array('success' => 1, 'message' => 'User information logged succesfully');
         return $Response;
     }
 

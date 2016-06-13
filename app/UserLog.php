@@ -25,7 +25,7 @@ class UserLog extends Model implements AuthenticatableContract, CanResetPassword
      *
      * @var array
      */
-    protected $fillable = ['ip', 'platform', 'browser', 'version'];
+    protected $fillable = ['user_id', 'ip', 'platform', 'browser', 'version'];
 
     /**
      * The attributes excluded from the model's JSON form.
