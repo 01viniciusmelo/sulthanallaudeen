@@ -415,7 +415,7 @@ $(document).ready(function () {
                     }
                 });
     });
-    $('#dataTables-example').DataTable({
+    var table = $('#dataTables-example').DataTable({
         responsive: true,
         aaSorting: [[0, 'desc']],
     });

@@ -110,6 +110,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('config-contact', 'HomeController@configContact');
     Route::post('getAdminContactData', 'Controller@AdminContactData');
     Route::post('updateAdminContactData', 'HomeController@updateAdminContactData');
+#Gmail
+    Route::get('gmail', 'HomeController@gmail');
 #Logout
     Route::get('logout', 'HomeController@logout');
 

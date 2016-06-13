@@ -16,9 +16,15 @@ return [
         'URL' => 'http://www.sulthanallaudeen.com',
     ],
     #Credentials
+    #Sendgrid
     'sendgrid' => [
         'username' => 'sulthanallaudeen',
         'password' => 'Open@#555',
+    ],
+    #Google Console
+    'google-mail' => [
+        'clientid' => '701496422438-touj3h0gh86r1c8g6mbfhceiogaq45qc.apps.googleusercontent.com',
+        'apiKey' => 'AIzaSyAl6RP5ZrC5h0vvKz8fvYuOdS7w4Z-S5Xc',
     ]
 
 ];

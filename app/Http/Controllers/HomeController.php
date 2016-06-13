@@ -407,10 +407,10 @@ class HomeController extends Controller {
         return $Response;
     }
 
-    #App Configuration
+    #Gmail
 
-    public function appConfig() {
-        return view('admin.appConfig.appConfig');
+    public function gmail() {
+        return view('admin.mail.gmail');
     }
 
     #Logout
