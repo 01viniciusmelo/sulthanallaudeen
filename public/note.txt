@@ -6,6 +6,11 @@ Generate Seed :
 php artisan iseed blog,blog_tag,cat,config,contactmail,mailtemplate,tag,task,task_cat,task_status,users,user_log --force
 Load Seed
 php artisan db:seed
+Drop Tables
+DROP TABLE blog, blog_tag, cat, config, contactmail, mailtemplate, migrations, tag, task, task_cat, task_status, users, user_log;
+Access Composer
+~/composer
+
 
 To do:
 1. Change Readme.md file to own

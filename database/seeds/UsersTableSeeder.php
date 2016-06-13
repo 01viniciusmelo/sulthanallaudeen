@@ -21,7 +21,7 @@ class UsersTableSeeder extends Seeder
             array (
                 'id' => '1',
                 'name' => 'Sulthan Allaudeen',
-                'password' => '$2y$10$x7JwK4bM/tRWB2D1dpDUMuKVpN1hSDqs0eyfkZnbxoFlWdKsnL482',
+                'password' => '$2y$10$AgwSIFzg/2lI.ywnrgVdkuzjoji.l.HRmW3hZ1sF2Ha2GWOTvyusG',
                 'remember_token' => '',
                 'email' => 'sa@sulthanallaudeen.com',
                 'gcm_id' => 'SAAA',
