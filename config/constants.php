@@ -18,8 +18,8 @@ return [
     #Credentials
     #Sendgrid
     'sendgrid' => [
-        'username' => 'sulthanallaudeen',
-        'password' => 'Open@#555',
+        'username' => 'xxxxxx',
+        'password' => 'xxxxxx',
     ],
     #Google Console
     'google-mail' => [

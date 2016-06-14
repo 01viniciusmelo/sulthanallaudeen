@@ -123,7 +123,8 @@ Route::group(['middleware' => ['web']], function () {
 });
 
 Route::get("/mail", function(){
-   return View::make("admin.mail.gmail");
+
+   return View::make("admin.mail.mail");
 });
 
 
