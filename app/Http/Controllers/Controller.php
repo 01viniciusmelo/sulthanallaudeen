@@ -55,7 +55,14 @@ class Controller extends BaseController {
     #Get All Blog Posts
 
     public function getBlogs() {
-        $Response = array('success' => 1, 'data' => $blogs = Blog::where('blogStatus', 1)->orderBy('id', 'desc')->paginate(10));
+        if(Input::get('url'))
+        {
+            $Response = $this->getBlog(Input::get('url'));
+        }
+        else
+        {
+            $Response = array('success' => 1, 'data' => $blogs = Blog::where('blogStatus', 1)->orderBy('id', 'desc')->paginate(10));    
+        }        
         return $Response;
     }
 
@@ -96,7 +103,24 @@ class Controller extends BaseController {
 
     #Get Particular Tag
 
-    public function getTag($tag) {
+    public function getTag($tag = NULL) {
+        if(Input::get('tag'))
+        {
+            $tag = Input::get('tag');
+        }
+        if(Input::get('tag') && Input::get('about'))
+        {
+            $tagData = Tag::where('tagTitle', $tag)->first();
+            if($tagData)
+            {
+                $Response = array('success' => 1, 'data' => $tagData);
+            }
+            else
+            {
+                $Response = array('success' => 0, 'data' => Config::get('constants.error.TAG_NOT_FOUND'));
+            }
+            return $Response;
+        }
         $tagId = Tag::where('tagTitle', $tag)->pluck('id');
         $blogTag = BlogTag::where('tag_id', $tagId)->pluck('id');
         if ($blogTag == '') {

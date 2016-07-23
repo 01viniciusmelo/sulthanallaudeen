@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'url' => 'https://localhost',
+    'url' => 'http://localhost/sulthanallaudeen',
 
     /*
     |--------------------------------------------------------------------------

@@ -98,7 +98,7 @@ class PublicController extends Controller {
 
     #Tag About Page
 
-    public function tagAbout($tag) {
+    public function tagAbout($tag = NULL) {
         $tagData = Tag::where('tagTitle', $tag)->first();
         $tags = Tag::where('tagStatus', 1)->get();
         return view('public.tagAbout')->with('tagData', $tagData)->with('tags', $tags);

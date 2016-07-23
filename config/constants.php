@@ -11,6 +11,8 @@ return [
 	    'ONLY_ADMIN' => 'Only Admin can Access',
 	    'USER_NOT_EXIST' => 'User does not Exist',
 	    'INVALID_PASSWORD' => 'Invalid Password',
+        'BLOG_NOT_FOUND' => 'Blog Not Found',
+        'TAG_NOT_FOUND' => 'Tag Not Found',
     ],
     'config' => [
         'URL' => 'http://www.sulthanallaudeen.com',

@@ -15,58 +15,32 @@
 Route::group(['middleware' => ['web']], function () {
 #Public Resources
     Route::get('/', 'AppController@index');
-#Login
-    Route::post('doLogin', 'AppController@doLogin');
 #Get CSRF Token
     Route::get('getToken', 'AppController@getToken');
+#Login
+    Route::post('doLogin', 'AppController@doLogin');
 #App Configuration
     Route::any('getAppConfig', 'Controller@getAppConfig');
+#Feeds
+    Route::any('getAllCount', 'AppController@getAllCount');
 #Access Info
     Route::any('getDetails', 'Controller@getDetails');
-#Views
 #Blog
     Route::get('blog', 'AppController@blog');
     Route::post('blog', 'Controller@getBlogs');
     Route::get('blog/{id}', 'AppController@blogData');
-    Route::post('blogData', 'Controller@getBlog');
+#Search Blog
+    Route::post('searchBlog', 'AppController@searchBlog');
 #Tag
     Route::get('tag/{query}', 'AppController@tagData');
     Route::post('tag', 'Controller@getTag');
-    Route::post('searchBlog', 'AppController@searchBlog');
+    Route::get('tag/{id}/about', 'PublicController@tagAbout');
 #Contact
     Route::get('contact', 'AppController@contact');
     Route::post('sendMail', 'AppController@sendMail');
-
-
-
-    Route::get('tag/{id}/about', 'PublicController@tagAbout');
-
-
-#Route::post('tag', 'Controller@tagData');
-#Feeds
-    Route::any('getAllCount', 'AppController@getAllCount');
-
-
-
-
-
-
-
-    Route::get('tag/{id}/about', 'PublicController@tagAbout');
-
-
-    Route::get('gallery', 'PublicController@gallery');
-    Route::get('gallery/{dir}', 'PublicController@galleryExplorer');
-    Route::get('project', 'PublicController@project');
-    Route::get('technology', 'PublicController@technology');
-
-
-#Admin Controller
+#####Admin Controller#######
     Route::get('sa', 'PublicController@adminLogin');
     Route::post('authAdmin', 'PublicController@authAdminLogin');
-
-
-
     Route::get('dashboard', 'HomeController@adminDashboard');
 #Blog
     Route::get('listblog', 'HomeController@listBlog');
@@ -112,7 +86,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('updateAdminContactData', 'HomeController@updateAdminContactData');
 #Gmail
     Route::get('gmail', 'HomeController@gmail');
-#Logout
+######Logout#####
     Route::get('logout', 'HomeController@logout');
 
 //#New Web Services :: 
