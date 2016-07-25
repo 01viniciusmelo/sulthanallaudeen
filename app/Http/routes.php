@@ -1,5 +1,8 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+header( 'Access-Control-Allow-Headers: Authorization, Content-Type' );
+
 /*
   |--------------------------------------------------------------------------
   | Application Routes
@@ -20,11 +23,11 @@ Route::group(['middleware' => ['web']], function () {
 #Login
     Route::post('doLogin', 'AppController@doLogin');
 #App Configuration
-    Route::any('getAppConfig', 'Controller@getAppConfig');
+    Route::post('getAppConfig', 'Controller@getAppConfig');
 #Feeds
-    Route::any('getAllCount', 'AppController@getAllCount');
+    Route::post('getAllCount', 'AppController@getAllCount');
 #Access Info
-    Route::any('getDetails', 'Controller@getDetails');
+    Route::post('getDetails', 'Controller@getDetails');
 #Blog
     Route::get('blog', 'AppController@blog');
     Route::post('blog', 'Controller@getBlogs');
