@@ -61,7 +61,7 @@ class Controller extends BaseController {
         }
         else
         {
-            $Response = array('success' => 1, 'data' => $blogs = Blog::where('blogStatus', 1)->orderBy('id', 'desc')->paginate(10));    
+            $Response = array('success' => 1, 'data' => $blogs = Blog::where('blogStatus', 1)->orderBy('id', 'desc')->paginate(10));
         }        
         return $Response;
     }
