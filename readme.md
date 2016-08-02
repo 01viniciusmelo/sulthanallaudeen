@@ -8,7 +8,7 @@ Hosted on [GoDaddy](https://in.godaddy.com), SVN'd on [Github](https://github.co
 
 ## Contact
 
-I can be contacted at [Contact Section](http://www.sulthanallaudeen.com/contact).
+I can be contacted at [Contact Section](http://www.sulthanallaudeen.com/contact)
 
 ## Contributing
 
