@@ -23,3 +23,8 @@ To do:
 #Putty
 sulthanallaudeen
 Allau@#000
+
+#Git Force pull from master
+git fetch origin master
+git reset --hard FETCH_HEAD
+git clean -df
