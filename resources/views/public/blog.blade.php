@@ -32,7 +32,7 @@
                 <hr>
                 <!-- Post Content -->
                 <?php
-                echo $data->blogContent;
+                echo $data->blog_content;
                 ?>
                 <hr>
             </div>

@@ -196,6 +196,7 @@ class Controller extends BaseController {
 
         $mailData['user_email'] = $email;
         $mailData['user_message'] = $message;
+        $mailData['message_status'] = 1;
         $validation = Validator::make($mailData, ContactMails::$mailData);
         if ($validation->passes()) {
             $sendgrid = new SendGrid('testmyblood', 'Open@123');

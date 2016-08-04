@@ -270,6 +270,28 @@ class TagTableSeeder extends Seeder
                 'created_at' => '2016-04-29 14:24:32',
                 'updated_at' => '2016-04-29 14:24:32',
             ),
+            23 => 
+            array (
+                'id' => '24',
+                'tag_title' => 'Yahoo',
+                'tag_content' => '<p>Yahoo</p>
+',
+                'tag_status' => '1',
+                'status' => '0',
+                'created_at' => '2016-07-26 16:27:34',
+                'updated_at' => '2016-07-26 16:27:34',
+            ),
+            24 => 
+            array (
+                'id' => '25',
+                'tag_title' => 'TechCrunch',
+                'tag_content' => '<p>TechCrunch</p>
+',
+                'tag_status' => '1',
+                'status' => '0',
+                'created_at' => '2016-07-26 16:27:48',
+                'updated_at' => '2016-07-26 16:27:48',
+            ),
         ));
         
         

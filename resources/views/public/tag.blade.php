@@ -18,7 +18,7 @@
                 ?>
                 @foreach ($tagData as $tag)
                 <h2>
-                    <a href="{{ asset('/blog').'/'.$tag->blogUrl }}" style="text-decoration:none">{{ $tag->blogTitle }}</a>
+                    <a href="{{ asset('/blog').'/'.$tag->blog_url }}" style="text-decoration:none">{{ $tag->blog_title }}</a>
                 </h2>
                 <p class="lead">
                     by <a style="text-decoration:none">Sulthan Allaudeen</a>
@@ -55,7 +55,7 @@
                         @foreach ($tags as $tag)
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                                <li><a href="{{ asset('/tag').'/'.$tag->tagTitle }}"> {{ $tag->tagTitle }} <span class="badge">{{ $count = BlogTag::where('tag_id', $tag->id)->count() }}</span></a></li>
+                                <li>a<a href="{{ asset('/tag').'/'.$tag->tag_title }}"> {{ $tag->tag_title }} <span class="badge">{{ $count = BlogTag::where('tag_id', $tag->id)->count() }}</span></a></li>
                             </ul>
                         </div>
                         @endforeach

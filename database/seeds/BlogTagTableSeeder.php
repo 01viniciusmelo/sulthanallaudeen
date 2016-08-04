@@ -847,6 +847,66 @@ class BlogTagTableSeeder extends Seeder
                 'created_at' => '2016-04-29 14:52:19',
                 'updated_at' => '2016-04-29 14:52:19',
             ),
+            83 => 
+            array (
+                'id' => '211',
+                'blog_id' => '42',
+                'tag_id' => '1',
+                'user_id' => '1',
+                'status' => '0',
+                'created_at' => '2016-06-19 18:23:50',
+                'updated_at' => '2016-06-19 18:23:50',
+            ),
+            84 => 
+            array (
+                'id' => '212',
+                'blog_id' => '43',
+                'tag_id' => '1',
+                'user_id' => '1',
+                'status' => '0',
+                'created_at' => '2016-06-19 18:26:39',
+                'updated_at' => '2016-06-19 18:26:39',
+            ),
+            85 => 
+            array (
+                'id' => '213',
+                'blog_id' => '44',
+                'tag_id' => '4',
+                'user_id' => '1',
+                'status' => '0',
+                'created_at' => '2016-07-21 06:17:19',
+                'updated_at' => '2016-07-21 06:17:19',
+            ),
+            86 => 
+            array (
+                'id' => '214',
+                'blog_id' => '45',
+                'tag_id' => '24',
+                'user_id' => '1',
+                'status' => '0',
+                'created_at' => '2016-07-26 16:33:44',
+                'updated_at' => '2016-07-26 16:33:44',
+            ),
+            87 => 
+            array (
+                'id' => '215',
+                'blog_id' => '45',
+                'tag_id' => '25',
+                'user_id' => '1',
+                'status' => '0',
+                'created_at' => '2016-07-26 16:33:44',
+                'updated_at' => '2016-07-26 16:33:44',
+            ),
+            88 => 
+            array (
+                'id' => '216',
+                'blog_id' => '46',
+                'tag_id' => '24',
+                'user_id' => '1',
+                'status' => '0',
+                'created_at' => '2016-07-26 16:36:57',
+                'updated_at' => '2016-07-26 16:36:57',
+            ),
         ));
         
         

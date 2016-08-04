@@ -1820,6 +1820,119 @@ array (
 'created_at' => '2016-04-29 14:50:24',
 'updated_at' => '2016-04-29 14:52:19',
 ),
+41 => 
+array (
+'id' => '42',
+'blog_title' => 'Cron Job Godaddy issue',
+'blog_url' => 'Cron-Job-Godaddy-issue',
+'blog_content' => '<p>As a part of building hybrid app to the Company Employee usage, i need to run a cron job at certain time, This was hosted on godaddy, i tried several way and nothing worked out.. Even i tried to go some third party to run cron and realized their packages. Then i planned to do google automated script which is my favorie, Then as a last try i tried this command,&nbsp;</p>
+
+<p>/usr/bin/php -q /home/wekancode/public_html/wekancode/cron.php&nbsp;</p>
+
+<p>And it worked awesome !!</p>
+
+<p>&nbsp;</p>
+
+<p>Thanks to myself for not losing confidence,. Cheers !!</p>
+
+<p>&nbsp;</p>
+
+<p>PS</p>
+
+<p>This was done at 11.53 pm, after i am fully drunk .. I mean ******&nbsp;!</p>
+',
+'blog_author' => '1',
+'blog_date' => '2016-06-21 11:00:00',
+'blog_status' => '1',
+'status' => '0',
+'created_at' => '2016-06-19 18:23:20',
+'updated_at' => '2016-06-19 18:23:50',
+),
+42 => 
+array (
+'id' => '43',
+'blog_title' => 'Hybrid Application for Personal is not a problem at all',
+'blog_url' => 'Hybrid-Application-for-Personal-is-not-a-problem-at-all',
+'blog_content' => '<p>Yeah,</p>
+
+<p>Who said hybrid app sucks ?</p>
+
+<p>It depends on how you build, i have read many articles talking about native and hybrid apps.&nbsp;</p>
+
+<p>I can find several pros and cons on both platforms, then finally concluded that it depensd on the requirement and usage. So i stronly recommend hybrid for personal usage which makes everything done and works flawlessly.</p>
+
+<p>&nbsp;</p>
+
+<p>Happy Coding !!</p>
+
+<p>&nbsp;</p>
+',
+'blog_author' => '1',
+'blog_date' => '2016-06-17 10:00:00',
+'blog_status' => '1',
+'status' => '0',
+'created_at' => '2016-06-19 18:26:39',
+'updated_at' => '2016-06-19 18:26:39',
+),
+43 => 
+array (
+'id' => '44',
+'blog_title' => 'JQuery use document click whenever needed',
+'blog_url' => 'JQuery-use-document-click-whenever-needed',
+'blog_content' => '<p>Use&nbsp;</p>
+
+<div style="background:#eee;border:1px solid #ccc;padding:5px 10px;"><code>$(document).on(&#39;click&#39;, &#39;#id&#39;, function(){});</code></div>
+
+<p>Instead of using loading the jquery functions in ajax, (In fear of DOM)&nbsp; :p</p>
+
+<p>[I know it well, that spoiled most of my codes] Thanks for a &nbsp;UI Designer&nbsp; Ashwath&nbsp;who taught me this !!</p>
+',
+'blog_author' => '1',
+'blog_date' => '2016-07-23 11:00:00',
+'blog_status' => '1',
+'status' => '0',
+'created_at' => '2016-07-21 06:17:19',
+'updated_at' => '2016-07-21 06:17:19',
+),
+44 => 
+array (
+'id' => '45',
+'blog_title' => 'Great day for Yahoo ! Not Really, it should great day for technology',
+'blog_url' => 'Great-day-for-Yahoo-!-Not-Really,-it-should-great-day-for-technology',
+'blog_content' => '<p>Yeah,&nbsp;</p>
+
+<p>After a week&#39;s bid, its concluded that Yahoo is to acquire by Verizon for $4.83 billion, We already know that yahoo stands first in the search, mail and messager decades ago. After&nbsp;marissa mayer&#39;s position she acquired tumblr and few stalks of alibaba. It happened that it was not enough to beat the giants.&nbsp;</p>
+
+<p>Tech crunch already bought by ALO which is acquired by Verizon still gonna add a boost for tech. Let&#39;s wait for the change and great new.&nbsp;</p>
+
+<p>Read more in Tech Crunch &nbsp;<a href="https://techcrunch.com/2016/07/25/tim-armstrong-yahoo-interview/">here</a>&nbsp;and <a href="https://techcrunch.com/2016/07/25/verizon-buys-yahoo-for-4-83-billion/">here</a></p>
+
+<p>Thanks !<br />
+&nbsp;</p>
+',
+'blog_author' => '1',
+'blog_date' => '2016-07-28 11:00:00',
+'blog_status' => '1',
+'status' => '0',
+'created_at' => '2016-07-26 16:33:43',
+'updated_at' => '2016-07-26 16:33:43',
+),
+45 => 
+array (
+'id' => '46',
+'blog_title' => 'Marissa mayer ! Stands height',
+'blog_url' => 'Marissa-mayer-!-Stands-height',
+'blog_content' => '<p>Though she&#39;s an former executive, key spokesperson for Google, after her entry to yahoo at 2012, she took many steps to make it worth, yeah she doubled the customers and concentrated on mobile side. Though this day it was considered it was not enough to stand against the giants google and facebook. That&#39;s the reason this day she&#39;s happy to announce about the acquiring of Yahoo !</p>
+
+<p>Great move lady !</p>
+',
+'blog_author' => '1',
+'blog_date' => '2016-07-28 12:00:00',
+'blog_status' => '1',
+'status' => '0',
+'created_at' => '2016-07-26 16:36:57',
+'updated_at' => '2016-07-26 16:36:57',
+),
 ));
         
         

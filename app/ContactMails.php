@@ -25,7 +25,7 @@ class ContactMails extends Model implements AuthenticatableContract, CanResetPas
      *
      * @var array
      */
-    protected $fillable = ['user_email', 'user_message'];
+    protected $fillable = ['user_email', 'user_message', 'message_status'];
 
     /**
      * The attributes excluded from the model's JSON form.

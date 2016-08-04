@@ -20,6 +20,7 @@ class UserLogTableSeeder extends Seeder
             0 => 
             array (
                 'id' => '1',
+                'user_id' => '',
                 'ip' => '117.213.133.208',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -31,6 +32,7 @@ class UserLogTableSeeder extends Seeder
             1 => 
             array (
                 'id' => '2',
+                'user_id' => '',
                 'ip' => '117.213.133.208',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -42,6 +44,7 @@ class UserLogTableSeeder extends Seeder
             2 => 
             array (
                 'id' => '3',
+                'user_id' => '',
                 'ip' => '66.249.79.188',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -53,6 +56,7 @@ class UserLogTableSeeder extends Seeder
             3 => 
             array (
                 'id' => '4',
+                'user_id' => '',
                 'ip' => '176.123.5.40',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -64,6 +68,7 @@ class UserLogTableSeeder extends Seeder
             4 => 
             array (
                 'id' => '5',
+                'user_id' => '',
                 'ip' => '27.63.48.7',
                 'platform' => 'Android',
                 'browser' => 'Google Chrome',
@@ -75,6 +80,7 @@ class UserLogTableSeeder extends Seeder
             5 => 
             array (
                 'id' => '6',
+                'user_id' => '',
                 'ip' => '27.63.48.7',
                 'platform' => 'Android',
                 'browser' => 'Google Chrome',
@@ -86,6 +92,7 @@ class UserLogTableSeeder extends Seeder
             6 => 
             array (
                 'id' => '7',
+                'user_id' => '',
                 'ip' => '184.168.27.78',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -97,6 +104,7 @@ class UserLogTableSeeder extends Seeder
             7 => 
             array (
                 'id' => '8',
+                'user_id' => '',
                 'ip' => '117.197.192.236',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -108,6 +116,7 @@ class UserLogTableSeeder extends Seeder
             8 => 
             array (
                 'id' => '9',
+                'user_id' => '',
                 'ip' => '117.197.192.236',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -119,6 +128,7 @@ class UserLogTableSeeder extends Seeder
             9 => 
             array (
                 'id' => '10',
+                'user_id' => '',
                 'ip' => '117.197.192.236',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -130,6 +140,7 @@ class UserLogTableSeeder extends Seeder
             10 => 
             array (
                 'id' => '11',
+                'user_id' => '',
                 'ip' => '23.94.173.166',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -141,6 +152,7 @@ class UserLogTableSeeder extends Seeder
             11 => 
             array (
                 'id' => '12',
+                'user_id' => '',
                 'ip' => '49.207.183.156',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -152,6 +164,7 @@ class UserLogTableSeeder extends Seeder
             12 => 
             array (
                 'id' => '13',
+                'user_id' => '',
                 'ip' => '183.83.49.72',
                 'platform' => 'Mac OS X',
                 'browser' => 'Mozilla Firefox',
@@ -163,6 +176,7 @@ class UserLogTableSeeder extends Seeder
             13 => 
             array (
                 'id' => '14',
+                'user_id' => '',
                 'ip' => '182.74.246.202',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -174,6 +188,7 @@ class UserLogTableSeeder extends Seeder
             14 => 
             array (
                 'id' => '15',
+                'user_id' => '',
                 'ip' => '183.83.49.72',
                 'platform' => 'Ubuntu',
                 'browser' => 'Mozilla Firefox',
@@ -185,6 +200,7 @@ class UserLogTableSeeder extends Seeder
             15 => 
             array (
                 'id' => '16',
+                'user_id' => '',
                 'ip' => '1.39.80.39',
                 'platform' => 'Android',
                 'browser' => 'Google Chrome',
@@ -196,6 +212,7 @@ class UserLogTableSeeder extends Seeder
             16 => 
             array (
                 'id' => '17',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -207,6 +224,7 @@ class UserLogTableSeeder extends Seeder
             17 => 
             array (
                 'id' => '18',
+                'user_id' => '',
                 'ip' => '108.179.248.75',
                 'platform' => 'Windows XP',
                 'browser' => 'Google Chrome',
@@ -218,6 +236,7 @@ class UserLogTableSeeder extends Seeder
             18 => 
             array (
                 'id' => '19',
+                'user_id' => '',
                 'ip' => '49.207.183.156',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -229,6 +248,7 @@ class UserLogTableSeeder extends Seeder
             19 => 
             array (
                 'id' => '20',
+                'user_id' => '',
                 'ip' => '49.207.183.156',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -240,6 +260,7 @@ class UserLogTableSeeder extends Seeder
             20 => 
             array (
                 'id' => '21',
+                'user_id' => '',
                 'ip' => '117.197.192.236',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -251,6 +272,7 @@ class UserLogTableSeeder extends Seeder
             21 => 
             array (
                 'id' => '22',
+                'user_id' => '',
                 'ip' => '117.197.192.236',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -262,6 +284,7 @@ class UserLogTableSeeder extends Seeder
             22 => 
             array (
                 'id' => '23',
+                'user_id' => '',
                 'ip' => '150.70.97.122',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -273,6 +296,7 @@ class UserLogTableSeeder extends Seeder
             23 => 
             array (
                 'id' => '24',
+                'user_id' => '',
                 'ip' => '150.70.97.97',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -284,6 +308,7 @@ class UserLogTableSeeder extends Seeder
             24 => 
             array (
                 'id' => '25',
+                'user_id' => '',
                 'ip' => '117.197.192.236',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -295,6 +320,7 @@ class UserLogTableSeeder extends Seeder
             25 => 
             array (
                 'id' => '26',
+                'user_id' => '',
                 'ip' => '117.197.192.236',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -306,6 +332,7 @@ class UserLogTableSeeder extends Seeder
             26 => 
             array (
                 'id' => '27',
+                'user_id' => '',
                 'ip' => '150.70.173.8',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -317,6 +344,7 @@ class UserLogTableSeeder extends Seeder
             27 => 
             array (
                 'id' => '28',
+                'user_id' => '',
                 'ip' => '117.197.192.236',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -328,6 +356,7 @@ class UserLogTableSeeder extends Seeder
             28 => 
             array (
                 'id' => '29',
+                'user_id' => '',
                 'ip' => '150.70.97.112',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -339,6 +368,7 @@ class UserLogTableSeeder extends Seeder
             29 => 
             array (
                 'id' => '30',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -350,6 +380,7 @@ class UserLogTableSeeder extends Seeder
             30 => 
             array (
                 'id' => '31',
+                'user_id' => '',
                 'ip' => '223.235.203.122',
                 'platform' => 'Android',
                 'browser' => 'Google Chrome',
@@ -361,6 +392,7 @@ class UserLogTableSeeder extends Seeder
             31 => 
             array (
                 'id' => '32',
+                'user_id' => '',
                 'ip' => '195.154.146.225',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -372,6 +404,7 @@ class UserLogTableSeeder extends Seeder
             32 => 
             array (
                 'id' => '33',
+                'user_id' => '',
                 'ip' => '177.39.244.156',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -383,6 +416,7 @@ class UserLogTableSeeder extends Seeder
             33 => 
             array (
                 'id' => '34',
+                'user_id' => '',
                 'ip' => '176.9.50.43',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -394,6 +428,7 @@ class UserLogTableSeeder extends Seeder
             34 => 
             array (
                 'id' => '35',
+                'user_id' => '',
                 'ip' => '189.164.166.38',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -405,6 +440,7 @@ class UserLogTableSeeder extends Seeder
             35 => 
             array (
                 'id' => '36',
+                'user_id' => '',
                 'ip' => '117.203.66.209',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -416,6 +452,7 @@ class UserLogTableSeeder extends Seeder
             36 => 
             array (
                 'id' => '37',
+                'user_id' => '',
                 'ip' => '23.232.235.76',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -427,6 +464,7 @@ class UserLogTableSeeder extends Seeder
             37 => 
             array (
                 'id' => '38',
+                'user_id' => '',
                 'ip' => '177.41.103.75',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -438,6 +476,7 @@ class UserLogTableSeeder extends Seeder
             38 => 
             array (
                 'id' => '39',
+                'user_id' => '',
                 'ip' => '177.74.21.1',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -449,6 +488,7 @@ class UserLogTableSeeder extends Seeder
             39 => 
             array (
                 'id' => '40',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows XP',
                 'browser' => 'Mozilla Firefox',
@@ -460,6 +500,7 @@ class UserLogTableSeeder extends Seeder
             40 => 
             array (
                 'id' => '41',
+                'user_id' => '',
                 'ip' => '187.12.42.166',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -471,6 +512,7 @@ class UserLogTableSeeder extends Seeder
             41 => 
             array (
                 'id' => '42',
+                'user_id' => '',
                 'ip' => '122.165.113.29',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -482,6 +524,7 @@ class UserLogTableSeeder extends Seeder
             42 => 
             array (
                 'id' => '43',
+                'user_id' => '',
                 'ip' => '88.207.123.101',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -493,6 +536,7 @@ class UserLogTableSeeder extends Seeder
             43 => 
             array (
                 'id' => '44',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 10',
                 'browser' => 'Mozilla Firefox',
@@ -504,6 +548,7 @@ class UserLogTableSeeder extends Seeder
             44 => 
             array (
                 'id' => '45',
+                'user_id' => '',
                 'ip' => '104.131.25.244',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -515,6 +560,7 @@ class UserLogTableSeeder extends Seeder
             45 => 
             array (
                 'id' => '46',
+                'user_id' => '',
                 'ip' => '117.213.100.191',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -526,6 +572,7 @@ class UserLogTableSeeder extends Seeder
             46 => 
             array (
                 'id' => '47',
+                'user_id' => '',
                 'ip' => '150.70.97.114',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -537,6 +584,7 @@ class UserLogTableSeeder extends Seeder
             47 => 
             array (
                 'id' => '48',
+                'user_id' => '',
                 'ip' => '117.213.100.191',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -548,6 +596,7 @@ class UserLogTableSeeder extends Seeder
             48 => 
             array (
                 'id' => '49',
+                'user_id' => '',
                 'ip' => '150.70.173.38',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -559,6 +608,7 @@ class UserLogTableSeeder extends Seeder
             49 => 
             array (
                 'id' => '50',
+                'user_id' => '',
                 'ip' => '8.28.16.254',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -570,6 +620,7 @@ class UserLogTableSeeder extends Seeder
             50 => 
             array (
                 'id' => '51',
+                'user_id' => '',
                 'ip' => '182.65.170.178',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -581,6 +632,7 @@ class UserLogTableSeeder extends Seeder
             51 => 
             array (
                 'id' => '52',
+                'user_id' => '',
                 'ip' => '107.169.2.59',
                 'platform' => 'Ubuntu',
                 'browser' => 'Mozilla Firefox',
@@ -592,6 +644,7 @@ class UserLogTableSeeder extends Seeder
             52 => 
             array (
                 'id' => '53',
+                'user_id' => '',
                 'ip' => '150.70.173.38',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -603,6 +656,7 @@ class UserLogTableSeeder extends Seeder
             53 => 
             array (
                 'id' => '54',
+                'user_id' => '',
                 'ip' => '54.162.129.199',
                 'platform' => 'Linux',
                 'browser' => 'Apple Safari',
@@ -614,6 +668,7 @@ class UserLogTableSeeder extends Seeder
             54 => 
             array (
                 'id' => '55',
+                'user_id' => '',
                 'ip' => '177.66.251.83',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -625,6 +680,7 @@ class UserLogTableSeeder extends Seeder
             55 => 
             array (
                 'id' => '56',
+                'user_id' => '',
                 'ip' => '66.249.74.50',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -636,6 +692,7 @@ class UserLogTableSeeder extends Seeder
             56 => 
             array (
                 'id' => '57',
+                'user_id' => '',
                 'ip' => '195.154.146.225',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -647,6 +704,7 @@ class UserLogTableSeeder extends Seeder
             57 => 
             array (
                 'id' => '58',
+                'user_id' => '',
                 'ip' => '151.74.109.140',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -658,6 +716,7 @@ class UserLogTableSeeder extends Seeder
             58 => 
             array (
                 'id' => '59',
+                'user_id' => '',
                 'ip' => '23.247.140.15',
                 'platform' => 'Ubuntu',
                 'browser' => 'Mozilla Firefox',
@@ -669,6 +728,7 @@ class UserLogTableSeeder extends Seeder
             59 => 
             array (
                 'id' => '60',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -680,6 +740,7 @@ class UserLogTableSeeder extends Seeder
             60 => 
             array (
                 'id' => '61',
+                'user_id' => '',
                 'ip' => '45.55.133.252',
                 'platform' => 'Mac OS X',
                 'browser' => 'Google Chrome',
@@ -691,6 +752,7 @@ class UserLogTableSeeder extends Seeder
             61 => 
             array (
                 'id' => '62',
+                'user_id' => '',
                 'ip' => '195.154.146.225',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -702,6 +764,7 @@ class UserLogTableSeeder extends Seeder
             62 => 
             array (
                 'id' => '63',
+                'user_id' => '',
                 'ip' => '192.80.158.218',
                 'platform' => 'Windows 8',
                 'browser' => 'Opera',
@@ -713,6 +776,7 @@ class UserLogTableSeeder extends Seeder
             63 => 
             array (
                 'id' => '64',
+                'user_id' => '',
                 'ip' => '104.238.147.218',
                 'platform' => 'Windows XP',
                 'browser' => 'Google Chrome',
@@ -724,6 +788,7 @@ class UserLogTableSeeder extends Seeder
             64 => 
             array (
                 'id' => '65',
+                'user_id' => '',
                 'ip' => '192.255.101.26',
                 'platform' => 'Windows 8',
                 'browser' => 'Opera',
@@ -735,6 +800,7 @@ class UserLogTableSeeder extends Seeder
             65 => 
             array (
                 'id' => '66',
+                'user_id' => '',
                 'ip' => '5.135.209.62',
                 'platform' => 'Windows 8',
                 'browser' => 'Opera',
@@ -746,6 +812,7 @@ class UserLogTableSeeder extends Seeder
             66 => 
             array (
                 'id' => '67',
+                'user_id' => '',
                 'ip' => '94.249.224.88',
                 'platform' => 'Windows 8',
                 'browser' => 'Opera',
@@ -757,6 +824,7 @@ class UserLogTableSeeder extends Seeder
             67 => 
             array (
                 'id' => '68',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -768,6 +836,7 @@ class UserLogTableSeeder extends Seeder
             68 => 
             array (
                 'id' => '69',
+                'user_id' => '',
                 'ip' => '123.136.214.123',
                 'platform' => 'Windows 10',
                 'browser' => 'Google Chrome',
@@ -779,6 +848,7 @@ class UserLogTableSeeder extends Seeder
             69 => 
             array (
                 'id' => '70',
+                'user_id' => '',
                 'ip' => '49.207.186.182',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -790,6 +860,7 @@ class UserLogTableSeeder extends Seeder
             70 => 
             array (
                 'id' => '71',
+                'user_id' => '',
                 'ip' => '49.207.186.182',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -801,6 +872,7 @@ class UserLogTableSeeder extends Seeder
             71 => 
             array (
                 'id' => '72',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 10',
                 'browser' => 'Google Chrome',
@@ -812,6 +884,7 @@ class UserLogTableSeeder extends Seeder
             72 => 
             array (
                 'id' => '73',
+                'user_id' => '',
                 'ip' => '23.94.173.166',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -823,6 +896,7 @@ class UserLogTableSeeder extends Seeder
             73 => 
             array (
                 'id' => '74',
+                'user_id' => '',
                 'ip' => '59.100.39.47',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -834,6 +908,7 @@ class UserLogTableSeeder extends Seeder
             74 => 
             array (
                 'id' => '75',
+                'user_id' => '',
                 'ip' => '192.255.101.106',
                 'platform' => 'Mac OS X',
                 'browser' => 'Mozilla Firefox',
@@ -845,6 +920,7 @@ class UserLogTableSeeder extends Seeder
             75 => 
             array (
                 'id' => '76',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -856,6 +932,7 @@ class UserLogTableSeeder extends Seeder
             76 => 
             array (
                 'id' => '77',
+                'user_id' => '',
                 'ip' => '201.150.159.12',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -867,6 +944,7 @@ class UserLogTableSeeder extends Seeder
             77 => 
             array (
                 'id' => '78',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -878,6 +956,7 @@ class UserLogTableSeeder extends Seeder
             78 => 
             array (
                 'id' => '79',
+                'user_id' => '',
                 'ip' => '66.249.74.52',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -889,6 +968,7 @@ class UserLogTableSeeder extends Seeder
             79 => 
             array (
                 'id' => '80',
+                'user_id' => '',
                 'ip' => '177.83.248.188',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -900,6 +980,7 @@ class UserLogTableSeeder extends Seeder
             80 => 
             array (
                 'id' => '81',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -911,6 +992,7 @@ class UserLogTableSeeder extends Seeder
             81 => 
             array (
                 'id' => '82',
+                'user_id' => '',
                 'ip' => '197.32.13.98',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -922,6 +1004,7 @@ class UserLogTableSeeder extends Seeder
             82 => 
             array (
                 'id' => '83',
+                'user_id' => '',
                 'ip' => '5.135.209.62',
                 'platform' => 'Mac OS X',
                 'browser' => 'Mozilla Firefox',
@@ -933,6 +1016,7 @@ class UserLogTableSeeder extends Seeder
             83 => 
             array (
                 'id' => '84',
+                'user_id' => '',
                 'ip' => '62.212.73.49',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -944,6 +1028,7 @@ class UserLogTableSeeder extends Seeder
             84 => 
             array (
                 'id' => '85',
+                'user_id' => '',
                 'ip' => '23.95.192.12',
                 'platform' => 'Mac OS X',
                 'browser' => 'Mozilla Firefox',
@@ -955,6 +1040,7 @@ class UserLogTableSeeder extends Seeder
             85 => 
             array (
                 'id' => '86',
+                'user_id' => '',
                 'ip' => '117.97.202.57',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -966,6 +1052,7 @@ class UserLogTableSeeder extends Seeder
             86 => 
             array (
                 'id' => '87',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -977,6 +1064,7 @@ class UserLogTableSeeder extends Seeder
             87 => 
             array (
                 'id' => '88',
+                'user_id' => '',
                 'ip' => '106.208.125.233',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -988,6 +1076,7 @@ class UserLogTableSeeder extends Seeder
             88 => 
             array (
                 'id' => '89',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -999,6 +1088,7 @@ class UserLogTableSeeder extends Seeder
             89 => 
             array (
                 'id' => '90',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1010,6 +1100,7 @@ class UserLogTableSeeder extends Seeder
             90 => 
             array (
                 'id' => '91',
+                'user_id' => '',
                 'ip' => '83.143.242.120',
                 'platform' => 'Mac OS X',
                 'browser' => 'Mozilla Firefox',
@@ -1021,6 +1112,7 @@ class UserLogTableSeeder extends Seeder
             91 => 
             array (
                 'id' => '92',
+                'user_id' => '',
                 'ip' => '93.71.201.77',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1032,6 +1124,7 @@ class UserLogTableSeeder extends Seeder
             92 => 
             array (
                 'id' => '93',
+                'user_id' => '',
                 'ip' => '155.94.240.132',
                 'platform' => 'Mac OS X',
                 'browser' => 'Mozilla Firefox',
@@ -1043,6 +1136,7 @@ class UserLogTableSeeder extends Seeder
             93 => 
             array (
                 'id' => '94',
+                'user_id' => '',
                 'ip' => '195.154.146.225',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -1054,6 +1148,7 @@ class UserLogTableSeeder extends Seeder
             94 => 
             array (
                 'id' => '95',
+                'user_id' => '',
                 'ip' => '150.70.97.123',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -1065,6 +1160,7 @@ class UserLogTableSeeder extends Seeder
             95 => 
             array (
                 'id' => '96',
+                'user_id' => '',
                 'ip' => '121.97.136.203',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1076,6 +1172,7 @@ class UserLogTableSeeder extends Seeder
             96 => 
             array (
                 'id' => '97',
+                'user_id' => '',
                 'ip' => '203.133.171.14',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Internet Explorer',
@@ -1087,6 +1184,7 @@ class UserLogTableSeeder extends Seeder
             97 => 
             array (
                 'id' => '98',
+                'user_id' => '',
                 'ip' => '70.50.157.191',
                 'platform' => 'Ubuntu',
                 'browser' => 'Google Chrome',
@@ -1098,6 +1196,7 @@ class UserLogTableSeeder extends Seeder
             98 => 
             array (
                 'id' => '99',
+                'user_id' => '',
                 'ip' => '5.9.36.66',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -1109,6 +1208,7 @@ class UserLogTableSeeder extends Seeder
             99 => 
             array (
                 'id' => '100',
+                'user_id' => '',
                 'ip' => '52.20.151.197',
                 'platform' => 'Mac OS X',
                 'browser' => 'Google Chrome',
@@ -1120,6 +1220,7 @@ class UserLogTableSeeder extends Seeder
             100 => 
             array (
                 'id' => '101',
+                'user_id' => '',
                 'ip' => '52.20.151.197',
                 'platform' => 'Mac OS X',
                 'browser' => 'Google Chrome',
@@ -1131,6 +1232,7 @@ class UserLogTableSeeder extends Seeder
             101 => 
             array (
                 'id' => '102',
+                'user_id' => '',
                 'ip' => '152.250.196.4',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1142,6 +1244,7 @@ class UserLogTableSeeder extends Seeder
             102 => 
             array (
                 'id' => '103',
+                'user_id' => '',
                 'ip' => '158.69.129.98',
                 'platform' => 'Windows XP',
                 'browser' => 'Opera',
@@ -1153,6 +1256,7 @@ class UserLogTableSeeder extends Seeder
             103 => 
             array (
                 'id' => '104',
+                'user_id' => '',
                 'ip' => '87.1.85.222',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1164,6 +1268,7 @@ class UserLogTableSeeder extends Seeder
             104 => 
             array (
                 'id' => '105',
+                'user_id' => '',
                 'ip' => '66.249.74.54',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -1175,6 +1280,7 @@ class UserLogTableSeeder extends Seeder
             105 => 
             array (
                 'id' => '106',
+                'user_id' => '',
                 'ip' => '93.127.158.77',
                 'platform' => 'Mac OS X',
                 'browser' => 'Google Chrome',
@@ -1186,6 +1292,7 @@ class UserLogTableSeeder extends Seeder
             106 => 
             array (
                 'id' => '107',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1197,6 +1304,7 @@ class UserLogTableSeeder extends Seeder
             107 => 
             array (
                 'id' => '108',
+                'user_id' => '',
                 'ip' => '79.117.6.224',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1208,6 +1316,7 @@ class UserLogTableSeeder extends Seeder
             108 => 
             array (
                 'id' => '109',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 10',
                 'browser' => 'Google Chrome',
@@ -1219,6 +1328,7 @@ class UserLogTableSeeder extends Seeder
             109 => 
             array (
                 'id' => '110',
+                'user_id' => '',
                 'ip' => '195.154.146.225',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -1230,6 +1340,7 @@ class UserLogTableSeeder extends Seeder
             110 => 
             array (
                 'id' => '111',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -1241,6 +1352,7 @@ class UserLogTableSeeder extends Seeder
             111 => 
             array (
                 'id' => '112',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 10',
                 'browser' => 'Mozilla Firefox',
@@ -1252,6 +1364,7 @@ class UserLogTableSeeder extends Seeder
             112 => 
             array (
                 'id' => '113',
+                'user_id' => '',
                 'ip' => '104.236.225.99',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -1263,6 +1376,7 @@ class UserLogTableSeeder extends Seeder
             113 => 
             array (
                 'id' => '114',
+                'user_id' => '',
                 'ip' => '104.236.225.99',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -1274,6 +1388,7 @@ class UserLogTableSeeder extends Seeder
             114 => 
             array (
                 'id' => '115',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1285,6 +1400,7 @@ class UserLogTableSeeder extends Seeder
             115 => 
             array (
                 'id' => '116',
+                'user_id' => '',
                 'ip' => '201.34.89.233',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1296,6 +1412,7 @@ class UserLogTableSeeder extends Seeder
             116 => 
             array (
                 'id' => '117',
+                'user_id' => '',
                 'ip' => '149.202.98.160',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -1307,6 +1424,7 @@ class UserLogTableSeeder extends Seeder
             117 => 
             array (
                 'id' => '118',
+                'user_id' => '',
                 'ip' => '186.210.215.8',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1318,6 +1436,7 @@ class UserLogTableSeeder extends Seeder
             118 => 
             array (
                 'id' => '119',
+                'user_id' => '',
                 'ip' => '66.249.74.52',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -1329,6 +1448,7 @@ class UserLogTableSeeder extends Seeder
             119 => 
             array (
                 'id' => '120',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1340,6 +1460,7 @@ class UserLogTableSeeder extends Seeder
             120 => 
             array (
                 'id' => '121',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 10',
                 'browser' => 'Google Chrome',
@@ -1351,6 +1472,7 @@ class UserLogTableSeeder extends Seeder
             121 => 
             array (
                 'id' => '122',
+                'user_id' => '',
                 'ip' => '195.154.146.225',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -1362,6 +1484,7 @@ class UserLogTableSeeder extends Seeder
             122 => 
             array (
                 'id' => '123',
+                'user_id' => '',
                 'ip' => '116.193.139.1',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1373,6 +1496,7 @@ class UserLogTableSeeder extends Seeder
             123 => 
             array (
                 'id' => '124',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1384,6 +1508,7 @@ class UserLogTableSeeder extends Seeder
             124 => 
             array (
                 'id' => '125',
+                'user_id' => '',
                 'ip' => '66.249.74.50',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -1395,6 +1520,7 @@ class UserLogTableSeeder extends Seeder
             125 => 
             array (
                 'id' => '126',
+                'user_id' => '',
                 'ip' => '89.0.182.101',
                 'platform' => 'Mac OS X',
                 'browser' => 'Apple Safari',
@@ -1406,6 +1532,7 @@ class UserLogTableSeeder extends Seeder
             126 => 
             array (
                 'id' => '127',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1417,6 +1544,7 @@ class UserLogTableSeeder extends Seeder
             127 => 
             array (
                 'id' => '128',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1428,6 +1556,7 @@ class UserLogTableSeeder extends Seeder
             128 => 
             array (
                 'id' => '129',
+                'user_id' => '',
                 'ip' => '195.154.146.225',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -1439,6 +1568,7 @@ class UserLogTableSeeder extends Seeder
             129 => 
             array (
                 'id' => '130',
+                'user_id' => '',
                 'ip' => '142.4.212.142',
                 'platform' => 'Mac OS X',
                 'browser' => 'Apple Safari',
@@ -1450,6 +1580,7 @@ class UserLogTableSeeder extends Seeder
             130 => 
             array (
                 'id' => '131',
+                'user_id' => '',
                 'ip' => '158.69.129.98',
                 'platform' => 'Windows XP',
                 'browser' => 'Opera',
@@ -1461,6 +1592,7 @@ class UserLogTableSeeder extends Seeder
             131 => 
             array (
                 'id' => '132',
+                'user_id' => '',
                 'ip' => '46.229.170.197',
                 'platform' => 'Linux',
                 'browser' => 'Mozilla Firefox',
@@ -1472,6 +1604,7 @@ class UserLogTableSeeder extends Seeder
             132 => 
             array (
                 'id' => '133',
+                'user_id' => '',
                 'ip' => '122.174.25.161',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1483,6 +1616,7 @@ class UserLogTableSeeder extends Seeder
             133 => 
             array (
                 'id' => '134',
+                'user_id' => '',
                 'ip' => '212.83.131.217',
                 'platform' => 'Mac OS X',
                 'browser' => 'Google Chrome',
@@ -1494,6 +1628,7 @@ class UserLogTableSeeder extends Seeder
             134 => 
             array (
                 'id' => '135',
+                'user_id' => '',
                 'ip' => '66.249.74.52',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -1505,6 +1640,7 @@ class UserLogTableSeeder extends Seeder
             135 => 
             array (
                 'id' => '136',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 10',
                 'browser' => 'Google Chrome',
@@ -1516,6 +1652,7 @@ class UserLogTableSeeder extends Seeder
             136 => 
             array (
                 'id' => '137',
+                'user_id' => '',
                 'ip' => '177.129.160.18',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1527,6 +1664,7 @@ class UserLogTableSeeder extends Seeder
             137 => 
             array (
                 'id' => '138',
+                'user_id' => '',
                 'ip' => '151.79.192.74',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1538,6 +1676,7 @@ class UserLogTableSeeder extends Seeder
             138 => 
             array (
                 'id' => '139',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1549,6 +1688,7 @@ class UserLogTableSeeder extends Seeder
             139 => 
             array (
                 'id' => '140',
+                'user_id' => '',
                 'ip' => '187.15.59.146',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1560,6 +1700,7 @@ class UserLogTableSeeder extends Seeder
             140 => 
             array (
                 'id' => '141',
+                'user_id' => '',
                 'ip' => '201.75.1.91',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1571,6 +1712,7 @@ class UserLogTableSeeder extends Seeder
             141 => 
             array (
                 'id' => '142',
+                'user_id' => '',
                 'ip' => '67.202.2.123',
                 'platform' => 'Windows Vista',
                 'browser' => 'Mozilla Firefox',
@@ -1582,6 +1724,7 @@ class UserLogTableSeeder extends Seeder
             142 => 
             array (
                 'id' => '143',
+                'user_id' => '',
                 'ip' => '66.249.74.54',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -1593,6 +1736,7 @@ class UserLogTableSeeder extends Seeder
             143 => 
             array (
                 'id' => '144',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1604,6 +1748,7 @@ class UserLogTableSeeder extends Seeder
             144 => 
             array (
                 'id' => '145',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1615,6 +1760,7 @@ class UserLogTableSeeder extends Seeder
             145 => 
             array (
                 'id' => '146',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1626,6 +1772,7 @@ class UserLogTableSeeder extends Seeder
             146 => 
             array (
                 'id' => '147',
+                'user_id' => '',
                 'ip' => '5.196.67.41',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -1637,6 +1784,7 @@ class UserLogTableSeeder extends Seeder
             147 => 
             array (
                 'id' => '148',
+                'user_id' => '',
                 'ip' => '66.249.74.54',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -1648,6 +1796,7 @@ class UserLogTableSeeder extends Seeder
             148 => 
             array (
                 'id' => '149',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1659,6 +1808,7 @@ class UserLogTableSeeder extends Seeder
             149 => 
             array (
                 'id' => '150',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -1670,6 +1820,7 @@ class UserLogTableSeeder extends Seeder
             150 => 
             array (
                 'id' => '151',
+                'user_id' => '',
                 'ip' => '95.130.9.140',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -1681,6 +1832,7 @@ class UserLogTableSeeder extends Seeder
             151 => 
             array (
                 'id' => '152',
+                'user_id' => '',
                 'ip' => '176.123.5.40',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -1692,6 +1844,7 @@ class UserLogTableSeeder extends Seeder
             152 => 
             array (
                 'id' => '153',
+                'user_id' => '',
                 'ip' => '150.70.97.119',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -1703,6 +1856,7 @@ class UserLogTableSeeder extends Seeder
             153 => 
             array (
                 'id' => '154',
+                'user_id' => '',
                 'ip' => '66.249.67.239',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -1714,6 +1868,7 @@ class UserLogTableSeeder extends Seeder
             154 => 
             array (
                 'id' => '155',
+                'user_id' => '',
                 'ip' => '117.197.187.121',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1725,6 +1880,7 @@ class UserLogTableSeeder extends Seeder
             155 => 
             array (
                 'id' => '156',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1736,6 +1892,7 @@ class UserLogTableSeeder extends Seeder
             156 => 
             array (
                 'id' => '157',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1747,6 +1904,7 @@ class UserLogTableSeeder extends Seeder
             157 => 
             array (
                 'id' => '158',
+                'user_id' => '',
                 'ip' => '177.80.103.73',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1758,6 +1916,7 @@ class UserLogTableSeeder extends Seeder
             158 => 
             array (
                 'id' => '159',
+                'user_id' => '',
                 'ip' => '45.55.146.21',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -1769,6 +1928,7 @@ class UserLogTableSeeder extends Seeder
             159 => 
             array (
                 'id' => '160',
+                'user_id' => '',
                 'ip' => '203.101.73.51',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1780,6 +1940,7 @@ class UserLogTableSeeder extends Seeder
             160 => 
             array (
                 'id' => '161',
+                'user_id' => '',
                 'ip' => '66.249.74.114',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -1791,6 +1952,7 @@ class UserLogTableSeeder extends Seeder
             161 => 
             array (
                 'id' => '162',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 10',
                 'browser' => 'Google Chrome',
@@ -1802,6 +1964,7 @@ class UserLogTableSeeder extends Seeder
             162 => 
             array (
                 'id' => '163',
+                'user_id' => '',
                 'ip' => '2.177.12.170',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1813,6 +1976,7 @@ class UserLogTableSeeder extends Seeder
             163 => 
             array (
                 'id' => '164',
+                'user_id' => '',
                 'ip' => '2.177.12.170',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1824,6 +1988,7 @@ class UserLogTableSeeder extends Seeder
             164 => 
             array (
                 'id' => '165',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1835,6 +2000,7 @@ class UserLogTableSeeder extends Seeder
             165 => 
             array (
                 'id' => '166',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1846,6 +2012,7 @@ class UserLogTableSeeder extends Seeder
             166 => 
             array (
                 'id' => '167',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1857,6 +2024,7 @@ class UserLogTableSeeder extends Seeder
             167 => 
             array (
                 'id' => '168',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1868,6 +2036,7 @@ class UserLogTableSeeder extends Seeder
             168 => 
             array (
                 'id' => '169',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1879,6 +2048,7 @@ class UserLogTableSeeder extends Seeder
             169 => 
             array (
                 'id' => '170',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1890,6 +2060,7 @@ class UserLogTableSeeder extends Seeder
             170 => 
             array (
                 'id' => '171',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1901,6 +2072,7 @@ class UserLogTableSeeder extends Seeder
             171 => 
             array (
                 'id' => '172',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1912,6 +2084,7 @@ class UserLogTableSeeder extends Seeder
             172 => 
             array (
                 'id' => '173',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1923,6 +2096,7 @@ class UserLogTableSeeder extends Seeder
             173 => 
             array (
                 'id' => '174',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1934,6 +2108,7 @@ class UserLogTableSeeder extends Seeder
             174 => 
             array (
                 'id' => '175',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1945,6 +2120,7 @@ class UserLogTableSeeder extends Seeder
             175 => 
             array (
                 'id' => '176',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1956,6 +2132,7 @@ class UserLogTableSeeder extends Seeder
             176 => 
             array (
                 'id' => '177',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1967,6 +2144,7 @@ class UserLogTableSeeder extends Seeder
             177 => 
             array (
                 'id' => '178',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1978,6 +2156,7 @@ class UserLogTableSeeder extends Seeder
             178 => 
             array (
                 'id' => '179',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -1989,6 +2168,7 @@ class UserLogTableSeeder extends Seeder
             179 => 
             array (
                 'id' => '180',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2000,6 +2180,7 @@ class UserLogTableSeeder extends Seeder
             180 => 
             array (
                 'id' => '181',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2011,6 +2192,7 @@ class UserLogTableSeeder extends Seeder
             181 => 
             array (
                 'id' => '182',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2022,6 +2204,7 @@ class UserLogTableSeeder extends Seeder
             182 => 
             array (
                 'id' => '183',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2033,6 +2216,7 @@ class UserLogTableSeeder extends Seeder
             183 => 
             array (
                 'id' => '184',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2044,6 +2228,7 @@ class UserLogTableSeeder extends Seeder
             184 => 
             array (
                 'id' => '185',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2055,6 +2240,7 @@ class UserLogTableSeeder extends Seeder
             185 => 
             array (
                 'id' => '186',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2066,6 +2252,7 @@ class UserLogTableSeeder extends Seeder
             186 => 
             array (
                 'id' => '187',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2077,6 +2264,7 @@ class UserLogTableSeeder extends Seeder
             187 => 
             array (
                 'id' => '188',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2088,6 +2276,7 @@ class UserLogTableSeeder extends Seeder
             188 => 
             array (
                 'id' => '189',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2099,6 +2288,7 @@ class UserLogTableSeeder extends Seeder
             189 => 
             array (
                 'id' => '190',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2110,6 +2300,7 @@ class UserLogTableSeeder extends Seeder
             190 => 
             array (
                 'id' => '191',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2121,6 +2312,7 @@ class UserLogTableSeeder extends Seeder
             191 => 
             array (
                 'id' => '192',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2132,6 +2324,7 @@ class UserLogTableSeeder extends Seeder
             192 => 
             array (
                 'id' => '193',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2143,6 +2336,7 @@ class UserLogTableSeeder extends Seeder
             193 => 
             array (
                 'id' => '194',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2154,6 +2348,7 @@ class UserLogTableSeeder extends Seeder
             194 => 
             array (
                 'id' => '195',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2165,6 +2360,7 @@ class UserLogTableSeeder extends Seeder
             195 => 
             array (
                 'id' => '196',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2176,6 +2372,7 @@ class UserLogTableSeeder extends Seeder
             196 => 
             array (
                 'id' => '197',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2187,6 +2384,7 @@ class UserLogTableSeeder extends Seeder
             197 => 
             array (
                 'id' => '198',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2198,6 +2396,7 @@ class UserLogTableSeeder extends Seeder
             198 => 
             array (
                 'id' => '199',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2209,6 +2408,7 @@ class UserLogTableSeeder extends Seeder
             199 => 
             array (
                 'id' => '200',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2220,6 +2420,7 @@ class UserLogTableSeeder extends Seeder
             200 => 
             array (
                 'id' => '201',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2231,6 +2432,7 @@ class UserLogTableSeeder extends Seeder
             201 => 
             array (
                 'id' => '202',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2242,6 +2444,7 @@ class UserLogTableSeeder extends Seeder
             202 => 
             array (
                 'id' => '203',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2253,6 +2456,7 @@ class UserLogTableSeeder extends Seeder
             203 => 
             array (
                 'id' => '204',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2264,6 +2468,7 @@ class UserLogTableSeeder extends Seeder
             204 => 
             array (
                 'id' => '205',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2275,6 +2480,7 @@ class UserLogTableSeeder extends Seeder
             205 => 
             array (
                 'id' => '206',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2286,6 +2492,7 @@ class UserLogTableSeeder extends Seeder
             206 => 
             array (
                 'id' => '207',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2297,6 +2504,7 @@ class UserLogTableSeeder extends Seeder
             207 => 
             array (
                 'id' => '208',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2308,6 +2516,7 @@ class UserLogTableSeeder extends Seeder
             208 => 
             array (
                 'id' => '209',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2319,6 +2528,7 @@ class UserLogTableSeeder extends Seeder
             209 => 
             array (
                 'id' => '210',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2330,6 +2540,7 @@ class UserLogTableSeeder extends Seeder
             210 => 
             array (
                 'id' => '211',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2341,6 +2552,7 @@ class UserLogTableSeeder extends Seeder
             211 => 
             array (
                 'id' => '212',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2352,6 +2564,7 @@ class UserLogTableSeeder extends Seeder
             212 => 
             array (
                 'id' => '213',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2363,6 +2576,7 @@ class UserLogTableSeeder extends Seeder
             213 => 
             array (
                 'id' => '214',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2374,6 +2588,7 @@ class UserLogTableSeeder extends Seeder
             214 => 
             array (
                 'id' => '215',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2385,6 +2600,7 @@ class UserLogTableSeeder extends Seeder
             215 => 
             array (
                 'id' => '216',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2396,6 +2612,7 @@ class UserLogTableSeeder extends Seeder
             216 => 
             array (
                 'id' => '217',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2407,6 +2624,7 @@ class UserLogTableSeeder extends Seeder
             217 => 
             array (
                 'id' => '218',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2418,6 +2636,7 @@ class UserLogTableSeeder extends Seeder
             218 => 
             array (
                 'id' => '219',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2429,6 +2648,7 @@ class UserLogTableSeeder extends Seeder
             219 => 
             array (
                 'id' => '220',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2440,6 +2660,7 @@ class UserLogTableSeeder extends Seeder
             220 => 
             array (
                 'id' => '221',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2451,6 +2672,7 @@ class UserLogTableSeeder extends Seeder
             221 => 
             array (
                 'id' => '222',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2462,6 +2684,7 @@ class UserLogTableSeeder extends Seeder
             222 => 
             array (
                 'id' => '223',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2473,6 +2696,7 @@ class UserLogTableSeeder extends Seeder
             223 => 
             array (
                 'id' => '224',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2484,6 +2708,7 @@ class UserLogTableSeeder extends Seeder
             224 => 
             array (
                 'id' => '225',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2495,6 +2720,7 @@ class UserLogTableSeeder extends Seeder
             225 => 
             array (
                 'id' => '226',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2506,6 +2732,7 @@ class UserLogTableSeeder extends Seeder
             226 => 
             array (
                 'id' => '227',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2517,6 +2744,7 @@ class UserLogTableSeeder extends Seeder
             227 => 
             array (
                 'id' => '228',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2528,6 +2756,7 @@ class UserLogTableSeeder extends Seeder
             228 => 
             array (
                 'id' => '229',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2539,6 +2768,7 @@ class UserLogTableSeeder extends Seeder
             229 => 
             array (
                 'id' => '230',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2550,6 +2780,7 @@ class UserLogTableSeeder extends Seeder
             230 => 
             array (
                 'id' => '231',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2561,6 +2792,7 @@ class UserLogTableSeeder extends Seeder
             231 => 
             array (
                 'id' => '232',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2572,6 +2804,7 @@ class UserLogTableSeeder extends Seeder
             232 => 
             array (
                 'id' => '233',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2583,6 +2816,7 @@ class UserLogTableSeeder extends Seeder
             233 => 
             array (
                 'id' => '234',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2594,6 +2828,7 @@ class UserLogTableSeeder extends Seeder
             234 => 
             array (
                 'id' => '235',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2605,6 +2840,7 @@ class UserLogTableSeeder extends Seeder
             235 => 
             array (
                 'id' => '236',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2616,6 +2852,7 @@ class UserLogTableSeeder extends Seeder
             236 => 
             array (
                 'id' => '237',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2627,6 +2864,7 @@ class UserLogTableSeeder extends Seeder
             237 => 
             array (
                 'id' => '238',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2638,6 +2876,7 @@ class UserLogTableSeeder extends Seeder
             238 => 
             array (
                 'id' => '239',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2649,6 +2888,7 @@ class UserLogTableSeeder extends Seeder
             239 => 
             array (
                 'id' => '240',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2660,6 +2900,7 @@ class UserLogTableSeeder extends Seeder
             240 => 
             array (
                 'id' => '241',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2671,6 +2912,7 @@ class UserLogTableSeeder extends Seeder
             241 => 
             array (
                 'id' => '242',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2682,6 +2924,7 @@ class UserLogTableSeeder extends Seeder
             242 => 
             array (
                 'id' => '243',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2693,6 +2936,7 @@ class UserLogTableSeeder extends Seeder
             243 => 
             array (
                 'id' => '244',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2704,6 +2948,7 @@ class UserLogTableSeeder extends Seeder
             244 => 
             array (
                 'id' => '245',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2715,6 +2960,7 @@ class UserLogTableSeeder extends Seeder
             245 => 
             array (
                 'id' => '246',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2726,6 +2972,7 @@ class UserLogTableSeeder extends Seeder
             246 => 
             array (
                 'id' => '247',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2737,6 +2984,7 @@ class UserLogTableSeeder extends Seeder
             247 => 
             array (
                 'id' => '248',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2748,6 +2996,7 @@ class UserLogTableSeeder extends Seeder
             248 => 
             array (
                 'id' => '249',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2759,6 +3008,7 @@ class UserLogTableSeeder extends Seeder
             249 => 
             array (
                 'id' => '250',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2770,6 +3020,7 @@ class UserLogTableSeeder extends Seeder
             250 => 
             array (
                 'id' => '251',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2781,6 +3032,7 @@ class UserLogTableSeeder extends Seeder
             251 => 
             array (
                 'id' => '252',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2792,6 +3044,7 @@ class UserLogTableSeeder extends Seeder
             252 => 
             array (
                 'id' => '253',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2803,6 +3056,7 @@ class UserLogTableSeeder extends Seeder
             253 => 
             array (
                 'id' => '254',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2814,6 +3068,7 @@ class UserLogTableSeeder extends Seeder
             254 => 
             array (
                 'id' => '255',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2825,6 +3080,7 @@ class UserLogTableSeeder extends Seeder
             255 => 
             array (
                 'id' => '256',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2836,6 +3092,7 @@ class UserLogTableSeeder extends Seeder
             256 => 
             array (
                 'id' => '257',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2847,6 +3104,7 @@ class UserLogTableSeeder extends Seeder
             257 => 
             array (
                 'id' => '258',
+                'user_id' => '',
                 'ip' => '69.22.174.193',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2858,6 +3116,7 @@ class UserLogTableSeeder extends Seeder
             258 => 
             array (
                 'id' => '259',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2869,6 +3128,7 @@ class UserLogTableSeeder extends Seeder
             259 => 
             array (
                 'id' => '260',
+                'user_id' => '',
                 'ip' => '109.163.234.2',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -2880,6 +3140,7 @@ class UserLogTableSeeder extends Seeder
             260 => 
             array (
                 'id' => '261',
+                'user_id' => '',
                 'ip' => '198.46.140.218',
                 'platform' => 'Windows XP',
                 'browser' => 'Mozilla Firefox',
@@ -2891,6 +3152,7 @@ class UserLogTableSeeder extends Seeder
             261 => 
             array (
                 'id' => '262',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 10',
                 'browser' => 'Google Chrome',
@@ -2902,6 +3164,7 @@ class UserLogTableSeeder extends Seeder
             262 => 
             array (
                 'id' => '263',
+                'user_id' => '',
                 'ip' => '72.52.94.234',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -2913,6 +3176,7 @@ class UserLogTableSeeder extends Seeder
             263 => 
             array (
                 'id' => '264',
+                'user_id' => '',
                 'ip' => '66.249.74.114',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -2924,6 +3188,7 @@ class UserLogTableSeeder extends Seeder
             264 => 
             array (
                 'id' => '265',
+                'user_id' => '',
                 'ip' => '177.68.3.133',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2935,6 +3200,7 @@ class UserLogTableSeeder extends Seeder
             265 => 
             array (
                 'id' => '266',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Mozilla Firefox',
@@ -2946,6 +3212,7 @@ class UserLogTableSeeder extends Seeder
             266 => 
             array (
                 'id' => '267',
+                'user_id' => '',
                 'ip' => '201.19.145.63',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2957,6 +3224,7 @@ class UserLogTableSeeder extends Seeder
             267 => 
             array (
                 'id' => '268',
+                'user_id' => '',
                 'ip' => '201.19.145.63',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2968,6 +3236,7 @@ class UserLogTableSeeder extends Seeder
             268 => 
             array (
                 'id' => '269',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -2979,6 +3248,7 @@ class UserLogTableSeeder extends Seeder
             269 => 
             array (
                 'id' => '270',
+                'user_id' => '',
                 'ip' => '82.58.90.85',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -2990,6 +3260,7 @@ class UserLogTableSeeder extends Seeder
             270 => 
             array (
                 'id' => '271',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3001,6 +3272,7 @@ class UserLogTableSeeder extends Seeder
             271 => 
             array (
                 'id' => '272',
+                'user_id' => '',
                 'ip' => '117.216.102.189',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3012,6 +3284,7 @@ class UserLogTableSeeder extends Seeder
             272 => 
             array (
                 'id' => '273',
+                'user_id' => '',
                 'ip' => '66.249.74.110',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -3023,6 +3296,7 @@ class UserLogTableSeeder extends Seeder
             273 => 
             array (
                 'id' => '274',
+                'user_id' => '',
                 'ip' => '198.96.88.72',
                 'platform' => 'Windows Vista',
                 'browser' => 'Mozilla Firefox',
@@ -3034,6 +3308,7 @@ class UserLogTableSeeder extends Seeder
             274 => 
             array (
                 'id' => '275',
+                'user_id' => '',
                 'ip' => '200.158.33.38',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3045,6 +3320,7 @@ class UserLogTableSeeder extends Seeder
             275 => 
             array (
                 'id' => '276',
+                'user_id' => '',
                 'ip' => '89.0.173.79',
                 'platform' => 'Mac OS X',
                 'browser' => 'Apple Safari',
@@ -3056,6 +3332,7 @@ class UserLogTableSeeder extends Seeder
             276 => 
             array (
                 'id' => '277',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -3067,6 +3344,7 @@ class UserLogTableSeeder extends Seeder
             277 => 
             array (
                 'id' => '278',
+                'user_id' => '',
                 'ip' => '94.77.199.98',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3078,6 +3356,7 @@ class UserLogTableSeeder extends Seeder
             278 => 
             array (
                 'id' => '279',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3089,6 +3368,7 @@ class UserLogTableSeeder extends Seeder
             279 => 
             array (
                 'id' => '280',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -3100,6 +3380,7 @@ class UserLogTableSeeder extends Seeder
             280 => 
             array (
                 'id' => '281',
+                'user_id' => '',
                 'ip' => '199.1.129.92',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3111,6 +3392,7 @@ class UserLogTableSeeder extends Seeder
             281 => 
             array (
                 'id' => '282',
+                'user_id' => '',
                 'ip' => '108.166.168.158',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -3122,6 +3404,7 @@ class UserLogTableSeeder extends Seeder
             282 => 
             array (
                 'id' => '283',
+                'user_id' => '',
                 'ip' => '66.249.74.114',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -3133,6 +3416,7 @@ class UserLogTableSeeder extends Seeder
             283 => 
             array (
                 'id' => '284',
+                'user_id' => '',
                 'ip' => '81.89.96.88',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -3144,6 +3428,7 @@ class UserLogTableSeeder extends Seeder
             284 => 
             array (
                 'id' => '285',
+                'user_id' => '',
                 'ip' => '203.133.170.8',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Internet Explorer',
@@ -3155,6 +3440,7 @@ class UserLogTableSeeder extends Seeder
             285 => 
             array (
                 'id' => '286',
+                'user_id' => '',
                 'ip' => '122.174.180.101',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3166,6 +3452,7 @@ class UserLogTableSeeder extends Seeder
             286 => 
             array (
                 'id' => '287',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3177,6 +3464,7 @@ class UserLogTableSeeder extends Seeder
             287 => 
             array (
                 'id' => '288',
+                'user_id' => '',
                 'ip' => '179.180.69.71',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3188,6 +3476,7 @@ class UserLogTableSeeder extends Seeder
             288 => 
             array (
                 'id' => '289',
+                'user_id' => '',
                 'ip' => '177.98.59.69',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3199,6 +3488,7 @@ class UserLogTableSeeder extends Seeder
             289 => 
             array (
                 'id' => '290',
+                'user_id' => '',
                 'ip' => '122.174.9.101',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3210,6 +3500,7 @@ class UserLogTableSeeder extends Seeder
             290 => 
             array (
                 'id' => '291',
+                'user_id' => '',
                 'ip' => '103.52.52.145',
                 'platform' => 'Mac OS X',
                 'browser' => 'Google Chrome',
@@ -3221,6 +3512,7 @@ class UserLogTableSeeder extends Seeder
             291 => 
             array (
                 'id' => '292',
+                'user_id' => '',
                 'ip' => '66.249.74.114',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -3232,6 +3524,7 @@ class UserLogTableSeeder extends Seeder
             292 => 
             array (
                 'id' => '293',
+                'user_id' => '',
                 'ip' => '177.138.191.248',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3243,6 +3536,7 @@ class UserLogTableSeeder extends Seeder
             293 => 
             array (
                 'id' => '294',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -3254,6 +3548,7 @@ class UserLogTableSeeder extends Seeder
             294 => 
             array (
                 'id' => '295',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 10',
                 'browser' => 'Google Chrome',
@@ -3265,6 +3560,7 @@ class UserLogTableSeeder extends Seeder
             295 => 
             array (
                 'id' => '296',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3276,6 +3572,7 @@ class UserLogTableSeeder extends Seeder
             296 => 
             array (
                 'id' => '297',
+                'user_id' => '',
                 'ip' => '23.232.235.214',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3287,6 +3584,7 @@ class UserLogTableSeeder extends Seeder
             297 => 
             array (
                 'id' => '298',
+                'user_id' => '',
                 'ip' => '67.55.84.212',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -3298,6 +3596,7 @@ class UserLogTableSeeder extends Seeder
             298 => 
             array (
                 'id' => '299',
+                'user_id' => '',
                 'ip' => '201.187.95.117',
                 'platform' => 'Windows XP',
                 'browser' => 'Mozilla Firefox',
@@ -3309,6 +3608,7 @@ class UserLogTableSeeder extends Seeder
             299 => 
             array (
                 'id' => '300',
+                'user_id' => '',
                 'ip' => '192.240.224.245',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3320,6 +3620,7 @@ class UserLogTableSeeder extends Seeder
             300 => 
             array (
                 'id' => '301',
+                'user_id' => '',
                 'ip' => '54.236.173.116',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3331,6 +3632,7 @@ class UserLogTableSeeder extends Seeder
             301 => 
             array (
                 'id' => '302',
+                'user_id' => '',
                 'ip' => '91.141.2.158',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -3342,6 +3644,7 @@ class UserLogTableSeeder extends Seeder
             302 => 
             array (
                 'id' => '303',
+                'user_id' => '',
                 'ip' => '117.216.111.251',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3353,6 +3656,7 @@ class UserLogTableSeeder extends Seeder
             303 => 
             array (
                 'id' => '304',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3364,6 +3668,7 @@ class UserLogTableSeeder extends Seeder
             304 => 
             array (
                 'id' => '305',
+                'user_id' => '',
                 'ip' => '45.55.133.241',
                 'platform' => 'Windows 7',
                 'browser' => 'Internet Explorer',
@@ -3375,6 +3680,7 @@ class UserLogTableSeeder extends Seeder
             305 => 
             array (
                 'id' => '306',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 10',
                 'browser' => 'Mozilla Firefox',
@@ -3386,6 +3692,7 @@ class UserLogTableSeeder extends Seeder
             306 => 
             array (
                 'id' => '307',
+                'user_id' => '',
                 'ip' => '80.79.119.252',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Mozilla Firefox',
@@ -3397,6 +3704,7 @@ class UserLogTableSeeder extends Seeder
             307 => 
             array (
                 'id' => '308',
+                'user_id' => '',
                 'ip' => '109.163.234.5',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -3408,6 +3716,7 @@ class UserLogTableSeeder extends Seeder
             308 => 
             array (
                 'id' => '309',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -3419,6 +3728,7 @@ class UserLogTableSeeder extends Seeder
             309 => 
             array (
                 'id' => '310',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3430,6 +3740,7 @@ class UserLogTableSeeder extends Seeder
             310 => 
             array (
                 'id' => '311',
+                'user_id' => '',
                 'ip' => '150.70.173.58',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -3441,6 +3752,7 @@ class UserLogTableSeeder extends Seeder
             311 => 
             array (
                 'id' => '312',
+                'user_id' => '',
                 'ip' => '150.70.97.98',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -3452,6 +3764,7 @@ class UserLogTableSeeder extends Seeder
             312 => 
             array (
                 'id' => '313',
+                'user_id' => '',
                 'ip' => '150.70.97.69',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -3463,6 +3776,7 @@ class UserLogTableSeeder extends Seeder
             313 => 
             array (
                 'id' => '314',
+                'user_id' => '',
                 'ip' => '66.249.74.110',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -3474,6 +3788,7 @@ class UserLogTableSeeder extends Seeder
             314 => 
             array (
                 'id' => '315',
+                'user_id' => '',
                 'ip' => '150.70.97.98',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -3485,6 +3800,7 @@ class UserLogTableSeeder extends Seeder
             315 => 
             array (
                 'id' => '316',
+                'user_id' => '',
                 'ip' => '107.189.60.70',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Mozilla Firefox',
@@ -3496,6 +3812,7 @@ class UserLogTableSeeder extends Seeder
             316 => 
             array (
                 'id' => '317',
+                'user_id' => '',
                 'ip' => '117.197.203.244',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3507,6 +3824,7 @@ class UserLogTableSeeder extends Seeder
             317 => 
             array (
                 'id' => '318',
+                'user_id' => '',
                 'ip' => '117.197.203.244',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3518,6 +3836,7 @@ class UserLogTableSeeder extends Seeder
             318 => 
             array (
                 'id' => '319',
+                'user_id' => '',
                 'ip' => '117.197.203.244',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3529,6 +3848,7 @@ class UserLogTableSeeder extends Seeder
             319 => 
             array (
                 'id' => '320',
+                'user_id' => '',
                 'ip' => '117.197.203.244',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3540,6 +3860,7 @@ class UserLogTableSeeder extends Seeder
             320 => 
             array (
                 'id' => '321',
+                'user_id' => '',
                 'ip' => '64.233.173.206',
                 'platform' => 'Android',
                 'browser' => 'Google Chrome',
@@ -3551,6 +3872,7 @@ class UserLogTableSeeder extends Seeder
             321 => 
             array (
                 'id' => '322',
+                'user_id' => '',
                 'ip' => '64.233.173.249',
                 'platform' => 'Android',
                 'browser' => 'Google Chrome',
@@ -3562,6 +3884,7 @@ class UserLogTableSeeder extends Seeder
             322 => 
             array (
                 'id' => '323',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3573,6 +3896,7 @@ class UserLogTableSeeder extends Seeder
             323 => 
             array (
                 'id' => '324',
+                'user_id' => '',
                 'ip' => '31.205.1.117',
                 'platform' => 'Windows 10',
                 'browser' => 'Google Chrome',
@@ -3584,6 +3908,7 @@ class UserLogTableSeeder extends Seeder
             324 => 
             array (
                 'id' => '325',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -3595,6 +3920,7 @@ class UserLogTableSeeder extends Seeder
             325 => 
             array (
                 'id' => '326',
+                'user_id' => '',
                 'ip' => '64.233.173.201',
                 'platform' => 'Android',
                 'browser' => 'Google Chrome',
@@ -3606,6 +3932,7 @@ class UserLogTableSeeder extends Seeder
             326 => 
             array (
                 'id' => '327',
+                'user_id' => '',
                 'ip' => '107.173.248.108',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -3617,6 +3944,7 @@ class UserLogTableSeeder extends Seeder
             327 => 
             array (
                 'id' => '328',
+                'user_id' => '',
                 'ip' => '64.233.173.196',
                 'platform' => 'Android',
                 'browser' => 'Google Chrome',
@@ -3628,6 +3956,7 @@ class UserLogTableSeeder extends Seeder
             328 => 
             array (
                 'id' => '329',
+                'user_id' => '',
                 'ip' => '64.233.173.206',
                 'platform' => 'Android',
                 'browser' => 'Google Chrome',
@@ -3639,6 +3968,7 @@ class UserLogTableSeeder extends Seeder
             329 => 
             array (
                 'id' => '330',
+                'user_id' => '',
                 'ip' => '117.216.106.213',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3650,6 +3980,7 @@ class UserLogTableSeeder extends Seeder
             330 => 
             array (
                 'id' => '331',
+                'user_id' => '',
                 'ip' => '117.216.106.213',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3661,6 +3992,7 @@ class UserLogTableSeeder extends Seeder
             331 => 
             array (
                 'id' => '332',
+                'user_id' => '',
                 'ip' => '150.70.173.43',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -3672,6 +4004,7 @@ class UserLogTableSeeder extends Seeder
             332 => 
             array (
                 'id' => '333',
+                'user_id' => '',
                 'ip' => '150.70.97.97',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -3683,6 +4016,7 @@ class UserLogTableSeeder extends Seeder
             333 => 
             array (
                 'id' => '334',
+                'user_id' => '',
                 'ip' => '150.70.173.39',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -3694,6 +4028,7 @@ class UserLogTableSeeder extends Seeder
             334 => 
             array (
                 'id' => '335',
+                'user_id' => '',
                 'ip' => '8.28.16.254',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -3705,6 +4040,7 @@ class UserLogTableSeeder extends Seeder
             335 => 
             array (
                 'id' => '336',
+                'user_id' => '',
                 'ip' => '117.216.106.213',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3716,6 +4052,7 @@ class UserLogTableSeeder extends Seeder
             336 => 
             array (
                 'id' => '337',
+                'user_id' => '',
                 'ip' => '93.115.95.204',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -3727,6 +4064,7 @@ class UserLogTableSeeder extends Seeder
             337 => 
             array (
                 'id' => '338',
+                'user_id' => '',
                 'ip' => '5.15.63.246',
                 'platform' => 'Ubuntu',
                 'browser' => 'Mozilla Firefox',
@@ -3738,6 +4076,7 @@ class UserLogTableSeeder extends Seeder
             338 => 
             array (
                 'id' => '339',
+                'user_id' => '',
                 'ip' => '5.15.63.246',
                 'platform' => 'Ubuntu',
                 'browser' => 'Mozilla Firefox',
@@ -3749,6 +4088,7 @@ class UserLogTableSeeder extends Seeder
             339 => 
             array (
                 'id' => '340',
+                'user_id' => '',
                 'ip' => '117.213.131.102',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3760,6 +4100,7 @@ class UserLogTableSeeder extends Seeder
             340 => 
             array (
                 'id' => '341',
+                'user_id' => '',
                 'ip' => '150.70.188.167',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -3771,6 +4112,7 @@ class UserLogTableSeeder extends Seeder
             341 => 
             array (
                 'id' => '342',
+                'user_id' => '',
                 'ip' => '187.56.148.76',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3782,6 +4124,7 @@ class UserLogTableSeeder extends Seeder
             342 => 
             array (
                 'id' => '343',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3793,6 +4136,7 @@ class UserLogTableSeeder extends Seeder
             343 => 
             array (
                 'id' => '344',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3804,6 +4148,7 @@ class UserLogTableSeeder extends Seeder
             344 => 
             array (
                 'id' => '345',
+                'user_id' => '',
                 'ip' => '212.18.225.173',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3815,6 +4160,7 @@ class UserLogTableSeeder extends Seeder
             345 => 
             array (
                 'id' => '346',
+                'user_id' => '',
                 'ip' => '23.94.54.70',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -3826,6 +4172,7 @@ class UserLogTableSeeder extends Seeder
             346 => 
             array (
                 'id' => '347',
+                'user_id' => '',
                 'ip' => '52.32.47.254',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3837,6 +4184,7 @@ class UserLogTableSeeder extends Seeder
             347 => 
             array (
                 'id' => '348',
+                'user_id' => '',
                 'ip' => '207.90.2.137',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3848,6 +4196,7 @@ class UserLogTableSeeder extends Seeder
             348 => 
             array (
                 'id' => '349',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3859,6 +4208,7 @@ class UserLogTableSeeder extends Seeder
             349 => 
             array (
                 'id' => '350',
+                'user_id' => '',
                 'ip' => '54.158.241.168',
                 'platform' => 'Ubuntu',
                 'browser' => 'Mozilla Firefox',
@@ -3870,6 +4220,7 @@ class UserLogTableSeeder extends Seeder
             350 => 
             array (
                 'id' => '351',
+                'user_id' => '',
                 'ip' => '187.10.200.117',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3881,6 +4232,7 @@ class UserLogTableSeeder extends Seeder
             351 => 
             array (
                 'id' => '352',
+                'user_id' => '',
                 'ip' => '52.27.45.5',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3892,6 +4244,7 @@ class UserLogTableSeeder extends Seeder
             352 => 
             array (
                 'id' => '353',
+                'user_id' => '',
                 'ip' => '187.2.110.188',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3903,6 +4256,7 @@ class UserLogTableSeeder extends Seeder
             353 => 
             array (
                 'id' => '354',
+                'user_id' => '',
                 'ip' => '52.10.37.249',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3914,6 +4268,7 @@ class UserLogTableSeeder extends Seeder
             354 => 
             array (
                 'id' => '355',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3925,6 +4280,7 @@ class UserLogTableSeeder extends Seeder
             355 => 
             array (
                 'id' => '356',
+                'user_id' => '',
                 'ip' => '66.249.74.110',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -3936,6 +4292,7 @@ class UserLogTableSeeder extends Seeder
             356 => 
             array (
                 'id' => '357',
+                'user_id' => '',
                 'ip' => '45.55.229.99',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -3947,6 +4304,7 @@ class UserLogTableSeeder extends Seeder
             357 => 
             array (
                 'id' => '358',
+                'user_id' => '',
                 'ip' => '80.79.125.106',
                 'platform' => 'Windows Vista',
                 'browser' => 'Mozilla Firefox',
@@ -3958,6 +4316,7 @@ class UserLogTableSeeder extends Seeder
             358 => 
             array (
                 'id' => '359',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3969,6 +4328,7 @@ class UserLogTableSeeder extends Seeder
             359 => 
             array (
                 'id' => '360',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -3980,6 +4340,7 @@ class UserLogTableSeeder extends Seeder
             360 => 
             array (
                 'id' => '361',
+                'user_id' => '',
                 'ip' => '150.70.97.130',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -3991,6 +4352,7 @@ class UserLogTableSeeder extends Seeder
             361 => 
             array (
                 'id' => '362',
+                'user_id' => '',
                 'ip' => '66.249.74.114',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -4002,6 +4364,7 @@ class UserLogTableSeeder extends Seeder
             362 => 
             array (
                 'id' => '363',
+                'user_id' => '',
                 'ip' => '188.165.206.188',
                 'platform' => 'Ubuntu',
                 'browser' => 'Mozilla Firefox',
@@ -4013,6 +4376,7 @@ class UserLogTableSeeder extends Seeder
             363 => 
             array (
                 'id' => '364',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4024,6 +4388,7 @@ class UserLogTableSeeder extends Seeder
             364 => 
             array (
                 'id' => '365',
+                'user_id' => '',
                 'ip' => '46.229.170.197',
                 'platform' => 'Linux',
                 'browser' => 'Mozilla Firefox',
@@ -4035,6 +4400,7 @@ class UserLogTableSeeder extends Seeder
             365 => 
             array (
                 'id' => '366',
+                'user_id' => '',
                 'ip' => '89.114.88.30',
                 'platform' => 'Windows 10',
                 'browser' => 'Google Chrome',
@@ -4046,6 +4412,7 @@ class UserLogTableSeeder extends Seeder
             366 => 
             array (
                 'id' => '367',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4057,6 +4424,7 @@ class UserLogTableSeeder extends Seeder
             367 => 
             array (
                 'id' => '368',
+                'user_id' => '',
                 'ip' => '52.2.209.254',
                 'platform' => 'Mac OS X',
                 'browser' => 'Google Chrome',
@@ -4068,6 +4436,7 @@ class UserLogTableSeeder extends Seeder
             368 => 
             array (
                 'id' => '369',
+                'user_id' => '',
                 'ip' => '54.87.110.27',
                 'platform' => 'Windows Vista',
                 'browser' => 'Mozilla Firefox',
@@ -4079,6 +4448,7 @@ class UserLogTableSeeder extends Seeder
             369 => 
             array (
                 'id' => '370',
+                'user_id' => '',
                 'ip' => '192.169.96.100',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -4090,6 +4460,7 @@ class UserLogTableSeeder extends Seeder
             370 => 
             array (
                 'id' => '371',
+                'user_id' => '',
                 'ip' => '192.169.96.100',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -4101,6 +4472,7 @@ class UserLogTableSeeder extends Seeder
             371 => 
             array (
                 'id' => '372',
+                'user_id' => '',
                 'ip' => '95.226.161.13',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Mozilla Firefox',
@@ -4112,6 +4484,7 @@ class UserLogTableSeeder extends Seeder
             372 => 
             array (
                 'id' => '373',
+                'user_id' => '',
                 'ip' => '188.49.19.190',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -4123,6 +4496,7 @@ class UserLogTableSeeder extends Seeder
             373 => 
             array (
                 'id' => '374',
+                'user_id' => '',
                 'ip' => '76.164.192.45',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4134,6 +4508,7 @@ class UserLogTableSeeder extends Seeder
             374 => 
             array (
                 'id' => '375',
+                'user_id' => '',
                 'ip' => '195.14.180.130',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -4145,6 +4520,7 @@ class UserLogTableSeeder extends Seeder
             375 => 
             array (
                 'id' => '376',
+                'user_id' => '',
                 'ip' => '114.44.208.139',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4156,6 +4532,7 @@ class UserLogTableSeeder extends Seeder
             376 => 
             array (
                 'id' => '377',
+                'user_id' => '',
                 'ip' => '52.27.7.158',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4167,6 +4544,7 @@ class UserLogTableSeeder extends Seeder
             377 => 
             array (
                 'id' => '378',
+                'user_id' => '',
                 'ip' => '41.150.87.57',
                 'platform' => 'Ubuntu',
                 'browser' => 'Google Chrome',
@@ -4178,6 +4556,7 @@ class UserLogTableSeeder extends Seeder
             378 => 
             array (
                 'id' => '379',
+                'user_id' => '',
                 'ip' => '45.55.137.222',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -4189,6 +4568,7 @@ class UserLogTableSeeder extends Seeder
             379 => 
             array (
                 'id' => '380',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4200,6 +4580,7 @@ class UserLogTableSeeder extends Seeder
             380 => 
             array (
                 'id' => '381',
+                'user_id' => '',
                 'ip' => '52.27.158.199',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4211,6 +4592,7 @@ class UserLogTableSeeder extends Seeder
             381 => 
             array (
                 'id' => '382',
+                'user_id' => '',
                 'ip' => '188.34.241.112',
                 'platform' => 'Windows 10',
                 'browser' => 'Google Chrome',
@@ -4222,6 +4604,7 @@ class UserLogTableSeeder extends Seeder
             382 => 
             array (
                 'id' => '383',
+                'user_id' => '',
                 'ip' => '150.70.97.98',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -4233,6 +4616,7 @@ class UserLogTableSeeder extends Seeder
             383 => 
             array (
                 'id' => '384',
+                'user_id' => '',
                 'ip' => '122.174.60.27',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -4244,6 +4628,7 @@ class UserLogTableSeeder extends Seeder
             384 => 
             array (
                 'id' => '385',
+                'user_id' => '',
                 'ip' => '122.174.60.27',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -4255,6 +4640,7 @@ class UserLogTableSeeder extends Seeder
             385 => 
             array (
                 'id' => '386',
+                'user_id' => '',
                 'ip' => '66.102.6.131',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -4266,6 +4652,7 @@ class UserLogTableSeeder extends Seeder
             386 => 
             array (
                 'id' => '387',
+                'user_id' => '',
                 'ip' => '45.55.135.226',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4277,6 +4664,7 @@ class UserLogTableSeeder extends Seeder
             387 => 
             array (
                 'id' => '388',
+                'user_id' => '',
                 'ip' => '95.122.32.254',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -4288,6 +4676,7 @@ class UserLogTableSeeder extends Seeder
             388 => 
             array (
                 'id' => '389',
+                'user_id' => '',
                 'ip' => '95.122.32.254',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -4299,6 +4688,7 @@ class UserLogTableSeeder extends Seeder
             389 => 
             array (
                 'id' => '390',
+                'user_id' => '',
                 'ip' => '216.38.216.197',
                 'platform' => 'Mac OS X',
                 'browser' => 'Google Chrome',
@@ -4310,6 +4700,7 @@ class UserLogTableSeeder extends Seeder
             390 => 
             array (
                 'id' => '391',
+                'user_id' => '',
                 'ip' => '216.38.216.197',
                 'platform' => 'Mac OS X',
                 'browser' => 'Google Chrome',
@@ -4321,6 +4712,7 @@ class UserLogTableSeeder extends Seeder
             391 => 
             array (
                 'id' => '392',
+                'user_id' => '',
                 'ip' => '216.163.188.225',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -4332,6 +4724,7 @@ class UserLogTableSeeder extends Seeder
             392 => 
             array (
                 'id' => '393',
+                'user_id' => '',
                 'ip' => '89.242.217.147',
                 'platform' => 'Windows XP',
                 'browser' => 'Mozilla Firefox',
@@ -4343,6 +4736,7 @@ class UserLogTableSeeder extends Seeder
             393 => 
             array (
                 'id' => '394',
+                'user_id' => '',
                 'ip' => '62.24.181.134',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -4354,6 +4748,7 @@ class UserLogTableSeeder extends Seeder
             394 => 
             array (
                 'id' => '395',
+                'user_id' => '',
                 'ip' => '66.249.79.195',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -4365,6 +4760,7 @@ class UserLogTableSeeder extends Seeder
             395 => 
             array (
                 'id' => '396',
+                'user_id' => '',
                 'ip' => '64.79.100.13',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4376,6 +4772,7 @@ class UserLogTableSeeder extends Seeder
             396 => 
             array (
                 'id' => '397',
+                'user_id' => '',
                 'ip' => '67.55.84.212',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -4387,6 +4784,7 @@ class UserLogTableSeeder extends Seeder
             397 => 
             array (
                 'id' => '398',
+                'user_id' => '',
                 'ip' => '66.249.66.104',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -4398,6 +4796,7 @@ class UserLogTableSeeder extends Seeder
             398 => 
             array (
                 'id' => '399',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4409,6 +4808,7 @@ class UserLogTableSeeder extends Seeder
             399 => 
             array (
                 'id' => '400',
+                'user_id' => '',
                 'ip' => '45.55.229.91',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -4420,6 +4820,7 @@ class UserLogTableSeeder extends Seeder
             400 => 
             array (
                 'id' => '401',
+                'user_id' => '',
                 'ip' => '133.130.54.151',
                 'platform' => 'Mac OS X',
                 'browser' => 'Google Chrome',
@@ -4431,6 +4832,7 @@ class UserLogTableSeeder extends Seeder
             401 => 
             array (
                 'id' => '402',
+                'user_id' => '',
                 'ip' => '178.192.173.130',
                 'platform' => 'Mac OS X',
                 'browser' => 'Apple Safari',
@@ -4442,6 +4844,7 @@ class UserLogTableSeeder extends Seeder
             402 => 
             array (
                 'id' => '403',
+                'user_id' => '',
                 'ip' => '66.249.79.195',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Google Chrome',
@@ -4453,6 +4856,7 @@ class UserLogTableSeeder extends Seeder
             403 => 
             array (
                 'id' => '404',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4464,6 +4868,7 @@ class UserLogTableSeeder extends Seeder
             404 => 
             array (
                 'id' => '405',
+                'user_id' => '',
                 'ip' => '64.246.165.170',
                 'platform' => 'Windows XP',
                 'browser' => 'Mozilla Firefox',
@@ -4475,6 +4880,7 @@ class UserLogTableSeeder extends Seeder
             405 => 
             array (
                 'id' => '406',
+                'user_id' => '',
                 'ip' => '182.65.183.85',
                 'platform' => 'Windows 10',
                 'browser' => 'Google Chrome',
@@ -4486,6 +4892,7 @@ class UserLogTableSeeder extends Seeder
             406 => 
             array (
                 'id' => '407',
+                'user_id' => '',
                 'ip' => '66.249.79.181',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -4497,6 +4904,7 @@ class UserLogTableSeeder extends Seeder
             407 => 
             array (
                 'id' => '408',
+                'user_id' => '',
                 'ip' => '176.31.24.29',
                 'platform' => 'Ubuntu',
                 'browser' => 'Google Chrome',
@@ -4508,6 +4916,7 @@ class UserLogTableSeeder extends Seeder
             408 => 
             array (
                 'id' => '409',
+                'user_id' => '',
                 'ip' => '94.23.217.201',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -4519,6 +4928,7 @@ class UserLogTableSeeder extends Seeder
             409 => 
             array (
                 'id' => '410',
+                'user_id' => '',
                 'ip' => '107.168.10.52',
                 'platform' => 'Windows 8',
                 'browser' => 'Google Chrome',
@@ -4530,6 +4940,7 @@ class UserLogTableSeeder extends Seeder
             410 => 
             array (
                 'id' => '411',
+                'user_id' => '',
                 'ip' => '107.173.218.171',
                 'platform' => 'Windows 8',
                 'browser' => 'Google Chrome',
@@ -4541,6 +4952,7 @@ class UserLogTableSeeder extends Seeder
             411 => 
             array (
                 'id' => '412',
+                'user_id' => '',
                 'ip' => '73.1.155.4',
                 'platform' => 'Windows 8',
                 'browser' => 'Google Chrome',
@@ -4552,6 +4964,7 @@ class UserLogTableSeeder extends Seeder
             412 => 
             array (
                 'id' => '413',
+                'user_id' => '',
                 'ip' => '66.249.74.114',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -4563,6 +4976,7 @@ class UserLogTableSeeder extends Seeder
             413 => 
             array (
                 'id' => '414',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4574,6 +4988,7 @@ class UserLogTableSeeder extends Seeder
             414 => 
             array (
                 'id' => '415',
+                'user_id' => '',
                 'ip' => '191.237.212.91',
                 'platform' => 'Windows 8',
                 'browser' => 'Internet Explorer',
@@ -4585,6 +5000,7 @@ class UserLogTableSeeder extends Seeder
             415 => 
             array (
                 'id' => '416',
+                'user_id' => '',
                 'ip' => '66.249.79.181',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -4596,6 +5012,7 @@ class UserLogTableSeeder extends Seeder
             416 => 
             array (
                 'id' => '417',
+                'user_id' => '',
                 'ip' => '45.55.133.242',
                 'platform' => 'Mac OS X',
                 'browser' => 'Apple Safari',
@@ -4607,6 +5024,7 @@ class UserLogTableSeeder extends Seeder
             417 => 
             array (
                 'id' => '418',
+                'user_id' => '',
                 'ip' => '96.126.98.111',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4618,6 +5036,7 @@ class UserLogTableSeeder extends Seeder
             418 => 
             array (
                 'id' => '419',
+                'user_id' => '',
                 'ip' => '192.99.10.173',
                 'platform' => 'Windows 10',
                 'browser' => 'Mozilla Firefox',
@@ -4629,6 +5048,7 @@ class UserLogTableSeeder extends Seeder
             419 => 
             array (
                 'id' => '420',
+                'user_id' => '',
                 'ip' => '197.250.195.116',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4640,6 +5060,7 @@ class UserLogTableSeeder extends Seeder
             420 => 
             array (
                 'id' => '421',
+                'user_id' => '',
                 'ip' => '46.229.170.197',
                 'platform' => 'Windows Server 2003/XP x64',
                 'browser' => 'Mozilla Firefox',
@@ -4651,6 +5072,7 @@ class UserLogTableSeeder extends Seeder
             421 => 
             array (
                 'id' => '422',
+                'user_id' => '',
                 'ip' => '45.32.131.61',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4662,6 +5084,7 @@ class UserLogTableSeeder extends Seeder
             422 => 
             array (
                 'id' => '423',
+                'user_id' => '',
                 'ip' => '112.133.244.105',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Mozilla Firefox',
@@ -4673,6 +5096,7 @@ class UserLogTableSeeder extends Seeder
             423 => 
             array (
                 'id' => '424',
+                'user_id' => '',
                 'ip' => '117.218.59.99',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4684,6 +5108,7 @@ class UserLogTableSeeder extends Seeder
             424 => 
             array (
                 'id' => '425',
+                'user_id' => '',
                 'ip' => '66.249.66.100',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -4695,6 +5120,7 @@ class UserLogTableSeeder extends Seeder
             425 => 
             array (
                 'id' => '426',
+                'user_id' => '',
                 'ip' => '182.65.72.99',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -4706,6 +5132,7 @@ class UserLogTableSeeder extends Seeder
             426 => 
             array (
                 'id' => '427',
+                'user_id' => '',
                 'ip' => '222.153.60.26',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4717,6 +5144,7 @@ class UserLogTableSeeder extends Seeder
             427 => 
             array (
                 'id' => '428',
+                'user_id' => '',
                 'ip' => '222.153.60.26',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4728,6 +5156,7 @@ class UserLogTableSeeder extends Seeder
             428 => 
             array (
                 'id' => '429',
+                'user_id' => '',
                 'ip' => '223.196.63.2',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -4739,6 +5168,7 @@ class UserLogTableSeeder extends Seeder
             429 => 
             array (
                 'id' => '430',
+                'user_id' => '',
                 'ip' => '223.196.63.2',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -4750,6 +5180,7 @@ class UserLogTableSeeder extends Seeder
             430 => 
             array (
                 'id' => '431',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4761,6 +5192,7 @@ class UserLogTableSeeder extends Seeder
             431 => 
             array (
                 'id' => '432',
+                'user_id' => '',
                 'ip' => '66.249.79.188',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Google Chrome',
@@ -4772,6 +5204,7 @@ class UserLogTableSeeder extends Seeder
             432 => 
             array (
                 'id' => '433',
+                'user_id' => '',
                 'ip' => '125.16.34.230',
                 'platform' => 'Windows 8',
                 'browser' => 'Google Chrome',
@@ -4783,6 +5216,7 @@ class UserLogTableSeeder extends Seeder
             433 => 
             array (
                 'id' => '434',
+                'user_id' => '',
                 'ip' => '66.249.79.188',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -4794,6 +5228,7 @@ class UserLogTableSeeder extends Seeder
             434 => 
             array (
                 'id' => '435',
+                'user_id' => '',
                 'ip' => '66.249.79.188',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Google Chrome',
@@ -4805,6 +5240,7 @@ class UserLogTableSeeder extends Seeder
             435 => 
             array (
                 'id' => '436',
+                'user_id' => '',
                 'ip' => '45.55.229.167',
                 'platform' => 'Windows 7',
                 'browser' => 'Internet Explorer',
@@ -4816,6 +5252,7 @@ class UserLogTableSeeder extends Seeder
             436 => 
             array (
                 'id' => '437',
+                'user_id' => '',
                 'ip' => '45.32.131.61',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4827,6 +5264,7 @@ class UserLogTableSeeder extends Seeder
             437 => 
             array (
                 'id' => '438',
+                'user_id' => '',
                 'ip' => '5.249.164.161',
                 'platform' => 'Windows XP',
                 'browser' => 'Mozilla Firefox',
@@ -4838,6 +5276,7 @@ class UserLogTableSeeder extends Seeder
             438 => 
             array (
                 'id' => '439',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4849,6 +5288,7 @@ class UserLogTableSeeder extends Seeder
             439 => 
             array (
                 'id' => '440',
+                'user_id' => '',
                 'ip' => '66.249.74.114',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -4860,6 +5300,7 @@ class UserLogTableSeeder extends Seeder
             440 => 
             array (
                 'id' => '441',
+                'user_id' => '',
                 'ip' => '203.133.170.7',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Internet Explorer',
@@ -4871,6 +5312,7 @@ class UserLogTableSeeder extends Seeder
             441 => 
             array (
                 'id' => '442',
+                'user_id' => '',
                 'ip' => '203.133.171.11',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Internet Explorer',
@@ -4882,6 +5324,7 @@ class UserLogTableSeeder extends Seeder
             442 => 
             array (
                 'id' => '443',
+                'user_id' => '',
                 'ip' => '37.156.74.31',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -4893,6 +5336,7 @@ class UserLogTableSeeder extends Seeder
             443 => 
             array (
                 'id' => '444',
+                'user_id' => '',
                 'ip' => '66.249.79.188',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -4904,6 +5348,7 @@ class UserLogTableSeeder extends Seeder
             444 => 
             array (
                 'id' => '445',
+                'user_id' => '',
                 'ip' => '94.23.217.201',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -4915,6 +5360,7 @@ class UserLogTableSeeder extends Seeder
             445 => 
             array (
                 'id' => '446',
+                'user_id' => '',
                 'ip' => '36.233.83.84',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -4926,6 +5372,7 @@ class UserLogTableSeeder extends Seeder
             446 => 
             array (
                 'id' => '447',
+                'user_id' => '',
                 'ip' => '36.233.83.84',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -4937,6 +5384,7 @@ class UserLogTableSeeder extends Seeder
             447 => 
             array (
                 'id' => '448',
+                'user_id' => '',
                 'ip' => '203.133.168.82',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Internet Explorer',
@@ -4948,6 +5396,7 @@ class UserLogTableSeeder extends Seeder
             448 => 
             array (
                 'id' => '449',
+                'user_id' => '',
                 'ip' => '203.133.169.225',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Internet Explorer',
@@ -4959,6 +5408,7 @@ class UserLogTableSeeder extends Seeder
             449 => 
             array (
                 'id' => '450',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -4970,6 +5420,7 @@ class UserLogTableSeeder extends Seeder
             450 => 
             array (
                 'id' => '451',
+                'user_id' => '',
                 'ip' => '192.99.10.173',
                 'platform' => 'Windows 10',
                 'browser' => 'Mozilla Firefox',
@@ -4981,6 +5432,7 @@ class UserLogTableSeeder extends Seeder
             451 => 
             array (
                 'id' => '452',
+                'user_id' => '',
                 'ip' => '66.249.74.112',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -4992,6 +5444,7 @@ class UserLogTableSeeder extends Seeder
             452 => 
             array (
                 'id' => '453',
+                'user_id' => '',
                 'ip' => '66.249.67.237',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -5003,6 +5456,7 @@ class UserLogTableSeeder extends Seeder
             453 => 
             array (
                 'id' => '454',
+                'user_id' => '',
                 'ip' => '23.232.235.62',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Mozilla Firefox',
@@ -5014,6 +5468,7 @@ class UserLogTableSeeder extends Seeder
             454 => 
             array (
                 'id' => '455',
+                'user_id' => '',
                 'ip' => '45.79.92.177',
                 'platform' => 'Mac OS X',
                 'browser' => 'Google Chrome',
@@ -5025,6 +5480,7 @@ class UserLogTableSeeder extends Seeder
             455 => 
             array (
                 'id' => '456',
+                'user_id' => '',
                 'ip' => '66.249.79.188',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Google Chrome',
@@ -5036,6 +5492,7 @@ class UserLogTableSeeder extends Seeder
             456 => 
             array (
                 'id' => '457',
+                'user_id' => '',
                 'ip' => '45.79.66.5',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5047,6 +5504,7 @@ class UserLogTableSeeder extends Seeder
             457 => 
             array (
                 'id' => '458',
+                'user_id' => '',
                 'ip' => '23.247.140.45',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Mozilla Firefox',
@@ -5058,6 +5516,7 @@ class UserLogTableSeeder extends Seeder
             458 => 
             array (
                 'id' => '459',
+                'user_id' => '',
                 'ip' => '45.55.133.239',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -5069,6 +5528,7 @@ class UserLogTableSeeder extends Seeder
             459 => 
             array (
                 'id' => '460',
+                'user_id' => '',
                 'ip' => '104.236.239.159',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -5080,6 +5540,7 @@ class UserLogTableSeeder extends Seeder
             460 => 
             array (
                 'id' => '461',
+                'user_id' => '',
                 'ip' => '192.255.101.215',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Google Chrome',
@@ -5091,6 +5552,7 @@ class UserLogTableSeeder extends Seeder
             461 => 
             array (
                 'id' => '462',
+                'user_id' => '',
                 'ip' => '31.220.30.64',
                 'platform' => 'Linux',
                 'browser' => 'Mozilla Firefox',
@@ -5102,6 +5564,7 @@ class UserLogTableSeeder extends Seeder
             462 => 
             array (
                 'id' => '463',
+                'user_id' => '',
                 'ip' => '104.156.230.231',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5113,6 +5576,7 @@ class UserLogTableSeeder extends Seeder
             463 => 
             array (
                 'id' => '464',
+                'user_id' => '',
                 'ip' => '203.133.171.12',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Internet Explorer',
@@ -5124,6 +5588,7 @@ class UserLogTableSeeder extends Seeder
             464 => 
             array (
                 'id' => '465',
+                'user_id' => '',
                 'ip' => '203.133.168.18',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Internet Explorer',
@@ -5135,6 +5600,7 @@ class UserLogTableSeeder extends Seeder
             465 => 
             array (
                 'id' => '466',
+                'user_id' => '',
                 'ip' => '37.156.74.42',
                 'platform' => 'Linux',
                 'browser' => 'Mozilla Firefox',
@@ -5146,6 +5612,7 @@ class UserLogTableSeeder extends Seeder
             466 => 
             array (
                 'id' => '467',
+                'user_id' => '',
                 'ip' => '106.208.238.117',
                 'platform' => 'Android',
                 'browser' => 'Apple Safari',
@@ -5157,6 +5624,7 @@ class UserLogTableSeeder extends Seeder
             467 => 
             array (
                 'id' => '468',
+                'user_id' => '',
                 'ip' => '106.208.238.117',
                 'platform' => 'Android',
                 'browser' => 'Apple Safari',
@@ -5168,6 +5636,7 @@ class UserLogTableSeeder extends Seeder
             468 => 
             array (
                 'id' => '469',
+                'user_id' => '',
                 'ip' => '106.208.238.117',
                 'platform' => 'Android',
                 'browser' => 'Apple Safari',
@@ -5179,6 +5648,7 @@ class UserLogTableSeeder extends Seeder
             469 => 
             array (
                 'id' => '470',
+                'user_id' => '',
                 'ip' => '88.160.113.18',
                 'platform' => 'Windows 10',
                 'browser' => 'Mozilla Firefox',
@@ -5190,6 +5660,7 @@ class UserLogTableSeeder extends Seeder
             470 => 
             array (
                 'id' => '471',
+                'user_id' => '',
                 'ip' => '66.249.69.63',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -5201,6 +5672,7 @@ class UserLogTableSeeder extends Seeder
             471 => 
             array (
                 'id' => '472',
+                'user_id' => '',
                 'ip' => '62.210.37.113',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -5212,6 +5684,7 @@ class UserLogTableSeeder extends Seeder
             472 => 
             array (
                 'id' => '473',
+                'user_id' => '',
                 'ip' => '54.84.139.195',
                 'platform' => 'Linux',
                 'browser' => 'Apple Safari',
@@ -5223,6 +5696,7 @@ class UserLogTableSeeder extends Seeder
             473 => 
             array (
                 'id' => '474',
+                'user_id' => '',
                 'ip' => '104.156.230.231',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5234,6 +5708,7 @@ class UserLogTableSeeder extends Seeder
             474 => 
             array (
                 'id' => '475',
+                'user_id' => '',
                 'ip' => '66.249.69.55',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Google Chrome',
@@ -5245,6 +5720,7 @@ class UserLogTableSeeder extends Seeder
             475 => 
             array (
                 'id' => '476',
+                'user_id' => '',
                 'ip' => '186.215.202.221',
                 'platform' => 'Windows 8',
                 'browser' => 'Internet Explorer',
@@ -5256,6 +5732,7 @@ class UserLogTableSeeder extends Seeder
             476 => 
             array (
                 'id' => '477',
+                'user_id' => '',
                 'ip' => '122.163.252.8',
                 'platform' => 'Windows 8',
                 'browser' => 'Google Chrome',
@@ -5267,6 +5744,7 @@ class UserLogTableSeeder extends Seeder
             477 => 
             array (
                 'id' => '478',
+                'user_id' => '',
                 'ip' => '122.163.252.8',
                 'platform' => 'Windows 8',
                 'browser' => 'Google Chrome',
@@ -5278,6 +5756,7 @@ class UserLogTableSeeder extends Seeder
             478 => 
             array (
                 'id' => '479',
+                'user_id' => '',
                 'ip' => '64.246.165.10',
                 'platform' => 'Windows XP',
                 'browser' => 'Mozilla Firefox',
@@ -5289,6 +5768,7 @@ class UserLogTableSeeder extends Seeder
             479 => 
             array (
                 'id' => '480',
+                'user_id' => '',
                 'ip' => '122.172.76.189',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5300,6 +5780,7 @@ class UserLogTableSeeder extends Seeder
             480 => 
             array (
                 'id' => '481',
+                'user_id' => '',
                 'ip' => '207.90.2.10',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5311,6 +5792,7 @@ class UserLogTableSeeder extends Seeder
             481 => 
             array (
                 'id' => '482',
+                'user_id' => '',
                 'ip' => '23.232.145.164',
                 'platform' => 'Ubuntu',
                 'browser' => 'Mozilla Firefox',
@@ -5322,6 +5804,7 @@ class UserLogTableSeeder extends Seeder
             482 => 
             array (
                 'id' => '483',
+                'user_id' => '',
                 'ip' => '66.249.75.1',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -5333,6 +5816,7 @@ class UserLogTableSeeder extends Seeder
             483 => 
             array (
                 'id' => '484',
+                'user_id' => '',
                 'ip' => '192.240.224.136',
                 'platform' => 'Ubuntu',
                 'browser' => 'Mozilla Firefox',
@@ -5344,6 +5828,7 @@ class UserLogTableSeeder extends Seeder
             484 => 
             array (
                 'id' => '485',
+                'user_id' => '',
                 'ip' => '188.240.88.21',
                 'platform' => 'Windows 8',
                 'browser' => 'Opera',
@@ -5355,6 +5840,7 @@ class UserLogTableSeeder extends Seeder
             485 => 
             array (
                 'id' => '486',
+                'user_id' => '',
                 'ip' => '188.240.88.21',
                 'platform' => 'Windows 8',
                 'browser' => 'Opera',
@@ -5366,6 +5852,7 @@ class UserLogTableSeeder extends Seeder
             486 => 
             array (
                 'id' => '487',
+                'user_id' => '',
                 'ip' => '203.133.169.25',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Internet Explorer',
@@ -5377,6 +5864,7 @@ class UserLogTableSeeder extends Seeder
             487 => 
             array (
                 'id' => '488',
+                'user_id' => '',
                 'ip' => '66.249.69.63',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -5388,6 +5876,7 @@ class UserLogTableSeeder extends Seeder
             488 => 
             array (
                 'id' => '489',
+                'user_id' => '',
                 'ip' => '23.232.176.183',
                 'platform' => 'Windows 8',
                 'browser' => 'Opera',
@@ -5399,6 +5888,7 @@ class UserLogTableSeeder extends Seeder
             489 => 
             array (
                 'id' => '490',
+                'user_id' => '',
                 'ip' => '79.68.227.208',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5410,6 +5900,7 @@ class UserLogTableSeeder extends Seeder
             490 => 
             array (
                 'id' => '491',
+                'user_id' => '',
                 'ip' => '75.127.11.125',
                 'platform' => 'Windows 8',
                 'browser' => 'Opera',
@@ -5421,6 +5912,7 @@ class UserLogTableSeeder extends Seeder
             491 => 
             array (
                 'id' => '492',
+                'user_id' => '',
                 'ip' => '54.145.165.199',
                 'platform' => 'Windows Vista',
                 'browser' => 'Mozilla Firefox',
@@ -5432,6 +5924,7 @@ class UserLogTableSeeder extends Seeder
             492 => 
             array (
                 'id' => '493',
+                'user_id' => '',
                 'ip' => '103.251.83.62',
                 'platform' => 'Windows XP',
                 'browser' => 'Internet Explorer',
@@ -5443,6 +5936,7 @@ class UserLogTableSeeder extends Seeder
             493 => 
             array (
                 'id' => '494',
+                'user_id' => '',
                 'ip' => '130.185.139.213',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -5454,6 +5948,7 @@ class UserLogTableSeeder extends Seeder
             494 => 
             array (
                 'id' => '495',
+                'user_id' => '',
                 'ip' => '23.232.176.140',
                 'platform' => 'Mac OS X',
                 'browser' => 'Mozilla Firefox',
@@ -5465,6 +5960,7 @@ class UserLogTableSeeder extends Seeder
             495 => 
             array (
                 'id' => '496',
+                'user_id' => '',
                 'ip' => '182.65.216.230',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5476,6 +5972,7 @@ class UserLogTableSeeder extends Seeder
             496 => 
             array (
                 'id' => '497',
+                'user_id' => '',
                 'ip' => '69.58.178.57',
                 'platform' => 'Ubuntu',
                 'browser' => 'Mozilla Firefox',
@@ -5487,6 +5984,7 @@ class UserLogTableSeeder extends Seeder
             497 => 
             array (
                 'id' => '498',
+                'user_id' => '',
                 'ip' => '46.229.170.197',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -5498,6 +5996,7 @@ class UserLogTableSeeder extends Seeder
             498 => 
             array (
                 'id' => '499',
+                'user_id' => '',
                 'ip' => '45.33.61.138',
                 'platform' => 'Mac OS X',
                 'browser' => 'Google Chrome',
@@ -5509,6 +6008,7 @@ class UserLogTableSeeder extends Seeder
             499 => 
             array (
                 'id' => '500',
+                'user_id' => '',
                 'ip' => '38.100.21.171',
                 'platform' => 'Windows Server 2003/XP x64',
                 'browser' => 'Internet Explorer',
@@ -5522,6 +6022,7 @@ class UserLogTableSeeder extends Seeder
             0 => 
             array (
                 'id' => '501',
+                'user_id' => '',
                 'ip' => '66.249.75.112',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -5533,6 +6034,7 @@ class UserLogTableSeeder extends Seeder
             1 => 
             array (
                 'id' => '502',
+                'user_id' => '',
                 'ip' => '66.249.69.63',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Google Chrome',
@@ -5544,6 +6046,7 @@ class UserLogTableSeeder extends Seeder
             2 => 
             array (
                 'id' => '503',
+                'user_id' => '',
                 'ip' => '45.55.229.154',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -5555,6 +6058,7 @@ class UserLogTableSeeder extends Seeder
             3 => 
             array (
                 'id' => '504',
+                'user_id' => '',
                 'ip' => '45.33.104.237',
                 'platform' => 'Windows 10',
                 'browser' => 'Google Chrome',
@@ -5566,6 +6070,7 @@ class UserLogTableSeeder extends Seeder
             4 => 
             array (
                 'id' => '505',
+                'user_id' => '',
                 'ip' => '191.205.17.128',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5577,6 +6082,7 @@ class UserLogTableSeeder extends Seeder
             5 => 
             array (
                 'id' => '506',
+                'user_id' => '',
                 'ip' => '66.249.73.205',
                 'platform' => 'iPhone',
                 'browser' => 'Apple Safari',
@@ -5588,6 +6094,7 @@ class UserLogTableSeeder extends Seeder
             6 => 
             array (
                 'id' => '507',
+                'user_id' => '',
                 'ip' => '203.133.169.22',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Internet Explorer',
@@ -5599,6 +6106,7 @@ class UserLogTableSeeder extends Seeder
             7 => 
             array (
                 'id' => '508',
+                'user_id' => '',
                 'ip' => '212.47.238.193',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -5610,6 +6118,7 @@ class UserLogTableSeeder extends Seeder
             8 => 
             array (
                 'id' => '509',
+                'user_id' => '',
                 'ip' => '104.207.150.177',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5621,6 +6130,7 @@ class UserLogTableSeeder extends Seeder
             9 => 
             array (
                 'id' => '510',
+                'user_id' => '',
                 'ip' => '66.249.73.213',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Google Chrome',
@@ -5632,6 +6142,7 @@ class UserLogTableSeeder extends Seeder
             10 => 
             array (
                 'id' => '511',
+                'user_id' => '',
                 'ip' => '89.187.142.208',
                 'platform' => 'Linux',
                 'browser' => 'Google Chrome',
@@ -5643,6 +6154,7 @@ class UserLogTableSeeder extends Seeder
             11 => 
             array (
                 'id' => '512',
+                'user_id' => '',
                 'ip' => '5.249.164.23',
                 'platform' => 'Windows 8.1',
                 'browser' => 'Google Chrome',
@@ -5654,6 +6166,7 @@ class UserLogTableSeeder extends Seeder
             12 => 
             array (
                 'id' => '513',
+                'user_id' => '',
                 'ip' => '179.215.254.118',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5665,6 +6178,7 @@ class UserLogTableSeeder extends Seeder
             13 => 
             array (
                 'id' => '514',
+                'user_id' => '',
                 'ip' => '186.118.238.59',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5676,6 +6190,7 @@ class UserLogTableSeeder extends Seeder
             14 => 
             array (
                 'id' => '515',
+                'user_id' => '',
                 'ip' => '191.209.20.46',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5687,6 +6202,7 @@ class UserLogTableSeeder extends Seeder
             15 => 
             array (
                 'id' => '516',
+                'user_id' => '',
                 'ip' => '23.95.244.103',
                 'platform' => 'Mac OS X',
                 'browser' => 'Google Chrome',
@@ -5698,6 +6214,7 @@ class UserLogTableSeeder extends Seeder
             16 => 
             array (
                 'id' => '517',
+                'user_id' => '',
                 'ip' => '179.180.100.246',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5709,6 +6226,7 @@ class UserLogTableSeeder extends Seeder
             17 => 
             array (
                 'id' => '518',
+                'user_id' => '',
                 'ip' => '138.59.208.94',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5720,6 +6238,7 @@ class UserLogTableSeeder extends Seeder
             18 => 
             array (
                 'id' => '519',
+                'user_id' => '',
                 'ip' => '45.55.133.238',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5731,6 +6250,7 @@ class UserLogTableSeeder extends Seeder
             19 => 
             array (
                 'id' => '520',
+                'user_id' => '',
                 'ip' => '203.133.170.90',
                 'platform' => 'Unknown OS Platform',
                 'browser' => 'Internet Explorer',
@@ -5742,6 +6262,7 @@ class UserLogTableSeeder extends Seeder
             20 => 
             array (
                 'id' => '521',
+                'user_id' => '',
                 'ip' => '94.23.217.201',
                 'platform' => 'Windows 7',
                 'browser' => 'Mozilla Firefox',
@@ -5753,6 +6274,7 @@ class UserLogTableSeeder extends Seeder
             21 => 
             array (
                 'id' => '522',
+                'user_id' => '',
                 'ip' => '45.32.129.200',
                 'platform' => 'Windows 7',
                 'browser' => 'Google Chrome',
@@ -5760,6 +6282,162 @@ class UserLogTableSeeder extends Seeder
                 'status' => '0',
                 'created_at' => '2015-12-15 05:21:38',
                 'updated_at' => '2015-12-15 05:21:38',
+            ),
+            22 => 
+            array (
+                'id' => '523',
+                'user_id' => '1',
+                'ip' => '106.51.3.181',
+                'platform' => 'Linux',
+                'browser' => 'Google Chrome',
+                'version' => '51.0.2704.84',
+                'status' => '1',
+                'created_at' => '2016-06-13 04:24:42',
+                'updated_at' => '2016-06-13 04:24:42',
+            ),
+            23 => 
+            array (
+                'id' => '524',
+                'user_id' => '1',
+                'ip' => '49.207.185.31',
+                'platform' => 'Windows 7',
+                'browser' => 'Google Chrome',
+                'version' => '51.0.2704.84',
+                'status' => '1',
+                'created_at' => '2016-06-13 10:34:00',
+                'updated_at' => '2016-06-13 10:34:00',
+            ),
+            24 => 
+            array (
+                'id' => '525',
+                'user_id' => '1',
+                'ip' => '106.51.3.181',
+                'platform' => 'Linux',
+                'browser' => 'Google Chrome',
+                'version' => '51.0.2704.84',
+                'status' => '1',
+                'created_at' => '2016-06-13 10:37:41',
+                'updated_at' => '2016-06-13 10:37:41',
+            ),
+            25 => 
+            array (
+                'id' => '526',
+                'user_id' => '1',
+                'ip' => '49.207.185.31',
+                'platform' => 'Windows 7',
+                'browser' => 'Google Chrome',
+                'version' => '51.0.2704.84',
+                'status' => '1',
+                'created_at' => '2016-06-13 10:38:40',
+                'updated_at' => '2016-06-13 10:38:40',
+            ),
+            26 => 
+            array (
+                'id' => '527',
+                'user_id' => '1',
+                'ip' => '117.231.94.139',
+                'platform' => 'Linux',
+                'browser' => 'Google Chrome',
+                'version' => '51.0.2704.84',
+                'status' => '1',
+                'created_at' => '2016-06-19 18:19:29',
+                'updated_at' => '2016-06-19 18:19:29',
+            ),
+            27 => 
+            array (
+                'id' => '528',
+                'user_id' => '1',
+                'ip' => '106.51.3.181',
+                'platform' => 'Linux',
+                'browser' => 'Google Chrome',
+                'version' => '51.0.2704.84',
+                'status' => '1',
+                'created_at' => '2016-06-20 05:55:08',
+                'updated_at' => '2016-06-20 05:55:08',
+            ),
+            28 => 
+            array (
+                'id' => '529',
+                'user_id' => '1',
+                'ip' => '182.65.183.244',
+                'platform' => 'Linux',
+                'browser' => 'Google Chrome',
+                'version' => '51.0.2704.106',
+                'status' => '1',
+                'created_at' => '2016-07-18 08:12:35',
+                'updated_at' => '2016-07-18 08:12:35',
+            ),
+            29 => 
+            array (
+                'id' => '530',
+                'user_id' => '1',
+                'ip' => '106.51.3.181',
+                'platform' => 'Linux',
+                'browser' => 'Google Chrome',
+                'version' => '51.0.2704.106',
+                'status' => '1',
+                'created_at' => '2016-07-21 06:15:28',
+                'updated_at' => '2016-07-21 06:15:28',
+            ),
+            30 => 
+            array (
+                'id' => '531',
+                'user_id' => '1',
+                'ip' => '106.51.3.181',
+                'platform' => 'Linux',
+                'browser' => 'Google Chrome',
+                'version' => '51.0.2704.106',
+                'status' => '1',
+                'created_at' => '2016-07-22 13:36:17',
+                'updated_at' => '2016-07-22 13:36:17',
+            ),
+            31 => 
+            array (
+                'id' => '532',
+                'user_id' => '1',
+                'ip' => '117.250.123.196',
+                'platform' => 'Linux',
+                'browser' => 'Google Chrome',
+                'version' => '51.0.2704.106',
+                'status' => '1',
+                'created_at' => '2016-07-26 16:27:08',
+                'updated_at' => '2016-07-26 16:27:08',
+            ),
+            32 => 
+            array (
+                'id' => '533',
+                'user_id' => '1',
+                'ip' => '182.65.52.196',
+                'platform' => 'Linux',
+                'browser' => 'Google Chrome',
+                'version' => '51.0.2704.106',
+                'status' => '1',
+                'created_at' => '2016-07-27 07:01:07',
+                'updated_at' => '2016-07-27 07:01:07',
+            ),
+            33 => 
+            array (
+                'id' => '534',
+                'user_id' => '1',
+                'ip' => '106.51.3.181',
+                'platform' => 'Linux',
+                'browser' => 'Google Chrome',
+                'version' => '51.0.2704.106',
+                'status' => '1',
+                'created_at' => '2016-08-02 14:14:46',
+                'updated_at' => '2016-08-02 14:14:46',
+            ),
+            34 => 
+            array (
+                'id' => '535',
+                'user_id' => '1',
+                'ip' => '106.51.3.181',
+                'platform' => 'Linux',
+                'browser' => 'Google Chrome',
+                'version' => '51.0.2704.106',
+                'status' => '1',
+                'created_at' => '2016-08-03 16:53:30',
+                'updated_at' => '2016-08-03 16:53:30',
             ),
         ));
         

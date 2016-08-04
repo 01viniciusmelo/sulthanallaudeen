@@ -177,6 +177,27 @@ class ContactmailTableSeeder extends Seeder
                 'created_at' => '2016-04-28 13:18:07',
                 'updated_at' => '2016-04-28 13:18:07',
             ),
+            16 => 
+            array (
+                'id' => '17',
+                'user_email' => 'test@tet.com',
+                'user_message' => 'heloo, how r u 
+',
+                'message_status' => '0',
+                'status' => '0',
+                'created_at' => '2016-08-03 15:11:46',
+                'updated_at' => '2016-08-03 15:11:46',
+            ),
+            17 => 
+            array (
+                'id' => '18',
+                'user_email' => 'test@t.com',
+                'user_message' => 'test',
+                'message_status' => '0',
+                'status' => '0',
+                'created_at' => '2016-08-03 15:12:04',
+                'updated_at' => '2016-08-03 15:12:04',
+            ),
         ));
         
         
