@@ -313,16 +313,17 @@ class Controller extends BaseController {
     #Cron Job
 
     public function cron() {
-        #Body of Cron
-        echo 'Running Cron Job...';
-        echo '...';
-        echo 'Running Finished.';
+        echo 'Cron Job Started at '.date("Y-m-d H:i:s").'<br>';
+        #Calling Sub Cron
+        $this->subCron();
+        echo nl2br("...\n");
+        echo 'Cron Job Finished at '.date("Y-m-d H:i:s");
     }
 
     #Sub Cron
 
     public function subCron() {
-        #Body of Sub Cron
+        echo 'Running Sub Cron<br>';
     }
 
     #End of Sub Cron
