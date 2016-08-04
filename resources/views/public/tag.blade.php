@@ -55,7 +55,7 @@
                         @foreach ($tags as $tag)
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                                <li>a<a href="{{ asset('/tag').'/'.$tag->tag_title }}"> {{ $tag->tag_title }} <span class="badge">{{ $count = BlogTag::where('tag_id', $tag->id)->count() }}</span></a></li>
+                                <li><a href="{{ asset('/tag').'/'.$tag->tag_title }}"> {{ $tag->tag_title }} <span class="badge">{{ $count = BlogTag::where('tag_id', $tag->id)->count() }}</span></a></li>
                             </ul>
                         </div>
                         @endforeach
