@@ -314,6 +314,9 @@ class Controller extends BaseController {
 
     public function cron() {
         #Body of Cron
+        echo 'Running Cron Job...';
+        echo '...';
+        echo 'Running Finished.';
     }
 
     #Sub Cron
