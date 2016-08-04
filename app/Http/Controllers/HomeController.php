@@ -61,7 +61,7 @@ class HomeController extends Controller {
     public function adminDashboard() {
         $blogCount = Blog::all()->count();
         $tagCount = Tag::all()->count();
-        $contactCount = ContactMails::where('messageStatus', 0)->count();
+        $contactCount = ContactMails::where('message_status', 0)->count();
         $totalCount = ContactMails::all()->count();
         $totalHit = UserLog::all()->count();
         return view('admin.dashBoard')->with('blogCount', $blogCount)->with('blogCount', $blogCount)->with('tagCount', $tagCount)->with('contactCount', $contactCount)->with('totalCount', $totalCount)->with('totalHit', $totalHit);
@@ -70,14 +70,14 @@ class HomeController extends Controller {
     #List Blogs
 
     public function listBlog() {
-        $blogs = Blog::get(['id', 'blogTitle', 'blogDate', 'blogUrl']);
+        $blogs = Blog::get(['id', 'blog_title', 'blog_date', 'blog_url']);
         return view('admin.blog.listBlog')->with('blogs', $blogs);
     }
 
     #Write Blog
 
     public function writeBlog() {
-        $tags = Tag::where('tagStatus', 1)->get();
+        $tags = Tag::where('tag_status', 1)->get();
         return view('admin.blog.writeBlog')->with('tags', $tags);
     }
 
@@ -85,9 +85,9 @@ class HomeController extends Controller {
 
     public function postBlog() {
         $blogData = Input::except('blogTags');
-        $blogData['blogAuthor'] = 1;
-        if ($blogData['blogDate'] == '') {
-            $blogData['blogDate'] = date('Y-m-d H:i:s');
+        $blogData['blog_author'] = 1;
+        if ($blogData['blog_date'] == '') {
+            $blogData['blog_date'] = date('Y-m-d H:i:s');
         }
         $validation = Validator::make($blogData, Blog::$postBlog);
         if ($validation->passes()) {
@@ -112,7 +112,7 @@ class HomeController extends Controller {
 
     public function editBlog($id) {
         $blogData = Blog::where('id', $id)->first();
-        $allTags = Tag::where('tagStatus', 1)->get();
+        $allTags = Tag::where('tag_status', 1)->get();
         $blogTags = BlogTag::where('blog_id', $id)->get();
         return view('admin.blog.editBlog')->with('blogData', $blogData)->with('allTags', $allTags)->with('blogTag', $blogTags);
     }
@@ -121,8 +121,8 @@ class HomeController extends Controller {
 
     public function updateBlog() {
         $blogData = Input::except('blogTags', '_token');
-        if ($blogData['blogDate'] == '') {
-            unset($blogData['blogDate']);
+        if ($blogData['blog_date'] == '') {
+            unset($blogData['blog_date']);
         }
         $validation = Validator::make($blogData, Blog::$updateBlog);
         if ($validation->passes()) {
@@ -303,25 +303,25 @@ class HomeController extends Controller {
 
     public function messageMarkAsRead() {
         $contactMail = ContactMails::where('id', Input::get('id'))->first();
-        if ($contactMail['messageStatus'] == 0) {
-            $status['messageStatus'] = 1;
+        if ($contactMail['message_status'] == 0) {
+            $status['message_status'] = 1;
             ContactMails::where('id', Input::get('id'))->update($status);
         } else {
-            $status['messageStatus'] = 0;
+            $status['message_status'] = 0;
             ContactMails::where('id', Input::get('id'))->update($status);
         }
-        $Response = array('success' => 1, 'status' => $status['messageStatus']);
+        $Response = array('success' => 1, 'status' => $status['message_status']);
         return $Response;
     }
 
     public function notificationAreaMessageList() {
-        $unReadMessages = ContactMails::where('messageStatus', 0)->limit(3)->get();
+        $unReadMessages = ContactMails::where('message_status', 1)->limit(3)->get();
         $Response = array('success' => '1', 'message' => $unReadMessages, 'count' => count($unReadMessages));
         return $Response;
     }
 
     public function getMessageCount() {
-        $messageCount = ContactMails::all()->where('messageStatus', 0)->count();
+        $messageCount = ContactMails::all()->where('message_status', 0)->count();
         $Response = array('success' => '1', 'messageCount' => $messageCount);
         return $Response;
     }

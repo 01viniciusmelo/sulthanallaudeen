@@ -1,8 +1,8 @@
 <?php
 
-#For Mobile Service
+#Allowing Cross Origin Temporarily for Mobile Service
 header('Access-Control-Allow-Origin: *');
-header( 'Access-Control-Allow-Headers: Authorization, Content-Type' );
+header('Access-Control-Allow-Headers: Authorization, Content-Type');
 /*
   |--------------------------------------------------------------------------
   | Application Routes
@@ -99,12 +99,14 @@ Route::group(['middleware' => ['web']], function () {
 //Route::get('sendPushMsg', 'AppController@sendPush');
 });
 
-Route::get("/mail", function(){
+Route::get("/mail", function() {
 
-   return View::make("admin.mail.mail");
+    return View::make("admin.mail.mail");
 });
 
-
+#Cron Job
+Route::get('cron', 'Controller@cron');
+#End of Cron Job
 
 #Default Auth Route
 Route::controllers([

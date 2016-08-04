@@ -32,15 +32,25 @@
                             </thead>
                             <tbody>
                                 @foreach($mails as $mail)
+                                <?php
+                                if($mail->message_status==1)
+                                {
+                                    $status = "Unread";
+                                }
+                                else
+                                {
+                                    $status = "Read";
+                                }
+                                ?>
                                 <tr class="odd gradeX">
-                                    <td>{{ $mail-> id}}</td>
-                                    <td>{{ $mail-> userEmail}}</td>
-                                    <td>{{ $mail-> messageStatus}}</td>
-                                    <td>{{ $mail-> created_at}}</td>
+                                    <td>{{ $mail->id}}</td>
+                                    <td>{{ $mail->user_email}}</td>
+                                    <td id="msg__{{ $mail->id}}">{{ $status}}</td>
+                                    <td>{{ $mail->created_at}}</td>
                                     <td>
                                         <button type="button" class="btn btn-success readMessage" id='{{ $mail->id }}' data-toggle="modal" data-target="#myModal">Read</button>
                                         <?php
-                                        if ($mail->messageStatus == 0) {
+                                        if ($mail->message_status == 0) {
                                             ?>
                                             <button type="button" class="read btn-info btn-circle" id='msg_{{ $mail->id }}'><i class="fa fa-check"></i></button>
                                             <?php
@@ -108,8 +118,8 @@ $.post( "getMessage", { _token : _token, id : id})
 
     if (result.success==1)
     {
-        $("#mailTitle").html('<font color="green">From : </font>'+result.mailData.userEmail+' <font color="green">Receied at</font> : '+result.mailData.created_at);
-        $("#mailContent").html('<font color="green">Message : </font>'+result.mailData.userMessage);
+        $("#mailTitle").html('<font color="green">From : </font>'+result.mailData.user_email+' <font color="green">Receied at</font> : '+result.mailData.created_at);
+        $("#mailContent").html('<font color="green">Message : </font>'+result.mailData.user_message);
     }
     else
     {
@@ -133,11 +143,12 @@ $.post( "messageMarkAsRead", { _token : _token, id : id})
         if(result.status==1)
         {
             $("#msg_"+id).toggleClass('messageUnRead');
+            $("#msg__"+id).html('Unread');
         }
         else
         {
             $("#msg_"+id).toggleClass('messageUnRead');
-            
+            $("#msg__"+id).html('Read');   
         }
     }
     else

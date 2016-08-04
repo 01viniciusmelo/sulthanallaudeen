@@ -21,7 +21,7 @@ class Task extends Model implements AuthenticatableContract, CanResetPasswordCon
     protected $table = 'task';
 
     public function getBlogs() {
-        return $this->belongsToMany('App\Task', 'task_cat', 'task_id', 'cat_id')->select(array('task.id', 'task.taskTitle', 'task.Content', 'task.created_at'));
+        return $this->belongsToMany('App\Task', 'task_cat', 'task_id', 'cat_id')->select(array('task.id', 'task.tag_title', 'task.Content', 'task.created_at'));
     }
 
     /**
@@ -29,7 +29,7 @@ class Task extends Model implements AuthenticatableContract, CanResetPasswordCon
      *
      * @var array
      */
-    protected $fillable = ['taskTitle', 'taskContent', 'taskStatus'];
+    protected $fillable = ['tag_title', 'tag_content', 'tag_status'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -38,12 +38,12 @@ class Task extends Model implements AuthenticatableContract, CanResetPasswordCon
      */
     protected $hidden = ['password', 'remember_token'];
     public static $postTask = array(
-        'taskTitle' => 'required|unique:task',
-        'taskContent' => 'required',
+        'tag_title' => 'required|unique:task',
+        'tag_content' => 'required',
     );
     public static $updateTask = array(
-        'taskTitle' => 'required',
-        'taskContent' => 'required',
+        'tag_title' => 'required',
+        'tag_content' => 'required',
     );
 
 }

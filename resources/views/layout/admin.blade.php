@@ -68,7 +68,7 @@
                         <ul class="dropdown-menu dropdown-messages" id="notifyAreaMessages" aria-expanded="true">
                         </ul>
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i><span id='renderMessageCount'></span>
+                            <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i> <span id='renderMessageCount'></span>
                         </a>
 
 
@@ -376,9 +376,10 @@ $(document).ready(function () {
                         $("#renderMessageList").html('<div align="center"><strong>No New Messages</strong></div>');
                     } else
                     {
+                        $("#renderMessageCount").html(result.message.length);
                         $("#notifyAreaMessages").append('<ul class="dropdown-menu dropdown-messages" id="notifyAreaMessages" aria-expanded="true">');
                         $.each(result.message, function (index, value) {
-                            $("#notifyAreaMessages").append('<li><a href="#"><div><strong>a@a.com</strong><span class="pull-right text-muted"><em>02-12-2013</em></span></div><div>msg...</div></a></li>');
+                            $("#notifyAreaMessages").append('<li><a href="#"><div><strong>'+value.user_email+'</strong><span class="pull-right text-muted"><em>'+value.created_at+'</em></span></div><div>'+value.user_message+'</div></a></li>');
                         });
                         $("#notifyAreaMessages").append('</ul>');
                     }
@@ -386,17 +387,7 @@ $(document).ready(function () {
                 {
                 }
             });
-    $.post("getMessageCount", {_token: _token})
-            .done(function (data) {
-                var result = jQuery.parseJSON(JSON.stringify(data));
-                if (result.success == 1)
-                {
-                    $("#renderMessageCount").append(result.messageCount);
-                } else
-                {
-                }
-            });
-
+    
 
     $("#notifyUser").click(function () {
         var id = $(this).attr('id')

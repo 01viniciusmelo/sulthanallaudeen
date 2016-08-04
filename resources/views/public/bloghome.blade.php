@@ -18,7 +18,7 @@ use URL; ?>
             <!-- First Blog Post -->
             @foreach ($posts as $post)
             <h2>
-                <a href="blog/{{ $post->blogUrl }}" style="text-decoration:none">{{ $post->blogTitle }}</a>
+                <a href="blog/{{ $post->blog_url }}" style="text-decoration:none">{{ $post->blog_title }}</a>
             </h2>
             <p class="lead">
                 by <a style="text-decoration:none">Sulthan Allaudeen</a>
@@ -29,7 +29,7 @@ use URL; ?>
 $tag = BlogTag::where('blog_id', $post->id)->get();
 ?>
                 @foreach ($tag as $tagName)
-                <?php $tagName = Tag::where('id', $tagName->tag_id)->pluck('tagTitle'); ?>
+                <?php $tagName = Tag::where('id', $tagName->tag_id)->pluck('tag_title'); ?>
                 <a href="{{ URL::to('tag/'.$tagName[0]) }}" title="{{ 'Tags related to : '.$tagName[0] }}">{{ $tagName[0] }}</a>
                 @endforeach
 <?php
@@ -66,7 +66,7 @@ $date = date('d M Y', strtotime($post->blogDate));
                 @foreach ($tags as $tag)
                 <div class="col-lg-6">
                     <ul class="list-unstyled">
-                        <li><a href="{{ asset('/tag').'/'.$tag->tagTitle }}"> {{ $tag->tagTitle }} <span class="badge">{{ $count = BlogTag::where('tag_id', $tag->id)->count() }}</span></a></li>
+                        <li><a href="{{ asset('/tag').'/'.$tag->tag_title }}"> {{ $tag->tag_title }} <span class="badge">{{ $count = BlogTag::where('tag_id', $tag->id)->count() }}</span></a></li>
                     </ul>
                 </div>
                 @endforeach

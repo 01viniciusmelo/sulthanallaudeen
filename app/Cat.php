@@ -25,7 +25,7 @@ class Cat extends Model implements AuthenticatableContract, CanResetPasswordCont
      *
      * @var array
      */
-    protected $fillable = ['catTitle', 'catContent', 'catStatus'];
+    protected $fillable = ['cat_title', 'cat_content', 'cat_status'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -33,8 +33,8 @@ class Cat extends Model implements AuthenticatableContract, CanResetPasswordCont
      * @var array
      */
     public static $postCat = array(
-        'catTitle' => 'required',
-        'catContent' => 'required',
+        'cat_title' => 'required',
+        'cat_content' => 'required',
     );
 
 }

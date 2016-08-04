@@ -61,7 +61,7 @@ class PublicController extends Controller {
 
     public function searchBlog() {
         $searchQuery = Input::get('searchQuery');
-        $blogResult = Blog::where('blogTitle', 'LIKE', '%' . $searchQuery . '%')->get();
+        $blogResult = Blog::where('blog_title', 'LIKE', '%' . $searchQuery . '%')->get();
         if (count($blogResult) == 0) {
             $resultData = '<div class="alert alert-danger" role="alert"><strong>Searching for the Posts contains the word "' . $searchQuery . '" ( ' . count($blogResult) . ' Results )</div>';
         } else {
@@ -69,7 +69,7 @@ class PublicController extends Controller {
         }
 
         foreach ($blogResult as $key) {
-            $resultData .= '<h2><a href="' . asset("/") . 'blog/' . $key["blogUrl"] . '" style="text-decoration:none">' . $key["blogTitle"] . '</a></h2>
+            $resultData .= '<h2><a href="' . asset("/") . 'blog/' . $key["blogUrl"] . '" style="text-decoration:none">' . $key["blog_title"] . '</a></h2>
 				<p class="lead">by <a style="text-decoration:none">Sulthan Allaudeen</a></p>
 				<p style="float:right"><span class="glyphicon glyphicon-time"></span> Posted on 01 Sep 2015 </p>';
         }
@@ -79,8 +79,8 @@ class PublicController extends Controller {
     #Get Blogs by Tag
 
     public function tagData($tag) {
-        $tagId = Tag::where('tagTitle', $tag)->pluck('id');
-        $tags = Tag::where('tagStatus', 1)->get();
+        $tagId = Tag::where('tag_title', $tag)->pluck('id');
+        $tags = Tag::where('tag_status', 1)->get();
         $blogTag = BlogTag::where('tag_id', $tagId)->pluck('id');
         #return $tagId;
         if ($blogTag == '') {
@@ -99,8 +99,8 @@ class PublicController extends Controller {
     #Tag About Page
 
     public function tagAbout($tag = NULL) {
-        $tagData = Tag::where('tagTitle', $tag)->first();
-        $tags = Tag::where('tagStatus', 1)->get();
+        $tagData = Tag::where('tag_title', $tag)->first();
+        $tags = Tag::where('tag_status', 1)->get();
         return view('public.tagAbout')->with('tagData', $tagData)->with('tags', $tags);
     }
 

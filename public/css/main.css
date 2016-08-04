@@ -9,7 +9,6 @@ FONTS
 /*******************************************
 SETTINGS
 *******************************************/
-@charset "utf-8";
 @-webkit-viewport   { width: device-width; }
 @-moz-viewport      { width: device-width; }
 @-ms-viewport       { width: device-width; }
@@ -94,7 +93,6 @@ DEFAULT BOX
   text-transform: uppercase;
 }
 .box h2:before{
-  //content: '//';
   margin-right: 5px;
 }
 .box p{

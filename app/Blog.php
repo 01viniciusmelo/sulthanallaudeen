@@ -21,7 +21,7 @@ class Blog extends Model implements AuthenticatableContract, CanResetPasswordCon
     protected $table = 'blog';
 
     public function getBlogs() {
-        return $this->belongsToMany('App\Blog', 'blog_tag', 'tag_id', 'blog_id')->select(array('blog.id', 'blog.blogTitle', 'blog.blogUrl', 'blog.created_at'));
+        return $this->belongsToMany('App\Blog', 'blog_tag', 'tag_id', 'blog_id')->select(array('blog.id', 'blog.blog_title', 'blog.blog_url', 'blog.created_at'));
     }
 
     /**
@@ -29,7 +29,7 @@ class Blog extends Model implements AuthenticatableContract, CanResetPasswordCon
      *
      * @var array
      */
-    protected $fillable = ['blogTitle', 'blogUrl', 'blogContent', 'blogAuthor', 'blogDate', 'blogStatus'];
+    protected $fillable = ['blog_title', 'blog_url', 'blog_content', 'blog_author', 'blog_date', 'blog_status'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -38,14 +38,14 @@ class Blog extends Model implements AuthenticatableContract, CanResetPasswordCon
      */
     protected $hidden = ['password', 'remember_token'];
     public static $postBlog = array(
-        'blogTitle' => 'required|unique:blog',
-        'blogUrl' => 'required',
-        'blogContent' => 'required',
+        'blog_title' => 'required|unique:blog',
+        'blog_url' => 'required',
+        'blog_content' => 'required',
     );
     public static $updateBlog = array(
-        'blogTitle' => 'required',
-        'blogUrl' => 'required',
-        'blogContent' => 'required',
+        'blog_title' => 'required',
+        'blog_url' => 'required',
+        'blog_content' => 'required',
     );
 
 }

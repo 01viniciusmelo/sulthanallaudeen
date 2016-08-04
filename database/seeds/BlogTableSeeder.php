@@ -20,15 +20,15 @@ class BlogTableSeeder extends Seeder
             0 => 
             array (
                 'id' => '1',
-                'blogTitle' => 'First Post ',
-                'blogUrl' => 'First-Post',
-                'blogContent' => '<p>This is the First Post of Sysaxiom after the wordpress Installation on 20th May 2015.</p>
+                'blog_title' => 'First Post ',
+                'blog_url' => 'First-Post',
+                'blog_content' => '<p>This is the First Post of Sysaxiom after the wordpress Installation on 20th May 2015.</p>
 
 <p>This installation should be some 100th installation of various applications within sysaxiom.</p>
 ',
-                'blogAuthor' => '1',
-                'blogDate' => '2014-05-01 20:55:05',
-                'blogStatus' => '1',
+                'blog_author' => '1',
+                'blog_date' => '2014-05-01 20:55:05',
+                'blog_status' => '1',
                 'status' => '0',
                 'created_at' => '2015-09-30 07:02:21',
                 'updated_at' => '2015-09-30 16:57:57',
@@ -36,9 +36,9 @@ class BlogTableSeeder extends Seeder
             1 => 
             array (
                 'id' => '2',
-                'blogTitle' => 'Simple jquery ajax call to a .txt file ',
-                'blogUrl' => 'Simple-jquery-ajax-call-to-a-.txt-file',
-                'blogContent' => '<p>Here&rsquo;s the simple ajax call to the text file which would return the content the targeted text fil</p>
+                'blog_title' => 'Simple jquery ajax call to a .txt file ',
+                'blog_url' => 'Simple-jquery-ajax-call-to-a-.txt-file',
+                'blog_content' => '<p>Here&rsquo;s the simple ajax call to the text file which would return the content the targeted text fil</p>
 
 <p><strong>Step 1 :</strong>&nbsp;Create a new .php and .txt file</p>
 
@@ -92,9 +92,9 @@ $(&quot;#result&quot;).html(result);
 
 <p>&nbsp;</p>
 ',
-        'blogAuthor' => '1',
-        'blogDate' => '2015-05-03 21:46:34',
-        'blogStatus' => '1',
+        'blog_author' => '1',
+        'blog_date' => '2015-05-03 21:46:34',
+        'blog_status' => '1',
         'status' => '0',
         'created_at' => '2015-09-30 18:24:21',
         'updated_at' => '2015-10-06 04:46:44',
@@ -102,9 +102,9 @@ $(&quot;#result&quot;).html(result);
     2 => 
     array (
         'id' => '3',
-        'blogTitle' => 'Google Maps Marker Shutsdown temporarily starting from 12th may 2015 ',
-        'blogUrl' => 'Google-Maps-Marker-Shutsdown-temporarily-starting-from-12th-may-2015',
-        'blogContent' => '<p>After pranksters used Google Map Maker to draw an&nbsp;<a href="http://thenextweb.com/google/2015/04/24/theres-an-android-peeing-on-apple-on-google-maps-and-we-cant-figure-out-why/">Android peeing on an Apple Logo</a>&nbsp;and engage in other acts of spammy vandalism, Google&nbsp;<a href="https://productforums.google.com/forum/#!category-topic/map-maker/news-and-announcements/crFEbGXJ-HI">has announced</a>&nbsp;that it will temporarily shut down its online map editor while it rethinks its approval process.</p>
+        'blog_title' => 'Google Maps Marker Shutsdown temporarily starting from 12th may 2015 ',
+        'blog_url' => 'Google-Maps-Marker-Shutsdown-temporarily-starting-from-12th-may-2015',
+        'blog_content' => '<p>After pranksters used Google Map Maker to draw an&nbsp;<a href="http://thenextweb.com/google/2015/04/24/theres-an-android-peeing-on-apple-on-google-maps-and-we-cant-figure-out-why/">Android peeing on an Apple Logo</a>&nbsp;and engage in other acts of spammy vandalism, Google&nbsp;<a href="https://productforums.google.com/forum/#!category-topic/map-maker/news-and-announcements/crFEbGXJ-HI">has announced</a>&nbsp;that it will temporarily shut down its online map editor while it rethinks its approval process.</p>
 
 <p>&nbsp;</p>
 
@@ -118,9 +118,9 @@ $(&quot;#result&quot;).html(result);
 
 <p><img alt="" class="img-thumbnail" src="../images/blog/GoogleMapMarkerWarning-1.png" style="height:768px; width:1366px" /></p>
 ',
-        'blogAuthor' => '1',
-        'blogDate' => '2015-05-12 06:54:26',
-        'blogStatus' => '1',
+        'blog_author' => '1',
+        'blog_date' => '2015-05-12 06:54:26',
+        'blog_status' => '1',
         'status' => '0',
         'created_at' => '2015-09-30 18:26:21',
         'updated_at' => '2015-10-16 15:37:58',
@@ -128,9 +128,9 @@ $(&quot;#result&quot;).html(result);
     3 => 
     array (
         'id' => '4',
-        'blogTitle' => 'Video Recording with voice is easy and simple ',
-        'blogUrl' => 'Video-Recording-with-voice-is-easy-and-simple',
-        'blogContent' => '<p>Last night I wanted to record a video with voice for a demo of my project. I really fear how i can do that. Then, I just remember about the same thing i did in the college. i.e., the project based on android in my Final year of the Course MCA.</p>
+        'blog_title' => 'Video Recording with voice is easy and simple ',
+        'blog_url' => 'Video-Recording-with-voice-is-easy-and-simple',
+        'blog_content' => '<p>Last night I wanted to record a video with voice for a demo of my project. I really fear how i can do that. Then, I just remember about the same thing i did in the college. i.e., the project based on android in my Final year of the Course MCA.</p>
 
 <p>&nbsp;</p>
 
@@ -148,9 +148,9 @@ $(&quot;#result&quot;).html(result);
 
 <p>And i presented those videos to the client and expereinced the simplicity in works&nbsp;<img alt=":)" src="http://localhost/ht-wp/wp-includes/images/smilies/simple-smile.png" /></p>
 ',
-    'blogAuthor' => '1',
-    'blogDate' => '2015-05-15 10:54:26',
-    'blogStatus' => '1',
+    'blog_author' => '1',
+    'blog_date' => '2015-05-15 10:54:26',
+    'blog_status' => '1',
     'status' => '0',
     'created_at' => '2015-09-30 18:27:06',
     'updated_at' => '2015-10-16 15:36:55',
@@ -158,9 +158,9 @@ $(&quot;#result&quot;).html(result);
 4 => 
 array (
     'id' => '5',
-    'blogTitle' => 'Introduction to PHP ',
-    'blogUrl' => 'Introduction-to-PHP',
-    'blogContent' => '<p>After posting few posts in Sysaxiom i felt that&nbsp;Though i know a little about PHP i would like to give a short intro about PHP before moving to future &nbsp;posts.</p>
+    'blog_title' => 'Introduction to PHP ',
+    'blog_url' => 'Introduction-to-PHP',
+    'blog_content' => '<p>After posting few posts in Sysaxiom i felt that&nbsp;Though i know a little about PHP i would like to give a short intro about PHP before moving to future &nbsp;posts.</p>
 
 <p><strong>Intro :&nbsp;</strong></p>
 
@@ -188,9 +188,9 @@ array (
 
 <p>3. Tutorialspont &ndash;&nbsp;<a href="http://www.tutorialspoint.com/php/" target="_blank">http://www.tutorialspoint.com/php/</a></p>
 ',
-    'blogAuthor' => '1',
-    'blogDate' => '2015-05-18 09:44:26',
-    'blogStatus' => '1',
+    'blog_author' => '1',
+    'blog_date' => '2015-05-18 09:44:26',
+    'blog_status' => '1',
     'status' => '0',
     'created_at' => '2015-09-30 18:32:15',
     'updated_at' => '2015-10-06 05:02:27',
@@ -198,9 +198,9 @@ array (
 5 => 
 array (
     'id' => '6',
-    'blogTitle' => 'How to Install and use PHP in your Machine ',
-    'blogUrl' => 'How-to-Install-and-use-PHP-in-your-Machine',
-    'blogContent' => '<p>After the short introduction of PHP, A Question should be raise.</p>
+    'blog_title' => 'How to Install and use PHP in your Machine ',
+    'blog_url' => 'How-to-Install-and-use-PHP-in-your-Machine',
+    'blog_content' => '<p>After the short introduction of PHP, A Question should be raise.</p>
 
 <p><strong>How to use PHP in my machine ?</strong></p>
 
@@ -246,9 +246,9 @@ array (
 
 <p>But I always prefer XAMPP Everywhere, Because why should i pluck the seeds when already it was collected in the pot&nbsp;<img alt=":)" src="http://localhost/ht-wp/wp-includes/images/smilies/simple-smile.png" /></p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-05-28 11:15:26',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-05-28 11:15:26',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 18:33:07',
 'updated_at' => '2015-09-30 18:33:07',
@@ -256,9 +256,9 @@ array (
 6 => 
 array (
 'id' => '7',
-'blogTitle' => 'Why one should not use mysql functions ',
-'blogUrl' => 'Why-one-should-not-use-mysql-functions',
-'blogContent' => '<p>The MySQL is officially&nbsp;<a href="https://wiki.php.net/rfc/mysql_deprecation" target="_blank">depreciated</a>&nbsp;and will be completely removed in php 7.</p>
+'blog_title' => 'Why one should not use mysql functions ',
+'blog_url' => 'Why-one-should-not-use-mysql-functions',
+'blog_content' => '<p>The MySQL is officially&nbsp;<a href="https://wiki.php.net/rfc/mysql_deprecation" target="_blank">depreciated</a>&nbsp;and will be completely removed in php 7.</p>
 
 <p>&nbsp;</p>
 
@@ -285,9 +285,9 @@ array (
 
 <p>And to be honest, I suggest everyone to use mysqli&rsquo;s Object Oriented Style and it will make your code and you smart. And Never stick to w3school&rsquo;s procedural style as it might make you to think less&nbsp;<img alt=":)" src="http://localhost/ht-wp/wp-includes/images/smilies/simple-smile.png" /></p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-06-01 20:04:26',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-06-01 20:04:26',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 18:34:21',
 'updated_at' => '2015-10-16 15:36:11',
@@ -295,9 +295,9 @@ array (
 7 => 
 array (
 'id' => '8',
-'blogTitle' => 'New Github Repository PHP – MySQL(i) All in One ',
-'blogUrl' => 'New-Github-Repository-PHP-–-MySQL(i)-All-in-One',
-'blogContent' => '<p>Yesterday, I had a plan to have a new repo which was in my mind for a while.</p>
+'blog_title' => 'New Github Repository PHP – MySQL(i) All in One ',
+'blog_url' => 'New-Github-Repository-PHP-–-MySQL(i)-All-in-One',
+'blog_content' => '<p>Yesterday, I had a plan to have a new repo which was in my mind for a while.</p>
 
 <p>I just started with the New Repo which was very little but efficient and it covers all possible operations in PHP and MySqli in Object Oriented Style.</p>
 
@@ -305,9 +305,9 @@ array (
 
 <p>Here&rsquo;s the Github&nbsp;<a href="https://github.com/sulthanallaudeen/PHP-MySQL-i-All-in-One" target="_blank">Link&nbsp;</a></p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-06-15 19:44:26',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-06-15 19:44:26',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 18:35:07',
 'updated_at' => '2015-10-06 04:24:52',
@@ -315,9 +315,9 @@ array (
 8 => 
 array (
 'id' => '9',
-'blogTitle' => 'Got 5k Reputation in Stackoverflow ',
-'blogUrl' => 'Got-5k-Reputation-in-Stackoverflow',
-'blogContent' => '<p>And this day (24th May 2015) I crossed 5000k Reputation in Stackoverflow. I feel really happy and i know it is not even a matter a there are many who got reputatoin Lakhs . However they are 6 years senior and i just got 1.</p>
+'blog_title' => 'Got 5k Reputation in Stackoverflow ',
+'blog_url' => 'Got-5k-Reputation-in-Stackoverflow',
+'blog_content' => '<p>And this day (24th May 2015) I crossed 5000k Reputation in Stackoverflow. I feel really happy and i know it is not even a matter a there are many who got reputatoin Lakhs . However they are 6 years senior and i just got 1.</p>
 
 <p>&nbsp;</p>
 
@@ -327,9 +327,9 @@ array (
 
 <p>&nbsp;</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-06-18 21:44:26',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-06-18 21:44:26',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 18:37:17',
 'updated_at' => '2015-10-06 04:25:03',
@@ -337,9 +337,9 @@ array (
 9 => 
 array (
 'id' => '10',
-'blogTitle' => 'How to Install Illuminate  HTML In Laravel 5 ',
-'blogUrl' => 'How-to-Install-Illuminate-HTML-In-Laravel-5-',
-'blogContent' => '<p>This post is because</p>
+'blog_title' => 'How to Install Illuminate  HTML In Laravel 5 ',
+'blog_url' => 'How-to-Install-Illuminate-HTML-In-Laravel-5-',
+'blog_content' => '<p>This post is because</p>
 
 <p>I can able to see many users stuck up with installing&nbsp;<strong>illuminate/HTML</strong>&nbsp;Form helpers in&nbsp;<strong>Laravel 5</strong>.</p>
 
@@ -380,9 +380,9 @@ composer require &quot;illuminate/html&quot;:&quot;5.0.*&quot;</pre>
 
 <p>&nbsp;</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-06-20 04:34:26',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-06-20 04:34:26',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 18:39:51',
 'updated_at' => '2015-10-16 15:35:56',
@@ -390,9 +390,9 @@ composer require &quot;illuminate/html&quot;:&quot;5.0.*&quot;</pre>
 10 => 
 array (
 'id' => '11',
-'blogTitle' => 'How to Install latest version of Laravel ',
-'blogUrl' => 'How-to-Install-latest-version-of-Laravel',
-'blogContent' => '<p><a href="http://laravel.com/docs/5.0" target="_blank">Here</a>&nbsp;is the Master Source &nbsp;where you can get it with more details, But let me give the lazy way which i follow</p>
+'blog_title' => 'How to Install latest version of Laravel ',
+'blog_url' => 'How-to-Install-latest-version-of-Laravel',
+'blog_content' => '<p><a href="http://laravel.com/docs/5.0" target="_blank">Here</a>&nbsp;is the Master Source &nbsp;where you can get it with more details, But let me give the lazy way which i follow</p>
 
 <p><strong>Step 1 :</strong></p>
 
@@ -407,9 +407,9 @@ composer create-project laravel/laravel</pre>
 
 <p>The above command will directly install you the latest Laravel Framework</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-06-21 05:44:06',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-06-21 05:44:06',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 18:41:21',
 'updated_at' => '2015-09-30 18:41:21',
@@ -417,9 +417,9 @@ composer create-project laravel/laravel</pre>
 11 => 
 array (
 'id' => '12',
-'blogTitle' => 'Remove public  index.php from your Laravel Project in two steps ',
-'blogUrl' => 'Remove-public-index.php-from-your-Laravel-Project-in-two-steps-',
-'blogContent' => '<p>Here&rsquo;s the Simple 2 step way step &nbsp;to remove the&nbsp;<strong>pubic/index.php&nbsp;</strong>&nbsp;from your laravel project which gives you pretty url</p>
+'blog_title' => 'Remove public  index.php from your Laravel Project in two steps ',
+'blog_url' => 'Remove-public-index.php-from-your-Laravel-Project-in-two-steps-',
+'blog_content' => '<p>Here&rsquo;s the Simple 2 step way step &nbsp;to remove the&nbsp;<strong>pubic/index.php&nbsp;</strong>&nbsp;from your laravel project which gives you pretty url</p>
 
 <p><strong>Step 1 :</strong></p>
 
@@ -429,9 +429,9 @@ array (
 
 <p>Move the&nbsp;<strong>.htaccess</strong>&nbsp;file from your&nbsp;<strong>public</strong>&nbsp;folder to root folder</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-06-24 02:24:06',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-06-24 02:24:06',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 18:41:48',
 'updated_at' => '2015-09-30 21:25:07',
@@ -439,9 +439,9 @@ array (
 12 => 
 array (
 'id' => '13',
-'blogTitle' => 'Multiplication of Time in PHP ',
-'blogUrl' => 'Multiplication-of-Time-in-PHP',
-'blogContent' => '<p>Today i crossed across a Question about Multiplying a Time using PHP Here&rsquo;s the&nbsp;<a href="http://stackoverflow.com/q/30555665/3282633" target="_blank">Link</a></p>
+'blog_title' => 'Multiplication of Time in PHP ',
+'blog_url' => 'Multiplication-of-Time-in-PHP',
+'blog_content' => '<p>Today i crossed across a Question about Multiplying a Time using PHP Here&rsquo;s the&nbsp;<a href="http://stackoverflow.com/q/30555665/3282633" target="_blank">Link</a></p>
 
 <p>After a small research 5 minutes i wrote the&nbsp;<a href="http://stackoverflow.com/a/30555780/3282633" target="_blank">answer</a></p>
 
@@ -497,9 +497,9 @@ echo sprintf(&quot;%02d:%02d:%02d&quot;, $diff-&gt;days * 24 + $diff-&gt;h, $dif
 
 <p>Here are the Eval&nbsp;<a href="https://eval.in/373216" target="_blank">Link1</a>&nbsp;and&nbsp;<a href="https://eval.in/373224" target="_blank">Link2</a></p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-06-26 03:13:36',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-06-26 03:13:36',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 18:56:10',
 'updated_at' => '2015-09-30 18:56:10',
@@ -507,9 +507,9 @@ echo sprintf(&quot;%02d:%02d:%02d&quot;, $diff-&gt;days * 24 + $diff-&gt;h, $dif
 13 => 
 array (
 'id' => '14',
-'blogTitle' => 'GoogleMapsApi – Initial Release ',
-'blogUrl' => 'GoogleMapsApi-–-Initial-Release',
-'blogContent' => '<p>And Today i launched the GoogleMapsApi with minimal calls to Google Api in the app part of the Sysaxiom&rsquo;s app Place. i.e.,&nbsp;<a href="http://sysaxiom.com/apps" target="_blank">sysaxiom.com/apps</a></p>
+'blog_title' => 'GoogleMapsApi – Initial Release ',
+'blog_url' => 'GoogleMapsApi-–-Initial-Release',
+'blog_content' => '<p>And Today i launched the GoogleMapsApi with minimal calls to Google Api in the app part of the Sysaxiom&rsquo;s app Place. i.e.,&nbsp;<a href="http://sysaxiom.com/apps" target="_blank">sysaxiom.com/apps</a></p>
 
 <p>For the Initial Release i have used the minimal calls</p>
 
@@ -519,9 +519,9 @@ array (
 
 <p>Thanks for all.</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-06-28 06:34:04',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-06-28 06:34:04',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 18:56:45',
 'updated_at' => '2015-10-16 15:39:15',
@@ -529,9 +529,9 @@ array (
 14 => 
 array (
 'id' => '15',
-'blogTitle' => 'Background Tracker – How I made it myself ',
-'blogUrl' => 'Background-Tracker-–-How-I-made-it-myself',
-'blogContent' => '<p>Last Night i made a task by myself for one of my work, To track the details of users who attempts to login the admin panel. I plan to get the basic details such as Operating System, Ip Address, Browser Details and trigger to the List of Admin who are listed.</p>
+'blog_title' => 'Background Tracker – How I made it myself ',
+'blog_url' => 'Background-Tracker-–-How-I-made-it-myself',
+'blog_content' => '<p>Last Night i made a task by myself for one of my work, To track the details of users who attempts to login the admin panel. I plan to get the basic details such as Operating System, Ip Address, Browser Details and trigger to the List of Admin who are listed.</p>
 
 <p><strong>Step 1 :&nbsp;</strong></p>
 
@@ -727,9 +727,9 @@ $results-&gt;free();
 
 <p>&nbsp;</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-07-01 20:44:06',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-07-01 20:44:06',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 19:00:45',
 'updated_at' => '2015-10-06 04:28:11',
@@ -737,9 +737,9 @@ $results-&gt;free();
 15 => 
 array (
 'id' => '16',
-'blogTitle' => 'How non-recommendation helped me ;) ',
-'blogUrl' => 'How-non-recommendation-helped-me-;)',
-'blogContent' => '<p>Previous day i had a which deals with some no sense.</p>
+'blog_title' => 'How non-recommendation helped me ;) ',
+'blog_url' => 'How-non-recommendation-helped-me-;)',
+'blog_content' => '<p>Previous day i had a which deals with some no sense.</p>
 
 <p>I was working on a admin panel which is fully made of Bootstrap and rich set of its native date, time picker and its own entities. At the same time for the front / user end panel I was given a&nbsp;paid template from theme forest and it had a loads of features with proper documentation in it.</p>
 
@@ -771,9 +771,9 @@ data : $(&quot;#allocateboat&quot;).serialize()+&#39;&amp;element=&#39;+target,<
 
 <p>What i did is just added the element along the form serialized value and it was done&nbsp;<img alt="????" src="http://s.w.org/images/core/emoji/72x72/1f609.png" /></p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-07-03 21:34:06',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-07-03 21:34:06',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 19:02:16',
 'updated_at' => '2015-09-30 21:23:46',
@@ -781,9 +781,9 @@ data : $(&quot;#allocateboat&quot;).serialize()+&#39;&amp;element=&#39;+target,<
 16 => 
 array (
 'id' => '17',
-'blogTitle' => 'Encourage one to make it Better ! ',
-'blogUrl' => 'Encourage-one-to-make-it-Better-!',
-'blogContent' => '<p>Encourage one to Make it Better !!</p>
+'blog_title' => 'Encourage one to make it Better ! ',
+'blog_url' => 'Encourage-one-to-make-it-Better-!',
+'blog_content' => '<p>Encourage one to Make it Better !!</p>
 
 <p>This is really a true one and it is experienced by me today.</p>
 
@@ -817,9 +817,9 @@ array (
 
 <p><em>Cheer&rsquo;s for the time ahead !!</em></p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-07-07 00:44:56',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-07-07 00:44:56',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 19:02:44',
 'updated_at' => '2015-10-16 15:39:36',
@@ -827,9 +827,9 @@ array (
 17 => 
 array (
 'id' => '18',
-'blogTitle' => 'How Cute the Jquery is ! With Basic Operation which is lovable – Short Version ',
-'blogUrl' => 'How-Cute-the-Jquery-is-!-With-Basic-Operation-which-is-lovable-–-Short-Version',
-'blogContent' => '<p>Hello, Guys.</p>
+'blog_title' => 'How Cute the Jquery is ! With Basic Operation which is lovable – Short Version ',
+'blog_url' => 'How-Cute-the-Jquery-is-!-With-Basic-Operation-which-is-lovable-–-Short-Version',
+'blog_content' => '<p>Hello, Guys.</p>
 
 <p>We all know the importance of&nbsp;<strong>JQuery</strong>&nbsp;(though Angular rocks). I can say that JQuery is the step one should learn to have his things done.</p>
 
@@ -895,9 +895,9 @@ $(&quot;#MyTrigger&quot;).click(function(){  //Here we can assure that that id w
 
 <p>&nbsp;</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-07-09 00:44:12',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-07-09 00:44:12',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 19:39:35',
 'updated_at' => '2015-09-30 19:39:35',
@@ -905,9 +905,9 @@ $(&quot;#MyTrigger&quot;).click(function(){  //Here we can assure that that id w
 18 => 
 array (
 'id' => '19',
-'blogTitle' => 'How Cute the Jquery is ! With Basic Operation which is lovable – Story Version ',
-'blogUrl' => 'How-Cute-the-Jquery-is-!-With-Basic-Operation-which-is-lovable-–-Story-Version',
-'blogContent' => '<p>Hello, Guys.</p>
+'blog_title' => 'How Cute the Jquery is ! With Basic Operation which is lovable – Story Version ',
+'blog_url' => 'How-Cute-the-Jquery-is-!-With-Basic-Operation-which-is-lovable-–-Story-Version',
+'blog_content' => '<p>Hello, Guys.</p>
 
 <p>We all know the importance of&nbsp;<strong>JQuery</strong>&nbsp;(though Angular rocks). I can say that JQuery is the step one should learn to have his things done.</p>
 
@@ -1087,9 +1087,9 @@ array (
 
 <p>&nbsp;</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-07-11 02:34:33',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-07-11 02:34:33',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 19:48:57',
 'updated_at' => '2015-09-30 19:48:57',
@@ -1097,9 +1097,9 @@ array (
 19 => 
 array (
 'id' => '20',
-'blogTitle' => 'How to install Laravel Older Versions through Composer ',
-'blogUrl' => 'How-to-install-Laravel-Older-Versions-through-Composer',
-'blogContent' => '<p>How to install Laravel Older Versions through Composer</p>
+'blog_title' => 'How to install Laravel Older Versions through Composer ',
+'blog_url' => 'How-to-install-Laravel-Older-Versions-through-Composer',
+'blog_content' => '<p>How to install Laravel Older Versions through Composer</p>
 
 <p>Today, While I want to do some reseach with Laravel 5.0, I can&rsquo;t able to download it in the default way</p>
 
@@ -1119,9 +1119,9 @@ array (
 
 <p>&nbsp;</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-08-03 00:44:26',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-08-03 00:44:26',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 19:50:41',
 'updated_at' => '2015-09-30 19:50:41',
@@ -1129,9 +1129,9 @@ array (
 20 => 
 array (
 'id' => '21',
-'blogTitle' => 'Tricky File Upload, List and Delete ',
-'blogUrl' => 'Tricky-File-Upload,-List-and-Delete',
-'blogContent' => '<p>I got a &nbsp;mate named as&nbsp;<a href="http://stackoverflow.com/users/4842333/luigi" target="_blank">Luigi</a>&nbsp;who asked a question about uploading the files using php. I can understand that there few mistakes in his code and i helped him to complete it which extends to listing the files inside the sub directory,</p>
+'blog_title' => 'Tricky File Upload, List and Delete ',
+'blog_url' => 'Tricky-File-Upload,-List-and-Delete',
+'blog_content' => '<p>I got a &nbsp;mate named as&nbsp;<a href="http://stackoverflow.com/users/4842333/luigi" target="_blank">Luigi</a>&nbsp;who asked a question about uploading the files using php. I can understand that there few mistakes in his code and i helped him to complete it which extends to listing the files inside the sub directory,</p>
 
 <p>&nbsp;</p>
 
@@ -1141,9 +1141,9 @@ array (
 
 <p>Here&rsquo;s the&nbsp;<a href="https://eval.in/393049" target="_blank">Eval of the Code</a>&nbsp;Here&rsquo;s the updated&nbsp;<a href="http://jsfiddle.net/allaudeen/rrpbuov2/" target="_blank">Fiddle</a>&nbsp;(Updated on 14th July 2015)</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-08-07 01:34:28',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-08-07 01:34:28',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 19:51:32',
 'updated_at' => '2015-10-16 15:40:04',
@@ -1151,9 +1151,9 @@ array (
 21 => 
 array (
 'id' => '22',
-'blogTitle' => 'Strange behaviour of Laravel Sessions and How I overcome it. ',
-'blogUrl' => 'Strange-behaviour-of-Laravel-Sessions-and-How-I-overcome-it.',
-'blogContent' => '<p>I recently met a strange behaviour from laravel where i am getting logged out in certain minutes, though i have set the expiration of the session<br />
+'blog_title' => 'Strange behaviour of Laravel Sessions and How I overcome it. ',
+'blog_url' => 'Strange-behaviour-of-Laravel-Sessions-and-How-I-overcome-it.',
+'blog_content' => '<p>I recently met a strange behaviour from laravel where i am getting logged out in certain minutes, though i have set the expiration of the session<br />
 for a very long time.</p>
 
 <p>Few of my office mates (Mr.Manoj) and other suffered the same issue recently.</p>
@@ -1185,9 +1185,9 @@ it the same in logout.</p>
 
 <p><strong>Note :</strong>&nbsp;You can dig the source file to explore a bit more</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-08-23 03:26:17',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-08-23 03:26:17',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 19:52:25',
 'updated_at' => '2015-10-16 15:40:13',
@@ -1195,9 +1195,9 @@ it the same in logout.</p>
 22 => 
 array (
 'id' => '23',
-'blogTitle' => 'My First Cross Origin Script ',
-'blogUrl' => 'My-First-Cross-Origin-Script',
-'blogContent' => '<p>Today i found a cool personal website and i was really wondered with the design, While seeing the other pages, i found that the admin used ajax calls for the testimonial kind of section, after digging the console i found that it was unsecured ajax call.</p>
+'blog_title' => 'My First Cross Origin Script ',
+'blog_url' => 'My-First-Cross-Origin-Script',
+'blog_content' => '<p>Today i found a cool personal website and i was really wondered with the design, While seeing the other pages, i found that the admin used ajax calls for the testimonial kind of section, after digging the console i found that it was unsecured ajax call.</p>
 
 <p>&nbsp;</p>
 
@@ -1225,9 +1225,9 @@ array (
 
 <p><em><strong>Never believe anonymous users !</strong></em></p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-08-28 21:46:17',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-08-28 21:46:17',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 19:53:14',
 'updated_at' => '2015-10-16 15:40:21',
@@ -1235,13 +1235,13 @@ array (
 23 => 
 array (
 'id' => '24',
-'blogTitle' => 'Recommendation of Crayon Syntax Highlighter ',
-'blogUrl' => 'Recommendation-of-Crayon-Syntax-Highlighter',
-'blogContent' => '<p>So far for all the codes that were embedded i have used&nbsp;<a href="https://wordpress.org/plugins/syntaxhighlighter/" target="_blank">SyntaxHighlighter</a>&nbsp;where i found so many difficulties and after using the&nbsp;<a href="https://github.com/aramk/crayon-syntax-highlighter" target="_blank">Crayon Syntax Highlighter</a>&nbsp;i really feel good and it makes many things easier. I recommend this plugin to use if you deal with the combination wordpress + code</p>
+'blog_title' => 'Recommendation of Crayon Syntax Highlighter ',
+'blog_url' => 'Recommendation-of-Crayon-Syntax-Highlighter',
+'blog_content' => '<p>So far for all the codes that were embedded i have used&nbsp;<a href="https://wordpress.org/plugins/syntaxhighlighter/" target="_blank">SyntaxHighlighter</a>&nbsp;where i found so many difficulties and after using the&nbsp;<a href="https://github.com/aramk/crayon-syntax-highlighter" target="_blank">Crayon Syntax Highlighter</a>&nbsp;i really feel good and it makes many things easier. I recommend this plugin to use if you deal with the combination wordpress + code</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-09-01 00:01:41',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-09-01 00:01:41',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 19:54:17',
 'updated_at' => '2015-10-16 15:40:28',
@@ -1249,9 +1249,9 @@ array (
 24 => 
 array (
 'id' => '25',
-'blogTitle' => 'Is goto in PHP Evil ',
-'blogUrl' => 'Is-goto-in-PHP-Evil',
-'blogContent' => '<p>I really know that i am mad lover of goto, but i really wonder why many of the people hate it (Even many of my office mates).</p>
+'blog_title' => 'Is goto in PHP Evil ',
+'blog_url' => 'Is-goto-in-PHP-Evil',
+'blog_content' => '<p>I really know that i am mad lover of goto, but i really wonder why many of the people hate it (Even many of my office mates).</p>
 
 <p>&nbsp;</p>
 
@@ -1273,9 +1273,9 @@ array (
 
 <p>BUT I DO ALWAYS LOVE&nbsp;<strong><a href="http://php.net/manual/en/control-structures.goto.php" target="_blank">GOTO</a></strong></p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-09-02 23:26:41',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-09-02 23:26:41',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 19:54:47',
 'updated_at' => '2015-10-16 15:40:35',
@@ -1283,17 +1283,17 @@ array (
 25 => 
 array (
 'id' => '26',
-'blogTitle' => 'Plan for Task Scheduler ',
-'blogUrl' => 'Plan-for-Task-Scheduler',
-'blogContent' => '<p>After few Projects and little House-Keeping works i have a plan to develop a Task Scheduler in Laravel 5 and AngularJS. Let me fork and convey the other details in following posts !</p>
+'blog_title' => 'Plan for Task Scheduler ',
+'blog_url' => 'Plan-for-Task-Scheduler',
+'blog_content' => '<p>After few Projects and little House-Keeping works i have a plan to develop a Task Scheduler in Laravel 5 and AngularJS. Let me fork and convey the other details in following posts !</p>
 
 <p>&nbsp;</p>
 
 <p>Cheers&nbsp;<img alt="????" src="http://s.w.org/images/core/emoji/72x72/1f609.png" /></p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-09-09 21:26:12',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-09-09 21:26:12',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 19:55:10',
 'updated_at' => '2015-10-06 04:35:07',
@@ -1301,9 +1301,9 @@ array (
 26 => 
 array (
 'id' => '27',
-'blogTitle' => 'How to create App in Heroku in 4 Steps ',
-'blogUrl' => 'How-to-create-App-in-Heroku-in-4-Steps',
-'blogContent' => '<p>I was wondering and trying to make use of Heroku since my days in Vel Tech where i attempted to build some<br />
+'blog_title' => 'How to create App in Heroku in 4 Steps ',
+'blog_url' => 'How-to-create-App-in-Heroku-in-4-Steps',
+'blog_content' => '<p>I was wondering and trying to make use of Heroku since my days in Vel Tech where i attempted to build some<br />
 facebook application. However i can&rsquo;t able to make it work more than sign-up :P. After seeing some good friends<br />
 making use of it I then plan to Utilize it and succeded.</p>
 
@@ -1331,9 +1331,9 @@ making use of it I then plan to Utilize it and succeded.</p>
 
 <p><strong>Now, Your App is Live, Just click on the view button and the url redirected is your&nbsp;<a href="http://sys-heroku-tutorial.herokuapp.com/" target="_blank">App&rsquo;s URL.</a></strong></p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-09-19 21:56:41',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-09-19 21:56:41',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 20:31:33',
 'updated_at' => '2015-10-08 03:44:02',
@@ -1341,9 +1341,9 @@ making use of it I then plan to Utilize it and succeded.</p>
 27 => 
 array (
 'id' => '28',
-'blogTitle' => 'Javascript is good boy too ! ',
-'blogUrl' => 'Javascript-is-good-boy-too-!',
-'blogContent' => '<p>While developing the TaskManagerApp i am planning it with simple and efficient actions,</p>
+'blog_title' => 'Javascript is good boy too ! ',
+'blog_url' => 'Javascript-is-good-boy-too-!',
+'blog_content' => '<p>While developing the TaskManagerApp i am planning it with simple and efficient actions,</p>
 
 <p>I had many wide options for the user to make themself comfort such as choosing the database mode, connection type etc.,</p>
 
@@ -1383,9 +1383,9 @@ which will make the menu expand..If not it will be again set to ‘dropdown pull
 
 <p> </p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-09-23 11:26:41',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-09-23 11:26:41',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 20:31:33',
 'updated_at' => '2015-10-06 04:34:09',
@@ -1393,9 +1393,9 @@ which will make the menu expand..If not it will be again set to ‘dropdown pull
 28 => 
 array (
 'id' => '29',
-'blogTitle' => 'Goolge’s New Logo ',
-'blogUrl' => 'Goolge’s-New-Logo',
-'blogContent' => '<p>Yes, Google&rsquo;s logo updated&nbsp;<a href="http://googleblog.blogspot.in/2015/09/google-update.html" target="_blank">on the fly</a>, i wonder to see&nbsp;<a href="https://en.wikipedia.org/wiki/Sundar_Pichai" target="_blank">Mr.Sundar Pichai</a>&lsquo;s comment at first also you can see&nbsp;<a href="https://plus.google.com/+SuLtHaNAlLaUdeEn/posts/M6FHyGXmsCF" target="_blank">mine there.</a></p>
+'blog_title' => 'Goolge’s New Logo ',
+'blog_url' => 'Goolge’s-New-Logo',
+'blog_content' => '<p>Yes, Google&rsquo;s logo updated&nbsp;<a href="http://googleblog.blogspot.in/2015/09/google-update.html" target="_blank">on the fly</a>, i wonder to see&nbsp;<a href="https://en.wikipedia.org/wiki/Sundar_Pichai" target="_blank">Mr.Sundar Pichai</a>&lsquo;s comment at first also you can see&nbsp;<a href="https://plus.google.com/+SuLtHaNAlLaUdeEn/posts/M6FHyGXmsCF" target="_blank">mine there.</a></p>
 
 <p>Here&rsquo;s the animated logo</p>
 
@@ -1405,9 +1405,9 @@ array (
 
 <p>Cheer&rsquo;s !</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-09-28 17:46:41',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-09-28 17:46:41',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 20:34:15',
 'updated_at' => '2015-10-08 03:40:23',
@@ -1415,9 +1415,9 @@ array (
 29 => 
 array (
 'id' => '30',
-'blogTitle' => ' Google App Script -> Which makes you feel Great !! ',
-'blogUrl' => '-Google-App-Script-->-Which-makes-you-feel-Great-!!',
-'blogContent' => '<p>Hello !!</p>
+'blog_title' => ' Google App Script -> Which makes you feel Great !! ',
+'blog_url' => '-Google-App-Script-->-Which-makes-you-feel-Great-!!',
+'blog_content' => '<p>Hello !!</p>
 
 <p>I worked on Google App Script last week ,and I really felt awesome on the work i had.</p>
 
@@ -1457,9 +1457,9 @@ array (
 
 <p>Let me continue in the following scripts in the following Posts &lt;3</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-10-01 07:46:41',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-10-01 07:46:41',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-09-30 20:34:42',
 'updated_at' => '2015-10-08 03:38:59',
@@ -1467,9 +1467,9 @@ array (
 30 => 
 array (
 'id' => '31',
-'blogTitle' => 'Think before you Build ',
-'blogUrl' => 'Think-before-you-Build',
-'blogContent' => '<p>Few days i have to build a App name as Match Predicor. I wanted to use AngularJS, CSS with any Framework.&nbsp;</p>
+'blog_title' => 'Think before you Build ',
+'blog_url' => 'Think-before-you-Build',
+'blog_content' => '<p>Few days i have to build a App name as Match Predicor. I wanted to use AngularJS, CSS with any Framework.&nbsp;</p>
 
 <p>&nbsp;</p>
 
@@ -1493,9 +1493,9 @@ array (
 
 <p>&nbsp; &nbsp; &nbsp;While moving this to online, i removed few of the classes and methods inside the models which is not supported by the Laravel 5.0. This made me to have the app in two versions Laravel 5.1 and 5.0</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-10-19 10:00:00',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-10-19 10:00:00',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-11-01 05:50:20',
 'updated_at' => '2015-11-05 20:34:32',
@@ -1503,9 +1503,9 @@ array (
 31 => 
 array (
 'id' => '32',
-'blogTitle' => 'Increase your confidence. Defeat your past. Don\'t set limit ',
-'blogUrl' => 'Increase-your-confidence.-Defeat-your-past.-Don\'t-set-limit',
-'blogContent' => '<p>You know what. I am really lucky to be myself.&nbsp;</p>
+'blog_title' => 'Increase your confidence. Defeat your past. Don\'t set limit ',
+'blog_url' => 'Increase-your-confidence.-Defeat-your-past.-Don\'t-set-limit',
+'blog_content' => '<p>You know what. I am really lucky to be myself.&nbsp;</p>
 
 <p>I love the changes, behaviour, attitude and everything from me. I can see the goodness and the willingness to learn.&nbsp;</p>
 
@@ -1523,9 +1523,9 @@ array (
 
 <p><strong>Cheers !!</strong></p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-10-23 10:00:00',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-10-23 10:00:00',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-11-01 05:50:59',
 'updated_at' => '2015-11-05 20:34:55',
@@ -1533,9 +1533,9 @@ array (
 32 => 
 array (
 'id' => '33',
-'blogTitle' => 'Cordova :: The Platform which makes web dev to dive into mobile ',
-'blogUrl' => 'Cordova-::-The-Platform-which-makes-web-dev-to-dive-into-mobile',
-'blogContent' => '<p>Firstly, I thank Mr.Suresh who always gives me the opportunity to learn, I always prefer to learn new things and do innovate works whereever i go.&nbsp;</p>
+'blog_title' => 'Cordova :: The Platform which makes web dev to dive into mobile ',
+'blog_url' => 'Cordova-::-The-Platform-which-makes-web-dev-to-dive-into-mobile',
+'blog_content' => '<p>Firstly, I thank Mr.Suresh who always gives me the opportunity to learn, I always prefer to learn new things and do innovate works whereever i go.&nbsp;</p>
 
 <p>And i saw him as the person who wanted to do the same, I shall write a seperate post to thank him as i wanted to do.</p>
 
@@ -1557,9 +1557,9 @@ array (
 
 <p>Good Luck !</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-11-01 10:00:00',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-11-01 10:00:00',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-11-01 05:51:24',
 'updated_at' => '2015-11-05 20:35:19',
@@ -1567,9 +1567,9 @@ array (
 33 => 
 array (
 'id' => '34',
-'blogTitle' => 'First Windows App Development',
-'blogUrl' => 'First-Windows-App-Developmen',
-'blogContent' => '<p>Yeah, This was the day i created First Windows App, though it was a hybrid one, i faced lots of challenges to reach it, Here i am giving it in short</p>
+'blog_title' => 'First Windows App Development',
+'blog_url' => 'First-Windows-App-Developmen',
+'blog_content' => '<p>Yeah, This was the day i created First Windows App, though it was a hybrid one, i faced lots of challenges to reach it, Here i am giving it in short</p>
 
 <p>&nbsp;</p>
 
@@ -1593,9 +1593,9 @@ array (
 
 <p>&nbsp;</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-11-13 00:00:00',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-11-13 00:00:00',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-11-04 04:00:50',
 'updated_at' => '2015-11-04 04:01:31',
@@ -1603,9 +1603,9 @@ array (
 34 => 
 array (
 'id' => '35',
-'blogTitle' => 'Laravel Middleware - Short Intro',
-'blogUrl' => 'Laravel-Middleware---Short-Intr',
-'blogContent' => '<p>This is the post about Laravel&#39;s Middleware</p>
+'blog_title' => 'Laravel Middleware - Short Intro',
+'blog_url' => 'Laravel-Middleware---Short-Intr',
+'blog_content' => '<p>This is the post about Laravel&#39;s Middleware</p>
 
 <p>Middleware is one of the cool way that is included in Laravel 5, It focuses mainly on dealing with the request that reaches application. The Laravel 5 users are highly adviced to use this feature to make use of it.&nbsp;</p>
 
@@ -1626,9 +1626,9 @@ array (
 
 <p>&nbsp;</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-11-15 00:00:00',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-11-15 00:00:00',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-11-05 19:03:17',
 'updated_at' => '2015-11-05 19:03:53',
@@ -1636,9 +1636,9 @@ array (
 35 => 
 array (
 'id' => '36',
-'blogTitle' => 'Time to Shift yeah i got job in Chennai Again ',
-'blogUrl' => 'Time-to-Shift-yeah-i-got-job-in-Chennai-Again',
-'blogContent' => '<p>Yeah, i am stepping into my 3rd Year in Work.&nbsp;</p>
+'blog_title' => 'Time to Shift yeah i got job in Chennai Again ',
+'blog_url' => 'Time-to-Shift-yeah-i-got-job-in-Chennai-Again',
+'blog_content' => '<p>Yeah, i am stepping into my 3rd Year in Work.&nbsp;</p>
 
 <p>Absolutely it means i have completed 2 year of working experience (Mostly php :p)</p>
 
@@ -1648,9 +1648,9 @@ array (
 
 <p>Well, only 1 more day to go from Old Company and i shall proceed with the shifting process, Nov 16th is the joining date in New Company, I shall tell a lot about New Company soon !!</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2015-11-18 00:00:00',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2015-11-18 00:00:00',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2015-11-13 09:13:04',
 'updated_at' => '2015-11-13 09:15:18',
@@ -1658,9 +1658,9 @@ array (
 36 => 
 array (
 'id' => '37',
-'blogTitle' => 'Chosen Select and Input old Laravel',
-'blogUrl' => 'Chosen-Select-and-Input-old-Larave',
-'blogContent' => '<p>Writing this Post after long time, which would help others if they use Chosen Menu</p>
+'blog_title' => 'Chosen Select and Input old Laravel',
+'blog_url' => 'Chosen-Select-and-Input-old-Larave',
+'blog_content' => '<p>Writing this Post after long time, which would help others if they use Chosen Menu</p>
 
 <p>&nbsp;</p>
 
@@ -1688,9 +1688,9 @@ array (
 
 <p>You shall break it down to look deeper :)&nbsp;</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2016-02-12 10:10:00',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2016-02-12 10:10:00',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2016-02-11 16:10:21',
 'updated_at' => '2016-02-11 16:10:21',
@@ -1698,9 +1698,9 @@ array (
 37 => 
 array (
 'id' => '38',
-'blogTitle' => 'Installing Composer for xampp in Ubuntu',
-'blogUrl' => 'Installing-Composer-for-xampp-in-Ubuntu',
-'blogContent' => '<p>If you look for a way to install Composer for the machine which is powered with xampp, then here are the tweaks that you shall do.</p>
+'blog_title' => 'Installing Composer for xampp in Ubuntu',
+'blog_url' => 'Installing-Composer-for-xampp-in-Ubuntu',
+'blog_content' => '<p>If you look for a way to install Composer for the machine which is powered with xampp, then here are the tweaks that you shall do.</p>
 
 <p><strong>Step 1 :&nbsp;</strong></p>
 
@@ -1724,9 +1724,9 @@ array (
 
 <p><code>And you&#39;re done ;)</code></p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2016-02-20 10:00:00',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2016-02-20 10:00:00',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2016-02-17 15:06:06',
 'updated_at' => '2016-02-17 15:06:06',
@@ -1734,9 +1734,9 @@ array (
 38 => 
 array (
 'id' => '39',
-'blogTitle' => 'How to auth logout in laravel 5.2',
-'blogUrl' => 'How-to-auth-logout-in-laravel-5.2',
-'blogContent' => '<p>This is just a quick note on how to logout the user if he is using Auth in Laravel 5.2</p>
+'blog_title' => 'How to auth logout in laravel 5.2',
+'blog_url' => 'How-to-auth-logout-in-laravel-5.2',
+'blog_content' => '<p>This is just a quick note on how to logout the user if he is using Auth in Laravel 5.2</p>
 
 <div style="background:#eee;border:1px solid #ccc;padding:5px 10px;">
 <p>public function getLogout() {</p>
@@ -1754,9 +1754,9 @@ array (
 
 <p>Happy Coding !!&nbsp;</p>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2016-03-11 11:00:00',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2016-03-11 11:00:00',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2016-03-08 17:28:03',
 'updated_at' => '2016-03-08 17:28:03',
@@ -1764,9 +1764,9 @@ array (
 39 => 
 array (
 'id' => '40',
-'blogTitle' => 'Linux Ubuntu 16.04 Macbuntu Look',
-'blogUrl' => 'Linux-Ubuntu-16.04-Macbuntu-Look',
-'blogContent' => '<p>I always love Ubuntu. After the firstday download of Ubuntu 16.04 i tried to change its look like mac, however i couldn&#39;t found few packages, but after noobslab announcement of Macbuntu look, i suddenly changed the look within minutes.. Here&#39;s the preview&nbsp;<img alt="" src="http://sulthanallaudeen.com/images/Macbuntu-16.04-1.png" class=\'img-thumbnail\' /></p>
+'blog_title' => 'Linux Ubuntu 16.04 Macbuntu Look',
+'blog_url' => 'Linux-Ubuntu-16.04-Macbuntu-Look',
+'blog_content' => '<p>I always love Ubuntu. After the firstday download of Ubuntu 16.04 i tried to change its look like mac, however i couldn&#39;t found few packages, but after noobslab announcement of Macbuntu look, i suddenly changed the look within minutes.. Here&#39;s the preview&nbsp;<img alt="" src="http://sulthanallaudeen.com/images/Macbuntu-16.04-1.png" class=\'img-thumbnail\' /></p>
 
 <p><img alt="" src="http://sulthanallaudeen.com/images/Macbuntu-16.04-2.png" class=\'img-thumbnail\'/></p>
 
@@ -1787,9 +1787,9 @@ array (
 <p>&nbsp;</p>
 
 <p><iframe frameborder="0" height="676" scrolling="no" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fallaudeen.s%2Fposts%2F773653469436795&amp;width=500" style="border:none;overflow:hidden" width="500"></iframe></p>',
-'blogAuthor' => '1',
-'blogDate' => '2016-04-30 10:00:00',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2016-04-30 10:00:00',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2016-04-28 18:14:04',
 'updated_at' => '2016-04-28 18:18:52',
@@ -1797,9 +1797,9 @@ array (
 40 => 
 array (
 'id' => '41',
-'blogTitle' => 'E: Could not get lock lock open (11 Resource temporarily unavailable)',
-'blogUrl' => 'E:-Could-not-get-lock-lock-open-(11-Resource-temporarily-unavailable)',
-'blogContent' => '<p>You would get this message few times, while you abort the download in your linux based machine.&nbsp;</p>
+'blog_title' => 'E: Could not get lock lock open (11 Resource temporarily unavailable)',
+'blog_url' => 'E:-Could-not-get-lock-lock-open-(11-Resource-temporarily-unavailable)',
+'blog_content' => '<p>You would get this message few times, while you abort the download in your linux based machine.&nbsp;</p>
 
 <div style="background:#eee;border:1px solid #ccc;padding:5px 10px;"><code>E: Could not get lock /var/lib/dpkg/lock - open (11 Resource temporarily unavailable)</code><br />
 <code>E: Unable to lock the administration directory (/var/lib/dpkg/) is another process using it? &nbsp;</code></div>
@@ -1813,9 +1813,9 @@ array (
 <div style="background:#eee;border:1px solid #ccc;padding:5px 10px;"><code>sudo rm /var/lib/apt/lists/lock</code><br />
 <code>sudo rm /var/cache/apt/archives/lock</code></div>
 ',
-'blogAuthor' => '1',
-'blogDate' => '2016-05-01 10:00:00',
-'blogStatus' => '1',
+'blog_author' => '1',
+'blog_date' => '2016-05-01 10:00:00',
+'blog_status' => '1',
 'status' => '0',
 'created_at' => '2016-04-29 14:50:24',
 'updated_at' => '2016-04-29 14:52:19',

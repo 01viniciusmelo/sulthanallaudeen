@@ -55,14 +55,11 @@ class Controller extends BaseController {
     #Get All Blog Posts
 
     public function getBlogs() {
-        if(Input::get('url'))
-        {
+        if (Input::get('url')) {
             $Response = $this->getBlog(Input::get('url'));
+        } else {
+            $Response = array('success' => 1, 'data' => $blogs = Blog::where('blog_status', 1)->orderBy('id', 'desc')->paginate(10));
         }
-        else
-        {
-            $Response = array('success' => 1, 'data' => $blogs = Blog::where('blogStatus', 1)->orderBy('id', 'desc')->paginate(10));
-        }        
         return $Response;
     }
 
@@ -70,14 +67,14 @@ class Controller extends BaseController {
 
     public function getBlog($id = NULL) {
         if ($id == '') {
-            $blogData = Blog::where('blogUrl', Input::get('url'))->first();
+            $blogData = Blog::where('blog_url', Input::get('url'))->first();
             if ($blogData) {
                 $Response = array('success' => 1, 'data' => $blogData);
             } else {
                 $Response = array('success' => 0, 'data' => 'Blog not found');
             }
         } else {
-            $Response = array('success' => '1', 'data' => Blog::where('blogUrl', $id)->first());
+            $Response = array('success' => '1', 'data' => Blog::where('blog_url', $id)->first());
         }
         return $Response;
     }
@@ -85,7 +82,7 @@ class Controller extends BaseController {
     #Search Blog
 
     public function searchBlogByQuery($query) {
-        $blogResult = Blog::where('blogTitle', 'LIKE', '%' . $query . '%')->get();
+        $blogResult = Blog::where('blog_title', 'LIKE', '%' . $query . '%')->get();
         if (count($blogResult) == 0) {
             $Response = array('success' => 0);
         } else {
@@ -97,31 +94,26 @@ class Controller extends BaseController {
     #Get Tag
 
     public function getTags() {
-        $Response = array('success' => 1, 'data' => $tags = Tag::where('tagStatus', 1)->get());
+        $Response = array('success' => 1, 'data' => $tags = Tag::where('tag_status', 1)->get());
         return $Response;
     }
 
     #Get Particular Tag
 
     public function getTag($tag = NULL) {
-        if(Input::get('tag'))
-        {
+        if (Input::get('tag')) {
             $tag = Input::get('tag');
         }
-        if(Input::get('tag') && Input::get('about'))
-        {
-            $tagData = Tag::where('tagTitle', $tag)->first();
-            if($tagData)
-            {
+        if (Input::get('tag') && Input::get('about')) {
+            $tagData = Tag::where('tag_title', $tag)->first();
+            if ($tagData) {
                 $Response = array('success' => 1, 'data' => $tagData);
-            }
-            else
-            {
+            } else {
                 $Response = array('success' => 0, 'data' => Config::get('constants.error.TAG_NOT_FOUND'));
             }
             return $Response;
         }
-        $tagId = Tag::where('tagTitle', $tag)->pluck('id');
+        $tagId = Tag::where('tag_title', $tag)->pluck('id');
         $blogTag = BlogTag::where('tag_id', $tagId)->pluck('id');
         if ($blogTag == '') {
             return 1;
@@ -144,10 +136,10 @@ class Controller extends BaseController {
     public function getTotalCount() {
         $blogCount = Blog::all()->count();
         $tagCount = Tag::all()->count();
-        $contactCount = ContactMails::where('messageStatus', 0)->count();
+        $contactCount = ContactMails::where('message_status', 0)->count();
         $totalCount = ContactMails::all()->count();
         $totalHit = UserLog::all()->count();
-        $Response = array('success' => '1', 'blogCount' => $blogCount, 'tagCount' => $tagCount, 'contactCount' => $contactCount, 'totalHit' => $totalHit);
+        $Response = array('success' => '1', 'blog_count' => $blogCount, 'tag_count' => $tagCount, 'contact_count' => $contactCount, 'total_hit' => $totalHit);
         return $Response;
     }
 
@@ -202,8 +194,8 @@ class Controller extends BaseController {
 
     public function triggerMail($email, $message) {
 
-        $mailData['userEmail'] = $email;
-        $mailData['userMessage'] = $message;
+        $mailData['user_email'] = $email;
+        $mailData['user_message'] = $message;
         $validation = Validator::make($mailData, ContactMails::$mailData);
         if ($validation->passes()) {
             $sendgrid = new SendGrid('testmyblood', 'Open@123');
@@ -213,7 +205,7 @@ class Controller extends BaseController {
                     ->setFrom('allau@sulthanallaudeen.com')
                     ->setSubject('Sysaxiom :: Message from : ' . $email)
                     ->setHtml($message);
-            //$sendgrid->send($mail);
+            $sendgrid->send($mail);
             $mailId = ContactMails::create($mailData);
             $Response = array('success' => '1', 'mailId' => $mailId->id);
         } else {
@@ -317,4 +309,18 @@ class Controller extends BaseController {
         return $Response;
     }
 
+    #Cron Job
+
+    public function cron() {
+        #Body of Cron
+    }
+
+    #Sub Cron
+
+    public function subCron() {
+        #Body of Sub Cron
+    }
+
+    #End of Sub Cron
+    #End of Cron Job
 }

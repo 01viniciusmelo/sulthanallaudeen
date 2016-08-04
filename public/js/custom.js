@@ -34,9 +34,9 @@ $("#blogArea").hide();
         {
         $("#resultArea").html('<div class="alert alert-success" role="alert"><strong>Searching for the Posts contains the word "' + searchQuery + '" ( ' + data.count + ' Results )</div>');
                 $.each(data.data, function (index, value) {
-                $("#resultArea").append('<h2><a href="blog/' + value.blogUrl + '" style="text-decoration:none">' + value.blogTitle + '</a></h2>');
+                $("#resultArea").append('<h2><a href="' +saUrl+'/blog/'+ value.blog_url + '" style="text-decoration:none">' + value.blog_title + '</a></h2>');
                         $("#resultArea").append('<p class="lead">by <a style="text-decoration:none">Sulthan Allaudeen</a></p>');
-                        $("#resultArea").append('<p style="float:right"><span class="glyphicon glyphicon-time"></span> Posted on ' + value.blogDate + ' </p>');
+                        $("#resultArea").append('<p style="float:right"><span class="glyphicon glyphicon-time"></span> Posted on ' + value.blog_date + ' </p>');
                 });
         } else
         {

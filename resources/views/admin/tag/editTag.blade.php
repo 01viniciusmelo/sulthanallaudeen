@@ -22,24 +22,24 @@
                                     <input type="hidden" name="tagId" value="{{ $tagData->id }}" id="tagId">
                                         <div class="form-group">
                                             <label>Tag Title</label>
-                                            <input class="form-control" placeholder='Blog Title Here' id="tagTitle" value="{{ $tagData->tagTitle }}">
+                                            <input class="form-control" placeholder='Blog Title Here' id="tag_title" value="{{ $tagData->tag_title }}">
                                         </div>
                                         <div class="form-group">
                                             <label>Tag Content</label>
-                                            <textarea class="ckeditor" name="tagContent" >{{ $tagData->tagContent }}</textarea>
+                                            <textarea class="ckeditor" name="tag_title" >{{ $tagData->tag_title }}</textarea>
                                         </div>
                                         <div class="form-group">
                                   <label class="col-lg-4 control-label">Tag Status</label>
                                   <div class="col-lg-8">
                                     <div class="radio">
                                       <label>
-                                        <input type="radio" name="tagStatus" id="optionsRadios1" value="1" <?php if($tagData->tagStatus==1) { echo 'checked'; }  ?>>
+                                        <input type="radio" name="tag_status" id="optionsRadios1" value="1" <?php if($tagData->tag_status==1) { echo 'checked'; }  ?>>
                                         Publish
                                       </label>
                                     </div>
                                     <div class="radio">
                                       <label>
-                                      <input type="radio" name="tagStatus" id="optionsRadios1" value="0" <?php if($tagData->tagStatus==0) { echo 'checked'; }  ?>>
+                                      <input type="radio" name="tag_status" id="optionsRadios1" value="0" <?php if($tagData->tag_status==0) { echo 'checked'; }  ?>>
                                         Draft
                                       </label>
                                     </div>
@@ -85,12 +85,12 @@ $(document).ready(function() {
   
   var id =  $("#tagId").val();
   
-  var tagTitle =  $("#tagTitle").val();
-  var tagContent = CKEDITOR.instances['tagContent'].getData();
-  var tagStatus =   $('input:radio[name=tagStatus]:checked').val();
+  var tag_title =  $("#tag_title").val();
+  var tag_content = CKEDITOR.instances['tag_title'].getData();
+  var tag_status =   $('input:radio[name=tag_status]:checked').val();
   
 
-  $.post( "../updateTag", { _token : _token, id: id, tagTitle, tagContent: tagContent, tagStatus: tagStatus })
+  $.post( "../updateTag", { _token : _token, id: id, tag_title, tag_title: tag_title, tag_status: tag_status, tag_content : tag_content })
   .done(function( data ) {
     var result = jQuery.parseJSON(JSON.stringify(data));
     
@@ -108,8 +108,8 @@ $(document).ready(function() {
     var _token = $("input[name=_token]").val();
     $("#tagPostFailure").html(" ");  
     $("#tagPostSuccess").hide();
-    $("#tagPostFailure").html(result.err.tagTitle);
-    $("#tagPostFailure").append(result.err.tagContent);
+    $("#tagPostFailure").html(result.err.tag_title);
+    $("#tagPostFailure").append(result.err.tag_title);
     $("#tagPostFailure").show(1000);
       
 

@@ -22,16 +22,16 @@
                                     <input type="hidden" name="blogId" value="{{ $blogData->id }}" id="blogId">
                                         <div class="form-group">
                                             <label>Blog Title</label>
-                                            <input class="form-control" placeholder='Blog Title Here' id="blogTitle" value="{{ $blogData->blogTitle }}">
+                                            <input class="form-control" placeholder='Blog Title Here' id="blog_title" value="{{ $blogData->blog_title }}">
                                         </div>
                                         <div class="form-group">
                                             <label>Blog Url</label>
-                                            <input class="form-control" placeholder="Never Mind, We'l Generate"  id="blogUrl" value="{{ $blogData->blogUrl }}">
+                                            <input class="form-control" placeholder="Never Mind, We'l Generate"  id="blog_url" value="{{ $blogData->blog_url }}">
                                             <p class="help-block">Blog Url will be auto-generated</p>
                                         </div>
                                         <div class="form-group">
                                             <label>Blog Content</label>
-                                            <textarea class="ckeditor" name="blogpost">{{ $blogData->blogContent }}</textarea>
+                                            <textarea class="ckeditor" name="blogpost">{{ $blogData->blog_content }}</textarea>
                                         </div>
                                         <div class="form-group">
                                             <label>Blog Tags </label><br>
@@ -49,7 +49,7 @@
                                       }
                                       ?>
                                       >
-                                       {{ $tag->tagTitle}}
+                                       {{ $tag->tag_title}}
                                     </label>
                                     @endforeach
                                         </div>
@@ -58,21 +58,21 @@
                                   <div class="col-lg-8">
                                     <div class="radio">
                                       <label>
-                                        <input type="radio" name="blogStatus" id="optionsRadios1" value="1" <?php if($blogData->blogStatus==1) { echo 'checked'; }  ?>>
+                                        <input type="radio" name="blog_status" id="optionsRadios1" value="1" <?php if($blogData->blog_status==1) { echo 'checked'; }  ?>>
                                         Publish
                                       </label>
                                     </div>
                                     <div class="radio">
                                       <label>
-                                        <input type="radio" name="blogStatus" id="optionsRadios2" value="0" <?php if($blogData->blogStatus==0) { echo 'checked'; }  ?>>
+                                        <input type="radio" name="blog_status" id="optionsRadios2" value="0" <?php if($blogData->blog_status==0) { echo 'checked'; }  ?>>
                                         Draft
                                       </label>
                                     </div>
                                   </div>
                                 </div>
-                                <span style='align:left'><b>Blog Date : </b></span><input type="text" class="default_datetimepicker" id='blogDate' value="{{ $blogData->blogDate }}" />
+                                <span style='align:left'><b>Blog Date : </b></span><input type="text" class="default_datetimepicker" id='blog_date' value="{{ $blogData->blog_date }}" />
                                         <p align="center">
-                                        <button type="button" class="btn btn-default" id="postBlog">Post Blog</button>
+                                        <button type="button" class="btn btn-default" id="postBlog">Update Blog</button>
                                         <button type="reset" class="btn btn-default">Reset</button>
                                         </p>
                                         {!! Form::close() !!}
@@ -103,26 +103,26 @@ $(document).ready(function() {
 
   
 
-$( "#blogTitle" ).keypress(function() {
-  var blogTitle =  $("#blogTitle").val();
-  var blogUrl = blogTitle.replace(/\s+/g, "-");
-  $("#blogUrl").val(blogUrl);
+$( "#blog_title" ).keypress(function() {
+  var blog_title =  $("#blog_title").val();
+  var blog_url = blog_title.replace(/\s+/g, "-");
+  $("#blog_url").val(blog_url);
 });
   $( "#postBlog" ).click(function() {
   var _token = $("input[name=_token]").val();
   var blogId =  $("#blogId").val();
-  var blogTitle =  $("#blogTitle").val();
-  var blogUrl =  $("#blogUrl").val();
-  var blogContent = CKEDITOR.instances['blogpost'].getData();
-  var blogDate =  $("#blogDate").val();
-  var blogStatus =   $('input:radio[name=blogStatus]:checked').val();
+  var blog_title =  $("#blog_title").val();
+  var blog_url =  $("#blog_url").val();
+  var blog_content = CKEDITOR.instances['blogpost'].getData();
+  var blog_date =  $("#blog_date").val();
+  var blog_status =   $('input:radio[name=blog_status]:checked').val();
   var blogTags = [];
   $('input[name=blogTags]:checked').map(function() {
               blogTags.push($(this).val());
   });
 
 
-  $.post( "../updateBlog", { _token : _token, id: blogId, blogTitle: blogTitle, blogUrl: blogUrl, blogContent:blogContent, blogDate : blogDate, blogTags:blogTags, blogStatus:blogStatus })
+  $.post( "../updateBlog", { _token : _token, id: blogId, blog_title: blog_title, blog_url: blog_url, blog_content:blog_content, blog_date : blog_date, blogTags:blogTags, blog_status:blog_status })
   .done(function( data ) {
     var result = jQuery.parseJSON(JSON.stringify(data));
 
@@ -130,7 +130,7 @@ $( "#blogTitle" ).keypress(function() {
     {
   
       $("#blogPostFailure").hide();
-      $("#blogPostSuccess").html("Blog Posted successfully.. Blog Id is "+result.blogId+" !");
+      $("#blogPostSuccess").html("Blog Updated successfully.. Blog Id is "+result.blogId+" !");
       $("#blogPostSuccess").show(1000);
       $("#blogPostSuccess").hide(2000);
   
@@ -139,9 +139,9 @@ $( "#blogTitle" ).keypress(function() {
     {
     $("#blogPostFailure").html(" ");  
     $("#blogPostSuccess").hide();
-    $("#blogPostFailure").html(result.err.blogTitle);
-    $("#blogPostFailure").append(result.err.blogUrl);
-    $("#blogPostFailure").append(result.err.blogContent);
+    $("#blogPostFailure").html(result.err.blog_title);
+    $("#blogPostFailure").append(result.err.blog_url);
+    $("#blogPostFailure").append(result.err.blog_content);
     $("#blogPostFailure").show(1000);
       
 

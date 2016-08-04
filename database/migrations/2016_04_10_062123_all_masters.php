@@ -41,12 +41,12 @@ class AllMasters extends Migration
         Schema::create('blog',function(Blueprint $table){
             $table->engine = "InnoDB";
             $table->increments('id');
-            $table->string('blogTitle', 200);
-            $table->string('blogUrl', 500);
-            $table->longText('blogContent');
-            $table->integer('blogAuthor');
-            $table->dateTime('blogDate');
-            $table->integer('blogStatus');
+            $table->string('blog_title', 200);
+            $table->string('blog_url', 500);
+            $table->longText('blog_content');
+            $table->integer('blog_author');
+            $table->dateTime('blog_date');
+            $table->integer('blog_status');
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
 
@@ -68,9 +68,9 @@ class AllMasters extends Migration
         Schema::create('cat',function(Blueprint $table){
             $table->engine = "InnoDB";
             $table->increments('id');
-            $table->string('catTitle', 100);
-            $table->longText('catContent');
-            $table->tinyInteger('catStatus')->default(0);
+            $table->string('cat_title', 100);
+            $table->longText('cat_content');
+            $table->tinyInteger('cat_status')->default(0);
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
 
@@ -94,9 +94,9 @@ class AllMasters extends Migration
         Schema::create('contactmail',function(Blueprint $table){
             $table->engine = "InnoDB";
             $table->increments('id');
-            $table->string('userEmail', 500);
-            $table->string('userMessage', 500);
-            $table->integer('messageStatus');
+            $table->string('user_email', 500);
+            $table->string('user_message', 500);
+            $table->integer('message_status');
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
 
@@ -115,9 +115,9 @@ class AllMasters extends Migration
         Schema::create('tag',function(Blueprint $table){
             $table->engine = "InnoDB";
             $table->increments('id');
-            $table->string('tagTitle', 100);
-            $table->longText('tagContent');
-            $table->integer('tagStatus');
+            $table->string('tag_title', 100);
+            $table->longText('tag_content');
+            $table->integer('tag_status');
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
 

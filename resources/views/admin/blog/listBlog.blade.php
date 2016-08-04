@@ -32,8 +32,8 @@
                                 @foreach($blogs as $blog)
                                 <tr class="odd gradeX">
                                     <td>{{ $blog->id }}</td>
-                                    <td>{{ $blog->blogTitle }}</td>
-                                    <td>{{ $blog->blogDate }}</td>
+                                    <td>{{ $blog->blog_title }}</td>
+                                    <td>{{ $blog->blog_date }}</td>
                                     <td><a href="{{ URL::to('/editblog/'.$blog->id) }}">Edit </a> / <a href="{{ URL::to('/blog/'.$blog->blogUrl) }}">View</a></td>
                                 </tr>
                                 @endforeach

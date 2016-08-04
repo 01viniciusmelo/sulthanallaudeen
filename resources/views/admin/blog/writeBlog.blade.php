@@ -21,11 +21,11 @@
                                     {!! Form::open(array('url' => 'blogPost', 'name' => 'blogPost', 'id' => 'blogPost','class' => 'form-horizontal'))!!}
                                         <div class="form-group">
                                             <label>Blog Title</label>
-                                            <input class="form-control" placeholder='Blog Title Here' id="blogTitle">
+                                            <input class="form-control" placeholder='Blog Title Here' id="blog_title">
                                         </div>
                                         <div class="form-group">
                                             <label>Blog Url</label>
-                                            <input class="form-control" placeholder="Never Mind, We'l Generate"  id="blogUrl">
+                                            <input class="form-control" placeholder="Never Mind, We'l Generate"  id="blog_url">
                                             <p class="help-block">Blog Url will be auto-generated</p>
                                         </div>
                                         <div class="form-group">
@@ -36,7 +36,7 @@
                                             <label>Blog Tags </label><br>
                                             @foreach($tags as $tag)
                                             <label class="checkbox-inline">
-                                                <input type="checkbox" name="blogTags" value="{{ $tag->id}}">{{$tag->tagTitle}}
+                                                <input type="checkbox" name="blogTags" value="{{ $tag->id}}">{{$tag->tag_title}}
                                             </label> 
                                             @endforeach
                                         </div>
@@ -45,20 +45,20 @@
                                   <div class="col-lg-8">
                                     <div class="radio">
                                       <label>
-                                        <input type="radio" name="blogStatus" id="optionsRadios1" value="1" checked>
+                                        <input type="radio" name="blog_status" id="optionsRadios1" value="1" checked>
                                         Publish
                                       </label>
                                     </div>
                                     <div class="radio">
                                       <label>
-                                        <input type="radio" name="blogStatus" id="optionsRadios2" value="0">
+                                        <input type="radio" name="blog_status" id="optionsRadios2" value="0">
                                         Draft
                                       </label>
                                     </div>
                                   </div>
                                 </div>
                                 <div class="form-group">
-                                <span style='align:left'><b>Blog Date : </b></span><input type="text" class="default_datetimepicker" id='blogDate'/>
+                                <span style='align:left'><b>Blog Date : </b></span><input type="text" class="default_datetimepicker" id='blog_date'/>
                                 </div>
                                         <p align="center">
                                         <button type="button" class="btn btn-default" id="postBlog">Post Blog</button>
@@ -90,26 +90,26 @@
 <script>
 $(document).ready(function() {
   console.log('page rendered');
-$( "#blogTitle" ).keypress(function() {
+$( "#blog_title" ).keypress(function() {
   console.log('test');
-  var blogTitle =  $("#blogTitle").val();
-  var blogUrl = blogTitle.replace(/\s+/g, "-");
-  $("#blogUrl").val(blogUrl);
+  var blog_title =  $("#blog_title").val();
+  var blog_url = blog_title.replace(/\s+/g, "-");
+  $("#blog_url").val(blog_url);
 });
   $( "#postBlog" ).click(function() {
   var _token = $("input[name=_token]").val();
-  var blogTitle =  $("#blogTitle").val();
-  var blogUrl =  $("#blogUrl").val();
-  var blogDate =  $("#blogDate").val();
-  var blogContent = CKEDITOR.instances['blogpost'].getData();
-  var blogStatus =   $('input:radio[name=blogStatus]:checked').val();
+  var blog_title =  $("#blog_title").val();
+  var blog_url =  $("#blog_url").val();
+  var blog_date =  $("#blog_date").val();
+  var blog_content = CKEDITOR.instances['blogpost'].getData();
+  var blog_status =   $('input:radio[name=blog_status]:checked').val();
   var blogTags = [];
   $('input[name=blogTags]:checked').map(function() {
               blogTags.push($(this).val());
   });
 
 
-  $.post( "postBlog", { _token : _token, blogTitle: blogTitle, blogUrl: blogUrl, blogContent:blogContent, blogTags:blogTags, blogDate : blogDate, blogStatus:blogStatus })
+  $.post( "postBlog", { _token : _token, blog_title: blog_title, blog_url: blog_url, blog_content:blog_content, blogTags:blogTags, blog_date : blog_date, blog_status:blog_status })
   .done(function( data ) {
     var result = jQuery.parseJSON(JSON.stringify(data));
 
@@ -131,9 +131,9 @@ $( "#blogTitle" ).keypress(function() {
     {
     $("#blogPostFailure").html(" ");  
     $("#blogPostSuccess").hide();
-    $("#blogPostFailure").html(result.err.blogTitle);
-    $("#blogPostFailure").append(result.err.blogUrl);
-    $("#blogPostFailure").append(result.err.blogContent);
+    $("#blogPostFailure").html(result.err.blog_title);
+    $("#blogPostFailure").append(result.err.blog_url);
+    $("#blogPostFailure").append(result.err.blog_content);
     $("#blogPostFailure").show(1000);
       
 

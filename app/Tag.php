@@ -25,7 +25,7 @@ class Tag extends Model implements AuthenticatableContract, CanResetPasswordCont
      *
      * @var array
      */
-    protected $fillable = ['tagTitle', 'tagContent', 'tagDate', 'tagStatus'];
+    protected $fillable = ['tag_title', 'tag_content', 'tag_date', 'tag_status'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -33,8 +33,8 @@ class Tag extends Model implements AuthenticatableContract, CanResetPasswordCont
      * @var array
      */
     public static $postTag = array(
-        'tagTitle' => 'required',
-        'tagContent' => 'required',
+        'tag_title' => 'required',
+        'tag_content' => 'required',
     );
 
 }

@@ -31,9 +31,9 @@
                                     @foreach($tags as $tag)
                                         <tr class="odd gradeX">
                                             <td>{{ $tag->id }}</td>
-                                            <td>{{ $tag->tagTitle }}</td>
+                                            <td>{{ $tag->tag_title }}</td>
                                             <td>{{ $tag->updated_at }}</td>
-                                            <td><a href="{{ URL::to('/edittag/'.$tag->id) }}">Edit </a> / <a href="{{ URL::to('/tag/'.$tag->tagTitle) }}">View</a></td>
+                                            <td><a href="{{ URL::to('/edittag/'.$tag->id) }}">Edit </a> / <a href="{{ URL::to('/tag/'.$tag->tag_title) }}">View</a></td>
                                         </tr>
                                     @endforeach
                                     </tbody>

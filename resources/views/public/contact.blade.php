@@ -101,7 +101,7 @@ $(document).ready(function() {
   var _token = $("input[name=_token]").val();
   var userEmail = $("#userEmail").val();
   var userMessage = $("#userMessage").val();
-  $.post( "sendMail", { _token : _token, userEmail : userEmail, userMessage : userMessage })
+  $.post( "sendMail", { _token : _token, user_email : userEmail, user_message : userMessage })
   .done(function( data ) {
     var result = jQuery.parseJSON(JSON.stringify(data));
     if (result.success==1)

@@ -24,7 +24,7 @@ class MailTemplate extends Model implements AuthenticatableContract, CanResetPas
 
     public function getBlogs() {
         #return $this->belongsToMany('App\Receipe', 'receipe_favorites', 'user_id', 'receipe_id')->select(array('receipe.id', 'receipe.ReceipeName', 'receipe.ReceipeImage'));
-        return $this->belongsToMany('App\Blog', 'blog_tag', 'tag_id', 'user_id')->select(array('blog.id', 'blog.blogTitle', 'blog.blogUrl'));
+        return $this->belongsToMany('App\Blog', 'blog_tag', 'tag_id', 'user_id')->select(array('blog.id', 'blog.blog_title', 'blog.blog_url'));
     }
 
     public $timestamps = true;

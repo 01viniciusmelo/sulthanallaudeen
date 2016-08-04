@@ -57,7 +57,7 @@ class AppController extends Controller {
     #Other Services
 
     public function sendMail() {
-        return $this->triggerMail(Input::get('userEmail'), Input::get('userMessage'));
+        return $this->triggerMail(Input::get('user_email'), Input::get('user_message'));
     }
 
     #Get CSRF Token

@@ -25,7 +25,7 @@ class ContactMails extends Model implements AuthenticatableContract, CanResetPas
      *
      * @var array
      */
-    protected $fillable = ['userEmail', 'userMessage'];
+    protected $fillable = ['user_email', 'user_message'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -34,8 +34,8 @@ class ContactMails extends Model implements AuthenticatableContract, CanResetPas
      */
     protected $hidden = ['password', 'remember_token'];
     public static $mailData = array(
-        'userEmail' => 'required|email',
-        'userMessage' => 'required',
+        'user_email' => 'required|email',
+        'user_message' => 'required',
     );
 
 }
