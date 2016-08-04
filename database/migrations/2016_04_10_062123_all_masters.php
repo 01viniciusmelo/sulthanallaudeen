@@ -102,6 +102,28 @@ class AllMasters extends Migration
 
         });
 
+        Schema::create('cron',function(Blueprint $table){
+                    $table->engine = "InnoDB";
+                    $table->increments('id');
+                    $table->string('cron_name', 50);
+                    $table->time('cron_time');
+                    $table->string('cron_note', 255);
+                    $table->tinyInteger('status')->default(0);
+                    $table->timestamps();
+
+                });
+
+        Schema::create('cron_entry',function(Blueprint $table){
+            $table->engine = "InnoDB";
+            $table->increments('id');
+            $table->integer('cron_id');
+            $table->dateTime('cron_time');
+            $table->string('cron_note', 255);
+            $table->tinyInteger('status')->default(0);
+            $table->timestamps();
+
+        });
+
         Schema::create('mailtemplate',function(Blueprint $table){
             $table->engine = "InnoDB";
             $table->increments('id');
@@ -155,7 +177,6 @@ class AllMasters extends Migration
             $table->timestamps();
 
         });
-
 
     }
 

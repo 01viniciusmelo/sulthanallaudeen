@@ -20,6 +20,8 @@ use App\BlogTag;
 use App\ContactMails;
 use App\UserLog;
 use App\AdminConfig;
+use App\Cron;
+use App\CronEntry;
 #Config
 use Config;
 
@@ -323,7 +325,19 @@ class Controller extends BaseController {
     #Sub Cron
 
     public function subCron() {
+        #Initiating Sub Cron
+        $cronList = Cron::where('status', 1)->get();
+        foreach($cronList as $cron)
+        {
+            $cronData['cron_id'] = $cron['id'];
+            $cronData['cron_time'] = date("Y-m-d H:i:s");
+            $cronData['cron_note'] = Config::get('constants.cron.success');
+            CronEntry::create($cronData);
+        }
+
+        #Finishing Sub Cron
         echo 'Running Sub Cron<br>';
+
     }
 
     #End of Sub Cron
