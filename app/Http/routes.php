@@ -27,7 +27,7 @@ Route::group(['middleware' => ['web']], function () {
 #Feeds
     Route::post('getAllCount', 'AppController@getAllCount');
 #Access Info
-    Route::post('getDetails', 'Controller@getDetails');
+    Route::get('getDetails', 'Controller@getDetails');
 #Blog
     Route::get('blog', 'AppController@blog');
     Route::post('blog', 'Controller@getBlogs');
@@ -89,6 +89,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('updateAdminContactData', 'HomeController@updateAdminContactData');
 #Gmail
     Route::get('gmail', 'HomeController@gmail');
+#Reminder
+    Route::post('remind', 'PublicController@remind');
+    Route::post('getNotification', 'PublicController@getNotification');
 ######Logout#####
     Route::get('logout', 'HomeController@logout');
 

@@ -30,7 +30,7 @@ git reset --hard FETCH_HEAD
 git clean -df
 
 #Create Seed
-php artisan make:seeder CronTableSeeder
+php artisan make:seeder ReminderTableSeeder
 
 #Create Model
 php artisan make:model Cron

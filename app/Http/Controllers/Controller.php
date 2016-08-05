@@ -20,7 +20,7 @@ use App\BlogTag;
 use App\ContactMails;
 use App\UserLog;
 use App\AdminConfig;
-use App\Cron;
+use App\Reminder;
 use App\CronEntry;
 #Config
 use Config;
@@ -153,6 +153,7 @@ class Controller extends BaseController {
         $browserDetails = $this->getBrowser();
         $userDetails['browser'] = $browserDetails['browser'];
         $userDetails['version'] = $browserDetails['version'];
+        $userDetails['datetime'] = date("Y-m-d H:i:s");
         $Response = array('success' => 1, 'systemDetails' => $userDetails);
         return $Response;
     }
@@ -315,31 +316,64 @@ class Controller extends BaseController {
     #Cron Job
 
     public function cron() {
-        echo 'Cron Job Started at '.date("Y-m-d H:i:s").'<br>';
+        echo 'Cron Job Started at ' . date("Y-m-d H:i:s") . '<br>';
         #Calling Sub Cron
-        $this->subCron();
         echo nl2br("...\n");
-        echo 'Cron Job Finished at '.date("Y-m-d H:i:s");
+        $this->subCron();
+        echo nl2br("\n...\n");
+        echo 'Cron Job Finished at ' . date("Y-m-d H:i:s");
     }
 
     #Sub Cron
 
     public function subCron() {
+
         #Initiating Sub Cron
-        $cronList = Cron::where('status', 1)->get();
-        foreach($cronList as $cron)
-        {
-            $cronData['cron_id'] = $cron['id'];
-            $cronData['cron_time'] = date("Y-m-d H:i:s");
-            $cronData['cron_note'] = Config::get('constants.cron.success');
-            CronEntry::create($cronData);
+        #Considering only Reminder for now
+        $reminderList = Reminder::where('status', 1)->get();
+
+        #Reminder Type 1 denotes Daily Reminder and 2 denotes Only one time
+        foreach ($reminderList as $reminder) {
+            if ($reminder['reminder_type'] == 1) {
+                #It is a Daily Reminder
+                $this->Reminder('Daily', $reminder);
+            } else {
+                #It is a One time Reminder
+                $this->Reminder('Once', $reminder);
+            }
         }
-
         #Finishing Sub Cron
-        echo 'Running Sub Cron<br>';
-
     }
 
     #End of Sub Cron
+
+    public function Reminder($type, $reminder) {
+
+        if ($type == "Once" && $reminder['status'] == 1 && date("Y-m-d H:i") == $reminder['reminder_date'] . ' ' . date("H:i", strtotime($reminder['reminder_time']))) {
+            #Remind Once
+            $this->doCronEntry($reminder['id']);
+            Reminder::where('id', $reminder['id'])->update(array('status' => 2));
+        } else {
+            #Remind Daily
+            if (date("Y-m-d") != date("Y-m-d", strtotime($reminder['updated_at'])) && date("H:i") == date("H:i", strtotime($reminder['reminder_time']))) {
+                $this->doCronEntry($reminder['id']);
+                Reminder::find($reminder['id'])->touch();
+            }
+        }
+    }
+
+    public function doCronEntry($id) {
+        echo 'Executed Process Id ' . $id . '<br>';
+        $cronData['process_id'] = $id;
+        $cronData['cron_time'] = date("Y-m-d H:i:s");
+        $cronData['cron_note'] = Config::get('constants.cron.success');
+        $cronData['status'] = 1;
+        CronEntry::create($cronData);
+    }
+
+    public function doPush() {
+        
+    }
+
     #End of Cron Job
 }

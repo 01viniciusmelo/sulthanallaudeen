@@ -412,6 +412,7 @@ class HomeController extends Controller {
     public function gmail() {
         return view('admin.mail.gmail');
     }
+    
 
     #Logout
 

@@ -19,6 +19,7 @@ use App\Blog;
 use App\ContactMails;
 use App\Tag;
 use App\BlogTag;
+use App\Reminder;
 use Validator;
 
 class PublicController extends Controller {
@@ -331,6 +332,25 @@ class PublicController extends Controller {
             die('Curl failed: ' . curl_error($ch));
         }
         curl_close($ch);
+    }
+
+    #Reminder
+
+    public function remind() {
+        $reminderData = Input::all();
+        $reminderData['reminder_time'] = date("H:i:s", strtotime($reminderData['reminder_date']));
+        $reminderData['reminder_date'] = date("Y-m-d", strtotime($reminderData['reminder_date']));
+        $reminderData['status'] = 1;
+        Reminder::create($reminderData);
+        $Response = array('success' => '1');
+        return $Response;
+    }
+
+    public function getNotification()
+    {
+        $reminderData = Reminder::orderBy('id', 'DESC')->take(10)->get();
+        $Response = array('success' => '1', 'reminder' => $reminderData);
+        return $Response;
     }
 
 }

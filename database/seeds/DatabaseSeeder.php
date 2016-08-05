@@ -18,7 +18,9 @@ class DatabaseSeeder extends Seeder
         $this->call('CatTableSeeder');
         $this->call('ConfigTableSeeder');
         $this->call('ContactmailTableSeeder');
+        $this->call('CronEntryTableSeeder');
         $this->call('MailtemplateTableSeeder');
+        $this->call('ReminderTableSeeder');
         $this->call('TagTableSeeder');
         $this->call('TaskTableSeeder');
         $this->call('TaskCatTableSeeder');

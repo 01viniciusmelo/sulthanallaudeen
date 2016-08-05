@@ -102,21 +102,12 @@ class AllMasters extends Migration
 
         });
 
-        Schema::create('cron',function(Blueprint $table){
-                    $table->engine = "InnoDB";
-                    $table->increments('id');
-                    $table->string('cron_name', 50);
-                    $table->time('cron_time');
-                    $table->string('cron_note', 255);
-                    $table->tinyInteger('status')->default(0);
-                    $table->timestamps();
-
-                });
 
         Schema::create('cron_entry',function(Blueprint $table){
             $table->engine = "InnoDB";
             $table->increments('id');
-            $table->integer('cron_id');
+            $table->integer('process_id');
+            $table->tinyInteger('type')->default(0);
             $table->dateTime('cron_time');
             $table->string('cron_note', 255);
             $table->tinyInteger('status')->default(0);
@@ -133,6 +124,19 @@ class AllMasters extends Migration
             $table->timestamps();
 
         });
+        
+        Schema::create('reminder',function(Blueprint $table){
+                    $table->engine = "InnoDB";
+                    $table->increments('id');
+                    $table->tinyInteger('reminder_type')->default(0);
+                    $table->string('reminder_name', 50);
+                    $table->date('reminder_date');
+                    $table->time('reminder_time');
+                    $table->string('reminder_note', 255);
+                    $table->tinyInteger('status')->default(0);
+                    $table->timestamps();
+
+                });
 
         Schema::create('tag',function(Blueprint $table){
             $table->engine = "InnoDB";
