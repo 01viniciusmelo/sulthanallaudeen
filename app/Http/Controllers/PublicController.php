@@ -342,7 +342,8 @@ class PublicController extends Controller {
         $reminderData['reminder_date'] = date("Y-m-d", strtotime($reminderData['reminder_date']));
         $reminderData['status'] = 1;
         Reminder::create($reminderData);
-        $Response = array('success' => '1');
+        $reminderData = Reminder::orderBy('id', 'DESC')->take(10)->get();
+        $Response = array('success' => '1', 'reminder' => $reminderData);
         return $Response;
     }
 
