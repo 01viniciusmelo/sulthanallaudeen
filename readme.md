@@ -1,6 +1,6 @@
 ## Sulthan Allaudeen
 
-This repo is the personal website of Sulthan Allaudeen.
+This repo is the personal website of Sulthan Allaudeen SA
 
 The website is powered with [Laravel 5.2](https://laravel.com/docs/5.2)
 
