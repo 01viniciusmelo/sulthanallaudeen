@@ -63,7 +63,7 @@ class HomeController extends Controller {
         $tagCount = Tag::all()->count();
         $contactCount = ContactMails::where('message_status', 0)->count();
         $totalCount = ContactMails::all()->count();
-        $totalHit = UserLog::all()->count();
+        $totalHit = UserLog::where('user_id', 1)->count();
         return view('admin.dashBoard')->with('blogCount', $blogCount)->with('blogCount', $blogCount)->with('tagCount', $tagCount)->with('contactCount', $contactCount)->with('totalCount', $totalCount)->with('totalHit', $totalHit);
     }
 

@@ -86,7 +86,7 @@
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">{{ $totalHit }}</div>
-                                    <div>Total Hits !</div>
+                                    <div>Total Login !</div>
                                 </div>
                             </div>
                         </div>
