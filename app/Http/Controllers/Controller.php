@@ -22,6 +22,7 @@ use App\UserLog;
 use App\AdminConfig;
 use App\Reminder;
 use App\CronEntry;
+use App\Cat;
 #Config
 use Config;
 
@@ -62,6 +63,56 @@ class Controller extends BaseController {
         } else {
             $Response = array('success' => 1, 'data' => $blogs = Blog::where('blog_status', 1)->orderBy('id', 'desc')->paginate(10));
         }
+        return $Response;
+    }
+
+    public function utilSysaxiomWebLog() {
+        $sideBar = $this->technologySideBar();
+        $userLog = $this->logUser();
+        return view('admin.util.sysWebLog')->with('sideBar', $sideBar)->with('userLog', $userLog['logs']);
+    }
+
+    #Need to clean this
+
+    public function technologySideBar() {
+
+        $fullUrl = $_SERVER['REQUEST_URI'];
+        $urlSegment = substr($fullUrl, strrpos($fullUrl, '/') + 1);
+        $url = array("accessLogServer" => "", "technology" => "");
+        if ($urlSegment == 'technology') {
+            $url['technology'] = 'active';
+        } else if ($urlSegment == 'server') {
+            $url['accessLogServer'] = 'active';
+        } else {
+            $url['technology'] = 'active';
+        }
+
+
+        return '<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+            <div class="list-group">
+            <a href=' . asset('/technology') . ' class="list-group-item ' . $url['technology'] . '">Home</a>
+            <a href="' . asset('/accessLog/server') . '" class="list-group-item ' . $url['accessLogServer'] . '">Website Log</a>
+          </div>
+        </div><!--/.sidebar-offcanvas-->';
+    }
+
+    #Reminder
+
+    public function remind() {
+        $reminderData = Input::all();
+        $reminderData['reminder_time'] = date("H:i:s", strtotime($reminderData['reminder_date']));
+        $reminderData['reminder_date'] = date("Y-m-d", strtotime($reminderData['reminder_date']));
+        $reminderData['status'] = 1;
+        Reminder::create($reminderData);
+        $reminderData = Reminder::orderBy('id', 'DESC')->take(10)->get();
+        $Response = array('success' => '1', 'reminder' => $reminderData);
+        return $Response;
+    }
+
+    public function getNotification()
+    {
+        $reminderData = Reminder::orderBy('id', 'DESC')->take(10)->get();
+        $Response = array('success' => '1', 'reminder' => $reminderData);
         return $Response;
     }
 
@@ -125,6 +176,14 @@ class Controller extends BaseController {
         }
     }
 
+    #Get Category Data
+
+    public function getTagData($tag = NULL)
+    {
+        $tagData = Tag::where('tag_title', $tag)->first();
+        return $tagData;
+    }
+
     #Config Contact Data
 
     public function AdminContactData() {
@@ -160,7 +219,12 @@ class Controller extends BaseController {
 
     #Log User
 
-    public function logUser($id) {
+    public function logUser($id = NULL) {
+        if($id == "")
+        {
+            $Response = array('success' => 1, 'logs' => UserLog::orderBy('id', 'desc')->get());
+            return $Response;
+        }
         $systemDetails = $this->getDetails();
         $logData = $systemDetails['systemDetails'];
         $logData['user_id'] = $id;
@@ -205,8 +269,8 @@ class Controller extends BaseController {
             $sendgrid = new SendGrid('testmyblood', 'Open@123');
             $mail = new SendGrid\Email();
             $emails = array($email);
-            $mail->addTo('sa@sulthanallaudeen.com')
-                    ->setFrom('allau@sulthanallaudeen.com')
+            $mail->addTo(Config::get('constants.config.email'))
+                    ->setFrom(Config::get('constants.config.email'))
                     ->setSubject('Sysaxiom :: Message from : ' . $email)
                     ->setHtml($message);
             $sendgrid->send($mail);

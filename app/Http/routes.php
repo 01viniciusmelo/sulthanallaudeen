@@ -37,13 +37,13 @@ Route::group(['middleware' => ['web']], function () {
 #Tag
     Route::get('tag/{query}', 'AppController@tagData');
     Route::post('tag', 'Controller@getTag');
-    Route::get('tag/{id}/about', 'PublicController@tagAbout');
+    Route::get('tag/{id}/about', 'AppController@tagAbout');
 #Contact
     Route::get('contact', 'AppController@contact');
     Route::post('sendMail', 'AppController@sendMail');
 #####Admin Controller#######
-    Route::get('sa', 'PublicController@adminLogin');
-    Route::post('authAdmin', 'PublicController@authAdminLogin');
+    Route::get('sa', 'AppController@adminLogin');
+    Route::post('authAdmin', 'AppController@authAdminLogin');
     Route::get('dashboard', 'HomeController@adminDashboard');
 #Blog
     Route::get('listblog', 'HomeController@listBlog');
@@ -95,7 +95,7 @@ Route::group(['middleware' => ['web']], function () {
 ######Logout#####
     Route::get('logout', 'HomeController@logout');
 
-//#New Web Services :: 
+//#New Web Services to be implemented :: 
 //Route::post('appLogin', 'AppController@Login');
 //Route::post('getDashboardData', 'AppController@getDashboardData');
 //Route::get('sendPush', 'PublicController@sendPush');

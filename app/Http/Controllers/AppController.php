@@ -8,6 +8,7 @@ use Redirect;
 use Mail;
 use Input;
 use Validator;
+use Auth;
 
 class AppController extends Controller {
 
@@ -38,6 +39,14 @@ class AppController extends Controller {
 
     public function tagData($query) {
         return view('public.tag')->with('tagData', $this->getTag($query))->with('tagList', $this->getTags())->with('tags', $this->getTags()['data'])->with('tagName', $query);
+    }
+
+    #Tag About Page
+
+    public function tagAbout($tag = NULL) {
+        $tagData =  $this->getTagData($tag);
+        $tags = $this->getTags($tag);
+        return view('public.tagAbout')->with('tagData', $tagData)->with('tags', $tags['data']);
     }
 
     #Search Blog
@@ -94,8 +103,52 @@ class AppController extends Controller {
 
     #Get Platform
 
-    public function getPlatform() {
-        return $this->getPlatform();
+    // public function getPlatform() {
+    //     return $this->getPlatform();
+    // }
+
+     #Gallery Page
+
+    public function gallery() {
+        return view('public.gallery');
     }
+
+    #Gallery Explorer
+
+    public function galleryExplorer($dir) {
+        return view('public.galleryexplorer')->with('dir', $dir);
+    }
+
+    #Project Page
+
+    public function project() {
+        return view('public.project');
+    }
+
+    #Technologies Used in Sysaxiom App
+
+    public function technology() {
+        $sideBarTech = $this->technologySideBar();
+        return view('public.technology')->with('sideBar', $sideBarTech);
+    }
+
+    #Admin Login Page
+
+    public function adminLogin() {
+        return view('admin.login.login');
+    }
+
+    #Admin Auth Login
+
+    public function authAdminLogin() {
+        if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))) {
+            return Redirect::to('dashboard');
+        } else {
+            #return Redirect::to('admin.login.login')->with('Message', 'Invalid Username or Password');   }
+            return Redirect::to('sa')->with('warning', 'Invalid Username or Password');
+        }
+    }
+
+    
 
 }

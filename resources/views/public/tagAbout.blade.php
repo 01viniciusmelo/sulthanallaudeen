@@ -9,11 +9,11 @@
             <!-- Blog Entries Column -->
             <div class="col-md-8">
 
-                <h1 class="page-header">About Tag  "{{ $tagData->tagTitle }}" </h1>
+                <h1 class="page-header">About Tag  "{{ $tagData->tag_title }}" </h1>
                 <div id="resultArea"></div>
                 <div id="blogArea">
                 <!-- First Blog Post -->
-                <?php echo $tagData->tagContent ?>
+                <?php echo $tagData->tag_content ?>
                 
                 
                 <hr>
@@ -44,7 +44,7 @@
                         @foreach ($tags as $tag)
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-								<li><a href="{{ asset('/tag').'/'.$tag->tagTitle }}"> {{ $tag->tagTitle }} <span class="badge">{{ $count = BlogTag::where('tag_id', $tag->id)->count() }}</span></a></li>
+								<li><a href="{{ asset('/tag').'/'.$tag->tag_title }}"> {{ $tag->tag_title }} <span class="badge">{{ $count = BlogTag::where('tag_id', $tag->id)->count() }}</span></a></li>
                             </ul>
                         </div>
                         @endforeach

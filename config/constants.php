@@ -16,6 +16,8 @@ return [
     ],
     'config' => [
         'URL' => 'http://www.sulthanallaudeen.com',
+        'email' => 'sa@sulthanallaudeen.com',
+        'dev_email' => 'sa@sulthanallaudeen.com'
     ],
     #Credentials
     #Sendgrid
