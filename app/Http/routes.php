@@ -70,7 +70,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('editcat/{id}', 'HomeController@editCat');
     Route::post('updateCat', 'HomeController@updateCat');
 #Util
-    Route::get('sys-web-log', 'PublicController@utilSysaxiomWebLog');
+    Route::get('sys-web-log', 'AppController@utilSysaxiomWebLog');
 #Messages
     Route::get('messages', 'HomeController@listMessages');
     Route::post('getMessage', 'HomeController@getMessage');
@@ -90,8 +90,8 @@ Route::group(['middleware' => ['web']], function () {
 #Gmail
     Route::get('gmail', 'HomeController@gmail');
 #Reminder
-    Route::post('remind', 'PublicController@remind');
-    Route::post('getNotification', 'PublicController@getNotification');
+    Route::post('remind', 'AppController@remind');
+    Route::post('getNotification', 'AppController@getNotification');
 ######Logout#####
     Route::get('logout', 'HomeController@logout');
 
