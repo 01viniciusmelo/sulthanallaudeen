@@ -71,6 +71,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('updateCat', 'HomeController@updateCat');
 #Util
     Route::get('sys-web-log', 'AppController@utilSysaxiomWebLog');
+    Route::get('time', 'AppController@time');
 #Messages
     Route::get('messages', 'HomeController@listMessages');
     Route::post('getMessage', 'HomeController@getMessage');

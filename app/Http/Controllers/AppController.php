@@ -149,6 +149,9 @@ class AppController extends Controller {
         }
     }
 
-    
+    public function time()
+    {
+        return date("Y-m-d H:i:s");
+    }    
 
 }
