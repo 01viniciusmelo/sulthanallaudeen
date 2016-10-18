@@ -108,7 +108,8 @@ class AllMasters extends Migration
             $table->increments('id');
             $table->integer('process_id');
             $table->tinyInteger('type')->default(0);
-            $table->dateTime('cron_time');
+            $table->date('cron_date');
+            $table->time('cron_time');
             $table->string('cron_note', 255);
             $table->tinyInteger('status')->default(0);
             $table->timestamps();

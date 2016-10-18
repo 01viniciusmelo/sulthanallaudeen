@@ -19,12 +19,12 @@ class CatTableSeeder extends Seeder
         \DB::table('cat')->insert(array (
             0 => 
             array (
-                'id' => '1',
+                'id' => 1,
                 'cat_title' => 'Urgent',
                 'cat_content' => '<p>Its Really Urgent</p>
 ',
-                'cat_status' => '1',
-                'status' => '0',
+                'cat_status' => 1,
+                'status' => 0,
                 'created_at' => '2015-11-13 23:11:19',
                 'updated_at' => '2015-11-13 23:11:19',
             ),

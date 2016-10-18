@@ -19,7 +19,7 @@ class ConfigTableSeeder extends Seeder
         \DB::table('config')->insert(array (
             0 => 
             array (
-                'id' => '1',
+                'id' => 1,
                 'mobile' => '9042445010',
                 'email' => 'sa@sulthanallaudeen.com',
                 'github' => 'https://github.com/sulthanallaudeen',
@@ -27,7 +27,7 @@ class ConfigTableSeeder extends Seeder
                 'twitter' => 'https://twitter.com/allaudeens',
                 'facebook' => 'http://facebook.com/allaudeen.s',
                 'skype' => 'allaudeen.s',
-                'status' => '0',
+                'status' => 0,
                 'created_at' => '2016-04-08 15:30:00',
                 'updated_at' => '2016-04-09 17:43:52',
             ),

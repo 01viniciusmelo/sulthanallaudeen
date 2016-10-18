@@ -19,7 +19,7 @@ class MailtemplateTableSeeder extends Seeder
         \DB::table('mailtemplate')->insert(array (
             0 => 
             array (
-                'id' => '1',
+                'id' => 1,
                 'subject' => 'User Access Log',
                 'content' => '\'
 <!DOCTYPE html>
@@ -243,7 +243,7 @@ Sysaxiom &bull; <span class="mobile-link--footer">India</span> &bull; <span clas
 </body>
 </html>\';
 ',
-                'status' => '0',
+                'status' => 0,
                 'created_at' => '0000-00-00 00:00:00',
                 'updated_at' => '0000-00-00 00:00:00',
             ),

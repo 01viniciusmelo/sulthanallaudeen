@@ -12,6 +12,7 @@ use Hash;
 use Input;
 use Validator;
 use SendGrid;
+use Plivo\RestAPI;
 #Models
 use App\User;
 use App\Blog;
@@ -415,28 +416,46 @@ class Controller extends BaseController {
 
         if ($type == "Once" && $reminder['status'] == 1 && date("Y-m-d H:i") == $reminder['reminder_date'] . ' ' . date("H:i", strtotime($reminder['reminder_time']))) {
             #Remind Once
-            $this->doCronEntry($reminder['id']);
+            $this->doCronEntry($reminder['id'],1, $reminder['reminder_name'].' : '.$reminder['reminder_note']);
             Reminder::where('id', $reminder['id'])->update(array('status' => 2));
         } else {
             #Remind Daily
-            if (date("Y-m-d") != date("Y-m-d", strtotime($reminder['updated_at'])) && date("H:i") == date("H:i", strtotime($reminder['reminder_time']))) {
-                $this->doCronEntry($reminder['id']);
+            $checkCron = CronEntry::where('process_id', $reminder['id'])->where('cron_date', date('Y-m-d'))->first();
+            //echo date("Y-m-d").date("Y-m-d", strtotime($reminder['updated_at']));
+            if ($checkCron=='') {
+                $this->doCronEntry($reminder['id'], 2);
                 Reminder::find($reminder['id'])->touch();
             }
         }
     }
 
-    public function doCronEntry($id) {
+    public function doCronEntry($id, $type, $reminder) {
         echo 'Executed Process Id ' . $id . '<br>';
         $cronData['process_id'] = $id;
+        $cronData['type'] = $type;
+        $cronData['cron_date'] = date("Y-m-d");
         $cronData['cron_time'] = date("Y-m-d H:i:s");
         $cronData['cron_note'] = Config::get('constants.cron.success');
         $cronData['status'] = 1;
         CronEntry::create($cronData);
+        $this->sendSMS(Config::get('constants.plivo.receiver'), $reminder);
     }
 
     public function doPush() {
         
+    }
+
+    public function sendSMS($to, $message)
+    {
+        $p = new RestAPI(Config::get('constants.plivo.auth'), Config::get('constants.plivo.secret'));
+        $params = array(
+            'src' => Config::get('constants.plivo.sender'),
+            'dst' => $to, 
+            'text' => $message,
+            'method' => 'POST'
+        );
+        $response = $p->send_message($params);
+        print_r($response);
     }
 
     #End of Cron Job

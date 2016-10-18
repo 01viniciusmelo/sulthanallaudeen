@@ -30,6 +30,13 @@ return [
         'clientid' => '701496422438-touj3h0gh86r1c8g6mbfhceiogaq45qc.apps.googleusercontent.com',
         'apiKey' => 'AIzaSyAl6RP5ZrC5h0vvKz8fvYuOdS7w4Z-S5Xc',
     ],
+    #Plivo
+    'plivo' => [
+        'auth' => 'MAMWJIZMU2Y2U0ZTVIMG',
+        'secret' => 'MjY3MTMzODUzOGM1OGZlMTc0YjRiNWRkNDgxMzdh',
+        'sender' => '919445555010',
+        'receiver' => '919042445010'
+    ],
     #Cron
     'cron' => [
         'success' => 'Cron Job Executed Succesfully',
