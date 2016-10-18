@@ -423,7 +423,7 @@ class Controller extends BaseController {
             $checkCron = CronEntry::where('process_id', $reminder['id'])->where('cron_date', date('Y-m-d'))->first();
             //echo date("Y-m-d").date("Y-m-d", strtotime($reminder['updated_at']));
             if ($checkCron=='') {
-                $this->doCronEntry($reminder['id'], 2);
+                $this->doCronEntry($reminder['id'], 2, $reminder['reminder_name'].' : '.$reminder['reminder_note']);
                 Reminder::find($reminder['id'])->touch();
             }
         }
