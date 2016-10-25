@@ -91,8 +91,11 @@ Route::group(['middleware' => ['web']], function () {
 #Gmail
     Route::get('gmail', 'HomeController@gmail');
 #Reminder
-    Route::post('remind', 'AppController@remind');
-    Route::post('getNotification', 'AppController@getNotification');
+    Route::post('remind', 'Controller@remind');
+    Route::post('getNotification', 'Controller@getNotification');
+#Status
+    Route::post('status', 'Controller@status');
+    Route::post('getStatus', 'Controller@getStatus');
 ######Logout#####
     Route::get('logout', 'HomeController@logout');
 

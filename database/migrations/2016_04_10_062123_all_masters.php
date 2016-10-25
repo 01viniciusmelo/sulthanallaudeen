@@ -133,6 +133,7 @@ class AllMasters extends Migration
                     $table->string('reminder_name', 50);
                     $table->date('reminder_date');
                     $table->time('reminder_time');
+                    $table->string('reminder_phone');
                     $table->string('reminder_note', 255);
                     $table->tinyInteger('status')->default(0);
                     $table->timestamps();
@@ -179,6 +180,15 @@ class AllMasters extends Migration
             $table->integer('status_name');
             $table->string('status_percent', 10);
             $table->tinyInteger('status')->default(0);
+            $table->timestamps();
+
+        });
+
+        Schema::create('status',function(Blueprint $table){
+            $table->engine = "InnoDB";
+            $table->increments('id');
+            $table->string('status_note', 255);
+            $table->tinyInteger('status_status')->default(0);
             $table->timestamps();
 
         });

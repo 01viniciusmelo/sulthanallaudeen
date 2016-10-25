@@ -24,6 +24,7 @@ use App\AdminConfig;
 use App\Reminder;
 use App\CronEntry;
 use App\Cat;
+use App\Status;
 #Config
 use Config;
 
@@ -101,10 +102,21 @@ class Controller extends BaseController {
 
     public function remind() {
         $reminderData = Input::all();
-        $reminderData['reminder_time'] = date("H:i:s", strtotime($reminderData['reminder_date']));
-        $reminderData['reminder_date'] = date("Y-m-d", strtotime($reminderData['reminder_date']));
         $reminderData['status'] = 1;
-        Reminder::create($reminderData);
+        if($reminderData['reminder_type']!='3')
+        {
+            $reminderData['reminder_time'] = date("H:i:s", strtotime($reminderData['reminder_date']));
+            $reminderData['reminder_date'] = date("Y-m-d", strtotime($reminderData['reminder_date']));
+            Reminder::create($reminderData);
+        }
+        else
+        {
+            $sendSMS = $this->sendSMS('91'.$reminderData['reminder_phone'], $reminderData['reminder_name'].' : '.$reminderData['reminder_note']);
+            Reminder::create($reminderData);
+            $smsLog = $sendSMS['response']['message_uuid']['0'];
+        }
+        
+        
         $reminderData = Reminder::orderBy('id', 'DESC')->take(10)->get();
         $Response = array('success' => '1', 'reminder' => $reminderData);
         return $Response;
@@ -114,6 +126,37 @@ class Controller extends BaseController {
     {
         $reminderData = Reminder::orderBy('id', 'DESC')->take(10)->get();
         $Response = array('success' => '1', 'reminder' => $reminderData);
+        return $Response;
+    }
+
+    #Status
+
+    public function status() {
+        $statusData = Input::all();
+        $statusData['status_status'] = 1;
+        $validation = Validator::make($statusData, Status::$addStatus);
+        $statusInfo = Status::orderBy('id', 'DESC')->take(10)->get();
+        if ($validation->passes()) {
+            Status::create($statusData);
+            $Response = array('success' => '1', 'status' => $statusInfo);
+        }
+        else
+        {
+            $Response = array('success' => '0', 'error' => $validation->messages());
+        }
+        return $Response;
+        
+        
+        
+        
+        $Response = array('success' => '1', 'reminder' => $reminderData);
+        return $Response;
+    }
+
+    public function getStatus()
+    {
+        $statusData = Status::orderBy('id', 'DESC')->take(10)->get();
+        $Response = array('success' => '1', 'status' => $statusData);
         return $Response;
     }
 
@@ -201,7 +244,8 @@ class Controller extends BaseController {
         $contactCount = ContactMails::where('message_status', 0)->count();
         $totalCount = ContactMails::all()->count();
         $totalHit = UserLog::all()->count();
-        $Response = array('success' => '1', 'blog_count' => $blogCount, 'tag_count' => $tagCount, 'contact_count' => $contactCount, 'total_hit' => $totalHit);
+        $userData = User::where('email', Config::get('constants.config.email'))->first();
+        $Response = array('success' => '1', 'blog_count' => $blogCount, 'tag_count' => $tagCount, 'contact_count' => $contactCount, 'total_hit' => $totalHit, 'userData' => $userData);
         return $Response;
     }
 
@@ -402,9 +446,11 @@ class Controller extends BaseController {
             if ($reminder['reminder_type'] == 1) {
                 #It is a Daily Reminder
                 $this->Reminder('Daily', $reminder);
-            } else {
+            } elseif ($reminder['reminder_type'] == 2) {
                 #It is a One time Reminder
                 $this->Reminder('Once', $reminder);
+            } else {
+                #It should be an instant reminder something else                
             }
         }
         #Finishing Sub Cron
@@ -455,7 +501,8 @@ class Controller extends BaseController {
             'method' => 'POST'
         );
         $response = $p->send_message($params);
-        print_r($response);
+        return $response;
+        //print_r($response);
     }
 
     #End of Cron Job

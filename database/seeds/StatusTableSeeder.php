@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TaskStatusTableSeeder extends Seeder
+class StatusTableSeeder extends Seeder
 {
 
     /**
@@ -14,7 +14,7 @@ class TaskStatusTableSeeder extends Seeder
     {
         
 
-        \DB::table('task_status')->delete();
+        \DB::table('status')->delete();
         
         
         
