@@ -33,7 +33,7 @@ $tag = BlogTag::where('blog_id', $post->id)->get();
                 <a href="{{ URL::to('tag/'.$tagName[0]) }}" title="{{ 'Tags related to : '.$tagName[0] }}">{{ $tagName[0] }}</a>
                 @endforeach
 <?php
-$date = date('d M Y', strtotime($post->blogDate));
+$date = date('d M Y', strtotime($post->created_at));
 ?></p>
             <p align="right"><span class="glyphicon glyphicon-time"></span> Posted on {{ $date }}</p>
             <hr>
