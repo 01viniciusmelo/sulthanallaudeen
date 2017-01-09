@@ -1,6 +1,6 @@
 $(document).ready(function () {
 var url = window.location.href; // Returns full URL
-        if (url.indexOf("localhost") > - 1) {
+if (url.indexOf("localhost") > - 1) {
 var mode = 'local';
 } else {
 var mode = 'live';
@@ -8,11 +8,11 @@ var mode = 'live';
 
 if (mode == 'local')
 {
-var saUrl = 'http://localhost/sulthanallaudeen';
+var saUrl = 'https://localhost/sulthanallaudeen';
         localStorage.setItem("saUrl", saUrl);
 } else
 {
-var saUrl = 'http://sulthanallaudeen.com';
+var saUrl = 'https://sulthanallaudeen.com';
         localStorage.setItem("saUrl", saUrl);
 }
 

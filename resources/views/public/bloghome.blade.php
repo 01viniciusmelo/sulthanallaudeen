@@ -10,7 +10,7 @@ use URL; ?>
     <div class="col-md-8">
 
         <h1 class="page-header">
-            Sysaxiom
+            Sulthan Allaudeen
             <small>- Blog Posts</small>
         </h1>
         <div id="resultArea"></div>
