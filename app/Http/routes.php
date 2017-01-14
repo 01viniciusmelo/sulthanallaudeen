@@ -93,6 +93,7 @@ Route::group(['middleware' => ['web']], function () {
 #Reminder
     Route::post('remind', 'Controller@remind');
     Route::post('getNotification', 'Controller@getNotification');
+    Route::get('viewreminder', 'HomeController@viewreminder');
 #Status
     Route::post('status', 'Controller@status');
     Route::post('getStatus', 'Controller@getStatus');

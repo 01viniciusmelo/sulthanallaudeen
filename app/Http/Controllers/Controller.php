@@ -262,6 +262,17 @@ class Controller extends BaseController {
         return $Response;
     }
 
+    #Record Log
+
+    public function recordLog($id)
+    {
+        $systemDetails = $this->getDetails();
+        $logData = $systemDetails['systemDetails'];
+        $logData['user_id'] = $id;
+        $logData['status'] = 0;
+        UserLog::create($logData);
+    }
+
     #Log User
 
     public function logUser($id = NULL) {
@@ -473,6 +484,11 @@ class Controller extends BaseController {
                 Reminder::find($reminder['id'])->touch();
             }
         }
+    }
+
+    public function getReminder()
+    {
+        return Reminder::orderBy('id', 'DESC')->get();
     }
 
     public function doCronEntry($id, $type, $reminder) {

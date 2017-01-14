@@ -17,11 +17,11 @@ if(location=='dashboard' || location=='dashboard#')
 
 function loadDashBoard()
 {
-	
+	var _token = $("input[name=_token]").val();
 	$.ajax({
             url: 'getNotification',
             type: 'POST',
-            data: {},
+            data: {_token:_token},
             success: function (message)
             {
 

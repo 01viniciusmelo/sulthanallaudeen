@@ -409,6 +409,12 @@ class HomeController extends Controller {
 
     #Gmail
 
+    public function viewreminder() {
+        return view('admin.reminder.reminder')->with('reminderData', $this->getReminder());
+    }
+
+    #Gmail
+
     public function gmail() {
         return view('admin.mail.gmail');
     }
