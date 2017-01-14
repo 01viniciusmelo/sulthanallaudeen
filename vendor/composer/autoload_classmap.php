@@ -617,6 +617,7 @@ return array(
     'Positioner' => $vendorDir . '/dompdf/dompdf/include/positioner.cls.php',
     'ReminderTableSeeder' => $baseDir . '/database/seeds/ReminderTableSeeder.php',
     'Renderer' => $vendorDir . '/dompdf/dompdf/include/renderer.cls.php',
+    'SMSLogTableSeeder' => $baseDir . '/database/seeds/SMSLogTableSeeder.php',
     'SebastianBergmann\\Comparator\\ArrayComparator' => $vendorDir . '/sebastian/comparator/src/ArrayComparator.php',
     'SebastianBergmann\\Comparator\\Comparator' => $vendorDir . '/sebastian/comparator/src/Comparator.php',
     'SebastianBergmann\\Comparator\\ComparisonFailure' => $vendorDir . '/sebastian/comparator/src/ComparisonFailure.php',

@@ -111,7 +111,7 @@ class Controller extends BaseController {
         }
         else
         {
-            $sendSMS = $this->sendSMS('91'.$reminderData['reminder_phone'], $reminderData['reminder_name'].' : '.$reminderData['reminder_note']);
+            $sendSMS = $this->sendSMS($reminderData['reminder_phone'], $reminderData['reminder_name'].' : '.$reminderData['reminder_note']);
             Reminder::create($reminderData);
             $smsLog = $sendSMS['response']['message_uuid']['0'];
         }

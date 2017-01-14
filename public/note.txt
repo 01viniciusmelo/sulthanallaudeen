@@ -11,9 +11,9 @@ Load Seed
 php artisan db:seed
 php artisan cache:clear
 Generate Seed :
-php artisan iseed blog,blog_tag,cat,config,contactmail,cron_entry,mailtemplate,reminder,status,tag,task,task_cat,task_status,users,user_log --force
+php artisan iseed blog,blog_tag,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log --force
 Drop Tables
-DROP TABLE blog,blog_tag,cat,config,contactmail,cron_entry,mailtemplate,reminder,status,tag,task,task_cat,task_status,users,user_log;
+DROP TABLE blog,blog_tag,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log;
 Access Composer
 ~/composer
 
@@ -36,7 +36,7 @@ git reset --hard FETCH_HEAD
 git clean -df
 
 #Create Seed
-php artisan make:seeder StatusTableSeeder
+php artisan make:seeder SMSLogTableSeeder
 
 #Create Model
 php artisan make:model Cron

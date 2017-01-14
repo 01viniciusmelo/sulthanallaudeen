@@ -949,6 +949,7 @@ class ComposerStaticInit5acfb6de964c169e2f151d0c7f18445a
         'Positioner' => __DIR__ . '/..' . '/dompdf/dompdf/include/positioner.cls.php',
         'ReminderTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ReminderTableSeeder.php',
         'Renderer' => __DIR__ . '/..' . '/dompdf/dompdf/include/renderer.cls.php',
+        'SMSLogTableSeeder' => __DIR__ . '/../..' . '/database/seeds/SMSLogTableSeeder.php',
         'SebastianBergmann\\Comparator\\ArrayComparator' => __DIR__ . '/..' . '/sebastian/comparator/src/ArrayComparator.php',
         'SebastianBergmann\\Comparator\\Comparator' => __DIR__ . '/..' . '/sebastian/comparator/src/Comparator.php',
         'SebastianBergmann\\Comparator\\ComparisonFailure' => __DIR__ . '/..' . '/sebastian/comparator/src/ComparisonFailure.php',

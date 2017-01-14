@@ -193,6 +193,17 @@ class AllMasters extends Migration
 
         });
 
+        Schema::create('sms_log',function(Blueprint $table){
+            $table->engine = "InnoDB";
+            $table->increments('id');
+            $table->string('user_id', 10);
+            $table->string('number', 13);
+            $table->string('content', 255);
+            $table->tinyInteger('status')->default(1);
+            $table->timestamps();
+
+        });
+
     }
 
     /**
