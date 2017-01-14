@@ -4,7 +4,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Logs</h1>
+                    <h1 class="page-header">Reminder</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -28,11 +28,31 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php $count = 0; ?>
                                     @foreach($reminderData as $data)
+                                    <?php $count++;?>
                                         <tr class="odd gradeX">
-                                            <td>{{ $data->id}}</td>
-                                            <td>{{ $data->reminder_type}}</td>
-                                            <td>{{ $data->reminder_name}} : {{ $data->reminder_note}} - {{$data->reminder_phone}}</td>
+                                            <td>{{ $count}}</td>
+                                            <?php
+                                            if($data->reminder_type==1)
+                                            {
+                                                $reminder = 'Daily';
+                                            }
+                                            elseif($data->reminder_type==2)
+                                            {
+                                                $reminder = 'Once';
+                                            }
+                                            elseif($data->reminder_type==3)
+                                            {
+                                                $reminder = 'Instant SMS';
+                                            }
+                                            else
+                                            {
+                                                $reminder = 'Undefined';
+                                            }
+                                            ?>
+                                            <td>{{ $reminder}}</td>
+                                            <td>{{ $data->reminder_name}} : {{ $data->reminder_note}}  {{$data->reminder_phone}}</td>
                                             <td>{{ $data->reminder_date}} {{ $data->reminder_time}}</td>
                                         </tr>
                                     @endforeach
