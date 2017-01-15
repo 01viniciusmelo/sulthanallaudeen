@@ -67,7 +67,7 @@ $(document).ready(function() {
   var tagTitle =  $("#tagTitle").val();
   var tagContent = CKEDITOR.instances['tagpost'].getData();
   var tagStatus =   $('input:radio[name=tagStatus]:checked').val();
-  $.post( "postTag", { _token : _token, tag_title: tagTitle, tag_content: tagContent, tagStatus: tagStatus })
+  $.post( "postTag", { _token : _token, tag_title: tagTitle, tag_content: tagContent, tagStatus: tag_status })
   .done(function( data ) {
     var result = jQuery.parseJSON(JSON.stringify(data));
 

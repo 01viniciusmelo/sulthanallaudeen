@@ -16,10 +16,10 @@
 						@endif
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus value="sa@sulthanallaudeen.com">
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="Allau@#000">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
                                 </div>
                                 <div class="checkbox">
                                     <label>
