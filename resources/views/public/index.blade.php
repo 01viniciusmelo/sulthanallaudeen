@@ -82,34 +82,34 @@
             <h2>Contact</h2>
             <div class="contact-item">
                 <div class="icon pull-left text-center"><span class="fa fa-phone fa-fw"></span></div>
-                <div class="title only pull-right" id="adminmobile"></div>
+                <div class="title only pull-right"><a href="" class="adminmobile"></a></div>
             </div>
             <div class="contact-item">
                 <div class="icon pull-left text-center"><span class="fa fa-envelope fa-fw"></span></div>
-                <div class="title only pull-right" id="adminemail"></div>
+                <div class="title only pull-right" ><a href="" class="adminemail"></a></div>
             </div>
             <div class="contact-item">
                 <div class="icon pull-left text-center"><span class="fa fa-github fa-fw"></span></div>
-                <div class="title only pull-right" id="admingithub"></div>
+                <div class="title only pull-right" ><a href="" class="admingithub" target="_new"></a></div>
             </div>
             <div class="contact-item">
                 <div class="icon pull-left text-center"><span class="fa fa-stack-overflow fa-fw"></span></div>
-                <div class="title only pull-right" id="adminstackoverflow"></div>
+                <div class="title only pull-right" ><a href="" class="adminstackoverflow" target="_new"></a></div>
             </div>
             <div class="contact-item">
                 <div class="icon pull-left text-center"><span class="fa fa-twitter fa-fw"></span></div>
                 <div class="title pull-right">Twitter</div>
-                <div class="description pull-right" id='admintwitter'></div>
+                <div class="description pull-right" ><a href="" class='admintwitter' target="_new"></a></div>
             </div>
             <div class="contact-item">
                 <div class="icon pull-left text-center"><span class="fa fa-facebook fa-fw"></span></div>
                 <div class="title pull-right">Facebook</div>
-                <div class="description pull-right" id='adminfacebook'></div>
+                <div class="description pull-right" ><a href="" class='adminfacebook' target="_new"></a></div>
             </div>
             <div class="contact-item">
                 <div class="icon pull-left text-center"><span class="fa fa-skype fa-fw"></span></div>
                 <div class="title pull-right">Skype</div>
-                <div class="description pull-right" id="adminskype"></div>
+                <div class="description pull-right" ><a href="" class="adminskype"></a></div>
             </div>
         </div>
         <!-- SKILLS -->

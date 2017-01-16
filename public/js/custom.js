@@ -55,8 +55,27 @@ var _token = $("input[name=_token]").val();
         var result = jQuery.parseJSON(JSON.stringify(data));
                 if (result.success == 1)
         {
+        
+        
         $.each(result.adminData, function (key, value) {
-        $("#admin"+key).html(value);
+        console.log(key+" - "+value)
+        if(key=="mobile")
+        {
+                $(".adminmobile").attr("href", 'tel:'+value).html(value);
+        }
+        else if(key=="email")
+        {
+                $(".adminemail").attr("href", 'mailto:'+value).html(value);
+        }
+        else if(key=="skype")
+        {
+                $(".adminskype").attr("href", 'skype:'+value).html(value);
+        }
+        else
+        {
+                $(".admin"+key).attr("href", value).html(value);        
+        }
+        
         });
         } else
         {
