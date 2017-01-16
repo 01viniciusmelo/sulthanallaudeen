@@ -12,7 +12,9 @@
         </div>
         <div class="box">
             <h2>About Me</h2>
-            <p>I have over 2.8 years experience in programming and in that time I had opportunity to learn technologies that are useful at websites and web applications development. The most important ones are PHP, Laravel framework, MySQL, JQuery, AWS and GIT. I have more interest on writing web services for across platforms, also follows Agile</p>
+            
+
+            <p>I am a Full Stack Developer with 3.5 Years of experience in Nodejs, Expressjs and PHP (Laravel). I use MongoDB, MySQL to store on AWS, Heroku or Digital Ocean. Using git and bitbucket for code repo. Develops Google Script and Hybrid Application. I have more interest on writing web services for across platforms, also follows Agile</p>
         </div>
         <!-- EXPERIENCES -->
         <div class="box">
@@ -24,7 +26,12 @@
                 </div>
                 <div class="col-xs-9">
                     <div class="profession">Full Stack Developer</div>
-                    <div class="description">Developed an Application :: <b><a href='greenhoppingapp.com' target="_new">GreenHopping</a></b> - A Juice Ordering System. Developed Front End, Back End, Web Services with Admin Panel hosted on AWS. Also, developing an application for <a href="testmyblood.in" target="_new">Medical based activities</a></b>.</div>
+                    <div class="description">
+                    <a href='http://52.57.21.92:8000' target="_new">MedApp</a> - Platform that will ease the follow-up the process between doctors and patients which gives the solution to constantly connected between doctor and patients to ensure the patient takes prescription as adviced. It has Doctor Prescription Portal with iOS and Android Clients for patients. Developed using NodeJS, Socket.io, ExpressJS and MongoDB. Hosted on AWS<br>
+                    <a href='http://52.33.94.167/#/' target="_new">Test My Blood</a> - Web Portal develoed using Laravel Framework and AngularJS as Frontend. Hosted on AWS<br>
+                    <a href='https://order.greenhoppingapp.com' target="_new">GreenHopping</a> - A Juice Ordering System. Developed Front End, Back End, Web Services with Admin Panel hosted on AWS. 
+                    <a href="https://itunes.apple.com/us/app/green-hopping/id763860235?mt=8" target="_new">Apple Store Link</a>
+                    </div>
                 </div>
             </div>
             <div class="job clearfix">
@@ -34,7 +41,11 @@
                 </div>
                 <div class="col-xs-9">
                     <div class="profession">BackEnd Developer</div>
-                    <div class="description">Developed <a href="http://api.taxihail.com/MaldenTransInc" target="_new">MTI</a>, Masna Taxi and Hashtag Pizza. Also written webservices for Android and iOS Devices using Google Cloud Messages and Apple Push Notifiatoin System. Tweaked on Hybrid Application on Android and Windows</div>
+                    <div class="description">
+                    <a href='http://api.taxihail.com/MaldenTransInc' target="_new">MTI</a> - Transport Management System which notifies parents on bus arraival and departure, allows parents to pay bus fee through portal, allows bus amin to allocate and track route. Has Android, iOS and Web PortalWeb Portal. Develoed using Laravel Framework. Hosted on AWS<br>
+                    <a href='http://www.adishi.com/' target="_new">Adishi</a> - Shopping Cart developed using Wordpress and Woocommerce<br>
+                    <a href='#' target="_new">Hashtag Pizza</a> - Shopping Cart to order Pizza and related items. Has User, Shop and Super Admin Portal. <br>
+                    <a href="http://www.bizarresoftware.in/products/alltaxi/" target="_new">Masna Taxi</a> Developed using Laravel Framework, written webservices for Android and iOS Client. Used Google Maps API for Tracking and Locating Clients. Used Google Cloud Messaging and Apple Push Notification System.</div>
                 </div>
             </div>
             <div class="job clearfix">
@@ -44,7 +55,8 @@
                 </div>
                 <div class="col-xs-9">
                     <div class="profession">PHP Developer</div>
-                    <div class="description">Written few modules for Learning Management System named as E-Future and developed many functions for Real Estate Portal named as Earthzu.</div>
+                    <div class="description">Earthzu - Developed a Real Estate Portal in Core PHP.<br>
+                    E-Future Written few modules for Learning Management System named as E-Future and developed many functions for Real Estate Portal named as Earthzu.</div>
                 </div>
             </div>
         </div>
@@ -116,13 +128,15 @@
         <div class="box">
             <h2>Skills</h2>
             <div class="skills">
+                <div class="item-skills" data-percent="1.00">NodeJS</div>
                 <div class="item-skills" data-percent="1.00">Laravel (framework)</div>
                 <div class="item-skills" data-percent="0.90">PHP</div>
-                <div class="item-skills" data-percent="0.80">MySQL</div>
-                <div class="item-skills" data-percent="0.85">JQuery</div>
-                <div class="item-skills" data-percent="0.75">AngularJS</div>
+                <div class="item-skills" data-percent="0.85">MongoDB</div>
+                <div class="item-skills" data-percent="0.85">MySQL</div>
+                <div class="item-skills" data-percent="0.80">JQuery</div>
                 <div class="item-skills" data-percent="0.78">GIT</div>
-                <div class="item-skills" data-percent="0.74">AWS</div>
+                <div class="item-skills" data-percent="0.75">AngularJS</div>
+                <div class="item-skills" data-percent="0.80">AWS</div>
                 <div class="skills-legend clearfix">
                     <div class="legend-left legend">Beginner</div>
                     <div class="legend-left legend"><span>Proficient</span></div>
@@ -135,7 +149,7 @@
         <div class="box">
             <h2>Hobbies</h2>
             <div class="hobby">Programming</div>
-            <div class="hobby">Photography</div>
+            <div class="hobby">Stackoverflow</div>
             <div class="hobby">Fitness</div>
         </div>
     </div>
