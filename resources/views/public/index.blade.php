@@ -27,7 +27,7 @@
                 <div class="col-xs-9">
                     <div class="profession">Full Stack Developer</div>
                     <div class="description">
-                    <a href='http://52.57.21.92:8000' target="_new">MedApp</a> - Platform that will ease the follow-up the process between doctors and patients which gives the solution to constantly connected between doctor and patients to ensure the patient takes prescription as adviced. It has Doctor Prescription Portal with iOS and Android Clients for patients. Developed using NodeJS, Socket.io, ExpressJS and MongoDB. Hosted on AWS<br>
+                    <a href='http://52.57.21.92:8000' target="_new">MedApp</a> - Platform that will make easy the follow up between doctors and patients which gives the solution to constantly connected between doctor and patients to ensure the patient takes prescription as adviced. It has Doctor Prescription Portal with iOS and Android Clients for patients. Developed using NodeJS, Socket.io, ExpressJS and MongoDB. Hosted on AWS<br>
                     <a href='http://52.33.94.167/#/' target="_new">Test My Blood</a> - Web Portal develoed using Laravel Framework and AngularJS as Frontend. Hosted on AWS<br>
                     <a href='https://order.greenhoppingapp.com' target="_new">GreenHopping</a> - A Juice Ordering System. Developed Front End, Back End, Web Services with Admin Panel hosted on AWS. 
                     <a href="https://itunes.apple.com/us/app/green-hopping/id763860235?mt=8" target="_new">Apple Store Link</a>
