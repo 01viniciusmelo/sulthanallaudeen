@@ -53,6 +53,7 @@
     <script src="{{ asset('/').('public/js/bootstrap.min.js') }}"></script>
     <!-- SCRIPTS -->
     <script src="{{ asset('/').('public/js/scripts.js') }}"></script>
+    <script type="text/javascript" src="https:﻿//cdn.ywxi﻿.net﻿/js/1.﻿js" async></script>
     <!-- Tracking Code for Google Analytics -->
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
