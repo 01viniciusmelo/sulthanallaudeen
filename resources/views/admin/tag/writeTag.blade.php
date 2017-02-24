@@ -62,6 +62,8 @@
 $(document).ready(function() {
 
   
+
+  
   $( "#tagBlog" ).click(function() {
   var _token = $("input[name=_token]").val();
   var tagTitle =  $("#tagTitle").val();
