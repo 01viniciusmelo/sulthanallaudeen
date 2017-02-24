@@ -84,7 +84,6 @@ $(document).ready(function() {
   var _token = $("input[name=_token]").val();
   
   var id =  $("#tagId").val();
-  
   var tag_title =  $("#tag_title").val();
   var tag_content = CKEDITOR.instances['tag_title'].getData();
   var tag_status =   $('input:radio[name=tag_status]:checked').val();

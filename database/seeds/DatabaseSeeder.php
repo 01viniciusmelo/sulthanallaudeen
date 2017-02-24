@@ -28,5 +28,6 @@ class DatabaseSeeder extends Seeder
         $this->call('StatusTableSeeder');
         $this->call('UserLogTableSeeder');
         $this->call('SMSLogTableSeeder');
+        $this->call('SmsLogTableSeeder');
     }
 }

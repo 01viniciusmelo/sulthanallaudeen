@@ -15,7 +15,7 @@ header('Access-Control-Allow-Headers: Authorization, Content-Type');
  */
 
 #Under Middleware
-Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => ['auth']], function () {
 #Public Resources
     Route::get('/', 'AppController@index');
 #Get CSRF Token
