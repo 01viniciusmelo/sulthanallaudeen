@@ -2,7 +2,6 @@
 
 namespace Illuminate\Mail\Transport;
 
-use Swift_Encoding;
 use Swift_Mime_Message;
 use GuzzleHttp\ClientInterface;
 
@@ -23,16 +22,25 @@ class SparkPostTransport extends Transport
     protected $key;
 
     /**
+     * Transmission options.
+     *
+     * @var array
+     */
+    protected $options = [];
+
+    /**
      * Create a new SparkPost transport instance.
      *
      * @param  \GuzzleHttp\ClientInterface  $client
      * @param  string  $key
+     * @param  array  $options
      * @return void
      */
-    public function __construct(ClientInterface $client, $key)
+    public function __construct(ClientInterface $client, $key, $options = [])
     {
-        $this->client = $client;
         $this->key = $key;
+        $this->client = $client;
+        $this->options = $options;
     }
 
     /**
@@ -46,32 +54,21 @@ class SparkPostTransport extends Transport
 
         $message->setBcc([]);
 
-        $options = [
+        $this->client->post('https://api.sparkpost.com/api/v1/transmissions', [
             'headers' => [
                 'Authorization' => $this->key,
             ],
-            'json' => [
+            'json' => array_merge([
                 'recipients' => $recipients,
                 'content' => [
-                    'html' => $message->getBody(),
-                    'from' => $this->getFrom($message),
-                    'reply_to' => $this->getReplyTo($message),
-                    'subject' => $message->getSubject(),
+                    'email_rfc822' => $message->toString(),
                 ],
-            ],
-        ];
+            ], $this->options),
+        ]);
 
-        if ($attachments = $message->getChildren()) {
-            $options['json']['content']['attachments'] = array_map(function ($attachment) {
-                return [
-                    'type' => $attachment->getContentType(),
-                    'name' => $attachment->getFileName(),
-                    'data' => Swift_Encoding::getBase64Encoding()->encodeString($attachment->getBody()),
-                ];
-            }, $attachments);
-        }
+        $this->sendPerformed($message);
 
-        return $this->client->post('https://api.sparkpost.com/api/v1/transmissions', $options);
+        return $this->numberOfRecipients($message);
     }
 
     /**
@@ -84,51 +81,21 @@ class SparkPostTransport extends Transport
      */
     protected function getRecipients(Swift_Mime_Message $message)
     {
-        $to = [];
+        $recipients = [];
 
-        if ($message->getTo()) {
-            $to = array_merge($to, array_keys($message->getTo()));
+        foreach ((array) $message->getTo() as $email => $name) {
+            $recipients[] = ['address' => compact('name', 'email')];
         }
 
-        if ($message->getCc()) {
-            $to = array_merge($to, array_keys($message->getCc()));
+        foreach ((array) $message->getCc() as $email => $name) {
+            $recipients[] = ['address' => compact('name', 'email')];
         }
 
-        if ($message->getBcc()) {
-            $to = array_merge($to, array_keys($message->getBcc()));
+        foreach ((array) $message->getBcc() as $email => $name) {
+            $recipients[] = ['address' => compact('name', 'email')];
         }
-
-        $recipients = array_map(function ($address) {
-            return ['address' => ['email' => $address, 'header_to' => $address]];
-        }, $to);
 
         return $recipients;
-    }
-
-    /**
-     * Get the "from" contacts in the format required by SparkPost.
-     *
-     * @param  Swift_Mime_Message  $message
-     * @return array
-     */
-    protected function getFrom(Swift_Mime_Message $message)
-    {
-        return array_map(function ($email, $name) {
-            return compact('name', 'email');
-        }, array_keys($message->getFrom()), $message->getFrom())[0];
-    }
-
-    /**
-     * Get the 'reply_to' headers and format as required by SparkPost.
-     *
-     * @param  Swift_Mime_Message  $message
-     * @return string
-     */
-    protected function getReplyTo(Swift_Mime_Message $message)
-    {
-        if (is_array($message->getReplyTo())) {
-            return current($message->getReplyTo()).' <'.key($message->getReplyTo()).'>';
-        }
     }
 
     /**
@@ -150,5 +117,26 @@ class SparkPostTransport extends Transport
     public function setKey($key)
     {
         return $this->key = $key;
+    }
+
+    /**
+     * Get the transmission options being used by the transport.
+     *
+     * @return string
+     */
+    public function getOptions()
+    {
+        return $this->options;
+    }
+
+    /**
+     * Set the transmission options being used by the transport.
+     *
+     * @param  array  $options
+     * @return array
+     */
+    public function setOptions(array $options)
+    {
+        return $this->options = $options;
     }
 }

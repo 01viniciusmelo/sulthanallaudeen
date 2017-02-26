@@ -22,7 +22,7 @@ class CronEntryTableSeeder extends Seeder
                 'id' => 1,
                 'process_id' => 2,
                 'type' => 0,
-                'cron_date' => '0000-00-00',
+                'cron_date' => '2016-10-18 08:01:38',
                 'cron_time' => '08:01:38',
                 'cron_note' => 'Cron Job Executed Succesfully',
                 'status' => 1,

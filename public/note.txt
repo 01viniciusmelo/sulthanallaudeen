@@ -11,9 +11,9 @@ Load Seed
 php artisan db:seed
 php artisan cache:clear
 Generate Seed :
-php artisan iseed blog,blog_tag,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log --force
+php artisan iseed blog,blog_tag,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log,sms_log --force
 Drop Tables
-DROP TABLE blog,blog_tag,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log;
+DROP TABLE blog,blog_tag,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log,sms_log;
 Access Composer
 ~/composer
 
@@ -36,6 +36,22 @@ git reset --hard FETCH_HEAD
 git clean -df
 
 #Create Seed
+php artisan make:seeder BlogTableSeeder
+php artisan make:seeder BlogTagTableSeeder
+php artisan make:seeder CatTableSeeder
+php artisan make:seeder ConfigTableSeeder
+php artisan make:seeder ContactmailTableSeeder
+php artisan make:seeder CronEntryTableSeeder
+php artisan make:seeder MailtemplateTableSeeder
+php artisan make:seeder ReminderTableSeeder
+php artisan make:seeder SmsLogTableSeeder
+php artisan make:seeder StatusTableSeeder
+php artisan make:seeder TagTableSeeder
+php artisan make:seeder TaskCatTableSeeder
+php artisan make:seeder TaskStatusTableSeeder
+php artisan make:seeder TaskTableSeeder
+php artisan make:seeder UserLogTableSeeder
+php artisan make:seeder UsersTableSeeder
 php artisan make:seeder SMSLogTableSeeder
 
 #Create Model
@@ -45,3 +61,6 @@ php artisan app:name sulthanallaudeen
 
 php artisan down
 php artisan up
+
+#Controller
+php artisan make:controller AppController

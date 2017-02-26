@@ -25,8 +25,8 @@ class TaskTableSeeder extends Seeder
                 'task_byuser' => 1,
                 'task_status' => 1,
                 'status' => 0,
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'created_at' => '2016-10-18 08:01:38',
+                'updated_at' => '2016-10-18 08:01:38',
             ),
         ));
         
