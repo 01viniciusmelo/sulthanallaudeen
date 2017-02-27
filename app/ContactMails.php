@@ -6,8 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ContactMails extends Model  {
 
-    use Authenticatable,
-        CanResetPassword;
+    
 
     /**
      * The database table used by the model.
