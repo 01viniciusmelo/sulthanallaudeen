@@ -41,10 +41,12 @@ header('Access-Control-Allow-Headers: Authorization, Content-Type');
     Route::get('contact', 'AppController@contact');
     Route::post('sendMail', 'AppController@sendMail');
 
-Route::group(['middleware' => ['auth']], function () {
-#####Admin Controller#######
+##Admin Panel
     Route::get('sa', 'AppController@adminLogin');
     Route::post('authAdmin', 'AppController@authAdminLogin');
+Route::group(['middleware' => ['auth']], function () {
+#####Admin Controller#######
+    
     Route::get('dashboard', 'HomeController@adminDashboard');
 #Blog
     Route::get('listblog', 'HomeController@listBlog');
