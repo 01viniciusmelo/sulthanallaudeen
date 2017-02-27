@@ -25,12 +25,16 @@ use App\Reminder;
 use App\CronEntry;
 use App\Cat;
 use App\Status;
+#Config
+use Config;
 
-class Controller extends BaseController
-{
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+class Controller extends BaseController {
 
-        #Global Functions
+    use AuthorizesRequests,
+        DispatchesJobs,
+        ValidatesRequests;
+
+    #Global Functions
 
     public function getAppConfig() {
         $Response = array('success' => 1, 'domainUrl' => Config::get('constants.config.URL'));

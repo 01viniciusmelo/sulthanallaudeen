@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use Session;
 use DB;
 use Redirect;
@@ -12,9 +10,9 @@ use Input;
 use Validator;
 use Auth;
 
-class AppController extends Controller
-{
-        public function __construct() {
+class AppController extends Controller {
+
+    public function __construct() {
         $this->middleware('guest');
     }
 
@@ -156,4 +154,5 @@ class AppController extends Controller
     {
         return date("Y-m-d H:i:s");
     }    
+
 }

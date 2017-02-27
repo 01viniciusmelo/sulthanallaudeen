@@ -35,6 +35,9 @@ git fetch origin master
 git reset --hard FETCH_HEAD
 git clean -df
 
+php artisan make:migration alltable
+
+
 #Create Seed
 php artisan make:seeder BlogTableSeeder
 php artisan make:seeder BlogTagTableSeeder
@@ -55,7 +58,21 @@ php artisan make:seeder UsersTableSeeder
 php artisan make:seeder SMSLogTableSeeder
 
 #Create Model
-php artisan make:model Cron
+php artisan make:model AdminConfig
+php artisan make:model Blog
+php artisan make:model BlogTag
+php artisan make:model Cat
+php artisan make:model ContactMails
+php artisan make:model CronEntry
+php artisan make:model MailTemplate
+php artisan make:model Reminder
+php artisan make:model Status
+php artisan make:model Tag
+php artisan make:model Task
+php artisan make:model TaskCat
+php artisan make:model UserLog
+
+#
 
 php artisan app:name sulthanallaudeen
 
@@ -64,6 +81,7 @@ php artisan up
 
 #Controller
 php artisan make:controller AppController
+php artisan make:controller HomeController
 
 
 /node_modules

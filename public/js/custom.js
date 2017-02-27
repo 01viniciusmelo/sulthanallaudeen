@@ -8,7 +8,7 @@ var mode = 'live';
 
 if (mode == 'local')
 {
-var saUrl = 'http://localhost/workspace/1/sulthanallaudeen';
+var saUrl = 'https://localhost/sulthanallaudeen';
         localStorage.setItem("saUrl", saUrl);
 } else
 {
