@@ -491,6 +491,22 @@ class Controller extends BaseController {
         return Reminder::orderBy('id', 'DESC')->get();
     }
 
+    public function updateStatus()
+    {
+        if(Input::get('status'))
+        {
+            $statusData['status_note'] = Input::get('status');
+            $statusData['status_status'] = 1;
+            Status::create($statusData);
+            $Response = array('success' => 1, 'message' => 'Status updated succesfully');
+        }
+        else
+        {
+            $Response = array('success' => 0, 'message' => 'Status field Missing');
+        }
+        return $Response;
+    }
+
     public function doCronEntry($id, $type, $reminder) {
         echo 'Executed Process Id ' . $id . '<br>';
         $cronData['process_id'] = $id;

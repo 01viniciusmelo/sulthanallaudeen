@@ -111,6 +111,9 @@ Route::group(['middleware' => ['auth']], function () {
 
 });
 
+#status
+Route::post('updateStatus', 'Controller@updateStatus');
+
 //Exceptions
 Route::post('getAdminContactData', 'Controller@AdminContactData');
 
