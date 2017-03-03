@@ -322,14 +322,14 @@ class Controller extends BaseController {
         $mailData['message_status'] = 1;
         $validation = Validator::make($mailData, ContactMails::$mailData);
         if ($validation->passes()) {
-            $sendgrid = new SendGrid('testmyblood', 'Open@123');
-            $mail = new SendGrid\Email();
-            $emails = array($email);
-            $mail->addTo(Config::get('constants.config.email'))
-                    ->setFrom(Config::get('constants.config.email'))
-                    ->setSubject('Sysaxiom :: Message from : ' . $email)
-                    ->setHtml($message);
-            $sendgrid->send($mail);
+            // $sendgrid = new SendGrid('testmyblood', 'Open@123');
+            // $mail = new SendGrid\Email();
+            // $emails = array($email);
+            // $mail->addTo(Config::get('constants.config.email'))
+            //         ->setFrom(Config::get('constants.config.email'))
+            //         ->setSubject('Sysaxiom :: Message from : ' . $email)
+            //         ->setHtml($message);
+            //$sendgrid->send($mail);
             $mailId = ContactMails::create($mailData);
             $Response = array('success' => '1', 'mailId' => $mailId->id);
         } else {
