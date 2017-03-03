@@ -1,8 +1,8 @@
 <?php
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL,"http://www.bambaram.in/bambaram/index.php?c=plans&m=subscribe&name=FUN!&desc=Books%20only&toys=0&limit=30&monthly=350&discount=0&deposit=500&duration=3&books=5");
+curl_setopt($ch, CURLOPT_URL,"http://www.bambaram.in/bambaram/index.php?c=products&m=product_action&id=4762&action=Buy&name=john&phone=1234567890&email=john%40john.com");
 curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS,"plan=FUN!&duration=3&name=john&company=john&phone=1234512345&email=a@a.com&submitMessage=Subscribe");
+curl_setopt($ch, CURLOPT_POSTFIELDS,"c=products&m=product_action&id=4762&action=Buy&name=john&phone=1231231230&email=a@a.com");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $server_output = curl_exec ($ch);
 curl_close ($ch);
