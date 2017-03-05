@@ -33,7 +33,7 @@ body {
 	font-family: 'Raleway', Calibri, Arial, sans-serif;
 	padding: 0;
     margin: 0;
-    background-image: url('../images/bg.jpg');
+    background-image: url('../images/bgg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -144,7 +144,7 @@ color: #fff !important;
 }
 
 .demo-1 .large-header {
-	background-image: url('../images/bg.jpg');
+	background-image: url('../images/bgg.jpg');
 }
 .main-title {
 	position: absolute;
