@@ -5,7 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    @if(isset($data))
+    <title>{{$data['blog_title']}} :: Sulthan Allaudeen</title>
+    @else
     <title>Sulthan Allaudeen</title>
+    @endif
     <meta name="author" content="Sulthan Allaudeen">
     <meta name="description" content="Sulthan Allaudeen's Personal Site and Blog about Technology and Stuff">
     <meta name="keywords" content="sulthan, allaudeen, sulthan allaudeen, sulthanallaudeen, full stack developer, chennai, full stack developer chennai, developer, php, nodejs, mean stack developer, laravel developer">
