@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @if(isset($data))
     <title>{{$data['blog_title']}} :: Sulthan Allaudeen</title>
+    <meta name="author" content="Sulthan Allaudeen">
+    <meta name="description" content="{{$data['blog_title']}} :: Sulthan Allaudeen">
     @else
     <title>Sulthan Allaudeen</title>
-    @endif
     <meta name="author" content="Sulthan Allaudeen">
     <meta name="description" content="Sulthan Allaudeen's Personal Site and Blog about Technology and Stuff">
+    @endif
     <meta name="keywords" content="sulthan, allaudeen, sulthan allaudeen, sulthanallaudeen, full stack developer, chennai, full stack developer chennai, developer, php, nodejs, mean stack developer, laravel developer">
     <link rel="icon" href="public/img/favicon.png" type="image/gif" sizes="16x16">
     <link href="{{ asset('/').('public/css/bootstrap.min.css') }}" rel="stylesheet">
