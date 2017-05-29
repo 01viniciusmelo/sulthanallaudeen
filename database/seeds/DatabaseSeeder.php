@@ -27,7 +27,6 @@ class DatabaseSeeder extends Seeder
         $this->call('TaskStatusTableSeeder');
         $this->call('StatusTableSeeder');
         $this->call('UserLogTableSeeder');
-        $this->call('SMSLogTableSeeder');
         $this->call('SmsLogTableSeeder');
     }
 }
