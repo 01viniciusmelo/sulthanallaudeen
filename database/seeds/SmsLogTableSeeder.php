@@ -2,20 +2,15 @@
 
 use Illuminate\Database\Seeder;
 
-class SmsLogTableSeeder extends Seeder
+class SMSLogTableSeeder extends Seeder
 {
-
     /**
-     * Auto generated seed file
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        
-
-        \DB::table('sms_log')->delete();
-           
-        
+        //
     }
 }
