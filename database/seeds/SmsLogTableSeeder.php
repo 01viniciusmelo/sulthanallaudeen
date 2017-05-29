@@ -15,7 +15,7 @@ class SmsLogTableSeeder extends Seeder
         
 
         \DB::table('sms_log')->delete();
-        
+
         
         
     }
