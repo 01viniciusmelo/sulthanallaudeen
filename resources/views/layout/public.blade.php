@@ -12,7 +12,7 @@
     <link href="public/asset/css/bootstrap.min.css" rel="stylesheet">
     <link href="public/asset/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="public/asset/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <link href="public/asset/css/theme.css" rel="stylesheet">
+    <link href="public/asset/css/sa.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="public/asset/js/ie-emulation-modes-warning.js"></script>
@@ -23,7 +23,7 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top hide">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -32,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Bootstrap theme</a>
+          <span class="navbar-brand" href="#">Sulthan Allaudeen</span>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
