@@ -9,6 +9,7 @@ use Mail;
 use Input;
 use Validator;
 use Auth;
+use SendGrid;
 
 class AppController extends Controller {
 
