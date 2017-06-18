@@ -10,8 +10,8 @@ class SendGridTest_SendGrid extends \PHPUnit_Framework_TestCase
         self::$apiKey = "SENDGRID_API_KEY";
         $host = array('host' => 'http://localhost:4010');
         self::$sg = new SendGrid(self::$apiKey, $host);
-        if( file_exists( '/usr/local/bin/prism' ) == false ) {
-            if(strtoupper(substr(php_uname('s'), 0, 3)) != 'WIN'){
+        if (file_exists('/usr/local/bin/prism') == false) {
+            if (strtoupper(substr(php_uname('s'), 0, 3)) != 'WIN') {
                 try {
                     $proc_ls = proc_open("curl https://raw.githubusercontent.com/stoplightio/prism/master/install.sh",
                                         array(
@@ -41,7 +41,7 @@ class SendGridTest_SendGrid extends \PHPUnit_Framework_TestCase
                     fclose($pipes[2]);
                     proc_close($proc_grep);
                 } catch (Exception $e) {
-                    print("Error downloading the prism binary, you can try downloading directly here (https://github.com/stoplightio/prism/releases) and place in your /user/local/bin directory: " .  $e->getMessage() . "\n");
+                    print("Error downloading the prism binary, you can try downloading directly here (https://github.com/stoplightio/prism/releases) and place in your /usr/local/bin directory: " .  $e->getMessage() . "\n");
                     exit();
                 }
             } else {
@@ -59,7 +59,7 @@ class SendGridTest_SendGrid extends \PHPUnit_Framework_TestCase
 
     public function testVersion()
     {
-        $this->assertEquals(SendGrid::VERSION, '5.2.0');
+        $this->assertEquals(SendGrid::VERSION, '5.5.1');
         $this->assertEquals(json_decode(file_get_contents(__DIR__ . '/../../composer.json'))->version, SendGrid::VERSION);
     }
 
@@ -81,9 +81,11 @@ class SendGridTest_SendGrid extends \PHPUnit_Framework_TestCase
         $sg2 = new SendGrid($apiKey, array('host' => 'https://api.test.com'));
         $this->assertEquals($sg2->client->getHost(), 'https://api.test.com');
 
-        $apiKey = 'SENDGRID_API_KEY';
         $sg3 = new SendGrid($apiKey, array('curl' => array('foo' => 'bar')));
         $this->assertEquals(array('foo' => 'bar'), $sg3->client->getCurlOptions());
+
+        $sg4 = new SendGrid($apiKey, ['curl' => [CURLOPT_PROXY => '127.0.0.1:8000']]);
+        $this->assertEquals($sg4->client->getCurlOptions(), [10004 => '127.0.0.1:8000']);
     }
 
     public function test_access_settings_activity_get()

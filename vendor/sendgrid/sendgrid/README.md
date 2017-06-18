@@ -49,7 +49,7 @@ Add SendGrid to your `composer.json` file. If you are not using [Composer](http:
 ```json
 {
   "require": {
-    "sendgrid/sendgrid": "~5.2"
+    "sendgrid/sendgrid": "~5.5"
   }
 }
 ```
@@ -105,7 +105,7 @@ $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
 echo $response->statusCode();
-echo $response->headers();
+print_r($response->headers());
 echo $response->body();
 ```
 
@@ -151,7 +151,7 @@ $sg = new \SendGrid($apiKey);
 $response = $sg->client->mail()->send()->post($request_body);
 echo $response->statusCode();
 echo $response->body();
-echo $response->headers();
+print_r($response->headers());
 ```
 
 ## General v3 Web API Usage (With Fluent Interface)
@@ -167,7 +167,7 @@ require 'vendor/autoload.php';
 $apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
 
-$response = $sg->client->suppressions()->bounces()->get();
+$response = $sg->client->suppression()->bounces()->get();
 
 print $response->statusCode();
 print $response->headers();
@@ -245,6 +245,5 @@ sendgrid-php is guided and supported by the SendGrid [Developer Experience Team]
 
 sendgrid-php is maintained and funded by SendGrid, Inc. The names and logos for sendgrid-php are trademarks of SendGrid, Inc.
 
-![SendGrid Logo]
-(https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
+![SendGrid Logo](https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
 
