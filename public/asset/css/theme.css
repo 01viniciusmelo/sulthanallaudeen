@@ -1,3 +1,8 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
 .theme-dropdown .dropdown-menu {
     position: static;
     display: block;
@@ -12,10 +17,12 @@
     width: auto;
 }
 
-.hide {
-    display: none;
+.headerbar {
+    height: 10px;
 }
 
-.show {
-    display: show;
+.homehead {
+    font-size: 40px;
 }
+
+.homepage {}

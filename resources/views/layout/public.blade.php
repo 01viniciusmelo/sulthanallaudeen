@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Sulthan Allaudeen's Personal Site and Blog about Technology and Stuff">
-    <meta name="keywords" content="Sulthan Allaudeen, Sulthan, Allaudeen, Full Stack Developer, Mean Stack Developer, Chennai" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Sulthan Allaudeen">
-    <link rel="icon" href="public/img/favicon.ico">
+    <meta name="description" content="Sulthan Allaudeen's Personal Site and Blog about Technology and Stuff">
+    <meta name="keywords" content="sulthan, allaudeen, sulthan allaudeen, sulthanallaudeen, full stack developer, chennai, full stack developer chennai, developer, php, nodejs, mean stack developer, laravel developer">
+    <link rel="icon" href="../../favicon.ico">
     <title>Sulthan Allaudeen</title>
     <link href="public/asset/css/bootstrap.min.css" rel="stylesheet">
     <link href="public/asset/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link href="public/asset/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <link href="public/asset/css/sa.css" rel="stylesheet">
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="public/asset/js/ie-emulation-modes-warning.js"></script>
+    <!-- Custom styles  -->
+    <link href="public/asset/css/theme.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -23,7 +23,8 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top hide">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -32,14 +33,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <span class="navbar-brand" href="#">Sulthan Allaudeen</span>
+          <a class="navbar-brand" href="#">Sulthan Allaudeen</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
+            <li class="dropdown hide">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Action</a></li>
@@ -56,20 +57,23 @@
       </div>
     </nav>
 @yield('content')
-<div class="container footer">
-    <footer>
-      <p>&copy; 2010 - {{ date("Y") }} <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" class="cc-img"/></a><a href="/feeds/atom.xml"><i class="fa fa-rss fa-fw"></i></a></p>
-      <ul class="list-unstyled">
-          <li><i class="fa fa-code fa-fw"></i> Sulthan Allaudeen</li>
-          <li><i class="fa fa-envelope fa-fw"></i> <a href="mailto:sa@sulthanallaudeen.com">sa@sulthanallaudeen.com</a></li>
-          <li><i class="fa fa-phone-square fa-fw"></i> 904.244.5010</li>
-      </ul>
-      <p class="text-muted text-center">Created using <a href="http://www.laravel.com/" target="_blank">Laravel </a>! (With the help of <a href="http://getbootstrap.com" target="_blank">Twitter Bootstrap</a> and <a href="http://fontawesome.io" target="_blank">Font Awesome</a>.)</p>
+  <footer class="footer">
+        <div class="container">
+          <p>&copy; 2010 - {{ date("Y") }} <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" class="cc-img"/></a><a href="/feeds/atom.xml"><i class="fa fa-rss fa-fw"></i></a></p>
+        <ul class="list-unstyled">
+            <li><i class="fa fa-code fa-fw"></i> Sulthan Allaudeen</li>
+            <li><i class="fa fa-envelope fa-fw"></i> <a href="mailto:sa@sulthanallaudeen.com">sa@sulthanallaudeen.com</a></li>
+            <li><i class="fa fa-phone-square fa-fw"></i> 904.244.5010</li>
+        </ul>
+        <p class="text-muted text-center">Created using <a href="http://www.laravel.com/" target="_blank">Laravel </a>! (With the help of <a href="http://getbootstrap.com" target="_blank">Twitter Bootstrap</a> and <a href="http://fontawesome.io" target="_blank">Font Awesome</a>.)</p>
+        </div>
     </footer>
-  </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="public/asset/js/vendor/jquery.min.js"><\/script>')</script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="public/asset/js/jquery.min.js"></script>
     <script src="public/asset/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="public/asset/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

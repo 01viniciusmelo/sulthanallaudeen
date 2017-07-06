@@ -145,7 +145,6 @@ class AppController extends Controller
 
     public function authAdminLogin() {
         if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))) {
-            $this->recordLog(Auth::user()->id);
             return Redirect::to('dashboard');
         } else {
             #return Redirect::to('admin.login.login')->with('Message', 'Invalid Username or Password');   }
