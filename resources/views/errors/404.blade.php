@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-12">
 			<div class="jumbotron">
-            <h1 class='text-center'>Application on maintenance Mode, Be right back. </h1>
+            <h1 class='text-center'>Page not Found :( </h1>
 			</div>
 		</div>
 	</div>

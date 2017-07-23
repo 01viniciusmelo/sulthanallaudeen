@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-8">
             <h1 class="homehead">Sulthan Allaudeen</h1>
-            <h2>
+            <h2 class='hide'>
               <a href="#">About</a> | 
               <a href="#">Blog</a> | 
               <a href="#">Contact</a>
