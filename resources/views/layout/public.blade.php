@@ -59,7 +59,8 @@
 @yield('content')
   <footer class="footer">
         <div class="container">
-          <p>&copy; 2010 - {{ date("Y") }} <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" class="cc-img"/></a><a href="/feeds/atom.xml"><i class="fa fa-rss fa-fw"></i></a></p>
+          <p>&copy; 2010 - {{ date("Y") }} <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" class="cc-img"/></a><a href="/feeds/atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+          <input type="hidden", "_token"  name="_token" value="{{ csrf_token()}}" ></p>
         <ul class="list-unstyled">
             <li><i class="fa fa-code fa-fw"></i> Sulthan Allaudeen</li>
             <li><i class="fa fa-envelope fa-fw"></i> <a href="mailto:sa@sulthanallaudeen.com">sa@sulthanallaudeen.com</a></li>

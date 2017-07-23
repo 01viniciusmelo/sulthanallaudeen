@@ -14,9 +14,11 @@ header('Access-Control-Allow-Headers: Authorization, Content-Type');
   |
  */
 
-
+#Start of SA Site works
 #Public Resources
     Route::get('/', 'AppController@index');
+#Admin Config Data
+    Route::post('getAdminContactData', 'Controller@AdminContactData');
 #Get CSRF Token
     Route::get('getToken', 'AppController@getToken');
 #Login
@@ -40,13 +42,11 @@ header('Access-Control-Allow-Headers: Authorization, Content-Type');
 #Contact
     Route::get('contact', 'AppController@contact');
     Route::post('sendMail', 'AppController@sendMail');
-
 ##Admin Panel
     Route::get('sa', 'AppController@adminLogin');
     Route::post('authAdmin', 'AppController@authAdminLogin');
 Route::group(['middleware' => ['auth']], function () {
 #####Admin Controller#######
-    
     Route::get('dashboard', 'HomeController@adminDashboard');
 #Blog
     Route::get('listblog', 'HomeController@listBlog');
@@ -108,17 +108,16 @@ Route::group(['middleware' => ['auth']], function () {
 //Route::get('sendPush', 'PublicController@sendPush');
 //Route::get('sendPushMsg', 'AppController@sendPush');
 #Under Middleware
-
 });
+#Start of SA Site works
 
-#status
+#For Native Mobile App - Temporary service
 Route::post('updateStatus', 'Controller@updateStatus');
 
-//Exceptions
-Route::post('getAdminContactData', 'Controller@AdminContactData');
+//GloExceptions
+
 
 Route::get("/mail", function() {
-
     return View::make("admin.mail.mail");
 });
 
