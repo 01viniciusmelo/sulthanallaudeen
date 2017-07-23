@@ -1,4 +1,4 @@
-<?php namespace App; use App\Blog; use URL?>
+<?php namespace App; use App\Blog; use URL;?>
 @extends('layout.public')
 @section('content')
     <!-- Page Content -->
