@@ -445,7 +445,7 @@ class Controller extends BaseController {
         echo 'Cron Job Finished at ' . date("Y-m-d H:i:s");
     }
 
-    #Log Cron Service
+    #Log Cron Service..
 
     public function logCron($id, $type, $note)
     {
