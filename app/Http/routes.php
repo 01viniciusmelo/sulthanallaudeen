@@ -122,7 +122,7 @@ Route::get("/mail", function() {
 });
 
 #Cron Job
-Route::get('cron', 'Controller@cron');
+Route::get('cron', 'CronController@cron');
 #End of Cron Job
 
 #Default Auth Route

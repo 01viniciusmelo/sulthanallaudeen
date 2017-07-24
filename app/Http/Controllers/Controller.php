@@ -436,6 +436,7 @@ class Controller extends BaseController {
     #Cron Job
 
     public function cron() {
+        return $this->Initcron();
         echo 'Cron Job Started at ' . date("Y-m-d H:i:s") .      '<br>';
         #Calling Sub Cron
         //echo nl2br("");
