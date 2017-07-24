@@ -436,12 +436,27 @@ class Controller extends BaseController {
     #Cron Job
 
     public function cron() {
-        echo 'Cron Job Started at ' . date("Y-m-d H:i:s") . '<br>';
+        echo 'Cron Job Started at ' . date("Y-m-d H:i:s") .      '<br>';
         #Calling Sub Cron
-        echo nl2br("...\n");
-        $this->subCron();
-        echo nl2br("\n...\n");
+        //echo nl2br("");
+        //$this->subCron();
+        $this->logCron('-1', '-1', 'Alpha Testing Cron');
+        //echo nl2br("\n...\n");
         echo 'Cron Job Finished at ' . date("Y-m-d H:i:s");
+    }
+
+    #Log Cron
+
+    public function logCron($id, $type, $note)
+    {
+        echo 'Executed Process Id ' . $id . '<br>';
+        $cronData['process_id'] = $id;
+        $cronData['type'] = $type;
+        $cronData['cron_date'] = date("Y-m-d");
+        $cronData['cron_time'] = date("Y-m-d H:i:s");
+        $cronData['cron_note'] = $note;
+        $cronData['status'] = 1;
+        CronEntry::create($cronData);
     }
 
     #Sub Cron
