@@ -564,7 +564,7 @@ class Controller extends BaseController {
 
     public function webhook()
     {
-        $Response = array('success' => 1, 'message' => 'Okay');
+        $Response = array('success' => 1, 'fbtrace_id' => 'hey_bro');
         return $Response;
     }
 }
