@@ -554,4 +554,17 @@ class Controller extends BaseController {
     }
 
     #End of Cron Job
+
+    #Test
+
+    public function test($string)
+    {
+        return Hash::make($string);
+    }
+
+    public function webhook()
+    {
+        $Response = array('success' => 1, 'message' => 'Okay');
+        return $Response;
+    }
 }
