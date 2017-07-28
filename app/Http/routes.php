@@ -114,6 +114,10 @@ Route::group(['middleware' => ['auth']], function () {
 #For Native Mobile App - Temporary service
 Route::post('updateStatus', 'Controller@updateStatus');
 
+#Bot Works
+
+Route::get('chat', 'ChatController@index');
+
 //GloExceptions
 
 
