@@ -42,6 +42,10 @@ header('Access-Control-Allow-Headers: Authorization, Content-Type');
 #Contact
     Route::get('contact', 'AppController@contact');
     Route::post('sendMail', 'AppController@sendMail');
+#Bot
+    Route::get('bot-build', 'HomeController@botBuild');
+    Route::get('bot-setup', 'HomeController@botSetup');
+
 ##Admin Panel
     Route::get('sa', 'AppController@adminLogin');
     Route::post('authAdmin', 'AppController@authAdminLogin');
@@ -102,7 +106,7 @@ Route::group(['middleware' => ['auth']], function () {
 ######Logout#####
     Route::get('logout', 'HomeController@logout');
 
-//#New Web Services to be implemented :: 
+//#New Web Services to be implemented ::
 //Route::post('appLogin', 'AppController@Login');
 //Route::post('getDashboardData', 'AppController@getDashboardData');
 //Route::get('sendPush', 'PublicController@sendPush');

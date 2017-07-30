@@ -14,6 +14,7 @@ use Mail;
 use App\User;
 use Input;
 use App\Blog;
+use App\Bot;
 use App\ContactMails;
 use App\Tag;
 use App\Cat;
@@ -393,7 +394,7 @@ class HomeController extends Controller {
         return $Response;
     }
 
-    #Config Contact 
+    #Config Contact
 
     public function configContact() {
         return view('admin.config.contact');
@@ -419,7 +420,18 @@ class HomeController extends Controller {
     public function gmail() {
         return view('admin.mail.gmail');
     }
-    
+
+    #AI Setup
+
+    public function botBuild()
+    {
+        $botData = Bot::where('id', 1)->first();
+        return view('admin.bot.build')->with('botData', $botData);
+    }
+    public function botSetup(){
+      return view('admin.bot.setup');
+    }
+
 
     #Logout
 

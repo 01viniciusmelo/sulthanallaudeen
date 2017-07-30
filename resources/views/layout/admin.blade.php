@@ -322,7 +322,19 @@
                                             </li>
                                         </ul>
                                         <!-- /.nav-third-level -->
-                                    </li>	
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-sitemap fa-fw"></i> AI<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                  <li>
+                                      <a href="{{ URL::to('/bot-build') }}">Build</a>
+                                  </li>
+                                  <li>
+                                      <a href="{{ URL::to('/bot-setup') }}">AI Setup</a>
+                                  </li>
                                 </ul>
                                 <!-- /.nav-second-level -->
                             </li>
@@ -337,7 +349,7 @@
                                             </li>
                                         </ul>
                                         <!-- /.nav-third-level -->
-                                    </li>   
+                                    </li>
                                     <li>
                                         <a href="#">GMail<span class="fa arrow"></span></a>
                                         <ul class="nav nav-third-level">
@@ -346,7 +358,7 @@
                                             </li>
                                         </ul>
                                         <!-- /.nav-third-level -->
-                                    </li>   
+                                    </li>
                                 </ul>
                                 <!-- /.nav-second-level -->
                             </li>
@@ -387,7 +399,7 @@ $(document).ready(function () {
                 {
                 }
             });
-    
+
 
     $("#notifyUser").click(function () {
         var id = $(this).attr('id')
