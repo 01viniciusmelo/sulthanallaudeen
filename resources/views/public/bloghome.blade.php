@@ -34,7 +34,7 @@ use URL; ?>
                 @endforeach
                 </p>
                 <p class="pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i> Posted on {{date("M d, Y", strtotime($post->blog_date))}}</p>
-                <p class='row'><img class="img-responsive hide" src="javascript:;" alt=""><?php echo substr($post->blog_content, 0, 150); ?></p>
+                <p class='row'><img class="img-responsive hide" src="javascript:;" alt=""><?php echo substr($post->blog_content, 0, 20); ?></p>
                 <a class="btn btn-primary" href="blog/{{ $post->blog_url }}">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                 <hr>
                 <!-- End of Blog -->
