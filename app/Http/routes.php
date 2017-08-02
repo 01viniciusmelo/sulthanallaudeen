@@ -42,9 +42,6 @@ header('Access-Control-Allow-Headers: Authorization, Content-Type');
 #Contact
     Route::get('contact', 'AppController@contact');
     Route::post('sendMail', 'AppController@sendMail');
-#Bot
-    Route::get('bot-build', 'HomeController@botBuild');
-    Route::get('bot-setup', 'HomeController@botSetup');
 
 ##Admin Panel
     Route::get('sa', 'AppController@adminLogin');

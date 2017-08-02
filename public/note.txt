@@ -95,3 +95,7 @@ php artisan make:controller HomeController
 Homestead.json
 Homestead.yaml
 .env
+
+#App Maintenance
+cp .env.example .env
+php artisan key:generate

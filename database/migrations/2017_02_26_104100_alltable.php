@@ -66,16 +66,6 @@ class Alltable extends Migration
 
         });
 
-        Schema::create('bot',function(Blueprint $table){
-            $table->engine = "InnoDB";
-            $table->increments('id');
-            $table->string('name', 100);
-            $table->longText('description');
-            $table->dateTime('dob');
-            $table->tinyInteger('status')->default(0);
-            $table->timestamps();
-
-        });
         
         Schema::create('cat',function(Blueprint $table){
             $table->engine = "InnoDB";
