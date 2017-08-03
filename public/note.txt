@@ -99,3 +99,7 @@ Homestead.yaml
 #App Maintenance
 cp .env.example .env
 php artisan key:generate
+
+#Cron
+/usr/bin/php -q /home/sulthanallaudeen/public_html/cron.php
+/usr/bin/php -q /home/wekancode/public_html/wekancode/minutecron.php

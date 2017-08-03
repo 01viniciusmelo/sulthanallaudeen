@@ -11,6 +11,7 @@ $arrContextOptions=array(
         "verify_peer_name"=>false,
     ),
 );
-$data = file_get_contents($url, false, stream_context_create($arrContextOptions));
+//$data = file_get_contents($url, false, stream_context_create($arrContextOptions));
+$data = file_get_contents($url);
 print_r($data);
 ?>
