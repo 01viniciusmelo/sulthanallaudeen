@@ -11,7 +11,7 @@ Load Seed
 php artisan db:seed
 php artisan cache:clear
 Generate Seed :
-php artisan iseed blog,blog_tag,bot,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log,sms_log --force
+php artisan iseed blog,blog_tag,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log,sms_log --force
 Drop Tables
 DROP TABLE blog,blog_tag,bot,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log,sms_log;
 Access Composer
