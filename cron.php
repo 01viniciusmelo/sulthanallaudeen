@@ -3,7 +3,6 @@
  file_put_contents('cron.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
  ?>
 <?php
-
 // $host = $_SERVER['HTTP_HOST'];
 // $url = $_SERVER['REQUEST_URI'];
 // $url = substr($url, 0, strrpos( $url, '/'));

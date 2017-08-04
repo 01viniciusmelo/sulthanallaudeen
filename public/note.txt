@@ -103,3 +103,6 @@ php artisan key:generate
 #Cron
 /usr/bin/php -q /home/sulthanallaudeen/public_html/cron.php
 /usr/bin/php -q /home/wekancode/public_html/wekancode/minutecron.php
+
+wget https://sulthanallaudeen.com/index1.php > /dev/null 2>&1
+/usr/bin/php -q /home/sulthanallaudeen/public_html/cron.php
