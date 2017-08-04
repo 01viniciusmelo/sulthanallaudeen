@@ -60,6 +60,7 @@
   <footer class="footer">
         <div class="container">
           <p>&copy; 2010 - {{ date("Y") }} <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" class="cc-img"/></a><a href="/feeds/atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+          <span class='pull-right' id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=zXDi8lx071OVItgGihdEfagLQo0YfNmUadOX0spepLVhyMH3AFGUPxDxTrka"></script></span>
           <input type="hidden", "_token"  name="_token" value="{{ csrf_token()}}" ></p>
         <ul class="list-unstyled">
             <li><i class="fa fa-code fa-fw"></i> Sulthan Allaudeen</li>
@@ -67,6 +68,7 @@
             <li><i class="fa fa-phone-square fa-fw"></i> 904.244.5010</li>
         </ul>
         <p class="text-muted text-center">Created with Love, using <a href="http://www.laravel.com/" target="_blank">Laravel </a>! (With the help of <a href="http://getbootstrap.com" target="_blank">Twitter Bootstrap</a> and <a href="http://fontawesome.io" target="_blank">Font Awesome</a>.)</p>
+
         </div>
     </footer>
     <!-- Bootstrap core JavaScript
