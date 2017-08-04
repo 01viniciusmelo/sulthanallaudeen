@@ -79,5 +79,6 @@
     <script src="{{ asset('/').('public/asset/js/bootstrap.min.js') }}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="{{ asset('/').('public/asset/js/ie10-viewport-bug-workaround.js') }}"></script>
+    <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
   </body>
 </html>
