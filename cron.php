@@ -1,6 +1,7 @@
  <?php
- $txt = date("Y-m-d H:i:s");
- file_put_contents('cron.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+ $txt = 'Cron on '.date("Y-m-d H:i:s").'|';
+ $fileName = 'public/logs/cron-'.date("Y-m-d-H-i").'.txt';
+ file_put_contents($fileName, $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
  ?>
 <?php
 // $host = $_SERVER['HTTP_HOST'];
