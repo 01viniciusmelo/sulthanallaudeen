@@ -17,6 +17,7 @@
     else{
         $data = file_get_contents($url);
     }
+echo $url;
 /*Temporary Cron Entry 
 */
 $txt = 'Cron on '.date("Y-m-d H:i:s").'|';
