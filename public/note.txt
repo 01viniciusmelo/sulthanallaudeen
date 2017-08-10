@@ -106,3 +106,5 @@ php artisan key:generate
 
 wget https://sulthanallaudeen.com/index1.php > /dev/null 2>&1
 /usr/bin/php -q /home/sulthanallaudeen/public_html/cron.php
+
+Final Commit - Hope
