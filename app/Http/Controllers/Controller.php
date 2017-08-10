@@ -289,7 +289,6 @@ class Controller extends BaseController {
         return $Response;
     }
 
-    #Cron Jobs
 
     public function sendPushNotification($DeviceId, $Message) {
         $url = 'https://android.googleapis.com/gcm/send';
@@ -433,57 +432,6 @@ class Controller extends BaseController {
         return $Response;
     }
 
-    #Cron Job
-
-    public function cron() {
-        return $this->Initcron();
-        echo 'Cron Job Started at ' . date("Y-m-d H:i:s") .      '<br>';
-        #Calling Sub Cron
-        //echo nl2br("");
-        //$this->subCron();
-        $this->logCron('-1', '-1', 'Alpha Testing Cron');
-        //echo nl2br("\n...\n");
-        echo 'Cron Job Finished at ' . date("Y-m-d H:i:s");
-    }
-
-    #Log Cron Service..
-
-    public function logCron($id, $type, $note)
-    {
-        echo 'Executed Process Id ' . $id . '<br>';
-        $cronData['process_id'] = $id;
-        $cronData['type'] = $type;
-        $cronData['cron_date'] = date("Y-m-d");
-        $cronData['cron_time'] = date("Y-m-d H:i:s");
-        $cronData['cron_note'] = $note;
-        $cronData['status'] = 1;
-        CronEntry::create($cronData);
-    }
-
-    #Sub Cron
-
-    public function subCron() {
-
-        #Initiating Sub Cron
-        #Considering only Reminder for now
-        $reminderList = Reminder::where('status', 1)->get();
-
-        #Reminder Type 1 denotes Daily Reminder and 2 denotes Only one time
-        foreach ($reminderList as $reminder) {
-            if ($reminder['reminder_type'] == 1) {
-                #It is a Daily Reminder
-                $this->Reminder('Daily', $reminder);
-            } elseif ($reminder['reminder_type'] == 2) {
-                #It is a One time Reminder
-                $this->Reminder('Once', $reminder);
-            } else {
-                #It should be an instant reminder something else                
-            }
-        }
-        #Finishing Sub Cron
-    }
-
-    #End of Sub Cron
 
     public function Reminder($type, $reminder) {
 
@@ -591,9 +539,4 @@ class Controller extends BaseController {
         return Hash::make($string);
     }
 
-    public function webhook()
-    {
-        $Response = array('success' => 1, 'fbtrace_id' => 'hey_bro');
-        return $Response;
-    }
 }

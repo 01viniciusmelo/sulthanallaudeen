@@ -3,6 +3,7 @@
     $url = $_SERVER['REQUEST_URI'];
     $url = substr($url, 0, strrpos( $url, '/'));
     $url = $host.$url;
+    $localName = 'sulthanallaudeen';
     if($host=='localhost'){
         $url = "https://".$url."/cron";
         #Temporarily Disabling SSL Certificate Verification as i need to run in Local Machine
