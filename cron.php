@@ -15,7 +15,7 @@
         $data = file_get_contents($url, false, stream_context_create($arrContextOptions));
     }
     else{
-        $data = file_get_contents($url);
+        $data = file_get_contents("https://".$url."/cron");
     }
 echo $host.$data;
 ?>
