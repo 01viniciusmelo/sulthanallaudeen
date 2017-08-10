@@ -30,11 +30,9 @@ use Config;
 
 class Controller extends BaseController {
 
-    use AuthorizesRequests,
-        DispatchesJobs,
-        ValidatesRequests;
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    #Global Functions
+    /*Global Functions*/
 
     public function getAppConfig() {
         $Response = array('success' => 1, 'domainUrl' => Config::get('constants.config.URL'));
@@ -68,36 +66,7 @@ class Controller extends BaseController {
         return $Response;
     }
 
-    public function utilSysaxiomWebLog() {
-        $sideBar = $this->technologySideBar();
-        $userLog = $this->logUser();
-        return view('admin.util.sysWebLog')->with('sideBar', $sideBar)->with('userLog', $userLog['logs']);
-    }
-
-    #Need to clean this
-
-    public function technologySideBar() {
-
-        $fullUrl = $_SERVER['REQUEST_URI'];
-        $urlSegment = substr($fullUrl, strrpos($fullUrl, '/') + 1);
-        $url = array("accessLogServer" => "", "technology" => "");
-        if ($urlSegment == 'technology') {
-            $url['technology'] = 'active';
-        } else if ($urlSegment == 'server') {
-            $url['accessLogServer'] = 'active';
-        } else {
-            $url['technology'] = 'active';
-        }
-
-
-        return '<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-            <div class="list-group">
-            <a href=' . asset('/technology') . ' class="list-group-item ' . $url['technology'] . '">Home</a>
-            <a href="' . asset('/accessLog/server') . '" class="list-group-item ' . $url['accessLogServer'] . '">Website Log</a>
-          </div>
-        </div><!--/.sidebar-offcanvas-->';
-    }
-
+    
     #Reminder
 
     public function remind() {

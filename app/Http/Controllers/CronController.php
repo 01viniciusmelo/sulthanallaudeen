@@ -11,10 +11,16 @@ class CronController extends Controller
 {
     public function InitCron()
     {
-        echo 'Initiated Cron...';
-        //logCron();
-        $this->logCron('-1', '-1', 'Alpha Testing Cron');
-        echo 'Finished Cron...';
+
+        return $this->remind();
+
+
+
+
+        echo 'Initiated Cron...<br>';
+        $this->logCron();
+        //$this->logCron('-1', '-1', 'Alpha Testing Cron');
+        echo 'Finished Cron...<br>';
         /* Logging Cron Job */
         return 'Initiated Cron...';
     }
@@ -44,19 +50,26 @@ class CronController extends Controller
 
     #Log Cron Service..
 
-    public function logCron($id, $type, $note)
+    public function logCron()
     {
         $txt = 'Cron on '.date("Y-m-d H:i:s").'|';
         $fileName = 'public/logs/cron-'.date("Y-m-d-H").'.txt';
         file_put_contents($fileName, $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
-
-        echo 'Executed Process Id ' . $id . '<br>';
-        $cronData['process_id'] = $id;
-        $cronData['type'] = $type;
-        $cronData['cron_date'] = date("Y-m-d");
-        $cronData['cron_time'] = date("Y-m-d H:i:s");
-        $cronData['cron_note'] = $note;
-        $cronData['status'] = 1;
-        CronEntry::create($cronData);
     }
+
+    // public function logCron($id, $type, $note)
+    // {
+    //     $txt = 'Cron on '.date("Y-m-d H:i:s").'|';
+    //     $fileName = 'public/logs/cron-'.date("Y-m-d-H").'.txt';
+    //     file_put_contents($fileName, $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+
+    //     echo 'Executed Process Id ' . $id . '<br>';
+    //     $cronData['process_id'] = $id;
+    //     $cronData['type'] = $type;
+    //     $cronData['cron_date'] = date("Y-m-d");
+    //     $cronData['cron_time'] = date("Y-m-d H:i:s");
+    //     $cronData['cron_note'] = $note;
+    //     $cronData['status'] = 1;
+    //     CronEntry::create($cronData);
+    // }
 }

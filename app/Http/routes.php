@@ -74,7 +74,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('editcat/{id}', 'HomeController@editCat');
     Route::post('updateCat', 'HomeController@updateCat');
 #Util
-    Route::get('sys-web-log', 'AppController@utilSysaxiomWebLog');
     Route::get('time', 'AppController@time');
 #Messages
     Route::get('messages', 'HomeController@listMessages');
@@ -94,7 +93,7 @@ Route::group(['middleware' => ['auth']], function () {
 #Gmail
     Route::get('gmail', 'HomeController@gmail');
 #Reminder
-    Route::post('remind', 'Controller@remind');
+    Route::get('remind', 'Controller@remind');
     Route::post('getNotification', 'Controller@getNotification');
     Route::get('viewreminder', 'HomeController@viewreminder');
 #Status
@@ -132,7 +131,7 @@ Route::get("/mail", function() {
 });
 
 #Cron Job
-Route::get('cron', 'CronController@cron');
+Route::get('cron', 'CronController@InitCron');
 #End of Cron Job
 
 #Default Auth Route
