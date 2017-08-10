@@ -17,5 +17,5 @@
     else{
         $data = file_get_contents($url);
     }
-echo $host;
+echo $host.$data;
 ?>
