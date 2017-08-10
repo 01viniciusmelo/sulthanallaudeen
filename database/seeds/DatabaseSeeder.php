@@ -11,22 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserTableSeeder::class);
-        $this->call('UsersTableSeeder');
-        $this->call('BlogTableSeeder');
-        $this->call('BlogTagTableSeeder');
-        $this->call('CatTableSeeder');
-        $this->call('ConfigTableSeeder');
-        $this->call('ContactmailTableSeeder');
-        $this->call('CronEntryTableSeeder');
-        $this->call('MailtemplateTableSeeder');
-        $this->call('ReminderTableSeeder');
-        $this->call('TagTableSeeder');
-        $this->call('TaskTableSeeder');
-        $this->call('TaskCatTableSeeder');
-        $this->call('TaskStatusTableSeeder');
-        $this->call('StatusTableSeeder');
-        $this->call('UserLogTableSeeder');
-        //$this->call('SmsLogTableSeeder');
+        // $this->call(UsersTableSeeder::class);
     }
 }
