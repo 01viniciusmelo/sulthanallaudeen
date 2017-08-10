@@ -27,6 +27,7 @@ use App\UserLog;
 use Validator;
 use Session;
 use Redirect;
+use Artisan;
 
 class HomeController extends Controller {
     /*
@@ -421,15 +422,13 @@ class HomeController extends Controller {
         return view('admin.mail.gmail');
     }
 
-    #AI Setup
+    #Migrate
 
-    public function botBuild()
+    public function migrate()
     {
-        $botData = Bot::where('id', 1)->first();
-        return view('admin.bot.build')->with('botData', $botData);
-    }
-    public function botSetup(){
-      return view('admin.bot.setup');
+         //return 1;
+         return Artisan::call('migrate:install');
+         //return Artisan::call("migrate");
     }
 
 

@@ -57,9 +57,20 @@ class SendGridTest_SendGrid extends \PHPUnit_Framework_TestCase
         print("\nPrism Started");
     }
 
+    public function testHelloWorld()
+    {
+        $from = new SendGrid\Email("Example User", "test@example.com");
+        $subject = "Sending with SendGrid is Fun";
+        $to = new SendGrid\Email("Example User", "test@example.com");
+        $content = new SendGrid\Content("text/plain", "and easy to do anywhere, even with PHP");
+        $mail = new SendGrid\Mail($from, $subject, $to, $content);
+        $json = json_encode($mail->jsonSerialize());
+        $this->assertEquals($json, '{"from":{"name":"Example User","email":"test@example.com"},"personalizations":[{"to":[{"name":"Example User","email":"test@example.com"}]}],"subject":"Sending with SendGrid is Fun","content":[{"type":"text\/plain","value":"and easy to do anywhere, even with PHP"}]}');
+    }
+
     public function testVersion()
     {
-        $this->assertEquals(SendGrid::VERSION, '5.5.1');
+        $this->assertEquals(SendGrid::VERSION, '5.6.2');
         $this->assertEquals(json_decode(file_get_contents(__DIR__ . '/../../composer.json'))->version, SendGrid::VERSION);
     }
 

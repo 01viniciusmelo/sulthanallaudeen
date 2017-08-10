@@ -100,6 +100,8 @@ Route::group(['middleware' => ['auth']], function () {
 #Status
     Route::post('status', 'Controller@status');
     Route::post('getStatus', 'Controller@getStatus');
+#Migrate
+    Route::get('migrate', 'HomeController@migrate');
 ######Logout#####
     Route::get('logout', 'HomeController@logout');
 
