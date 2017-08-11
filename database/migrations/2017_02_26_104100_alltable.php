@@ -66,7 +66,6 @@ class Alltable extends Migration
 
         });
 
-        
         Schema::create('cat',function(Blueprint $table){
             $table->engine = "InnoDB";
             $table->increments('id');

@@ -126,6 +126,12 @@ class AppController extends Controller {
         return view('public.project');
     }
 
+    #Technologies Used in Sysaxiom App
+
+    public function technology() {
+        $sideBarTech = $this->technologySideBar();
+        return view('public.technology')->with('sideBar', $sideBarTech);
+    }
 
     #Admin Login Page
 

@@ -14,11 +14,9 @@ header('Access-Control-Allow-Headers: Authorization, Content-Type');
   |
  */
 
-#Start of SA Site works
+
 #Public Resources
     Route::get('/', 'AppController@index');
-#Admin Config Data
-    Route::post('getAdminContactData', 'Controller@AdminContactData');
 #Get CSRF Token
     Route::get('getToken', 'AppController@getToken');
 #Login
@@ -48,6 +46,7 @@ header('Access-Control-Allow-Headers: Authorization, Content-Type');
     Route::post('authAdmin', 'AppController@authAdminLogin');
 Route::group(['middleware' => ['auth']], function () {
 #####Admin Controller#######
+    
     Route::get('dashboard', 'HomeController@adminDashboard');
 #Blog
     Route::get('listblog', 'HomeController@listBlog');
@@ -74,6 +73,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('editcat/{id}', 'HomeController@editCat');
     Route::post('updateCat', 'HomeController@updateCat');
 #Util
+    Route::get('sys-web-log', 'AppController@utilSysaxiomWebLog');
     Route::get('time', 'AppController@time');
 #Messages
     Route::get('messages', 'HomeController@listMessages');
@@ -93,45 +93,37 @@ Route::group(['middleware' => ['auth']], function () {
 #Gmail
     Route::get('gmail', 'HomeController@gmail');
 #Reminder
-    Route::get('remind', 'Controller@remind');
+    Route::post('remind', 'Controller@remind');
     Route::post('getNotification', 'Controller@getNotification');
     Route::get('viewreminder', 'HomeController@viewreminder');
 #Status
     Route::post('status', 'Controller@status');
     Route::post('getStatus', 'Controller@getStatus');
-#Migrate
-    Route::get('migrate', 'HomeController@migrate');
 ######Logout#####
     Route::get('logout', 'HomeController@logout');
 
-//#New Web Services to be implemented ::
+//#New Web Services to be implemented :: 
 //Route::post('appLogin', 'AppController@Login');
 //Route::post('getDashboardData', 'AppController@getDashboardData');
 //Route::get('sendPush', 'PublicController@sendPush');
 //Route::get('sendPushMsg', 'AppController@sendPush');
 #Under Middleware
-});
-#Start of SA Site works
 
-#For Native Mobile App - Temporary service
+});
+
+#status
 Route::post('updateStatus', 'Controller@updateStatus');
 
-#Bot Works
-
-Route::get('chat', 'ChatController@index');
-
-#Temporary Service
-Route::get('/test/{string}', 'Controller@test');
-
-//GloExceptions
-
+//Exceptions
+Route::post('getAdminContactData', 'Controller@AdminContactData');
 
 Route::get("/mail", function() {
+
     return View::make("admin.mail.mail");
 });
 
 #Cron Job
-Route::get('cron', 'CronController@InitCron');
+Route::get('cron', 'Controller@cron');
 #End of Cron Job
 
 #Default Auth Route

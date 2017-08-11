@@ -15,15 +15,10 @@ namespace SendGrid;
 class ReplyTo implements \JsonSerializable
 {
     private $email;
-    private $name;
 
-    public function __construct($email, $name = null)
+    public function __construct($email)
     {
         $this->email = $email;
-
-        if (!is_null($name)) {
-            $this->name = $name;
-        }
     }
 
     public function setEmail($email)
@@ -36,22 +31,11 @@ class ReplyTo implements \JsonSerializable
         return $this->email;
     }
 
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    public function getName()
-    {
-        return $this->name;
-    }
-
     public function jsonSerialize()
     {
         return array_filter(
             [
-                'email' => $this->getEmail(),
-                'name' => $this->getName(),
+                'email' => $this->getEmail()
             ],
             function ($value) {
                 return $value !== null;

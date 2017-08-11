@@ -30,9 +30,11 @@ use Config;
 
 class Controller extends BaseController {
 
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    use AuthorizesRequests,
+        DispatchesJobs,
+        ValidatesRequests;
 
-    /*Global Functions*/
+    #Global Functions
 
     public function getAppConfig() {
         $Response = array('success' => 1, 'domainUrl' => Config::get('constants.config.URL'));
@@ -66,7 +68,36 @@ class Controller extends BaseController {
         return $Response;
     }
 
-    
+    public function utilSysaxiomWebLog() {
+        $sideBar = $this->technologySideBar();
+        $userLog = $this->logUser();
+        return view('admin.util.sysWebLog')->with('sideBar', $sideBar)->with('userLog', $userLog['logs']);
+    }
+
+    #Need to clean this
+
+    public function technologySideBar() {
+
+        $fullUrl = $_SERVER['REQUEST_URI'];
+        $urlSegment = substr($fullUrl, strrpos($fullUrl, '/') + 1);
+        $url = array("accessLogServer" => "", "technology" => "");
+        if ($urlSegment == 'technology') {
+            $url['technology'] = 'active';
+        } else if ($urlSegment == 'server') {
+            $url['accessLogServer'] = 'active';
+        } else {
+            $url['technology'] = 'active';
+        }
+
+
+        return '<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+            <div class="list-group">
+            <a href=' . asset('/technology') . ' class="list-group-item ' . $url['technology'] . '">Home</a>
+            <a href="' . asset('/accessLog/server') . '" class="list-group-item ' . $url['accessLogServer'] . '">Website Log</a>
+          </div>
+        </div><!--/.sidebar-offcanvas-->';
+    }
+
     #Reminder
 
     public function remind() {
@@ -258,6 +289,7 @@ class Controller extends BaseController {
         return $Response;
     }
 
+    #Cron Jobs
 
     public function sendPushNotification($DeviceId, $Message) {
         $url = 'https://android.googleapis.com/gcm/send';
@@ -401,6 +433,41 @@ class Controller extends BaseController {
         return $Response;
     }
 
+    #Cron Job
+
+    public function cron() {
+        echo 'Cron Job Started at ' . date("Y-m-d H:i:s") . '<br>';
+        #Calling Sub Cron
+        echo nl2br("...\n");
+        $this->subCron();
+        echo nl2br("\n...\n");
+        echo 'Cron Job Finished at ' . date("Y-m-d H:i:s");
+    }
+
+    #Sub Cron
+
+    public function subCron() {
+
+        #Initiating Sub Cron
+        #Considering only Reminder for now
+        $reminderList = Reminder::where('status', 1)->get();
+
+        #Reminder Type 1 denotes Daily Reminder and 2 denotes Only one time
+        foreach ($reminderList as $reminder) {
+            if ($reminder['reminder_type'] == 1) {
+                #It is a Daily Reminder
+                $this->Reminder('Daily', $reminder);
+            } elseif ($reminder['reminder_type'] == 2) {
+                #It is a One time Reminder
+                $this->Reminder('Once', $reminder);
+            } else {
+                #It should be an instant reminder something else                
+            }
+        }
+        #Finishing Sub Cron
+    }
+
+    #End of Sub Cron
 
     public function Reminder($type, $reminder) {
 
@@ -471,41 +538,4 @@ class Controller extends BaseController {
     }
 
     #End of Cron Job
-
-    #Test
-
-    public function test($string)
-    {
-        $url = 'https://fcm.googleapis.com/fcm/send';
-
-        $fields = array (
-                'registration_ids' => array (
-                        'cisKTNAQ1Zk:APA91bE2tRQ7z1ClY27fbrkEdYnaN7T-OW6vfCkJd2zhdRM3GoKxMqAtGLqzCOAIWHAFo6DSDeL-m-jwYKCo2KmlhYipiKHY-pdo8xMYDmhh9qnJKmDf6JN590GAJ6ONUFtQ29yW96o6'
-                ),
-                'data' => array (
-                        "message" => 'How r u'
-                )
-        );
-        $fields = json_encode ( $fields );
-
-        $headers = array (
-                'Authorization: key=' . "AAAAalLjbyM:APA91bE9ZeLmlJ6i5DaTo6-12q_7YM1eT2HYQAl4XbpAmGchFkBmLEvarNkM9Jmcdk-kaZeCqEW-tVfGqK7OGTuJJdKyfsNgGGdPrgCJlwPVLG4BW21vGN527VBMq9yJntlGZCV5YvXu",
-                'Content-Type: application/json'
-        );
-
-        $ch = curl_init ();
-        curl_setopt ( $ch, CURLOPT_URL, $url );
-        curl_setopt ( $ch, CURLOPT_POST, true );
-        curl_setopt ( $ch, CURLOPT_HTTPHEADER, $headers );
-        curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, true );
-        curl_setopt ( $ch, CURLOPT_POSTFIELDS, $fields );
-
-        $result = curl_exec ( $ch );
-        echo $result;
-        curl_close ( $ch );
-        echo 12345;
-        print_r($result);
-        return Hash::make($string);
-    }
-
 }

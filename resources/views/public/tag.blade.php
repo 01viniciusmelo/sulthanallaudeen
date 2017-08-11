@@ -1,7 +1,6 @@
 <?php namespace App; use App\Blog; use URL;?>
 @extends('layout.public')
 @section('content')
-<div class="container">
 <div class="row">
         <div class="col-md-8">
 
@@ -74,7 +73,6 @@
 
             </div>
       </div>
-    </div>
     </div>
 <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}"> 
 @stop

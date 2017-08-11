@@ -322,7 +322,7 @@
                                             </li>
                                         </ul>
                                         <!-- /.nav-third-level -->
-                                    </li>
+                                    </li>	
                                 </ul>
                                 <!-- /.nav-second-level -->
                             </li>
@@ -337,7 +337,7 @@
                                             </li>
                                         </ul>
                                         <!-- /.nav-third-level -->
-                                    </li>
+                                    </li>   
                                     <li>
                                         <a href="#">GMail<span class="fa arrow"></span></a>
                                         <ul class="nav nav-third-level">
@@ -346,7 +346,7 @@
                                             </li>
                                         </ul>
                                         <!-- /.nav-third-level -->
-                                    </li>
+                                    </li>   
                                 </ul>
                                 <!-- /.nav-second-level -->
                             </li>
@@ -387,7 +387,7 @@ $(document).ready(function () {
                 {
                 }
             });
-
+    
 
     $("#notifyUser").click(function () {
         var id = $(this).attr('id')

@@ -14,7 +14,6 @@ use Mail;
 use App\User;
 use Input;
 use App\Blog;
-use App\Bot;
 use App\ContactMails;
 use App\Tag;
 use App\Cat;
@@ -27,7 +26,6 @@ use App\UserLog;
 use Validator;
 use Session;
 use Redirect;
-use Artisan;
 
 class HomeController extends Controller {
     /*
@@ -395,7 +393,7 @@ class HomeController extends Controller {
         return $Response;
     }
 
-    #Config Contact
+    #Config Contact 
 
     public function configContact() {
         return view('admin.config.contact');
@@ -421,16 +419,7 @@ class HomeController extends Controller {
     public function gmail() {
         return view('admin.mail.gmail');
     }
-
-    #Migrate
-
-    public function migrate()
-    {
-         //return 1;
-         return Artisan::call('migrate:install');
-         //return Artisan::call("migrate");
-    }
-
+    
 
     #Logout
 

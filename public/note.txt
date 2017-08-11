@@ -13,7 +13,7 @@ php artisan cache:clear
 Generate Seed :
 php artisan iseed blog,blog_tag,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log,sms_log --force
 Drop Tables
-DROP TABLE blog,blog_tag,bot,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log,sms_log;
+DROP TABLE blog,blog_tag,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log,sms_log;
 Access Composer
 ~/composer
 
@@ -41,7 +41,6 @@ php artisan make:migration alltable
 #Create Seed
 php artisan make:seeder BlogTableSeeder
 php artisan make:seeder BlogTagTableSeeder
-php artisan make:seeder BotTableSeeder
 php artisan make:seeder CatTableSeeder
 php artisan make:seeder ConfigTableSeeder
 php artisan make:seeder ContactmailTableSeeder
@@ -62,7 +61,6 @@ php artisan make:seeder SMSLogTableSeeder
 php artisan make:model AdminConfig
 php artisan make:model Blog
 php artisan make:model BlogTag
-php artisan make:model Bot
 php artisan make:model Cat
 php artisan make:model ContactMails
 php artisan make:model CronEntry
@@ -95,16 +93,3 @@ php artisan make:controller HomeController
 Homestead.json
 Homestead.yaml
 .env
-
-#App Maintenance
-cp .env.example .env
-php artisan key:generate
-
-#Cron
-/usr/bin/php -q /home/sulthanallaudeen/public_html/cron.php
-/usr/bin/php -q /home/wekancode/public_html/wekancode/minutecron.php
-
-wget https://sulthanallaudeen.com/index1.php > /dev/null 2>&1
-/usr/bin/php -q /home/sulthanallaudeen/public_html/cron.php
-
-Final Commit - Hope
