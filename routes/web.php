@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
+    return 'Sulthan Allaudeen';
     return view('welcome');
 });
