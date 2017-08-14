@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+#Public Resources
+    Route::get('/', 'PublicController@index');
+    Route::get('blog', 'PublicController@blog');
+    Route::get('blog/{url}', 'PublicController@blogData');

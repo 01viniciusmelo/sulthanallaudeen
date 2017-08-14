@@ -1,0 +1,90 @@
+Clone : 
+https://github.com/sulthanallaudeen/sulthanallaudeen.git
+Migrate
+#To create Table Structure
+php artisan migrate
+Load Seed
+php artisan db:seed
+php artisan cache:clear
+Generate Seed :
+php artisan iseed blog,blog_tag,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log,sms_log --force
+Drop Tables
+DROP TABLE blog,blog_tag,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log,sms_log;
+Access Composer
+~/composer
+Generate Seed :
+#Create Seed
+php artisan make:seeder BlogTableSeeder
+php artisan make:seeder BlogTagTableSeeder
+php artisan make:seeder CatTableSeeder
+php artisan make:seeder ConfigTableSeeder
+php artisan make:seeder ContactmailTableSeeder
+php artisan make:seeder CronEntryTableSeeder
+php artisan make:seeder MailtemplateTableSeeder
+php artisan make:seeder ReminderTableSeeder
+php artisan make:seeder TagTableSeeder
+php artisan make:seeder UserLogTableSeeder
+php artisan make:seeder UsersTableSeeder
+
+#Create Model
+
+php artisan make:model Blog
+php artisan make:model BlogTag
+php artisan make:model Cat
+php artisan make:model Config
+php artisan make:model ContactMails
+php artisan make:model CronEntry
+php artisan make:model MailTemplate
+php artisan make:model Reminder
+php artisan make:model Tag
+php artisan make:model UserLog
+
+
+
+To do:
+1. Change Readme.md file to own
+2. Update API Services for Mobile Request
+3. Create Mail in Gmail Section
+4. SA App for Personal Use
+5. Try implementing Node
+
+
+
+#Git Force pull from master
+git fetch origin master
+git reset --hard FETCH_HEAD
+git clean -df
+
+
+php artisan make:migration alltable
+
+
+Additional Commands
+
+#
+
+php artisan app:name sulthanallaudeen
+
+php artisan down
+php artisan up
+
+
+#Controller
+php artisan make:controller AppController
+php artisan make:controller HomeController
+
+
+
+.gitignore
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
