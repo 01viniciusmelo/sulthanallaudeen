@@ -122,6 +122,7 @@ Route::get('chat', 'ChatController@index');
 
 #Temporary Service
 Route::get('/test/{string}', 'Controller@test');
+Route::get('tutchapon', 'AppController@Tutchapon'); 
 
 //GloExceptions
 

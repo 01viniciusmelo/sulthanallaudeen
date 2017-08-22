@@ -150,4 +150,11 @@ class AppController extends Controller {
         return date("Y-m-d H:i:s");
     }    
 
+    public function Tutchapon()
+    {
+        $url = "http://13.228.10.174/api/v4/projects";
+        $homepage = file_get_contents($url);
+        echo $homepage;
+    }
+
 }
