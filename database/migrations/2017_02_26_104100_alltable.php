@@ -128,20 +128,7 @@ class Alltable extends Migration
 
         });
         
-        Schema::create('reminder',function(Blueprint $table){
-                    $table->engine = "InnoDB";
-                    $table->increments('id');
-                    $table->tinyInteger('reminder_type')->default(0);
-                    $table->string('reminder_name', 50);
-                    $table->date('reminder_date');
-                    $table->time('reminder_time');
-                    $table->string('reminder_phone');
-                    $table->string('reminder_note', 255);
-                    $table->tinyInteger('status')->default(0);
-                    $table->timestamps();
-
-                });
-
+        
         Schema::create('tag',function(Blueprint $table){
             $table->engine = "InnoDB";
             $table->increments('id');
@@ -152,59 +139,7 @@ class Alltable extends Migration
             $table->timestamps();
 
         });
-
-        Schema::create('task',function(Blueprint $table){
-            $table->engine = "InnoDB";
-            $table->increments('id');
-            $table->string('task_name', 500);
-            $table->longText('task_details');
-            $table->integer('task_byuser');
-            $table->integer('task_status');
-            $table->tinyInteger('status')->default(0);
-            $table->timestamps();
-
-        });
-
-        Schema::create('task_cat',function(Blueprint $table){
-            $table->engine = "InnoDB";
-            $table->increments('id');
-            $table->integer('task_id');
-            $table->integer('cat_id');
-            $table->integer('user_id');
-            $table->tinyInteger('status')->default(0);
-            $table->timestamps();
-
-        });
-
-        Schema::create('task_status',function(Blueprint $table){
-            $table->engine = "InnoDB";
-            $table->increments('id');
-            $table->integer('status_name');
-            $table->string('status_percent', 10);
-            $table->tinyInteger('status')->default(0);
-            $table->timestamps();
-
-        });
-
-        Schema::create('status',function(Blueprint $table){
-            $table->engine = "InnoDB";
-            $table->increments('id');
-            $table->string('status_note', 255);
-            $table->tinyInteger('status_status')->default(0);
-            $table->timestamps();
-
-        });
-
-        Schema::create('sms_log',function(Blueprint $table){
-            $table->engine = "InnoDB";
-            $table->increments('id');
-            $table->string('user_id', 10);
-            $table->string('number', 13);
-            $table->string('content', 255);
-            $table->tinyInteger('status')->default(1);
-            $table->timestamps();
-
-        });
+        
     }
 
     /**

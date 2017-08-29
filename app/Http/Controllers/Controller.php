@@ -21,10 +21,6 @@ use App\BlogTag;
 use App\ContactMails;
 use App\UserLog;
 use App\AdminConfig;
-use App\Reminder;
-use App\CronEntry;
-use App\Cat;
-use App\Status;
 #Config
 use Config;
 
@@ -65,70 +61,7 @@ class Controller extends BaseController {
         }
         return $Response;
     }
-
     
-    #Reminder
-
-    public function remind() {
-        $reminderData = Input::all();
-        $reminderData['status'] = 1;
-        if($reminderData['reminder_type']!='3')
-        {
-            $reminderData['reminder_time'] = date("H:i:s", strtotime($reminderData['reminder_date']));
-            $reminderData['reminder_date'] = date("Y-m-d", strtotime($reminderData['reminder_date']));
-            Reminder::create($reminderData);
-        }
-        else
-        {
-            $sendSMS = $this->sendSMS($reminderData['reminder_phone'], $reminderData['reminder_name'].' : '.$reminderData['reminder_note']);
-            Reminder::create($reminderData);
-            $smsLog = $sendSMS['response']['message_uuid']['0'];
-        }
-        
-        
-        $reminderData = Reminder::orderBy('id', 'DESC')->take(10)->get();
-        $Response = array('success' => '1', 'reminder' => $reminderData);
-        return $Response;
-    }
-
-    public function getNotification()
-    {
-        $reminderData = Reminder::orderBy('id', 'DESC')->take(10)->get();
-        $Response = array('success' => '1', 'reminder' => $reminderData);
-        return $Response;
-    }
-
-    #Status
-
-    public function status() {
-        $statusData = Input::all();
-        $statusData['status_status'] = 1;
-        $validation = Validator::make($statusData, Status::$addStatus);
-        $statusInfo = Status::orderBy('id', 'DESC')->take(10)->get();
-        if ($validation->passes()) {
-            Status::create($statusData);
-            $Response = array('success' => '1', 'status' => $statusInfo);
-        }
-        else
-        {
-            $Response = array('success' => '0', 'error' => $validation->messages());
-        }
-        return $Response;
-        
-        
-        
-        
-        $Response = array('success' => '1', 'reminder' => $reminderData);
-        return $Response;
-    }
-
-    public function getStatus()
-    {
-        $statusData = Status::orderBy('id', 'DESC')->take(10)->get();
-        $Response = array('success' => '1', 'status' => $statusData);
-        return $Response;
-    }
-
     #Get Particular Blog Post
 
     public function getBlog($id = NULL) {
@@ -402,60 +335,7 @@ class Controller extends BaseController {
     }
 
 
-    public function Reminder($type, $reminder) {
-
-        if ($type == "Once" && $reminder['status'] == 1 && date("Y-m-d H:i") == $reminder['reminder_date'] . ' ' . date("H:i", strtotime($reminder['reminder_time']))) {
-            #Remind Once
-            $this->doCronEntry($reminder['id'],1, $reminder['reminder_name'].' : '.$reminder['reminder_note']);
-            Reminder::where('id', $reminder['id'])->update(array('status' => 2));
-        } else {
-            #Remind Daily
-            $checkCron = CronEntry::where('process_id', $reminder['id'])->where('cron_date', date('Y-m-d'))->first();
-            //echo date("Y-m-d").date("Y-m-d", strtotime($reminder['updated_at']));
-            if ($checkCron=='') {
-                $this->doCronEntry($reminder['id'], 2, $reminder['reminder_name'].' : '.$reminder['reminder_note']);
-                Reminder::find($reminder['id'])->touch();
-            }
-        }
-    }
-
-    public function getReminder()
-    {
-        return Reminder::orderBy('id', 'DESC')->get();
-    }
-
-    public function updateStatus()
-    {
-        if(Input::get('status'))
-        {
-            $statusData['status_note'] = Input::get('status');
-            $statusData['status_status'] = 1;
-            Status::create($statusData);
-            $Response = array('success' => 1, 'message' => 'Status updated succesfully');
-        }
-        else
-        {
-            $Response = array('success' => 0, 'message' => 'Status field Missing');
-        }
-        return $Response;
-    }
-
-    public function doCronEntry($id, $type, $reminder) {
-        echo 'Executed Process Id ' . $id . '<br>';
-        $cronData['process_id'] = $id;
-        $cronData['type'] = $type;
-        $cronData['cron_date'] = date("Y-m-d");
-        $cronData['cron_time'] = date("Y-m-d H:i:s");
-        $cronData['cron_note'] = Config::get('constants.cron.success');
-        $cronData['status'] = 1;
-        CronEntry::create($cronData);
-        $this->sendSMS(Config::get('constants.plivo.receiver'), $reminder);
-    }
-
-    public function doPush() {
-        
-    }
-
+    
     public function sendSMS($to, $message)
     {
         $p = new RestAPI(Config::get('constants.plivo.auth'), Config::get('constants.plivo.secret'));

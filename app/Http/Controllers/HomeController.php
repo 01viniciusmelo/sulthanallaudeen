@@ -426,9 +426,7 @@ class HomeController extends Controller {
 
     public function migrate()
     {
-         //return 1;
          return Artisan::call('migrate:install');
-         //return Artisan::call("migrate");
     }
 
 

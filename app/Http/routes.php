@@ -60,18 +60,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('postTag', 'HomeController@postTag');
     Route::get('edittag/{id}', 'HomeController@editTag');
     Route::post('updateTag', 'HomeController@updateTag');
-#Task
-    Route::get('listtask', 'HomeController@listTask');
-    Route::get('createtask', 'HomeController@createTask');
-    Route::post('postTask', 'HomeController@postTask');
-    Route::get('edittask/{id}', 'HomeController@editTask');
-    Route::post('updateTask', 'HomeController@updateTask');
-#Category
-    Route::get('listcat', 'HomeController@listCat');
-    Route::get('createcat', 'HomeController@createCat');
-    Route::post('postCat', 'HomeController@postCat');
-    Route::get('editcat/{id}', 'HomeController@editCat');
-    Route::post('updateCat', 'HomeController@updateCat');
 #Util
     Route::get('time', 'AppController@time');
 #Messages
@@ -91,22 +79,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('updateAdminContactData', 'HomeController@updateAdminContactData');
 #Gmail
     Route::get('gmail', 'HomeController@gmail');
-#Reminder
-    Route::get('remind', 'Controller@remind');
-    Route::post('getNotification', 'Controller@getNotification');
-    Route::get('viewreminder', 'HomeController@viewreminder');
-#Status
-    Route::post('status', 'Controller@status');
-    Route::post('getStatus', 'Controller@getStatus');
 #Migrate
     Route::get('migrate', 'HomeController@migrate');
 ######Logout#####
     Route::get('logout', 'HomeController@logout');
 
-//#New Web Services to be implemented ::
-//Route::post('appLogin', 'AppController@Login');
-//Route::post('getDashboardData', 'AppController@getDashboardData');
-//Route::get('sendPush', 'PublicController@sendPush');
+//#New Web Services to be implemented in Mobile Side::
 //Route::get('sendPushMsg', 'AppController@sendPush');
 #Under Middleware
 });
@@ -125,8 +103,7 @@ Route::get('/test/hash/{string}', 'TestController@hash');
 Route::get('/test/fcmPush', 'TestController@fcmPush');
 Route::get('/test/tutchapon', 'TestController@Tutchapon'); 
 
-//GloExceptions
-
+//GlobalExceptions
 
 Route::get("/mail", function() {
     return View::make("admin.mail.mail");

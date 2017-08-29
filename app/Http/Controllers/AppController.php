@@ -73,8 +73,7 @@ class AppController extends Controller {
     #Get CSRF Token
 
     public function getToken() {
-        $token = csrf_token();
-        $Response = array('success' => '1', '_token' => $token);
+        $Response = array('success' => '1', '_token' =>csrf_token());
         return $Response;
     }
 
@@ -107,24 +106,6 @@ class AppController extends Controller {
     // public function getPlatform() {
     //     return $this->getPlatform();
     // }
-
-     #Gallery Page
-
-    public function gallery() {
-        return view('public.gallery');
-    }
-
-    #Gallery Explorer
-
-    public function galleryExplorer($dir) {
-        return view('public.galleryexplorer')->with('dir', $dir);
-    }
-
-    #Project Page
-
-    public function project() {
-        return view('public.project');
-    }
 
 
     #Admin Login Page
