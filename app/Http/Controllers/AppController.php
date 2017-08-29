@@ -150,23 +150,4 @@ class AppController extends Controller {
         return date("Y-m-d H:i:s");
     }    
 
-    public function Tutchapon()
-    {
-        $url = "http://13.228.10.174/api/v4/projects";
-        $homepage = file_get_contents($url);
-        $decoded = json_decode($homepage);
-        $count = 0;
-        echo '<table border="1">
-                <tr>
-                    <th>S.No</th>
-                    <th>Name</th>
-                    <th>Url</th>
-                </tr>';
-        foreach ($decoded as $value) {
-            $count++;
-            echo '<tr><td>'.$count.'</td><td>'.$value->name.'</td><td>'.$value->http_url_to_repo.'</td></tr>';
-        }
-        echo '</table>';
-    }
-
 }

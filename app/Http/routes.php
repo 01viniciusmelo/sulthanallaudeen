@@ -1,5 +1,4 @@
 <?php
-#Cleanup reminder for 5.2
 #Allowing Cross Origin Temporarily for Mobile Service
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Headers: Authorization, Content-Type');
@@ -120,9 +119,11 @@ Route::post('updateStatus', 'Controller@updateStatus');
 
 Route::get('chat', 'ChatController@index');
 
-#Temporary Service
-Route::get('/test/{string}', 'Controller@test');
-Route::get('tutchapon', 'AppController@Tutchapon'); 
+#Testing Service
+Route::get('/test', 'TestController@index');
+Route::get('/test/hash/{string}', 'TestController@hash');
+Route::get('/test/fcmPush', 'TestController@fcmPush');
+Route::get('/test/tutchapon', 'TestController@Tutchapon'); 
 
 //GloExceptions
 
