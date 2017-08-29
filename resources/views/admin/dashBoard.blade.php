@@ -108,7 +108,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-clock-o fa-fw"></i> Recent Reminders
-                            <span style='float:right'><a href="{{ URL::to('/viewreminder') }}" class="btn btn-xs btn-primary">View all Reminder</a></span>
+                            <span style='float:right'><a href="#" class="btn btn-xs btn-primary">View all</a></span>
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body reminderData">

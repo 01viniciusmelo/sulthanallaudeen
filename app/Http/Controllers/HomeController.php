@@ -17,12 +17,8 @@ use App\Blog;
 use App\Bot;
 use App\ContactMails;
 use App\Tag;
-use App\Cat;
 use App\AdminConfig;
-use App\Task;
-use App\TaskCat;
 use App\BlogTag;
-use App\Status;
 use App\UserLog;
 use Validator;
 use Session;
@@ -410,11 +406,6 @@ class HomeController extends Controller {
         return $Response;
     }
 
-    #Gmail
-
-    public function viewreminder() {
-        return view('admin.reminder.reminder')->with('reminderData', $this->getReminder());
-    }
 
     #Gmail
 

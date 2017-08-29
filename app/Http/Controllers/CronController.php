@@ -11,12 +11,6 @@ class CronController extends Controller
 {
     public function InitCron()
     {
-
-        return $this->remind();
-
-
-
-
         echo 'Initiated Cron...<br>';
         $this->logCron();
         //$this->logCron('-1', '-1', 'Alpha Testing Cron');
@@ -27,22 +21,7 @@ class CronController extends Controller
 
     public function subCron() {
 
-        #Initiating Sub Cron
-        #Considering only Reminder for now
-        $reminderList = Reminder::where('status', 1)->get();
-
-        #Reminder Type 1 denotes Daily Reminder and 2 denotes Only one time
-        foreach ($reminderList as $reminder) {
-            if ($reminder['reminder_type'] == 1) {
-                #It is a Daily Reminder
-                $this->Reminder('Daily', $reminder);
-            } elseif ($reminder['reminder_type'] == 2) {
-                #It is a One time Reminder
-                $this->Reminder('Once', $reminder);
-            } else {
-                #It should be an instant reminder something else                
-            }
-        }
+        #Initiating Sub Cron        
         #Finishing Sub Cron
     }
 

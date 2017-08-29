@@ -122,7 +122,6 @@ class Controller extends BaseController {
         }
     }
 
-    #Get Category Data
 
     public function getTagData($tag = NULL)
     {

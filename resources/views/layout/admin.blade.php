@@ -282,36 +282,6 @@
                                 <!-- /.nav-second-level -->
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-sitemap fa-fw"></i> Task<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="#">Task<span class="fa arrow"></span></a>
-                                        <ul class="nav nav-third-level">
-                                            <li>
-                                                <a href="{{ URL::to('/createtask') }}">Create Task</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ URL::to('/listtask') }}">List / Edit Task</a>
-                                            </li>
-                                        </ul>
-                                        <!-- /.nav-third-level -->
-                                    </li>
-                                    <li>
-                                        <a href="#">Category<span class="fa arrow"></span></a>
-                                        <ul class="nav nav-third-level">
-                                            <li>
-                                                <a href="{{ URL::to('/createcat') }}">Create Category</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ URL::to('/listcat') }}">List / Edit Category </a>
-                                            </li>
-                                        </ul>
-                                        <!-- /.nav-third-level -->
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
-                            <li>
                                 <a href="#"><i class="fa fa-sitemap fa-fw"></i> Config<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>

@@ -11,9 +11,9 @@ Load Seed
 php artisan db:seed
 php artisan cache:clear
 Generate Seed :
-php artisan iseed blog,blog_tag,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log,sms_log --force
+php artisan iseed blog,blog_tag,cat,config,contactmail,mailtemplate,tag,users,user_log --force
 Drop Tables
-DROP TABLE blog,blog_tag,bot,cat,config,contactmail,cron_entry,mailtemplate,reminder,sms_log,status,tag,task,task_cat,task_status,users,user_log,sms_log;
+DROP TABLE blog,blog_tag,cat,config,contactmail,mailtemplate,tag,users,user_log;
 Access Composer
 ~/composer
 
@@ -45,33 +45,18 @@ php artisan make:seeder BotTableSeeder
 php artisan make:seeder CatTableSeeder
 php artisan make:seeder ConfigTableSeeder
 php artisan make:seeder ContactmailTableSeeder
-php artisan make:seeder CronEntryTableSeeder
 php artisan make:seeder MailtemplateTableSeeder
-php artisan make:seeder ReminderTableSeeder
-php artisan make:seeder SmsLogTableSeeder
-php artisan make:seeder StatusTableSeeder
 php artisan make:seeder TagTableSeeder
-php artisan make:seeder TaskCatTableSeeder
-php artisan make:seeder TaskStatusTableSeeder
-php artisan make:seeder TaskTableSeeder
 php artisan make:seeder UserLogTableSeeder
 php artisan make:seeder UsersTableSeeder
-php artisan make:seeder SMSLogTableSeeder
 
 #Create Model
 php artisan make:model AdminConfig
 php artisan make:model Blog
 php artisan make:model BlogTag
-php artisan make:model Bot
-php artisan make:model Cat
 php artisan make:model ContactMails
-php artisan make:model CronEntry
 php artisan make:model MailTemplate
-php artisan make:model Reminder
-php artisan make:model Status
 php artisan make:model Tag
-php artisan make:model Task
-php artisan make:model TaskCat
 php artisan make:model UserLog
 
 #
