@@ -1,5 +1,5 @@
 <?php
-
+#Cleanup reminder for 5.2
 #Allowing Cross Origin Temporarily for Mobile Service
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Headers: Authorization, Content-Type');
