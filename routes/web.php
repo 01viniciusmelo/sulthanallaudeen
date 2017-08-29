@@ -16,3 +16,4 @@
     Route::get('/', 'PublicController@index');
     Route::get('blog', 'PublicController@blog');
     Route::get('blog/{url}', 'PublicController@blogData');
+    Route::post('searchBlog', 'AppController@searchBlog');
