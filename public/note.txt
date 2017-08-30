@@ -1,0 +1,6 @@
+#Basic Conf
+Host :166.62.10.190
+Repo : https://github.com/sulthanallaudeen/sulthanallaudeen.git
+
+#Application Up / Down  :: php artisan up | php artisan down
+#Application Up / Down  :: php artisan up | php artisan down
