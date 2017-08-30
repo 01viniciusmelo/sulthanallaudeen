@@ -101,13 +101,6 @@ class AppController extends Controller {
         return $this->getTotalCount();
     }
 
-    #Get Platform
-
-    // public function getPlatform() {
-    //     return $this->getPlatform();
-    // }
-
-
     #Admin Login Page
 
     public function adminLogin() {
@@ -124,11 +117,6 @@ class AppController extends Controller {
             #return Redirect::to('admin.login.login')->with('Message', 'Invalid Username or Password');   }
             return Redirect::to('sa')->with('warning', 'Invalid Username or Password');
         }
-    }
-
-    public function time()
-    {
-        return date("Y-m-d H:i:s");
     }    
 
 }

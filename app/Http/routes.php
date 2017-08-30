@@ -77,8 +77,6 @@ Route::group(['middleware' => ['auth']], function () {
 #Config
     Route::get('config-contact', 'HomeController@configContact');
     Route::post('updateAdminContactData', 'HomeController@updateAdminContactData');
-#Gmail
-    Route::get('gmail', 'HomeController@gmail');
 #Migrate
     Route::get('migrate', 'HomeController@migrate');
 ######Logout#####
@@ -102,21 +100,7 @@ Route::get('/test', 'TestController@index');
 Route::get('/test/hash/{string}', 'TestController@hash');
 Route::get('/test/fcmPush', 'TestController@fcmPush');
 Route::get('/test/tutchapon', 'TestController@Tutchapon'); 
-
-//GlobalExceptions
-
-Route::get("/mail", function() {
-    return View::make("admin.mail.mail");
-});
-
 #Cron Job
 Route::get('cron', 'CronController@InitCron');
 #End of Cron Job
-
-#Default Auth Route
-Route::controllers([
-    'auth' => 'Auth\AuthController',
-    'password' => 'Auth\PasswordController',
-]);
-
 #End of Routes

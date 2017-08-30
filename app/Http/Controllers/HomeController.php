@@ -14,7 +14,6 @@ use Mail;
 use App\User;
 use Input;
 use App\Blog;
-use App\Bot;
 use App\ContactMails;
 use App\Tag;
 use App\AdminConfig;
@@ -51,9 +50,6 @@ class HomeController extends Controller {
      *
      * @return Response
      */
-    public function index() {
-        return view('home');
-    }
 
     #Admin Dashboard Page
 
@@ -242,47 +238,6 @@ class HomeController extends Controller {
         return $Response;
     }
 
-    #Create Task
-
-    public function createTask() {
-        $cats = Cat::where('catStatus', 1)->get();
-        return view('admin.task.createTask')->with('cats', $cats);
-    }
-
-    #Post Task
-
-    public function postTask() {
-
-        $taskData = Input::except('_token');
-        $taskData['taskAuthor'] = 1;
-        $taskCats = Input::get('catTags');
-        $validation = Validator::make($taskData, Task::$postTask);
-        if ($validation->passes()) {
-            $postTask = Task::create($taskData);
-            foreach ($taskCats as $taskCatData) {
-                TaskCat::create([
-                    'task_id' => $postTask->id,
-                    'user_id' => '1',
-                    'cat_id' => $taskCatData[0]
-                ]);
-            }
-            $Response = array('success' => '1', 'taskId' => $postTask->id);
-        } else {
-            $Response = array('success' => '0', 'err' => $validation->messages());
-        }
-        return $Response;
-    }
-
-    public function listTask() {
-        $tasks = Task::all();
-        return view('admin.task.listTask')->with('tasks', $tasks);
-    }
-
-    public function editTask($id) {
-        $taskData = Task::where('id', $id)->first();
-        return view('admin.task.editTask')->with('taskData', $taskData);
-    }
-
     #Messages
 
     public function listMessages() {
@@ -406,12 +361,6 @@ class HomeController extends Controller {
         return $Response;
     }
 
-
-    #Gmail
-
-    public function gmail() {
-        return view('admin.mail.gmail');
-    }
 
     #Migrate
 
