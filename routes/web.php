@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'PublicController@index');
+Route::get('/blog', 'PublicController@blogs');
+Route::get('/blog/{id}', 'PublicController@blog');
+Route::get('/contact', 'PublicController@contact');
