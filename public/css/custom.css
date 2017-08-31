@@ -10,3 +10,25 @@ body {
 .hide {
     display: none;
 }
+
+.sa-img-box {
+    text-align: center;
+}
+
+.sa-name {
+    text-align: center;
+}
+
+.sa-img {
+    height: 200px;
+    width: 200px;
+}
+
+.sa-social-lnk {
+    text-decoration: none;
+}
+
+.sa-fa-s-lnk {
+    color: black;
+    font-size: 100px;
+}

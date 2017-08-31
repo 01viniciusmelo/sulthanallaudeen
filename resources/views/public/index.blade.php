@@ -12,6 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('/').('public/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/').('public/css/font-awesome.min.css') }}" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{{ asset('/').('public/css/custom.css') }}" rel="stylesheet">
   </head>
@@ -40,13 +41,22 @@
     </nav>
 
     <div class="container">
-
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      <div class="jumbotron">
+        <p class="sa-img-box"><img src="{{ asset('/').('public/images/sulthan-allaudeen.jpg') }}" class="img-fluid rounded-circle sa-img" alt="Sulthan Allaudeen"> <h1 class="sa-name">Sulthan Allaudeen</h1></p>
+         <div class="row">
+          <div class="col-4">
+            <a href="https://github.com/sulthanallaudeen" class="sa-social-lnk" target="_new"><i class="fa fa-github sa-fa-s-lnk" aria-hidden="true"></i></a>
+          </div>
+          <div class="col-4">
+            <a href="https://stackoverflow.com/users/3282633/sulthan-allaudeen" class="sa-social-lnk" target="_new"><i class="fa fa-stack-overflow sa-fa-s-lnk" aria-hidden="true"></i></a>
+          </div>
+          <div class="col-4">
+            <a href="https://www.linkedin.com/in/sulthanallaudeen/" class="sa-social-lnk" target="_new"><i class="fa fa-linkedin-square sa-fa-s-lnk" aria-hidden="true"></i></a>
+          </div>
+        </div>
       </div>
+    </div>
 
-    </div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
