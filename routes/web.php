@@ -13,5 +13,12 @@
 
 Route::get('/', 'PublicController@index');
 Route::get('/blog', 'PublicController@blogs');
-Route::get('/blog/{id}', 'PublicController@blog');
+Route::get('/blog/{query}', 'PublicController@blog');
+Route::post('/searchBlog', 'PublicController@searchBlog');
+Route::get('/tag/{query}', 'PublicController@tag');
+Route::get('/tag/{query}/about', 'PublicController@tagAbout');
 Route::get('/contact', 'PublicController@contact');
+Route::post('/contactSA', 'PublicController@contactSA');
+
+#Admin Panel
+Route::get('/sa', 'PublicController@admin');

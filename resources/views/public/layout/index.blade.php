@@ -66,6 +66,7 @@
           </div>
           <div class="col-6">
             <p class="text-muted text-center">Created with <i class="fa fa-heart sa-red" aria-hidden="true"></i> using <a href="http://www.laravel.com/" target="_blank">Laravel </a>! <br>(With the help of <a href="http://getbootstrap.com" target="_blank">Twitter Bootstrap</a> and <a href="http://fontawesome.io" target="_blank">Font Awesome</a>)</p>
+            <span class="hide" id="csrf_token">{{csrf_token()}}</span>
           </div>
           <div class="col-3">
             <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fsulthanallaudeen.com%2F" target="blank"><img src="https://www.w3.org/Icons/valid-html20-blue.png"></a>
@@ -76,11 +77,10 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{{ asset('/').('public/js/jquery-3.2.1.slim.min.js') }}"></script>
-    <script src="{{ asset('/').('public/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('/').('public/js/popper.min.js') }}"></script>
-    <script src="{{ asset('/').('public/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/').('public/admin/js/jquery-3.2.1.slim.min.js') }}"></script>
+    <script src="{{ asset('/').('public/admin/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/').('public/admin/js/admin.js') }}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="{{ asset('/').('public/js/ie10-viewport-bug-workaround.js') }}"></script>
+    <script src="{{ asset('/').('public/admin/js/ie10-viewport-bug-workaround.js') }}"></script>
   </body>
 </html>

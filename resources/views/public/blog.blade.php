@@ -6,10 +6,12 @@
           <p class="float-right d-md-none">
             <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
           </p>
-          <div class="row">
+          <div class="row" id="resultArea">
+          </div>
+          <div class="row" id="blogArea">
             <div class="col-9 col-lg-9">
-              <h2>Blog Full Title</h2>
-              <p>Blog Full Base Content</p>
+              <h2>{{$blog->title}}</h2>
+              <p><?php echo $blog->content; ?></p>
             </div>
           </div>
         </div>
@@ -19,7 +21,7 @@
             <h4 class="card-title">Search Blog</h4>
             <form>
             <div class="form-group">
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search Query">
+              <input type="text" class="form-control" id="searchBlog" aria-describedby="emailHelp" placeholder="Search Query">
             </div>
           </form>
           </div>
@@ -27,7 +29,12 @@
         <div class="card" style="width: 20rem;">
           <div class="card-body">
             <h4 class="card-title">Blog Tags</h4>
-            <button type="button" class="btn btn-primary">PHP <a href="#" class="badge badge-dark">8</a></button>
+            @foreach ($tags as $tag)
+            <?php
+              $tagTitle = str_replace(" ","-",$tag->title);
+            ?>
+            <a href="{{ URL::to('tag/'.$tagTitle) }}" class="btn btn-primary">{{ $tagTitle }} <span href="#" class="badge badge-dark">{{$tag->count}}</span></a>
+            @endforeach
           </div>
         </div>
         </div>
