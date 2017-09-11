@@ -77,10 +77,11 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{{ asset('/').('public/admin/js/jquery-3.2.1.slim.min.js') }}"></script>
-    <script src="{{ asset('/').('public/admin/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('/').('public/admin/js/admin.js') }}"></script>
+    <script src="{{ asset('/').('public/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('/').('public/js/popper.min.js') }}"></script>
+    <script src="{{ asset('/').('public/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/').('public/js/custom.js') }}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="{{ asset('/').('public/admin/js/ie10-viewport-bug-workaround.js') }}"></script>
+    <script src="{{ asset('/').('public/js/ie10-viewport-bug-workaround.js') }}"></script>
   </body>
 </html>
