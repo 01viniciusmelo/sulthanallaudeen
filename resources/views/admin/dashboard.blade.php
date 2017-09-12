@@ -1,5 +1,7 @@
 @extends('admin.layout.index')
 @section('content')
+<!-- Morris Chart Css-->
+<link href="{{ asset('/').('public/admin/plugins/morrisjs/morris.css') }}" rel="stylesheet">
 <section class="content">
         <div class="container-fluid">
             <div class="block-header">
@@ -311,4 +313,23 @@
             </div>
         </div>
     </section>
+<!-- Jquery CountTo Plugin Js -->
+    <script src="{{ asset('/').('public/admin/plugins/jquery-countto/jquery.countTo.js') }}"></script>
+
+    <!-- Morris Plugin Js -->
+    <script src="{{ asset('/').('public/admin/plugins/raphael/raphael.min.js') }}"></script>
+    <script src="{{ asset('/').('public/admin/plugins/morrisjs/morris.js') }}"></script>
+
+    <!-- ChartJs -->
+    <script src="{{ asset('/').('public/admin/plugins/chartjs/Chart.bundle.js') }}"></script>
+
+    <!-- Flot Charts Plugin Js -->
+    <script src="{{ asset('/').('public/admin/plugins/flot-charts/jquery.flot.js') }}"></script>
+    <script src="{{ asset('/').('public/admin/plugins/flot-charts/jquery.flot.resize.js') }}"></script>
+    <script src="{{ asset('/').('public/admin/plugins/flot-charts/jquery.flot.pie.js') }}"></script>
+    <script src="{{ asset('/').('public/admin/plugins/flot-charts/jquery.flot.categories.js') }}"></script>
+    <script src="{{ asset('/').('public/admin/plugins/flot-charts/jquery.flot.time.js') }}"></script>
+
+    <!-- Sparkline Chart Plugin Js -->
+    <script src="{{ asset('/').('public/admin/plugins/jquery-sparkline/jquery.sparkline.js') }}"></script>
 @stop

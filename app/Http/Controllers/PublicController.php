@@ -89,10 +89,10 @@ class PublicController extends Controller
     public function doLogin(){
         $userData = Input::all();
         if (Auth::attempt(['email' => $userData['email'], 'password' => $userData['password']])) {
-            return redirect()->intended('dashboard');
+            return redirect()->intended('admin/dashboard');
         }
         else{
-            return back()->withInput();
+            return back()->withInput()->with('status', 'Invalid Username or Password');
         }
 
     }

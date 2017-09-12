@@ -33,6 +33,11 @@
         </div>
         <div class="card">
             <div class="body">
+                @if (session('status'))
+                    <div class="alert alert-danger">
+                        {{ session('status') }}
+                    </div>
+                @endif
                 <form id="sign_in" method="POST" action="doLogin">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="msg">Sign in to start your session</div>
@@ -41,7 +46,7 @@
                             <i class="material-icons">person</i>
                         </span>
                         <div class="form-line">
-                            <input type="text" class="form-control" name="email" placeholder="Username" required autofocus>
+                            <input type="text" class="form-control" name="email" placeholder="Username" value="{{ old('email') }}" required autofocus>
                         </div>
                     </div>
                     <div class="input-group">
@@ -49,7 +54,7 @@
                             <i class="material-icons">lock</i>
                         </span>
                         <div class="form-line">
-                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+                            <input type="password" class="form-control" name="password" placeholder="Password" required value="{{ old('password') }}">
                         </div>
                     </div>
                     <div class="row">
