@@ -21,6 +21,7 @@ DROP TABLE blog,blog_tag,cat,mail,mailtemplate,tag,users;
 php artisan make:migration all_tables
 #Controller
 php artisan make:controller PublicController
+php artisan make:controller AdminController
 #Model
 php artisan make:model Blog
 php artisan make:model BlogTag

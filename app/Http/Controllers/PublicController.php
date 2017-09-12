@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 #Util
+use Auth;
+use Config;
+use Hash;
 use Validator;
 #Models
 use App\Blog;
@@ -16,6 +19,11 @@ use App\User;
 
 class PublicController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('guest');
+    }
+
     public function index(){
         return view('public.index');
     }
@@ -71,7 +79,21 @@ class PublicController extends Controller
             $Response = array('success' => '0', 'error' => $validation->messages());
         }
         return $Response;
-    }public function admin(){
-        return view('admin.index');
+    }
+
+    #Admin Login Part
+    public function login(){
+        return view('admin.login');
+    }
+
+    public function doLogin(){
+        $userData = Input::all();
+        if (Auth::attempt(['email' => $userData['email'], 'password' => $userData['password']])) {
+            return redirect()->intended('dashboard');
+        }
+        else{
+            return back()->withInput();
+        }
+
     }
 }

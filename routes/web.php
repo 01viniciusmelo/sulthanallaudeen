@@ -12,13 +12,15 @@
 */
 
 Route::get('/', 'PublicController@index');
-Route::get('/blog', 'PublicController@blogs');
-Route::get('/blog/{query}', 'PublicController@blog');
-Route::post('/searchBlog', 'PublicController@searchBlog');
-Route::get('/tag/{query}', 'PublicController@tag');
-Route::get('/tag/{query}/about', 'PublicController@tagAbout');
-Route::get('/contact', 'PublicController@contact');
-Route::post('/contactSA', 'PublicController@contactSA');
-
+Route::get('blog', 'PublicController@blogs');
+Route::get('blog/{query}', 'PublicController@blog');
+Route::post('searchBlog', 'PublicController@searchBlog');
+Route::get('tag/{query}', 'PublicController@tag');
+Route::get('tag/{query}/about', 'PublicController@tagAbout');
+Route::get('contact', 'PublicController@contact');
+Route::post('contactSA', 'PublicController@contactSA');
+Route::get('login', [ 'as' => 'login', 'uses' => 'PublicController@login']);
+Route::post('doLogin', 'PublicController@doLogin');
+Route::get('logout', [ 'as' => 'logout', 'uses' => 'Controller@logout']);
 #Admin Panel
-Route::get('/sa', 'PublicController@admin');
+Route::get('dashboard', 'AdminController@index');

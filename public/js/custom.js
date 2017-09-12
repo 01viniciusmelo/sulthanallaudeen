@@ -20,7 +20,10 @@ $(document).ready(function() {
             $("#resultArea").html('');
         } else {
             $("#blogArea").hide();
-            var json = { _token: token, searchQuery: searchQuery };
+            var json = {
+                _token: token,
+                searchQuery: searchQuery
+            };
             var url = saUrl + "/searchBlog";
             httpCall(url, json, function(data) {
                 if (data.success == 1) {
@@ -40,7 +43,11 @@ $(document).ready(function() {
         $("error").html("");
         var email = $("#email").val();
         var message = $("#message").val();
-        var json = { _token: token, email: email, message: message };
+        var json = {
+            _token: token,
+            email: email,
+            message: message
+        };
         var url = saUrl + "/contactSA";
         httpCall(url, json, function(data) {
             if (data.success == '1') {
