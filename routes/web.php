@@ -24,5 +24,8 @@ Route::post('doLogin', 'PublicController@doLogin');
 Route::get('logout', [ 'as' => 'logout', 'uses' => 'Controller@logout']);
 #Admin Panel
 Route::get('admin/dashboard', 'AdminController@index');
+#Blog
 Route::get('admin/blog', 'AdminController@blog');
+Route::get('admin/blog/create', 'AdminController@blogCreate');
+#Tag
 Route::get('admin/tag', 'AdminController@tag');

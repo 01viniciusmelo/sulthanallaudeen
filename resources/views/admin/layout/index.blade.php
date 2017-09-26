@@ -583,10 +583,12 @@
 
     <!-- Custom Js -->
     <script src="{{ asset('/').('public/admin/js/admin.js') }}"></script>
-    <script src="{{ asset('/').('public/admin/js/pages/index.js') }}"></script>
+    
 
     <!-- Demo Js -->
     <script src="{{ asset('/').('public/admin/js/demo.js') }}"></script>
+
+    <script src="{{ asset('/').('public/admin/js/custom.js') }}"></script>
 </body>
 
 </html>

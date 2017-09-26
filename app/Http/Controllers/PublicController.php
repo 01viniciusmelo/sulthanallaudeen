@@ -83,7 +83,7 @@ class PublicController extends Controller
 
     #Admin Login Part
     public function login(){
-        return view('admin.login');
+        return view('admin.login.login');
     }
 
     public function doLogin(){

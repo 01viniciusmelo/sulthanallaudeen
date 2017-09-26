@@ -20,16 +20,21 @@ class AdminController extends Controller
     }
 
     public function index(){
-        return view('admin.dashboard');
+        return view('admin.dashboard.index');
     }
 
     public function blog(){
         $blogs = Blog::where('status', 1)->orderBy('id', 'desc')->get();
-        return view('admin.blog')->with('blogs', $blogs);
+        return view('admin.blog.list')->with('blogs', $blogs);
+    }
+
+    public function blogCreate(){
+        $tags = Tag::where('status', 1)->orderBy('id', 'desc')->get();
+        return view('admin.blog.create')->with('tags', $tags);
     }
 
     public function tag(){
         $tags = Tag::where('status', 1)->orderBy('id', 'desc')->get();
-        return view('admin.tag')->with('tags', $tags);
+        return view('admin.tag.list')->with('tags', $tags);
     }
 }
