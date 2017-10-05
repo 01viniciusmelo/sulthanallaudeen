@@ -6,13 +6,11 @@
           <p class="float-right d-md-none">
             <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
           </p>
-          <div class="row">
-          <div>
+          <div class="container">
           <h2>Blogs related to "{{$tag->title}}"</h2>
-              <a href="{{ URL::to('tag/'.$tag->title.'/about') }}"><p class="text-right">Read more about {{$tag->title}}</p></a>
-          </div>
-            <div class="row" id="resultArea">
-          </div>
+          <a class="text-right" href="{{ URL::to('tag/'.$tag->title.'/about') }}"><p>Read more about {{$tag->title}}</p></a>
+          <hr>
+            <div class="row" id="resultArea"></div>
           <div class="row" id="blogArea">
             @foreach($blogs as $blog)
             <div class="col-9 col-lg-9">

@@ -11,6 +11,14 @@
           <div class="row" id="blogArea">
             <div class="col-9 col-lg-9">
               <h2>{{$blog->title}}</h2>
+              <div>
+              <p style="float:right"><span class="fa fa-clock-o"></span> Posted on {{ date("M d, Y", strtotime($blog->date)) }} </p>
+                <h6 class="card-title">Tagged with </h6>
+                @foreach($tagged as $tag)
+                <a href="{{ URL::to('tag/'.$tag->title) }}"  class="btn btn-primary">{{ $tag->title }}</a>
+                @endforeach
+              </div>
+              <hr>               
               <p><?php echo $blog->content; ?></p>
             </div>
           </div>
@@ -33,7 +41,7 @@
             <?php
               $tagTitle = str_replace(" ","-",$tag->title);
             ?>
-            <a href="{{ URL::to('tag/'.$tagTitle) }}" class="btn btn-primary">{{ $tagTitle }} <span href="#" class="badge badge-dark">{{$tag->count}}</span></a>
+            <a href="{{ URL::to('tag/'.$tagTitle) }}" class="btn btn-primary">{{ $tagTitle }} <span href="#" class="badge badge-dark">{{$tag->id}}</span></a>
             @endforeach
           </div>
         </div>
