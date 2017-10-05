@@ -6,7 +6,7 @@
           <p class="float-right d-md-none">
             <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
           </p>
-          <div class="container">
+          <div class="<container></container>">
           <h2>Blogs related to "{{$tag->title}}"</h2>
           <a class="text-right" href="{{ URL::to('tag/'.$tag->title.'/about') }}"><p>Read more about {{$tag->title}}</p></a>
           <hr>
@@ -40,7 +40,7 @@
             <?php
               $tagTitle = str_replace(" ","-",$tag->title);
             ?>
-            <a href="{{ URL::to('tag/'.$tagTitle) }}"  class="btn btn-primary">{{ $tagTitle }} <span href="#" class="badge badge-dark">{{$tag->count}}</span></a>
+            <a href="{{ URL::to('tag/'.$tagTitle) }}"  class="btn btn-primary tag_space">{{ $tagTitle }} <span href="#" class="badge badge-dark">{{$tag->count}}</span></a>
             @endforeach
           </div>
         </div>

@@ -41,7 +41,7 @@
             <?php
               $tagTitle = str_replace(" ","-",$tag->title);
             ?>
-            <a href="{{ URL::to('tag/'.$tagTitle) }}" class="btn btn-primary">{{ $tagTitle }} <span href="#" class="badge badge-dark">{{$tag->id}}</span></a>
+            <a href="{{ URL::to('tag/'.$tagTitle) }}" class="btn btn-primary tag_space">{{ $tagTitle }} <span href="#" class="badge badge-dark">{{$tag->id}}</span></a>
             @endforeach
           </div>
         </div>
