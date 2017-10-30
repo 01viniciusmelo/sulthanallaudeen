@@ -2,15 +2,21 @@
 
 use Illuminate\Database\Seeder;
 
-class MailTemplateTableSeeder extends Seeder
+class MailtemplateTableSeeder extends Seeder
 {
+
     /**
-     * Run the database seeds.
+     * Auto generated seed file
      *
      * @return void
      */
     public function run()
     {
-        //
+        
+
+        \DB::table('mailtemplate')->delete();
+        
+        
+        
     }
 }

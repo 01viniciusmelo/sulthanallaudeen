@@ -14,7 +14,7 @@ Load Seed
 php artisan db:seed
 php artisan cache:clear
 Generate Seed :
-php artisan iseed blog,blog_tag,cat,mail,mailtemplate,tag,users --force
+php artisan iseed blog,blog_tag,mail,mailtemplate,tag,users --force
 Drop Tables
 DROP TABLE blog,blog_tag,cat,mail,mailtemplate,tag,users;
 #Creating Migration
