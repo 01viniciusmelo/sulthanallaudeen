@@ -1,6 +1,7 @@
 @extends('admin.layout.index')
 @section('content')
 <link href="{{ asset('/').('public/admin/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css') }}" rel="stylesheet">
+<link href="{{ asset('/').('public/admin/plugins/sweetalert/sweetalert.css') }}" rel="stylesheet">
 <section class="content">
         <div class="container-fluid">
             <div class="block-header">
@@ -9,12 +10,13 @@
                     Blog
                     <small>Manage Blog List</small>
                 </h2>
-                @if(isset($success))
-                <div class="alert alert-success">
-                    <strong>Well done!</strong> You successfully read this important alert message.
-                </div>
-                @endif
             </div>
+            @if (session('success'))
+            <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                {{session('success')}}
+            </div>
+            @endif
             <!-- Basic Examples -->
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -38,7 +40,7 @@
                         </div>
                         <div class="body">
                             <div class="table-responsive">
-                                <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                <table class="table table-bordered table-striped table-hover dataTable" id='my-table'>
                                     <thead>
                                         <tr>
                                             <th>S.No</th>
@@ -53,7 +55,7 @@
                                         <tr>
                                             <td>{{$blog->id}}</td>
                                             <td>{{$blog->title}}</td>
-                                            <td>{{$blog->date}}</td>
+                                            <td>{{ date('Y-m-d', strtotime($blog->date)) }}</td>
                                             <?php
                                             if($blog->status==1){
                                                 $status = 'Active';
@@ -63,8 +65,8 @@
                                             ?>
                                             <td>{{$status}}</td>
                                             <td>
-                                            <button class="btn btn-warning waves-effect">Edit</button>
-                                            <button class="btn btn-danger waves-effect js-sweetalert" data-type="confirm">Delete</button>
+                                            <a class="btn btn-warning waves-effect" href='blog/edit/{{$blog->id}}'>Edit</a>
+                                            <button class="btn btn-danger waves-effect js-sweetalert delete" data-type="confirm" id='{{$blog->id}}'>Delete</button>
                                             </td>
                                         </tr>
                                     @endforeach    
@@ -80,4 +82,5 @@
     </section>
 <script src="{{ asset('/').('public/admin/plugins/jquery-datatable/jquery.dataTables.js') }}"></script>
 <script src="{{ asset('/').('public/admin/js/pages/tables/jquery-datatable.js') }}"></script>
+<script src="{{ asset('/').('public/admin/plugins/sweetalert/sweetalert.min.js') }}"></script>
 @stop

@@ -17,4 +17,12 @@ class Blog extends Model
         'date' => 'required',
         'status' => 'required'
     );
+
+    public static $updateBlog = array(
+        'title' => 'required',
+        'url' => 'required',
+        'content' => 'required',
+        'date' => 'required',
+        'status' => 'required'
+    );
 }

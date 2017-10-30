@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="block-header">
                 <h2>
-                    Create  Blog
+                    Edit Blog
                     <a type="button" class="btn btn-primary pull-right" href='{{ URL::to('admin/blog') }}'>Back to Blog</a>
                     <small>Manage Blog List</small>
                     @if ($errors->any())
@@ -14,6 +14,11 @@
                             @endforeach
                         </div>
                     @endif
+                    @if(isset($errorjk))
+                    <div class="alert alert-danger">
+                        {{$error}}
+                    </div>
+                    @endif
                 </h2>
             </div>
             <!-- Basic Validation -->
@@ -21,7 +26,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>Create Blog</h2>
+                            <h2>Edit Blog</h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -36,11 +41,12 @@
                             </ul>
                         </div>
                         <div class="body">
-                            <form id="form_validation" method="POST" action="write">
+                            <form id="form_validation" method="POST" action="update">
                                 {{ csrf_field() }}
+                                <input type='hidden' value='{{$blog->id}}' name="id">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="title" id="title" required value="{{ old('title') }}">
+                                        <input type="text" class="form-control" name="title" id="title" required value="{{ $blog->title }}">
                                         <label class="form-label">Blog Title</label>
                                     </div>
                                 </div>
@@ -48,21 +54,23 @@
                                     <div class="form-line">
                                         <input type="text" class="form-control" readonly>
                                         <label class="form-label url">
-                                        @if(old('url'))
-                                        {{ old('url') }}
-                                        @else
-                                        Blog Url
-                                        @endif
+                                        {{ $blog->url }}
                                         </label>
-                                        <input type="hidden" name="url" id="url" value="{{ old('url') }}">
+                                        <input type="hidden" name="url" id="url" value="{{ $blog->url }}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     @foreach($tags as $tag)
                                     <input type="checkbox" id="{{$tag->title}}" name="tags[]" value="{{$tag->id}}"
-                                    @if(old('tags'))
+                                    @if(2==1)
                                     <?php
-                                        if (in_array($tag->id, old('tags'))) {
+                                        if (in_array($blog->id, old('tags'))) {
+                                        echo "checked";
+                                        }
+                                    ?>
+                                    @else
+                                        <?php
+                                        if (in_array($tag->id, $tagId)) {
                                         echo "checked";
                                         }
                                     ?>
@@ -73,8 +81,7 @@
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <textarea name="content" cols="30" rows="5" class="form-control no-resize ckeditor" required>{{ old('content') }}</textarea>
-                                        <label class="form-label">Content</label>
+                                        <textarea name="content" cols="30" rows="5" class="form-control no-resize ckeditor" required>@if(old('content')){{ old('content') }}@else{{{$blog->content}}}@endif</textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -84,16 +91,33 @@
                                 </div>
                                 <div class="demo-radio-button">
                                 <input name="status" type="radio" id="draft" class="radio-col-red" value="0" 
-                                @if(old('status')==0)
-                                checked
-                                @endif
-                                required
+                                <?php
+                                if(old('status')){
+                                    if(old('status')==0){
+                                        echo 'checked';
+                                    }
+                                }
+                                else{
+                                    if ($blog->status==0){
+                                        echo 'checked';
+                                    }
+                                }
+                                ?>
                                 >
                                 <label for="draft">Draft</label>
                                 <input name="status" type="radio" id="publish" class="radio-col-pink" value="1" 
-                                @if(old('status')==1)
-                                checked
-                                @endif
+                                <?php
+                                if(old('status')){
+                                    if(old('status')==1){
+                                        echo 'checked';
+                                    }
+                                }
+                                else{
+                                    if ($blog->status==1){
+                                        echo 'checked';
+                                    }
+                                }
+                                ?>
                                 required
                                 >
                                 <label for="publish">Publish</label>
@@ -134,6 +158,7 @@ $( "#title" ).keyup(function() {
   $("#url").val(url);
 });
 
+
 $('.datepicker').bootstrapMaterialDatePicker({
     format: 'YYYY-MM-DD',
     clearButton: true,
@@ -141,6 +166,8 @@ $('.datepicker').bootstrapMaterialDatePicker({
     time: false
 });
 
+
+$('.datepicker').bootstrapMaterialDatePicker('setDate', '{{$blog->date}}');
 
 });
 </script>

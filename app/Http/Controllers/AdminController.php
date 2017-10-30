@@ -38,15 +38,15 @@ class AdminController extends Controller
 
     public function blogCreateData(){
         $blogData = Input::except('_token');
-        //return $blogData;
         $validation = Validator::make($blogData, Blog::$createBlog);
         if ($validation->passes()) {
             //Check if tags are present
             $postBlog = Blog::create($blogData);
             $blogTags = Input::get('blogTags');
             foreach ($blogData['tags'] as $tags) {
-                BlogTag::create(['blog_id' => $postBlog->id,'user_id' => '1','tag_id' => $tags]);
+                BlogTag::create(['blog_id' => $postBlog->id,'user_id' => 1,'tag_id' => $tags,'status' => 1]);
             }
+            $this->SyncBlogCount();
             return redirect()->route('blog')->with('success', 'Blog created Success');
         }
         else{
@@ -54,8 +54,72 @@ class AdminController extends Controller
         }
     }
 
+    public function blogEdit($id){
+        $blog = Blog::where('id', $id)->first();
+        $tags = Tag::where('status', 1)->orderBy('id', 'asc')->get();
+        $tagged = BlogTag::where('blog_id', $id)->get();
+        $tagId = [];
+        for ($i=0; $i < count($tagged); $i++) { 
+            array_push($tagId,$tagged[$i]->tag_id);
+        }
+        return view('admin.blog.edit')->with('tags', $tags)->with('blog', $blog)->with('tagId', $tagId);
+    }
+
+    public function blogUpdateData(){
+        $blogData = Input::except('_token');
+        $blogExist = Blog::where('id', $blogData['id'])->first();
+        if($blogExist){
+            $validation = Validator::make($blogData, Blog::$updateBlog);
+        if ($validation->passes()) {
+            $data['title'] = $blogData['title'];
+            $data['url'] = $blogData['url'];
+            $data['content'] = $blogData['content'];
+            $data['content'] = $blogData['content'];
+            $data['date'] = $blogData['date'];
+            $data['status'] = $blogData['status'];
+            Blog::where('id', $blogData['id'])->update($data);
+            $tagged = BlogTag::where('blog_id', $blogData['id'])->get();
+            $oldTags = [];
+            for ($i=0; $i <count($tagged) ; $i++) { 
+                array_push($oldTags,$tagged[$i]->id);
+            }
+            BlogTag::destroy($oldTags);
+            $blogTags = Input::get('blogTags');
+            foreach ($blogData['tags'] as $tags) {
+                BlogTag::create(['blog_id' => $blogData['id'],'user_id' => 1,'tag_id' => $tags,'status' => 1]);
+            }
+            $this->SyncBlogCount();
+            return redirect()->route('blog')->with('success', 'Blog updated Success');
+        }
+        else{
+            return back()->withInput()->with('errors', $validation->messages());
+        }
+        }else{
+            return back()->withInput()->with('error', 'Invalid Blog Id');
+        }
+    }
+
+    public function blogDelete($id){
+        Blog::destroy($id);
+        BlogTag::where('blog_id', $id)->delete();
+        return redirect()->route('blog')->with('success', 'Blog deleted Success');
+    }
+
     public function tag(){
         $tags = Tag::orderBy('id', 'desc')->get();
         return view('admin.tag.list')->with('tags', $tags);
+    }
+
+
+    #Maintenance Functions
+
+    public function SyncBlogCount(){
+        $tags = Tag::orderBy('id', 'asc')->get();
+        for ($i=0; $i < count($tags) ; $i++) { 
+            $data['count'] = BlogTag::where('tag_id', $tags[$i]->id)->count();
+            Tag::where('id', $tags[$i]->id)->update($data);
+        }
+        $Response = array('success' => 1,'message' => 'Synced Blog Count Succesfully !');
+        return $Response;
     }
 }

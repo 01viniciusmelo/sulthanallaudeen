@@ -28,8 +28,8 @@
 <body class="login-page">
     <div class="login-box">
         <div class="logo">
-            <a href="javascript:void(0);">Admin<b>BSB</b></a>
-            <small>Admin BootStrap Based - Material Design</small>
+            <a href="javascript:void(0);"><b>SA</b></a>
+            <small>SA's Personalized Control Panel</small>
         </div>
         <div class="card">
             <div class="body">
@@ -40,7 +40,7 @@
                 @endif
                 <form id="sign_in" method="POST" action="doLogin">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <div class="msg">Sign in to start your session</div>
+                    <div class="msg">Sign in to start the session</div>
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>
@@ -67,10 +67,10 @@
                         </div>
                     </div>
                     <div class="row m-t-15 m-b--20">
-                        <div class="col-xs-6">
+                        <div class="col-xs-6 hide">
                             <a href="sign-up.html">Register Now!</a>
                         </div>
-                        <div class="col-xs-6 align-right">
+                        <div class="col-xs-6 pull-right">
                             <a href="forgot-password.html">Forgot Password?</a>
                         </div>
                     </div>

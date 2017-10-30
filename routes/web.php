@@ -28,5 +28,11 @@ Route::get('admin/dashboard', 'AdminController@index');
 Route::get('admin/blog', 'AdminController@blog')->name('blog');;
 Route::get('admin/blog/create', 'AdminController@blogCreate');
 Route::post('admin/blog/write', 'AdminController@blogCreateData');
+Route::get('admin/blog/edit/{id}', 'AdminController@blogEdit');
+Route::post('admin/blog/edit/update', 'AdminController@blogUpdateData');
+Route::get('admin/blog/delete/{id}', 'AdminController@blogDelete');
 #Tag
 Route::get('admin/tag', 'AdminController@tag');
+
+#Maintenance 
+Route::get('SyncBlogCount', 'AdminController@SyncBlogCount');

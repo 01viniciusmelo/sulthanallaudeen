@@ -35,13 +35,19 @@ class PublicController extends Controller
 
     public function blog($query){
         $blog = Blog::where('url', $query)->first();
-        $blog_tags = BlogTag::where('blog_id',$blog->id)->get();
+        $tags = $this->getRelatedTags($blog->id);
+        $tag = $this->getTags();
+        return view('public.blog')->with('blog', $blog)->with('tags', $this->getTags())->with('tagged',$tags);
+    }
+
+    public function getRelatedTags($id){
+        $blog_tags = BlogTag::where('blog_id',$id)->get();
         $tags = [];
         for ($i=0; $i < count($blog_tags) ; $i++) { 
             $tag = Tag::where('id',$blog_tags[$i]->tag_id)->first();
             array_push($tags,$tag);
         }
-        return view('public.blog')->with('blog', $blog)->with('tags', $this->getTags())->with('tagged',$tags);
+        return $tags;
     }
 
     public function searchBlog() {

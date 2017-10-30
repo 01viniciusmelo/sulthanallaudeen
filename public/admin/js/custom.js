@@ -1,28 +1,35 @@
 $(document).ready(function() {
-    console.log("ready!");
-    $('.js-sweetalert').on('click', function() {
-        var type = $(this).data('type');
-        if (type === 'basic') {
-            showBasicMessage();
-        } else if (type === 'with-title') {
-            showWithTitleMessage();
-        } else if (type === 'success') {
-            showSuccessMessage();
-        } else if (type === 'confirm') {
-            showConfirmMessage();
-        } else if (type === 'cancel') {
-            showCancelMessage();
-        } else if (type === 'with-custom-icon') {
-            showWithCustomIconMessage();
-        } else if (type === 'html-message') {
-            showHtmlMessage();
-        } else if (type === 'autoclose-timer') {
-            showAutoCloseTimerMessage();
-        } else if (type === 'prompt') {
-            showPromptMessage();
-        } else if (type === 'ajax-loader') {
-            showAjaxLoaderMessage();
-        }
+    var url = window.location.href;
+    $('.delete').on('click', function() {
+        var id = this.id;
+        swal({
+            title: "Are you sure to delete?",
+            text: "You will not be able to recover this!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel plx!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        }, function(isConfirm) {
+            if (isConfirm) {
+                window.location.href = url + '/delete/' + id;
+            } else {
+                swal("Cancelled", "It's safe :)", "error");
+            }
+        });
     });
+
+    var tablePage = url.includes("edit");
+    if (tablePage === false) {
+        $('#my-table').DataTable({
+            "order": [
+                [0, "desc"]
+            ]
+        });
+    } else {
+        console.log('Other page than list page');
+    }
 
 });
