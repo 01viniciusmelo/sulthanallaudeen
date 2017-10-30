@@ -21,5 +21,6 @@
     // else{
         
     // }
-echo $host.$data;
+    echo $data;
+//echo $host.$data;
 ?>
