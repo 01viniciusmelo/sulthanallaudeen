@@ -5,7 +5,8 @@
     $url = substr($url, 0, strrpos( $url, '/'));
     $url = $host.$url;
     $localName = 'sulthanallaudeen';
-    $data = file_get_contents("https://".$url."/cron");
+    //$data = file_get_contents("https://".$url."/cron");
+    $data = file_get_contents("https://sulthanallaudeen.com/cron");
     // if($host=='localhost'){
     //     $url = "https://".$url."/cron";
     //     #Temporarily Disabling SSL Certificate Verification as i need to run in Local Machine
