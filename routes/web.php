@@ -24,15 +24,22 @@ Route::post('doLogin', 'PublicController@doLogin');
 Route::get('logout', [ 'as' => 'logout', 'uses' => 'Controller@logout']);
 #Admin Panel
 Route::get('admin/dashboard', 'AdminController@index');
-#Blog
+#Start of Blog
 Route::get('admin/blog', 'AdminController@blog')->name('blog');;
 Route::get('admin/blog/create', 'AdminController@blogCreate');
 Route::post('admin/blog/write', 'AdminController@blogCreateData');
 Route::get('admin/blog/edit/{id}', 'AdminController@blogEdit');
 Route::post('admin/blog/edit/update', 'AdminController@blogUpdateData');
 Route::get('admin/blog/delete/{id}', 'AdminController@blogDelete');
-#Tag
-Route::get('admin/tag', 'AdminController@tag');
+#End of Blog
+#Start of Tag
+Route::get('admin/tag', 'AdminController@tag')->name('tag');;
+Route::get('admin/tag/create', 'AdminController@tagCreate');
+Route::post('admin/tag/write', 'AdminController@tagCreateData');
+Route::get('admin/tag/edit/{id}', 'AdminController@tagEdit');
+Route::post('admin/tag/edit/update', 'AdminController@tagUpdateData');
+Route::get('admin/tag/delete/{id}', 'AdminController@tagDelete');
+#End of Tag
 
 #Maintenance 
 Route::get('SyncBlogCount', 'AdminController@SyncBlogCount');

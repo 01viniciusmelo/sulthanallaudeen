@@ -26,6 +26,8 @@ class AdminController extends Controller
         return view('admin.dashboard.index');
     }
 
+    //Start of Blog Section
+
     public function blog(){
         $blogs = Blog::orderBy('id', 'desc')->get();
         return view('admin.blog.list')->with('blogs', $blogs);
@@ -74,7 +76,6 @@ class AdminController extends Controller
             $data['title'] = $blogData['title'];
             $data['url'] = $blogData['url'];
             $data['content'] = $blogData['content'];
-            $data['content'] = $blogData['content'];
             $data['date'] = $blogData['date'];
             $data['status'] = $blogData['status'];
             Blog::where('id', $blogData['id'])->update($data);
@@ -105,10 +106,63 @@ class AdminController extends Controller
         return redirect()->route('blog')->with('success', 'Blog deleted Success');
     }
 
+    //End of Blog Section
+
+    //Start of Tag Section
+
     public function tag(){
         $tags = Tag::orderBy('id', 'desc')->get();
         return view('admin.tag.list')->with('tags', $tags);
     }
+
+    public function tagCreate(){
+        return view('admin.tag.create');
+    }
+
+    public function tagCreateData(){
+        $tagData = Input::except('_token');
+        $validation = Validator::make($tagData, Tag::$createTag);
+        if ($validation->passes()) {
+            $tagData['count'] = 0;
+            $postBlog = Tag::create($tagData);
+            return redirect()->route('tag')->with('success', 'Tag created Success');
+        }
+        else{
+            return back()->withInput()->with('errors', $validation->messages());
+        }
+    }
+
+    public function tagEdit($id){
+        $tag = Tag::where('id', $id)->first();
+        return view('admin.tag.edit')->with('tag', $tag);
+    }
+
+    public function tagUpdateData(){
+        $tagData = Input::except('_token');
+        $tagExist = Tag::where('id', $tagData['id'])->first();
+        if($tagExist){
+            $validation = Validator::make($tagData, Tag::$updateTag);
+        if ($validation->passes()) {
+            $data['title'] = $tagData['title'];
+            $data['content'] = $tagData['content'];
+            $data['status'] = $tagData['status'];
+            Tag::where('id', $tagData['id'])->update($data);
+            return redirect()->route('tag')->with('success', 'Tag updated Success');
+        }
+        else{
+            return back()->withInput()->with('errors', $validation->messages());
+        }
+        }else{
+            return back()->withInput()->with('error', 'Invalid Tag Id');
+        }
+    }
+
+    public function tagDelete($id){
+        Tag::destroy($id);
+        return redirect()->route('tag')->with('success', 'Tag deleted Success');
+    }
+
+    //End of Tag Section
 
 
     #Maintenance Functions
