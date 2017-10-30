@@ -108,4 +108,9 @@ class PublicController extends Controller
         }
 
     }
+
+    #Cron
+    public function cron(){
+
+    }
 }

@@ -22,6 +22,8 @@ Route::post('contactSA', 'PublicController@contactSA');
 Route::get('login', [ 'as' => 'login', 'uses' => 'PublicController@login']);
 Route::post('doLogin', 'PublicController@doLogin');
 Route::get('logout', [ 'as' => 'logout', 'uses' => 'Controller@logout']);
+#Cron
+Route::get('cron', 'CronController@index');
 #Admin Panel
 Route::get('admin/dashboard', 'AdminController@index');
 #Start of Blog

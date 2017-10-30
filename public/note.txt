@@ -22,6 +22,7 @@ php artisan make:migration all_tables
 #Controller
 php artisan make:controller PublicController
 php artisan make:controller AdminController
+php artisan make:controller CronController
 #Model
 php artisan make:model Blog
 php artisan make:model BlogTag
