@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Sign In | Bootstrap Based Admin Template - Material Design</title>
+    <title>SA | Login</title>
     <!-- Favicon-->
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
@@ -46,7 +46,7 @@
                             <i class="material-icons">person</i>
                         </span>
                         <div class="form-line">
-                            <input type="text" class="form-control" name="email" placeholder="Username" value="{{ old('email') }}" required autofocus>
+                            <input type="text" class="form-control" name="email" placeholder="Email" value="{{ old('email') }}" required autofocus>
                         </div>
                     </div>
                     <div class="input-group">
@@ -70,7 +70,7 @@
                         <div class="col-xs-6 hide">
                             <a href="sign-up.html">Register Now!</a>
                         </div>
-                        <div class="col-xs-6 pull-right">
+                        <div class="col-xs-6 pull-right hide">
                             <a href="forgot-password.html">Forgot Password?</a>
                         </div>
                     </div>
