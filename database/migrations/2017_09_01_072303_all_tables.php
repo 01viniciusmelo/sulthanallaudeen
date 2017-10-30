@@ -44,15 +44,6 @@ class AllTables extends Migration
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });
-		#Mail Tempalte
-		Schema::create('mailtemplate',function(Blueprint $table){
-            $table->engine = "InnoDB";
-            $table->increments('id');
-            $table->string('subject', 500);
-            $table->longText('content');
-            $table->tinyInteger('status')->default(0);
-            $table->timestamps();
-        });
 		#Tag
 		Schema::create('tag',function(Blueprint $table){
             $table->engine = "InnoDB";
@@ -85,7 +76,6 @@ class AllTables extends Migration
 		Schema::dropIfExists('blog');
 		Schema::dropIfExists('blog_tag');
 		Schema::dropIfExists('mail');
-		Schema::dropIfExists('mailtemplate');
 		Schema::dropIfExists('tag');
 		Schema::dropIfExists('users');
     }
