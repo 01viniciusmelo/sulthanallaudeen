@@ -907,6 +907,96 @@ class BlogTagTableSeeder extends Seeder
                 'created_at' => '2016-07-26 11:06:57',
                 'updated_at' => '2016-07-26 11:06:57',
             ),
+            89 => 
+            array (
+                'id' => 217,
+                'blog_id' => 47,
+                'tag_id' => 19,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 19:56:07',
+                'updated_at' => '2017-10-31 19:56:07',
+            ),
+            90 => 
+            array (
+                'id' => 218,
+                'blog_id' => 48,
+                'tag_id' => 15,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 19:59:22',
+                'updated_at' => '2017-10-31 19:59:22',
+            ),
+            91 => 
+            array (
+                'id' => 219,
+                'blog_id' => 49,
+                'tag_id' => 26,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:02:14',
+                'updated_at' => '2017-10-31 20:02:14',
+            ),
+            92 => 
+            array (
+                'id' => 220,
+                'blog_id' => 50,
+                'tag_id' => 26,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:12:44',
+                'updated_at' => '2017-10-31 20:12:44',
+            ),
+            93 => 
+            array (
+                'id' => 221,
+                'blog_id' => 51,
+                'tag_id' => 26,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:13:48',
+                'updated_at' => '2017-10-31 20:13:48',
+            ),
+            94 => 
+            array (
+                'id' => 222,
+                'blog_id' => 52,
+                'tag_id' => 26,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:14:55',
+                'updated_at' => '2017-10-31 20:14:55',
+            ),
+            95 => 
+            array (
+                'id' => 223,
+                'blog_id' => 53,
+                'tag_id' => 26,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:15:51',
+                'updated_at' => '2017-10-31 20:15:51',
+            ),
+            96 => 
+            array (
+                'id' => 224,
+                'blog_id' => 54,
+                'tag_id' => 26,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:17:52',
+                'updated_at' => '2017-10-31 20:17:52',
+            ),
+            97 => 
+            array (
+                'id' => 225,
+                'blog_id' => 55,
+                'tag_id' => 26,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:18:56',
+                'updated_at' => '2017-10-31 20:18:56',
+            ),
         ));
         
         

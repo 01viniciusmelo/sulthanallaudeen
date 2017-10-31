@@ -1841,6 +1841,426 @@ array (
 'created_at' => '2016-07-26 11:06:57',
 'updated_at' => '2016-07-26 11:06:57',
 ),
+46 => 
+array (
+'id' => 47,
+'title' => 'Creating Family Tree',
+'url' => 'Creating-Family-Tree',
+'content' => '<p>This is the First attempt to create the Family Tree.</p>
+
+<p><img alt="" src="https://i.imgur.com/e4Ujbe9.png" style="height:2023px; width:2119px" /></p>
+
+<p>The work is in progress....</p>',
+'date' => '2012-05-24 00:00:00',
+'status' => 1,
+'created_at' => '2017-10-31 19:56:07',
+'updated_at' => '2017-10-31 19:56:07',
+),
+47 => 
+array (
+'id' => 48,
+'title' => 'Google Chrome updated the security feature',
+'url' => 'Google-Chrome-updated-the-security-feature',
+'content' => '<p>FindMyFriend app is in progress, but I can see some important features are not working. After some search i found the below reason</p>
+
+<p><a href="https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features">https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features</a></p>
+
+<p>It says that Google Chrome has updated the security feature in which the origin should start from the given below extensions</p>
+
+<p>(https, *, *)<br />
+(wss, *, *)<br />
+(*, localhost, *)<br />
+(*, 127/8, *)<br />
+(*, ::1/128, *)<br />
+(file, *, &mdash;)<br />
+(chrome-extension, *, &mdash;)&nbsp;<br />
+Need to do a workaround for this update</p>',
+'date' => '2017-02-27 00:00:00',
+'status' => 1,
+'created_at' => '2017-10-31 19:58:42',
+'updated_at' => '2017-10-31 19:59:22',
+),
+48 => 
+array (
+'id' => 49,
+'title' => 'Started Learning Android Native',
+'url' => 'Started-Learning-Android-Native',
+'content' => '<p>After rolling back to Ubuntu OS due to Windows lazy performance and hybrid&#39;s evil update I planned to start learning Android. This time i planned to cover features day by day and let me update the posts once i have done !</p>',
+'date' => '2017-02-22 00:00:00',
+'status' => 1,
+'created_at' => '2017-10-31 20:02:14',
+'updated_at' => '2017-10-31 20:02:14',
+),
+49 => 
+array (
+'id' => 50,
+'title' => 'Solution Error: Could not find gradle wrapper within Android SDK. Might need to update your Android SDK',
+'url' => 'Solution-Error:-Could-not-find-gradle-wrapper-within-Android-SDK.-Might-need-to-update-your-Android-SDK',
+'content' => '<p>After the update of Android Studio 2.3 i got this error, you might also probably..</p>
+
+<p><img alt="" src="https://i.imgur.com/rzAhGYr.png" style="height:28px; width:1241px" /></p>
+
+<p>There are solutions given like update the ANDROID_HOME in proper place, but none of that worked for me..</p>
+
+<p>The Actual issue is missing the tools in the Android SDK.</p>
+
+<p>To fix this, just download Only the command line tools from Android SDK Website,&nbsp;</p>',
+'date' => '2017-05-25 00:00:00',
+'status' => 1,
+'created_at' => '2017-10-31 20:12:44',
+'updated_at' => '2017-10-31 20:12:44',
+),
+50 => 
+array (
+'id' => 51,
+'title' => 'Day 1 Basic Layouts and Activity',
+'url' => 'Day-1-Basic-Layouts-and-Activity',
+'content' => '<p>Learned How to create Activity in Android and Linking from One Page to another.&nbsp;</p>
+
+<p>Created Login and Register Activity and linked to each other. !</p>',
+'date' => '2017-02-22 00:00:00',
+'status' => 1,
+'created_at' => '2017-10-31 20:13:48',
+'updated_at' => '2017-10-31 20:13:48',
+),
+51 => 
+array (
+'id' => 52,
+'title' => 'Day 2 API Calls using Volley',
+'url' => 'Day-2-API-Calls-using-Volley',
+'content' => '<p>After creating Login and Register i plan to Intergrate the page with API calls,&nbsp;</p>
+
+<p>So started learn how to do API calls and parse the response given by the server.</p>
+
+<p>BTW, I used FindMyFriend API here !</p>
+
+<p>Here&#39;s the Code</p>
+
+<p>&nbsp;</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<pre>
+package com.example.allaudeen.sa;
+
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.service.voice.VoiceInteractionSession;
+import android.support.v4.content.Loader;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.android.volley.Response;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
+
+import java.lang.String;
+
+
+public class LoginActivity extends AppCompatActivity {
+
+private final String TAG = LoginActivity.class.getSimpleName();
+
+public final String baseUrl = &quot;https://findmyfriend-app.herokuapp.com&quot;;
+//public final String baseUrl = &quot;http://localhost:3000&quot;;
+
+public final String registerUser = baseUrl+&quot;/users/registerUser&quot;;
+public final String loginUser = baseUrl+&quot;/users/loginUser&quot;;
+
+
+
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+super.onCreate(savedInstanceState);
+setContentView(R.layout.activity_login);
+//Dialogue
+
+
+}
+
+public void showDashboard(View v)
+{
+Log.d(&quot;Log&quot;,&quot;Clicked Login Button&quot;);
+setContentView(R.layout.activity_register);
+}
+
+public void showLogin(View v)
+{
+Log.d(&quot;Log&quot;,&quot;Clicked Login Button&quot;);
+setContentView(R.layout.activity_login);
+}
+public void doLogout(View v)
+{
+Toast.makeText(getApplicationContext(), &quot;Loggedout Successfully&quot;, Toast.LENGTH_LONG).show();
+setContentView(R.layout.activity_login);
+}
+
+
+
+public void doLogin(View v)
+{
+//Email
+EditText emailTxt = (EditText)findViewById(R.id.email);
+final String email = emailTxt.getText().toString();
+//Password
+EditText passwordTxt = (EditText)findViewById(R.id.password);
+final String password = passwordTxt.getText().toString();
+RequestQueue queue = Volley.newRequestQueue(this);
+
+StringRequest postRequest = new StringRequest(Request.Method.POST, loginUser,
+new Response.Listener&lt;String&gt;()
+{
+@Override
+public void onResponse(String response) {
+try {
+JSONObject mainObject = new JSONObject(response);
+Integer successVal = mainObject.getInt(&quot;success&quot;);
+if(successVal==0)
+{
+JSONObject mainObjects = new JSONObject(response);
+String successMsg = mainObjects.getString(&quot;message&quot;);
+Toast.makeText(getApplicationContext(), successMsg, Toast.LENGTH_LONG).show();
+}
+else
+{
+Toast.makeText(getApplicationContext(), &quot;LoggedIn Succesfully&quot;, Toast.LENGTH_LONG).show();
+setContentView(R.layout.activity_dashboard);
+}
+} catch (JSONException e) {
+Log.e(&quot;MYAPP&quot;, &quot;unexpected JSON exception&quot;, e);
+}
+}
+},
+new Response.ErrorListener()
+{
+@Override
+public void onErrorResponse(VolleyError error) {
+// error
+Log.d(&quot;Error.Response&quot;, error.toString());
+}
+}
+) {
+@Override
+protected Map&lt;String, String&gt; getParams()
+{
+Map&lt;String, String&gt;  params = new HashMap&lt;String, String&gt;();
+params.put(&quot;email&quot;, email);
+params.put(&quot;password&quot;, password);
+
+return params;
+}
+};
+queue.add(postRequest);
+}
+
+
+
+public void doRegister(View v)
+{
+
+
+//Full Name
+EditText fullNameTxt = (EditText)findViewById(R.id.fullName);
+final String fullName = fullNameTxt.getText().toString();
+//Email
+EditText emailTxt = (EditText)findViewById(R.id.email);
+final String email = emailTxt.getText().toString();
+//Password
+EditText passwordTxt = (EditText)findViewById(R.id.password);
+final String password = passwordTxt.getText().toString();
+final TextView mTextView = (TextView) findViewById(R.id.text);
+RequestQueue queue = Volley.newRequestQueue(this);
+StringRequest postRequest = new StringRequest(Request.Method.POST, registerUser,
+new Response.Listener&lt;String&gt;()
+{
+@Override
+public void onResponse(String response) {
+
+try {
+JSONObject mainObject = new JSONObject(response);
+Integer successVal = mainObject.getInt(&quot;success&quot;);
+if(successVal==0)
+{
+JSONObject mainObjecta = new JSONObject(response);
+String successMsg = mainObjecta.getString(&quot;message&quot;);
+Toast.makeText(getApplicationContext(), successMsg, Toast.LENGTH_LONG).show();
+}
+else
+{
+Toast.makeText(getApplicationContext(), &quot;Registered Succesfully&quot;, Toast.LENGTH_LONG).show();
+setContentView(R.layout.activity_login);
+}
+} catch (JSONException e) {
+Log.e(&quot;MYAPP&quot;, &quot;unexpected JSON exception&quot;, e);
+}
+
+}
+},
+new Response.ErrorListener()
+{
+@Override
+public void onErrorResponse(VolleyError error) {
+// error
+Log.d(&quot;Error.Response..-&gt;&quot;, error.toString());
+}
+}
+) {
+@Override
+protected Map&lt;String, String&gt; getParams()
+{
+Map&lt;String, String&gt;  params = new HashMap&lt;String, String&gt;();
+params.put(&quot;email&quot;, email);
+params.put(&quot;password&quot;, password);
+params.put(&quot;name&quot;, fullName);
+
+return params;
+}
+};
+queue.add(postRequest);
+}
+
+
+}</pre>
+</div>',
+'date' => '2017-02-22 00:00:00',
+'status' => 1,
+'created_at' => '2017-10-31 20:14:55',
+'updated_at' => '2017-10-31 20:14:55',
+),
+52 => 
+array (
+'id' => 53,
+'title' => 'Day 3 Toast Message and Intent',
+'url' => 'Day-3-Toast-Message-and-Intent',
+'content' => '<p>Toast message should not cost more, We use it to display the server response.</p>
+
+<p>Intent is used to move the Control from one activity to another.</p>
+
+<p>Here&#39;s how you can transfer the Intent</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<pre>
+Intent intent = new Intent(LoginActivity.this, DashBoardActivity.class);
+startActivity(intent);</pre>
+</div>
+
+<p>Here&#39;s how you can display a Toast</p>
+
+<p>&nbsp;</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<pre>
+import android.widget.Toast;</pre>
+
+<pre>
+Toast.makeText(getApplicationContext(), successMsg, Toast.LENGTH_LONG).show();</pre>
+&nbsp;</div>
+
+<p>&nbsp;</p>',
+'date' => '2017-11-01 00:00:00',
+'status' => 1,
+'created_at' => '2017-10-31 20:15:50',
+'updated_at' => '2017-10-31 20:15:50',
+),
+53 => 
+array (
+'id' => 54,
+'title' => 'Day 4 Using Firebase for Push Notification',
+'url' => 'Day-4-Using-Firebase-for-Push-Notification',
+'content' => '<p>After customizing few modules i planned to implement firebase in the project for sending push notification.&nbsp;</p>
+
+<p>What you need to do is</p>
+
+<p>1. Go to Tools -&gt; Firebase-&gt;Cloud Messaging -&gt; Import / Create New Project</p>
+
+<p>2. Once the project is created in the Google App Engine, you need to sync the Gradle</p>
+
+<p>Whenver you run the project, the app will get the firebase token, and you can get the firebase token by&nbsp;<strong><code>FirebaseInstanceId.getInstance().getToken()</code></strong></p>
+
+<p>You can test it by consoling it</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">Log.d(&quot;Firebase&quot;, &quot;token &quot;+ FirebaseInstanceId.getInstance().getToken());</div>
+
+<p>3. Next thing you need to do is, sending push notification on your device.</p>
+
+<p>You can use send it throught the Firebase console &nbsp;like the image given below</p>
+
+<p><img alt="" src="https://i.imgur.com/u6IRqwN.png" style="height:719px; width:1280px" /></p>
+
+<p>&nbsp;</p>',
+'date' => '2017-11-01 00:00:00',
+'status' => 1,
+'created_at' => '2017-10-31 20:17:35',
+'updated_at' => '2017-10-31 20:17:52',
+),
+54 => 
+array (
+'id' => 55,
+'title' => 'Day 5 Sending Firebase Notification using Nodejs',
+'url' => 'Day-5-Sending-Firebase-Notification-using-Nodejs',
+'content' => '<p>Once you&#39;re setup with the firebase in your application, you can send push notification through any source, I am using Nodejs.</p>
+
+<p>Step 1 : Install FCM in node project&nbsp;Go here&nbsp;https://www.npmjs.com/package/fcm or add</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<pre>
+<code>From your terminal
+
+<strong>npm install fcm</strong></code></pre>
+</div>
+
+<p><code>Step 2 : Include fcm in your controller</code></p>
+
+<p><code><strong>var FCM = require(&#39;fcm-push&#39;);</strong></code></p>
+
+<p>Step 3 : Configure fcm in your project&nbsp;</p>
+
+<p>var fcm = new FCM(serverKey);</p>
+
+<p>Step 4 : Trigger / Push the push notification</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">var message = {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; to: fcm_token<br />
+&nbsp; &nbsp; &nbsp; &nbsp; collapse_key: pid,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; notification: {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; title: &quot;title&quot;,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; body: message<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; };<br />
+fcm.send(message, function(err, response) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if (err) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.log(&quot;Something has gone wrong!&quot;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; } else {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.log(&quot;Successfully sent with response: &quot;, response);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; });</div>
+
+<p>&nbsp;Now you&#39;re done !&nbsp;</p>',
+'date' => '2017-11-01 00:00:00',
+'status' => 1,
+'created_at' => '2017-10-31 20:18:56',
+'updated_at' => '2017-10-31 20:18:56',
+),
 ));
         
         

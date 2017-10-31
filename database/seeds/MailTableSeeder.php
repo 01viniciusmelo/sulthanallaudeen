@@ -4,13 +4,16 @@ use Illuminate\Database\Seeder;
 
 class MailTableSeeder extends Seeder
 {
+
     /**
-     * Run the database seeds.
+     * Auto generated seed file
      *
      * @return void
      */
     public function run()
     {
+        
+
         \DB::table('mail')->delete();
         
         \DB::table('mail')->insert(array (
@@ -145,5 +148,7 @@ class MailTableSeeder extends Seeder
                 'updated_at' => '2017-10-05 20:11:31',
             ),
         ));
+        
+        
     }
 }

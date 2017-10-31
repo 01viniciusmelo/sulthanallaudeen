@@ -23,10 +23,10 @@ class TagTableSeeder extends Seeder
                 'title' => 'php',
                 'content' => '<p>PHP is a popular general-purpose weakly-typed server-side scripting plus object oriented programming language that is especially suited for web development.</p>
 ',
-                'count' => 1,
-                'status' => 0,
+                'count' => 27,
+                'status' => 1,
                 'created_at' => '2015-09-28 17:41:23',
-                'updated_at' => '2015-09-28 17:41:23',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             1 => 
             array (
@@ -34,10 +34,10 @@ class TagTableSeeder extends Seeder
                 'title' => 'laravel',
                 'content' => '<p>Laravel is an open-source PHP web development MVC framework created by Taylor Otwell. Laravel helps you create applications using simple, expressive syntax.</p>
 ',
-                'count' => 1,
-                'status' => 0,
+                'count' => 10,
+                'status' => 1,
                 'created_at' => '2015-09-28 17:41:53',
-                'updated_at' => '2015-09-28 17:41:53',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             2 => 
             array (
@@ -45,10 +45,10 @@ class TagTableSeeder extends Seeder
                 'title' => 'Sysaxiom',
                 'content' => '<p>Post related to Sysaxiom</p>
 ',
-                'count' => 1,
-                'status' => 0,
+                'count' => 5,
+                'status' => 1,
                 'created_at' => '2015-09-30 01:30:21',
-                'updated_at' => '2015-09-30 01:30:21',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             3 => 
             array (
@@ -56,10 +56,10 @@ class TagTableSeeder extends Seeder
                 'title' => 'jQuery',
                 'content' => '<p>About JQuery</p>
 ',
-                'count' => 1,
-                'status' => 0,
+                'count' => 6,
+                'status' => 1,
                 'created_at' => '2015-09-30 12:47:30',
-                'updated_at' => '2015-09-30 12:47:30',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             4 => 
             array (
@@ -67,10 +67,10 @@ class TagTableSeeder extends Seeder
                 'title' => 'Github',
                 'content' => '<p>Github</p>
 ',
-                'count' => 1,
-                'status' => 0,
+                'count' => 6,
+                'status' => 1,
                 'created_at' => '2015-09-30 13:05:23',
-                'updated_at' => '2015-09-30 13:05:23',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             5 => 
             array (
@@ -78,10 +78,10 @@ class TagTableSeeder extends Seeder
                 'title' => 'StackoverFlow',
                 'content' => '<p>StackoverFlow</p>
 ',
-                'count' => 1,
-                'status' => 0,
+                'count' => 6,
+                'status' => 1,
                 'created_at' => '2015-09-30 13:05:30',
-                'updated_at' => '2015-09-30 13:05:30',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             6 => 
             array (
@@ -90,9 +90,9 @@ class TagTableSeeder extends Seeder
                 'content' => '<p>Windows</p>
 ',
                 'count' => 1,
-                'status' => 0,
+                'status' => 1,
                 'created_at' => '2015-09-30 13:05:36',
-                'updated_at' => '2015-09-30 13:05:36',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             7 => 
             array (
@@ -100,10 +100,10 @@ class TagTableSeeder extends Seeder
                 'title' => 'Windows',
                 'content' => '<p>Windows</p>
 ',
-                'count' => 1,
-                'status' => 0,
+                'count' => 0,
+                'status' => 1,
                 'created_at' => '2015-09-30 13:05:36',
-                'updated_at' => '2015-09-30 13:05:36',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             8 => 
             array (
@@ -111,10 +111,10 @@ class TagTableSeeder extends Seeder
                 'title' => 'Misc',
                 'content' => '<p>Misc</p>
 ',
-                'count' => 1,
-                'status' => 0,
+                'count' => 6,
+                'status' => 1,
                 'created_at' => '2015-09-30 13:05:42',
-                'updated_at' => '2015-09-30 13:05:42',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             9 => 
             array (
@@ -122,10 +122,10 @@ class TagTableSeeder extends Seeder
                 'title' => 'GoogleMaps',
                 'content' => '<p>About&nbsp;GoogleMaps</p>
 ',
-                'count' => 1,
-                'status' => 0,
+                'count' => 2,
+                'status' => 1,
                 'created_at' => '2015-10-05 22:46:40',
-                'updated_at' => '2015-10-05 22:46:40',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             10 => 
             array (
@@ -133,10 +133,10 @@ class TagTableSeeder extends Seeder
                 'title' => 'General Tips',
                 'content' => '<p>This tag is about&nbsp;General Tips</p>
 ',
-                'count' => 1,
-                'status' => 0,
+                'count' => 0,
+                'status' => 1,
                 'created_at' => '2015-10-05 22:48:17',
-                'updated_at' => '2015-10-05 22:48:17',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             11 => 
             array (
@@ -144,10 +144,10 @@ class TagTableSeeder extends Seeder
                 'title' => 'MySQL',
                 'content' => '<p>This tag is about&nbsp;MySQL</p>
 ',
-                'count' => 1,
-                'status' => 0,
+                'count' => 2,
+                'status' => 1,
                 'created_at' => '2015-10-05 22:51:36',
-                'updated_at' => '2015-10-05 22:51:36',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             12 => 
             array (
@@ -156,9 +156,9 @@ class TagTableSeeder extends Seeder
             'content' => '<p>This is about&nbsp;MySQL(i)</p>
 ',
                 'count' => 1,
-                'status' => 0,
+                'status' => 1,
                 'created_at' => '2015-10-05 22:51:48',
-                'updated_at' => '2015-10-05 22:51:48',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             13 => 
             array (
@@ -167,9 +167,9 @@ class TagTableSeeder extends Seeder
                 'content' => '<p>This tag is about&nbsp;Google App Script</p>
 ',
                 'count' => 1,
-                'status' => 0,
+                'status' => 1,
                 'created_at' => '2015-10-05 23:01:28',
-                'updated_at' => '2015-10-05 23:01:28',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             14 => 
             array (
@@ -177,10 +177,10 @@ class TagTableSeeder extends Seeder
                 'title' => 'Google ',
                 'content' => '<p>About&nbsp;Google</p>
 ',
-                'count' => 1,
-                'status' => 0,
+                'count' => 4,
+                'status' => 1,
                 'created_at' => '2015-10-05 23:03:38',
-                'updated_at' => '2015-10-05 23:03:38',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             15 => 
             array (
@@ -189,9 +189,9 @@ class TagTableSeeder extends Seeder
                 'content' => '<p>About Heroku</p>
 ',
                 'count' => 1,
-                'status' => 0,
+                'status' => 1,
                 'created_at' => '2015-10-05 23:04:40',
-                'updated_at' => '2015-10-05 23:04:40',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             16 => 
             array (
@@ -200,9 +200,9 @@ class TagTableSeeder extends Seeder
                 'content' => '<p>Windows Phone App Development</p>
 ',
                 'count' => 1,
-                'status' => 0,
+                'status' => 1,
                 'created_at' => '2015-11-03 22:22:24',
-                'updated_at' => '2015-11-03 22:22:24',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             17 => 
             array (
@@ -211,9 +211,9 @@ class TagTableSeeder extends Seeder
                 'content' => '<p>Tag about Laravel Middleware -&gt;&nbsp;http://laravel.com/docs/5.1/middleware</p>
 ',
                 'count' => 1,
-                'status' => 0,
+                'status' => 1,
                 'created_at' => '2015-11-05 13:24:46',
-                'updated_at' => '2015-11-05 13:24:46',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             18 => 
             array (
@@ -221,10 +221,10 @@ class TagTableSeeder extends Seeder
                 'title' => 'Personal',
                 'content' => '<p>Its all about Personal of Sulthan Allaudeen</p>
 ',
-                'count' => 1,
-                'status' => 0,
+                'count' => 2,
+                'status' => 1,
                 'created_at' => '2015-11-13 03:37:26',
-                'updated_at' => '2015-11-13 03:37:26',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             19 => 
             array (
@@ -232,10 +232,10 @@ class TagTableSeeder extends Seeder
                 'title' => 'Ubuntu',
                 'content' => '<p>This tag is about Ubuntu</p>
 ',
-                'count' => 1,
-                'status' => 0,
+                'count' => 3,
+                'status' => 1,
                 'created_at' => '2016-02-17 09:33:34',
-                'updated_at' => '2016-02-17 09:33:34',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             20 => 
             array (
@@ -244,9 +244,9 @@ class TagTableSeeder extends Seeder
                 'content' => '<p>This tag is about Composer Package Manager</p>
 ',
                 'count' => 1,
-                'status' => 0,
+                'status' => 1,
                 'created_at' => '2016-02-17 09:34:06',
-                'updated_at' => '2016-02-17 09:34:06',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             21 => 
             array (
@@ -255,9 +255,9 @@ class TagTableSeeder extends Seeder
                 'content' => '<p>About XAMPP</p>
 ',
                 'count' => 1,
-                'status' => 0,
+                'status' => 1,
                 'created_at' => '2016-02-17 09:34:55',
-                'updated_at' => '2016-02-17 09:34:55',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             22 => 
             array (
@@ -266,9 +266,9 @@ class TagTableSeeder extends Seeder
                 'content' => '<p>About Ubuntu Terminal</p>
 ',
                 'count' => 1,
-                'status' => 0,
+                'status' => 1,
                 'created_at' => '2016-04-29 08:54:32',
-                'updated_at' => '2016-04-29 08:54:32',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             23 => 
             array (
@@ -276,10 +276,10 @@ class TagTableSeeder extends Seeder
                 'title' => 'Yahoo',
                 'content' => '<p>Yahoo</p>
 ',
-                'count' => 1,
-                'status' => 0,
+                'count' => 2,
+                'status' => 1,
                 'created_at' => '2016-07-26 10:57:34',
-                'updated_at' => '2016-07-26 10:57:34',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
             24 => 
             array (
@@ -288,9 +288,19 @@ class TagTableSeeder extends Seeder
                 'content' => '<p>TechCrunch</p>
 ',
                 'count' => 1,
-                'status' => 0,
+                'status' => 1,
                 'created_at' => '2016-07-26 10:57:48',
-                'updated_at' => '2016-07-26 10:57:48',
+                'updated_at' => '2017-10-31 20:18:57',
+            ),
+            25 => 
+            array (
+                'id' => 26,
+                'title' => 'Andriod',
+                'content' => '<p>Android !</p>',
+                'count' => 7,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:01:45',
+                'updated_at' => '2017-10-31 20:18:57',
             ),
         ));
         
