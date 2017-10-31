@@ -997,6 +997,66 @@ class BlogTagTableSeeder extends Seeder
                 'created_at' => '2017-10-31 20:18:56',
                 'updated_at' => '2017-10-31 20:18:56',
             ),
+            98 => 
+            array (
+                'id' => 226,
+                'blog_id' => 56,
+                'tag_id' => 16,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:27:52',
+                'updated_at' => '2017-10-31 20:27:52',
+            ),
+            99 => 
+            array (
+                'id' => 227,
+                'blog_id' => 57,
+                'tag_id' => 19,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:35:09',
+                'updated_at' => '2017-10-31 20:35:09',
+            ),
+            100 => 
+            array (
+                'id' => 228,
+                'blog_id' => 58,
+                'tag_id' => 16,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:41:26',
+                'updated_at' => '2017-10-31 20:41:26',
+            ),
+            101 => 
+            array (
+                'id' => 229,
+                'blog_id' => 59,
+                'tag_id' => 19,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:44:25',
+                'updated_at' => '2017-10-31 20:44:25',
+            ),
+            102 => 
+            array (
+                'id' => 230,
+                'blog_id' => 60,
+                'tag_id' => 5,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:47:22',
+                'updated_at' => '2017-10-31 20:47:22',
+            ),
+            103 => 
+            array (
+                'id' => 231,
+                'blog_id' => 60,
+                'tag_id' => 16,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:47:22',
+                'updated_at' => '2017-10-31 20:47:22',
+            ),
         ));
         
         

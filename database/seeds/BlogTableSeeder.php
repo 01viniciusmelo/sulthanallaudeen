@@ -2261,6 +2261,170 @@ fcm.send(message, function(err, response) {<br />
 'created_at' => '2017-10-31 20:18:56',
 'updated_at' => '2017-10-31 20:18:56',
 ),
+55 => 
+array (
+'id' => 56,
+'title' => 'Created FCM Push for Tester in Heroku',
+'url' => 'Created-FCM-Push-for-Tester-in-Heroku',
+'content' => '<p>While testing the FCM for Hybrid apps, i depend on some 3rd party to testing it, I thought to create it on my own, and here&#39;s it on Heroku !</p>
+
+<p><a href="https://fcm-push.herokuapp.com/">https://fcm-push.herokuapp.com/</a></p>
+
+<p>If you need the code, go get here on Github&nbsp;</p>
+
+<p><a href="https://github.com/sulthanallaudeen/fcm-push">https://github.com/sulthanallaudeen/fcm-push</a></p>
+
+<p>I am saving a bit of code here in order to save !</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<p>var serverKey = req.body.key;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; var fcm = new FCM(serverKey);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; var message = {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; to: req.body.to,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; collapse_key: &#39;your_collapse_key&#39;,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; data: {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; key: req.body.title<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; notification: {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; title: req.body.title,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; body: req.body.body<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; };</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; //callback style<br />
+&nbsp; &nbsp; &nbsp; &nbsp; fcm.send(message, function(err, response) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (err) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; res.status(200).json({<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;success&quot;: &quot;0&quot;,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;message&quot;: err<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; res.status(200).json({<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;success&quot;: &quot;1&quot;,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;message&quot;: response<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; });</p>
+</div>
+
+<p>And the client part will be&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<pre>
+$(document).ready(function() {
+$(&quot;#sendPush&quot;).click(function() {
+var url = window.location.href + &#39;/&#39;;
+var key = $(&quot;#key&quot;).val();
+var to = $(&quot;#fcm_token&quot;).val();
+var title = $(&quot;#title&quot;).val();
+var body = $(&quot;#body&quot;).val();
+$.post(&quot;sendPush&quot;, { key: key, to: to, title: title, body: body })
+.done(function(data) {
+alert(&quot;Pls check console for now !!&quot;);
+console.log(data);
+});
+});
+});</pre>
+</div>
+
+<p>There you go !&nbsp;</p>',
+'date' => '2017-11-01 00:00:00',
+'status' => 1,
+'created_at' => '2017-10-31 20:27:51',
+'updated_at' => '2017-10-31 20:27:51',
+),
+56 => 
+array (
+'id' => 57,
+'title' => 'Change of Company : Wekancode to TPF',
+'url' => 'Change-of-Company-:-Wekancode-to-TPF',
+'content' => '<p>Change of Company : Wekancode to TPF</p>',
+'date' => '2017-06-16 00:00:00',
+'status' => 1,
+'created_at' => '2017-10-31 20:35:08',
+'updated_at' => '2017-10-31 20:35:08',
+),
+57 => 
+array (
+'id' => 58,
+'title' => 'Notam Feed',
+'url' => 'Notam-Feed',
+'content' => '<p>Once i was assigned to do an interesting task. (Web scrapping - for testing purpose)</p>
+
+<p>I have done a much play in manual javascript html parsing technique, and then finally came up with php</p>
+
+<p>Here&#39;s the part&nbsp;</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">&lt;?php<br />
+header(&#39;Access-Control-Allow-Origin: *&#39;);<br />
+header(&#39;Access-Control-Allow-Methods: GET&#39;);<br />
+if($_GET){<br />
+if($_GET[&#39;code&#39;]==&#39;&#39;){<br />
+&nbsp; &nbsp; $error =&quot;Code should not be empty&quot;;<br />
+&nbsp; &nbsp; echo $error;<br />
+}<br />
+else{<br />
+$url = &quot;https://pilotweb.nas.faa.gov/PilotWeb/notamRetrievalByICAOAction.do?method=displayByICAOs&amp;reportType=RAW&amp;formatType=ICAO&amp;retrieveLocId=&quot;.$_GET[&#39;code&#39;].&quot;&amp;actionType=notamRetrievalByICAOs&quot;;<br />
+$data = &nbsp;file_get_contents($url);<br />
+echo $data;<br />
+}<br />
+}<br />
+else{<br />
+&nbsp; &nbsp; $error =&quot;Invalid Access&quot;;<br />
+&nbsp; &nbsp; //echo $error;<br />
+}<br />
+?&gt;</div>
+
+<p>Also,&nbsp;</p>
+
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">&lt;?php<br />
+header(&#39;Access-Control-Allow-Origin: *&#39;);<br />
+header(&#39;Access-Control-Allow-Methods: GET&#39;);<br />
+$url = &quot;https://pilotweb.nas.faa.gov/PilotWeb/notamRetrievalByICAOAction.do?method=displayByICAOs&amp;reportType=RAW&amp;formatType=ICAO&amp;retrieveLocId=VOMM&amp;actionType=notamRetrievalByICAOs&quot;;<br />
+$data = &nbsp;file_get_contents($url);<br />
+echo $data;<br />
+?&gt;&nbsp;</div>
+
+<p>&nbsp;</p>
+
+<p>And the javascript part is missing, as i didn&#39;t saved it in good way,</p>
+
+<p>&nbsp;</p>
+
+<p>btw, here&#39;s the heroku app</p>
+
+<p><a href="http://notams.herokuapp.com">notams.herokuapp.com</a>&nbsp;</p>',
+'date' => '2017-09-01 00:00:00',
+'status' => 1,
+'created_at' => '2017-10-31 20:41:26',
+'updated_at' => '2017-10-31 20:41:26',
+),
+58 => 
+array (
+'id' => 59,
+'title' => 'Interest lies on bots, chatbot inspired from devpost aws challenge',
+'url' => 'Interest-lies-on-bots,-chatbot-inspired-from-devpost-aws-challenge',
+'content' => '<p>Once i came across <a href="https://devpost.com/submit-to/4979-aws-chatbot-challenge/select">this</a>&nbsp;post, i really want to explore the existing submissions and was really inspired on the works,</p>
+
+<p>Yes creating chat bot is not a easy process but i set my mind to create bots that atlest solves my real life problems !</p>',
+'date' => '2017-09-01 00:00:00',
+'status' => 1,
+'created_at' => '2017-10-31 20:44:24',
+'updated_at' => '2017-10-31 20:44:24',
+),
+59 => 
+array (
+'id' => 60,
+'title' => 'Initiating My GitHub Badge',
+'url' => 'Initiating-My-GitHub-Badge',
+'content' => '<p>Just reserved the name&nbsp;<a href="http://my-github-badge">my-github-badge</a>&nbsp;, need to work on in it, will update the same in this blog once the work was done !</p>',
+'date' => '2017-10-12 00:00:00',
+'status' => 1,
+'created_at' => '2017-10-31 20:47:22',
+'updated_at' => '2017-10-31 20:47:22',
+),
 ));
         
         
