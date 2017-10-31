@@ -1009,16 +1009,6 @@ class BlogTagTableSeeder extends Seeder
             ),
             99 => 
             array (
-                'id' => 227,
-                'blog_id' => 57,
-                'tag_id' => 19,
-                'user_id' => 1,
-                'status' => 1,
-                'created_at' => '2017-10-31 20:35:09',
-                'updated_at' => '2017-10-31 20:35:09',
-            ),
-            100 => 
-            array (
                 'id' => 228,
                 'blog_id' => 58,
                 'tag_id' => 16,
@@ -1027,17 +1017,7 @@ class BlogTagTableSeeder extends Seeder
                 'created_at' => '2017-10-31 20:41:26',
                 'updated_at' => '2017-10-31 20:41:26',
             ),
-            101 => 
-            array (
-                'id' => 229,
-                'blog_id' => 59,
-                'tag_id' => 19,
-                'user_id' => 1,
-                'status' => 1,
-                'created_at' => '2017-10-31 20:44:25',
-                'updated_at' => '2017-10-31 20:44:25',
-            ),
-            102 => 
+            100 => 
             array (
                 'id' => 230,
                 'blog_id' => 60,
@@ -1047,7 +1027,7 @@ class BlogTagTableSeeder extends Seeder
                 'created_at' => '2017-10-31 20:47:22',
                 'updated_at' => '2017-10-31 20:47:22',
             ),
-            103 => 
+            101 => 
             array (
                 'id' => 231,
                 'blog_id' => 60,
@@ -1056,6 +1036,26 @@ class BlogTagTableSeeder extends Seeder
                 'status' => 1,
                 'created_at' => '2017-10-31 20:47:22',
                 'updated_at' => '2017-10-31 20:47:22',
+            ),
+            102 => 
+            array (
+                'id' => 232,
+                'blog_id' => 57,
+                'tag_id' => 19,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:49:42',
+                'updated_at' => '2017-10-31 20:49:42',
+            ),
+            103 => 
+            array (
+                'id' => 233,
+                'blog_id' => 59,
+                'tag_id' => 19,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:49:57',
+                'updated_at' => '2017-10-31 20:49:57',
             ),
         ));
         

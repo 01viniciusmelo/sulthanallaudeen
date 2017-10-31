@@ -2342,9 +2342,9 @@ array (
 'url' => 'Change-of-Company-:-Wekancode-to-TPF',
 'content' => '<p>Change of Company : Wekancode to TPF</p>',
 'date' => '2017-06-16 00:00:00',
-'status' => 1,
+'status' => 0,
 'created_at' => '2017-10-31 20:35:08',
-'updated_at' => '2017-10-31 20:35:08',
+'updated_at' => '2017-10-31 20:49:42',
 ),
 57 => 
 array (
@@ -2410,9 +2410,9 @@ array (
 
 <p>Yes creating chat bot is not a easy process but i set my mind to create bots that atlest solves my real life problems !</p>',
 'date' => '2017-09-01 00:00:00',
-'status' => 1,
+'status' => 0,
 'created_at' => '2017-10-31 20:44:24',
-'updated_at' => '2017-10-31 20:44:24',
+'updated_at' => '2017-10-31 20:49:57',
 ),
 59 => 
 array (
