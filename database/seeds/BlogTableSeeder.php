@@ -2357,8 +2357,7 @@ array (
 
 <p>Here&#39;s the part&nbsp;</p>
 
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">&lt;?php<br />
-header(&#39;Access-Control-Allow-Origin: *&#39;);<br />
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><!--?php<br /-->header(&#39;Access-Control-Allow-Origin: *&#39;);<br />
 header(&#39;Access-Control-Allow-Methods: GET&#39;);<br />
 if($_GET){<br />
 if($_GET[&#39;code&#39;]==&#39;&#39;){<br />
@@ -2379,8 +2378,7 @@ else{<br />
 
 <p>Also,&nbsp;</p>
 
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">&lt;?php<br />
-header(&#39;Access-Control-Allow-Origin: *&#39;);<br />
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><!--?php<br /-->header(&#39;Access-Control-Allow-Origin: *&#39;);<br />
 header(&#39;Access-Control-Allow-Methods: GET&#39;);<br />
 $url = &quot;https://pilotweb.nas.faa.gov/PilotWeb/notamRetrievalByICAOAction.do?method=displayByICAOs&amp;reportType=RAW&amp;formatType=ICAO&amp;retrieveLocId=VOMM&amp;actionType=notamRetrievalByICAOs&quot;;<br />
 $data = &nbsp;file_get_contents($url);<br />
@@ -2397,9 +2395,9 @@ echo $data;<br />
 
 <p><a href="http://notams.herokuapp.com">notams.herokuapp.com</a>&nbsp;</p>',
 'date' => '2017-09-01 00:00:00',
-'status' => 1,
+'status' => 0,
 'created_at' => '2017-10-31 20:41:26',
-'updated_at' => '2017-10-31 20:41:26',
+'updated_at' => '2017-10-31 20:53:04',
 ),
 58 => 
 array (

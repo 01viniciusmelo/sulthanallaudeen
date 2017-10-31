@@ -1009,16 +1009,6 @@ class BlogTagTableSeeder extends Seeder
             ),
             99 => 
             array (
-                'id' => 228,
-                'blog_id' => 58,
-                'tag_id' => 16,
-                'user_id' => 1,
-                'status' => 1,
-                'created_at' => '2017-10-31 20:41:26',
-                'updated_at' => '2017-10-31 20:41:26',
-            ),
-            100 => 
-            array (
                 'id' => 230,
                 'blog_id' => 60,
                 'tag_id' => 5,
@@ -1027,7 +1017,7 @@ class BlogTagTableSeeder extends Seeder
                 'created_at' => '2017-10-31 20:47:22',
                 'updated_at' => '2017-10-31 20:47:22',
             ),
-            101 => 
+            100 => 
             array (
                 'id' => 231,
                 'blog_id' => 60,
@@ -1037,7 +1027,7 @@ class BlogTagTableSeeder extends Seeder
                 'created_at' => '2017-10-31 20:47:22',
                 'updated_at' => '2017-10-31 20:47:22',
             ),
-            102 => 
+            101 => 
             array (
                 'id' => 232,
                 'blog_id' => 57,
@@ -1047,7 +1037,7 @@ class BlogTagTableSeeder extends Seeder
                 'created_at' => '2017-10-31 20:49:42',
                 'updated_at' => '2017-10-31 20:49:42',
             ),
-            103 => 
+            102 => 
             array (
                 'id' => 233,
                 'blog_id' => 59,
@@ -1056,6 +1046,16 @@ class BlogTagTableSeeder extends Seeder
                 'status' => 1,
                 'created_at' => '2017-10-31 20:49:57',
                 'updated_at' => '2017-10-31 20:49:57',
+            ),
+            103 => 
+            array (
+                'id' => 234,
+                'blog_id' => 58,
+                'tag_id' => 16,
+                'user_id' => 1,
+                'status' => 1,
+                'created_at' => '2017-10-31 20:53:05',
+                'updated_at' => '2017-10-31 20:53:05',
             ),
         ));
         
