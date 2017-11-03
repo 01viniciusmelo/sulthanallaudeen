@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 #Util
+use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Validator;
@@ -10,7 +11,6 @@ use Validator;
 use App\Blog;
 use App\BlogTag;
 use App\Mail;
-use App\MailTemplate;
 use App\Tag;
 use App\User;
 
@@ -106,6 +106,22 @@ class AdminController extends Controller
         return redirect()->route('blog')->with('success', 'Blog deleted Success');
     }
 
+    public function blogStatus($id,$status){
+        if($status=='Active')
+        {
+            $data['status'] = 0;
+            Blog::where('id', $tagData['id'])->update($data);
+            return redirect()->route('blog')->with('success', 'Blog Deactivated Success');
+        }else if($status=='InActive'){
+            $data['status'] = 0;
+            $data['status'] = $tagData['status'];
+            Blog::where('id', $tagData['id'])->update($data);
+            return redirect()->route('blog')->with('success', 'Blog Activated Success');
+        }else{
+            return redirect()->route('blog')->with('error', 'Invalid Action');
+        }
+    }
+
     //End of Blog Section
 
     //Start of Tag Section
@@ -175,5 +191,12 @@ class AdminController extends Controller
         }
         $Response = array('success' => 1,'message' => 'Synced Blog Count Succesfully !');
         return $Response;
+    }
+
+    #Logout Function
+    
+    public function logout(){
+        Auth::logout();
+        return redirect('login');
     }
 }

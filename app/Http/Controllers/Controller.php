@@ -7,15 +7,13 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
-#Util
-use Auth;
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function logout(){
-        Auth::logout();
-        return redirect('login');
+    public function getAppConfig() {
+        $Response = array('success' => 1, 'domainUrl' => Config::get('constants.config.URL'));
+        return $Response;
     }
 }

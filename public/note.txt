@@ -25,6 +25,7 @@ php artisan make:controller AdminController
 php artisan make:controller CronController
 #Model
 php artisan make:model Blog
+php artisan make:model Cron
 php artisan make:model BlogTag
 php artisan make:model Mail
 php artisan make:model Tag
@@ -38,3 +39,6 @@ Access Composer
 #Git Force pull from master
 git fetch origin master
 git reset --hard FETCH_HEAD
+//Fresh Migration
+php artisan make:migration create_cron_table --create=cron
+php artisan migrate:rollback --step=1
