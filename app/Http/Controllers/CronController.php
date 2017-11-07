@@ -109,7 +109,7 @@ class CronController extends Controller
         $apiKey = base64_decode(Config::get('constants.keys.sendgrid'));
         $sg = new \SendGrid($apiKey);
 
-
+        // Start of Attachment 
         // $file = Config::get('constants.path.app').'/backup/'.date("Y-m-d").'.zip';
         // $file_encoded = base64_encode(file_get_contents($file));
         // $attachment = new SendGrid\Attachment();
@@ -117,7 +117,6 @@ class CronController extends Controller
         // $attachment->setType("application/zip");
         // $attachment->setDisposition("attachment");
         // $attachment->setFilename($file);
-
         // $mail = new SendGrid\Mail($from, $subject, $to, $content);
         // $mail->addAttachment($attachment);
 

@@ -109,8 +109,10 @@ class PublicController extends Controller
 
     }
 
-    #Cron
-    public function cron(){
-
+    #getToken
+    public function getToken(){
+        $token = csrf_token();
+        $Response = array('success' => '1', '_token' => $token);
+        return $Response;
     }
 }

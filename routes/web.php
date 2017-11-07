@@ -21,6 +21,7 @@ Route::get('contact', 'PublicController@contact');
 Route::post('contactSA', 'PublicController@contactSA');
 Route::get('login', [ 'as' => 'login', 'uses' => 'PublicController@login']);
 Route::post('doLogin', 'PublicController@doLogin');
+Route::get('getToken', 'PublicController@getToken');
 Route::get('logout', [ 'as' => 'logout', 'uses' => 'Controller@logout']);
 #Cron
 Route::get('cron', 'CronController@index');
