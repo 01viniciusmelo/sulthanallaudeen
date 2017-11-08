@@ -62,7 +62,8 @@ class PublicController extends Controller
 
     public function tag($query){
         $tag = Tag::where('title', $query)->first();
-        $blogs = Blog::where('status', 1)->orderBy('id', 'desc')->paginate(10);
+        //$blog_tagged = BlogTag::where('tag_id', $tag->id)->first();
+        $blogs = Blog::where('status', 1)->where('status', 1)->orderBy('id', 'desc')->paginate(10);
         return view('public.tag')->with('blogs', $blogs)->with('tag', $tag)->with('tags', $this->getTags());
     }
 
@@ -81,7 +82,7 @@ class PublicController extends Controller
 
     public function contactSA(){
         $mailData = Input::all();
-        $mailData['read'] = 8;
+        $mailData['read'] = 0;
         $validation = Validator::make($mailData, Mail::$mailData);
         if ($validation->passes()){
             $create = Mail::create($mailData);
