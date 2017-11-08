@@ -62,8 +62,12 @@ class PublicController extends Controller
 
     public function tag($query){
         $tag = Tag::where('title', $query)->first();
-        //$blog_tagged = BlogTag::where('tag_id', $tag->id)->first();
-        $blogs = Blog::where('status', 1)->where('status', 1)->orderBy('id', 'desc')->paginate(10);
+        $blog_tagged = BlogTag::where('tag_id', $tag->id)->get();
+        $blogList = [];
+        for ($i=0; $i < count($blog_tagged) ; $i++) { 
+            array_push($blogList,$blog_tagged[$i]->blog_id);
+        }
+        $blogs = Blog::whereIn('id',$blogList)->where('status', 1)->orderBy('id', 'desc')->paginate(10);
         return view('public.tag')->with('blogs', $blogs)->with('tag', $tag)->with('tags', $this->getTags());
     }
 
