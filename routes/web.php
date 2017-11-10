@@ -37,13 +37,19 @@ Route::get('admin/blog/status/{id}/{status}', 'AdminController@blogStatus');
 Route::get('admin/blog/delete/{id}', 'AdminController@blogDelete');
 #End of Blog
 #Start of Tag
-Route::get('admin/tag', 'AdminController@tag')->name('tag');;
+Route::get('admin/tag', 'AdminController@tag')->name('tag');
 Route::get('admin/tag/create', 'AdminController@tagCreate');
 Route::post('admin/tag/write', 'AdminController@tagCreateData');
 Route::get('admin/tag/edit/{id}', 'AdminController@tagEdit');
 Route::post('admin/tag/edit/update', 'AdminController@tagUpdateData');
 Route::get('admin/tag/delete/{id}', 'AdminController@tagDelete');
 #End of Tag
+#End of Admin Panel
+#Start of API
+Route::post('api/authUser', 'PublicController@authUser');
+Route::get('api/getBlog', 'ApiController@getBlog');
+Route::get('api/logout', 'PublicController@logout');
+#End of API
 
 #Maintenance 
 Route::get('SyncBlogCount', 'AdminController@SyncBlogCount');

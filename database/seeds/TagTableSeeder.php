@@ -25,8 +25,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 27,
                 'status' => 1,
-                'created_at' => '2015-09-28 17:41:23',
-                'updated_at' => '2017-10-31 20:53:05',
+                'created_at' => '2015-09-29 06:11:23',
+                'updated_at' => '2017-11-01 09:23:05',
             ),
             1 => 
             array (
@@ -36,8 +36,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 10,
                 'status' => 1,
-                'created_at' => '2015-09-28 17:41:53',
-                'updated_at' => '2017-10-31 20:53:05',
+                'created_at' => '2015-09-29 06:11:53',
+                'updated_at' => '2017-11-01 09:23:05',
             ),
             2 => 
             array (
@@ -47,8 +47,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 5,
                 'status' => 1,
-                'created_at' => '2015-09-30 01:30:21',
-                'updated_at' => '2017-10-31 20:53:05',
+                'created_at' => '2015-09-30 14:00:21',
+                'updated_at' => '2017-11-01 09:23:05',
             ),
             3 => 
             array (
@@ -58,8 +58,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 6,
                 'status' => 1,
-                'created_at' => '2015-09-30 12:47:30',
-                'updated_at' => '2017-10-31 20:53:05',
+                'created_at' => '2015-10-01 01:17:30',
+                'updated_at' => '2017-11-01 09:23:05',
             ),
             4 => 
             array (
@@ -69,8 +69,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 7,
                 'status' => 1,
-                'created_at' => '2015-09-30 13:05:23',
-                'updated_at' => '2017-10-31 20:53:05',
+                'created_at' => '2015-10-01 01:35:23',
+                'updated_at' => '2017-11-01 09:23:05',
             ),
             5 => 
             array (
@@ -80,8 +80,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 6,
                 'status' => 1,
-                'created_at' => '2015-09-30 13:05:30',
-                'updated_at' => '2017-10-31 20:53:05',
+                'created_at' => '2015-10-01 01:35:30',
+                'updated_at' => '2017-11-01 09:23:05',
             ),
             6 => 
             array (
@@ -91,8 +91,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 1,
                 'status' => 1,
-                'created_at' => '2015-09-30 13:05:36',
-                'updated_at' => '2017-10-31 20:53:05',
+                'created_at' => '2015-10-01 01:35:36',
+                'updated_at' => '2017-11-01 09:23:05',
             ),
             7 => 
             array (
@@ -102,8 +102,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 0,
                 'status' => 1,
-                'created_at' => '2015-09-30 13:05:36',
-                'updated_at' => '2017-10-31 20:53:05',
+                'created_at' => '2015-10-01 01:35:36',
+                'updated_at' => '2017-11-01 09:23:05',
             ),
             8 => 
             array (
@@ -113,8 +113,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 6,
                 'status' => 1,
-                'created_at' => '2015-09-30 13:05:42',
-                'updated_at' => '2017-10-31 20:53:05',
+                'created_at' => '2015-10-01 01:35:42',
+                'updated_at' => '2017-11-01 09:23:05',
             ),
             9 => 
             array (
@@ -124,8 +124,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 2,
                 'status' => 1,
-                'created_at' => '2015-10-05 22:46:40',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2015-10-06 11:16:40',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             10 => 
             array (
@@ -135,8 +135,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 0,
                 'status' => 1,
-                'created_at' => '2015-10-05 22:48:17',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2015-10-06 11:18:17',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             11 => 
             array (
@@ -146,8 +146,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 2,
                 'status' => 1,
-                'created_at' => '2015-10-05 22:51:36',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2015-10-06 11:21:36',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             12 => 
             array (
@@ -157,8 +157,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 1,
                 'status' => 1,
-                'created_at' => '2015-10-05 22:51:48',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2015-10-06 11:21:48',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             13 => 
             array (
@@ -168,8 +168,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 1,
                 'status' => 1,
-                'created_at' => '2015-10-05 23:01:28',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2015-10-06 11:31:28',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             14 => 
             array (
@@ -179,8 +179,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 4,
                 'status' => 1,
-                'created_at' => '2015-10-05 23:03:38',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2015-10-06 11:33:38',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             15 => 
             array (
@@ -190,8 +190,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 4,
                 'status' => 1,
-                'created_at' => '2015-10-05 23:04:40',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2015-10-06 11:34:40',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             16 => 
             array (
@@ -201,8 +201,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 1,
                 'status' => 1,
-                'created_at' => '2015-11-03 22:22:24',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2015-11-04 10:52:24',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             17 => 
             array (
@@ -212,8 +212,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 1,
                 'status' => 1,
-                'created_at' => '2015-11-05 13:24:46',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2015-11-06 01:54:46',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             18 => 
             array (
@@ -223,8 +223,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 4,
                 'status' => 1,
-                'created_at' => '2015-11-13 03:37:26',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2015-11-13 16:07:26',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             19 => 
             array (
@@ -234,8 +234,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 3,
                 'status' => 1,
-                'created_at' => '2016-02-17 09:33:34',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2016-02-17 22:03:34',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             20 => 
             array (
@@ -245,8 +245,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 1,
                 'status' => 1,
-                'created_at' => '2016-02-17 09:34:06',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2016-02-17 22:04:06',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             21 => 
             array (
@@ -256,8 +256,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 1,
                 'status' => 1,
-                'created_at' => '2016-02-17 09:34:55',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2016-02-17 22:04:55',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             22 => 
             array (
@@ -267,8 +267,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 1,
                 'status' => 1,
-                'created_at' => '2016-04-29 08:54:32',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2016-04-29 21:24:32',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             23 => 
             array (
@@ -278,8 +278,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 2,
                 'status' => 1,
-                'created_at' => '2016-07-26 10:57:34',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2016-07-26 23:27:34',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             24 => 
             array (
@@ -289,8 +289,8 @@ class TagTableSeeder extends Seeder
 ',
                 'count' => 1,
                 'status' => 1,
-                'created_at' => '2016-07-26 10:57:48',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2016-07-26 23:27:48',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
             25 => 
             array (
@@ -299,8 +299,8 @@ class TagTableSeeder extends Seeder
                 'content' => '<p>Android !</p>',
                 'count' => 7,
                 'status' => 1,
-                'created_at' => '2017-10-31 20:01:45',
-                'updated_at' => '2017-10-31 20:53:06',
+                'created_at' => '2017-11-01 08:31:45',
+                'updated_at' => '2017-11-01 09:23:06',
             ),
         ));
         

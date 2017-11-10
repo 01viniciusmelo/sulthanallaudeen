@@ -28,8 +28,8 @@ class BlogTableSeeder extends Seeder
 ',
                 'date' => '2014-05-01 20:55:05',
                 'status' => 1,
-                'created_at' => '2015-09-30 01:32:21',
-                'updated_at' => '2015-09-30 11:27:57',
+                'created_at' => '2015-09-30 14:02:21',
+                'updated_at' => '2015-09-30 23:57:57',
             ),
             1 => 
             array (
@@ -92,8 +92,8 @@ $(&quot;#result&quot;).html(result);
 ',
         'date' => '2015-05-03 21:46:34',
         'status' => 1,
-        'created_at' => '2015-09-30 12:54:21',
-        'updated_at' => '2015-10-05 23:16:44',
+        'created_at' => '2015-10-01 01:24:21',
+        'updated_at' => '2015-10-06 11:46:44',
     ),
     2 => 
     array (
@@ -116,8 +116,8 @@ $(&quot;#result&quot;).html(result);
 ',
         'date' => '2015-05-12 06:54:26',
         'status' => 1,
-        'created_at' => '2015-09-30 12:56:21',
-        'updated_at' => '2015-10-16 10:07:58',
+        'created_at' => '2015-10-01 01:26:21',
+        'updated_at' => '2015-10-16 22:37:58',
     ),
     3 => 
     array (
@@ -144,8 +144,8 @@ $(&quot;#result&quot;).html(result);
 ',
     'date' => '2015-05-15 10:54:26',
     'status' => 1,
-    'created_at' => '2015-09-30 12:57:06',
-    'updated_at' => '2015-10-16 10:06:55',
+    'created_at' => '2015-10-01 01:27:06',
+    'updated_at' => '2015-10-16 22:36:55',
 ),
 4 => 
 array (
@@ -182,8 +182,8 @@ array (
 ',
     'date' => '2015-05-18 09:44:26',
     'status' => 1,
-    'created_at' => '2015-09-30 13:02:15',
-    'updated_at' => '2015-10-05 23:32:27',
+    'created_at' => '2015-10-01 01:32:15',
+    'updated_at' => '2015-10-06 12:02:27',
 ),
 5 => 
 array (
@@ -238,8 +238,8 @@ array (
 ',
 'date' => '2015-05-28 11:15:26',
 'status' => 1,
-'created_at' => '2015-09-30 13:03:07',
-'updated_at' => '2015-09-30 13:03:07',
+'created_at' => '2015-10-01 01:33:07',
+'updated_at' => '2015-10-01 01:33:07',
 ),
 6 => 
 array (
@@ -275,8 +275,8 @@ array (
 ',
 'date' => '2015-06-01 20:04:26',
 'status' => 1,
-'created_at' => '2015-09-30 13:04:21',
-'updated_at' => '2015-10-16 10:06:11',
+'created_at' => '2015-10-01 01:34:21',
+'updated_at' => '2015-10-16 22:36:11',
 ),
 7 => 
 array (
@@ -293,8 +293,8 @@ array (
 ',
 'date' => '2015-06-15 19:44:26',
 'status' => 1,
-'created_at' => '2015-09-30 13:05:07',
-'updated_at' => '2015-10-05 22:54:52',
+'created_at' => '2015-10-01 01:35:07',
+'updated_at' => '2015-10-06 11:24:52',
 ),
 8 => 
 array (
@@ -313,8 +313,8 @@ array (
 ',
 'date' => '2015-06-18 21:44:26',
 'status' => 1,
-'created_at' => '2015-09-30 13:07:17',
-'updated_at' => '2015-10-05 22:55:03',
+'created_at' => '2015-10-01 01:37:17',
+'updated_at' => '2015-10-06 11:25:03',
 ),
 9 => 
 array (
@@ -364,8 +364,8 @@ composer require &quot;illuminate/html&quot;:&quot;5.0.*&quot;</pre>
 ',
 'date' => '2015-06-20 04:34:26',
 'status' => 1,
-'created_at' => '2015-09-30 13:09:51',
-'updated_at' => '2015-10-16 10:05:56',
+'created_at' => '2015-10-01 01:39:51',
+'updated_at' => '2015-10-16 22:35:56',
 ),
 10 => 
 array (
@@ -389,8 +389,8 @@ composer create-project laravel/laravel</pre>
 ',
 'date' => '2015-06-21 05:44:06',
 'status' => 1,
-'created_at' => '2015-09-30 13:11:21',
-'updated_at' => '2015-09-30 13:11:21',
+'created_at' => '2015-10-01 01:41:21',
+'updated_at' => '2015-10-01 01:41:21',
 ),
 11 => 
 array (
@@ -409,8 +409,8 @@ array (
 ',
 'date' => '2015-06-24 02:24:06',
 'status' => 1,
-'created_at' => '2015-09-30 13:11:48',
-'updated_at' => '2015-09-30 15:55:07',
+'created_at' => '2015-10-01 01:41:48',
+'updated_at' => '2015-10-01 04:25:07',
 ),
 12 => 
 array (
@@ -475,8 +475,8 @@ echo sprintf(&quot;%02d:%02d:%02d&quot;, $diff-&gt;days * 24 + $diff-&gt;h, $dif
 ',
 'date' => '2015-06-26 03:13:36',
 'status' => 1,
-'created_at' => '2015-09-30 13:26:10',
-'updated_at' => '2015-09-30 13:26:10',
+'created_at' => '2015-10-01 01:56:10',
+'updated_at' => '2015-10-01 01:56:10',
 ),
 13 => 
 array (
@@ -495,8 +495,8 @@ array (
 ',
 'date' => '2015-06-28 06:34:04',
 'status' => 1,
-'created_at' => '2015-09-30 13:26:45',
-'updated_at' => '2015-10-16 10:09:15',
+'created_at' => '2015-10-01 01:56:45',
+'updated_at' => '2015-10-16 22:39:15',
 ),
 14 => 
 array (
@@ -701,8 +701,8 @@ $results-&gt;free();
 ',
 'date' => '2015-07-01 20:44:06',
 'status' => 1,
-'created_at' => '2015-09-30 13:30:45',
-'updated_at' => '2015-10-05 22:58:11',
+'created_at' => '2015-10-01 02:00:45',
+'updated_at' => '2015-10-06 11:28:11',
 ),
 15 => 
 array (
@@ -743,8 +743,8 @@ data : $(&quot;#allocateboat&quot;).serialize()+&#39;&amp;element=&#39;+target,<
 ',
 'date' => '2015-07-03 21:34:06',
 'status' => 1,
-'created_at' => '2015-09-30 13:32:16',
-'updated_at' => '2015-09-30 15:53:46',
+'created_at' => '2015-10-01 02:02:16',
+'updated_at' => '2015-10-01 04:23:46',
 ),
 16 => 
 array (
@@ -787,8 +787,8 @@ array (
 ',
 'date' => '2015-07-07 00:44:56',
 'status' => 1,
-'created_at' => '2015-09-30 13:32:44',
-'updated_at' => '2015-10-16 10:09:36',
+'created_at' => '2015-10-01 02:02:44',
+'updated_at' => '2015-10-16 22:39:36',
 ),
 17 => 
 array (
@@ -863,8 +863,8 @@ $(&quot;#MyTrigger&quot;).click(function(){  //Here we can assure that that id w
 ',
 'date' => '2015-07-09 00:44:12',
 'status' => 1,
-'created_at' => '2015-09-30 14:09:35',
-'updated_at' => '2015-09-30 14:09:35',
+'created_at' => '2015-10-01 02:39:35',
+'updated_at' => '2015-10-01 02:39:35',
 ),
 18 => 
 array (
@@ -1053,8 +1053,8 @@ array (
 ',
 'date' => '2015-07-11 02:34:33',
 'status' => 1,
-'created_at' => '2015-09-30 14:18:57',
-'updated_at' => '2015-09-30 14:18:57',
+'created_at' => '2015-10-01 02:48:57',
+'updated_at' => '2015-10-01 02:48:57',
 ),
 19 => 
 array (
@@ -1083,8 +1083,8 @@ array (
 ',
 'date' => '2015-08-03 00:44:26',
 'status' => 1,
-'created_at' => '2015-09-30 14:20:41',
-'updated_at' => '2015-09-30 14:20:41',
+'created_at' => '2015-10-01 02:50:41',
+'updated_at' => '2015-10-01 02:50:41',
 ),
 20 => 
 array (
@@ -1103,8 +1103,8 @@ array (
 ',
 'date' => '2015-08-07 01:34:28',
 'status' => 1,
-'created_at' => '2015-09-30 14:21:32',
-'updated_at' => '2015-10-16 10:10:04',
+'created_at' => '2015-10-01 02:51:32',
+'updated_at' => '2015-10-16 22:40:04',
 ),
 21 => 
 array (
@@ -1145,8 +1145,8 @@ it the same in logout.</p>
 ',
 'date' => '2015-08-23 03:26:17',
 'status' => 1,
-'created_at' => '2015-09-30 14:22:25',
-'updated_at' => '2015-10-16 10:10:13',
+'created_at' => '2015-10-01 02:52:25',
+'updated_at' => '2015-10-16 22:40:13',
 ),
 22 => 
 array (
@@ -1183,8 +1183,8 @@ array (
 ',
 'date' => '2015-08-28 21:46:17',
 'status' => 1,
-'created_at' => '2015-09-30 14:23:14',
-'updated_at' => '2015-10-16 10:10:21',
+'created_at' => '2015-10-01 02:53:14',
+'updated_at' => '2015-10-16 22:40:21',
 ),
 23 => 
 array (
@@ -1195,8 +1195,8 @@ array (
 ',
 'date' => '2015-09-01 00:01:41',
 'status' => 1,
-'created_at' => '2015-09-30 14:24:17',
-'updated_at' => '2015-10-16 10:10:28',
+'created_at' => '2015-10-01 02:54:17',
+'updated_at' => '2015-10-16 22:40:28',
 ),
 24 => 
 array (
@@ -1227,8 +1227,8 @@ array (
 ',
 'date' => '2015-09-02 23:26:41',
 'status' => 1,
-'created_at' => '2015-09-30 14:24:47',
-'updated_at' => '2015-10-16 10:10:35',
+'created_at' => '2015-10-01 02:54:47',
+'updated_at' => '2015-10-16 22:40:35',
 ),
 25 => 
 array (
@@ -1243,8 +1243,8 @@ array (
 ',
 'date' => '2015-09-09 21:26:12',
 'status' => 1,
-'created_at' => '2015-09-30 14:25:10',
-'updated_at' => '2015-10-05 23:05:07',
+'created_at' => '2015-10-01 02:55:10',
+'updated_at' => '2015-10-06 11:35:07',
 ),
 26 => 
 array (
@@ -1281,8 +1281,8 @@ making use of it I then plan to Utilize it and succeded.</p>
 ',
 'date' => '2015-09-19 21:56:41',
 'status' => 1,
-'created_at' => '2015-09-30 15:01:33',
-'updated_at' => '2015-10-07 22:14:02',
+'created_at' => '2015-10-01 03:31:33',
+'updated_at' => '2015-10-08 10:44:02',
 ),
 27 => 
 array (
@@ -1331,8 +1331,8 @@ which will make the menu expand..If not it will be again set to ‘dropdown pull
 ',
 'date' => '2015-09-23 11:26:41',
 'status' => 1,
-'created_at' => '2015-09-30 15:01:33',
-'updated_at' => '2015-10-05 23:04:09',
+'created_at' => '2015-10-01 03:31:33',
+'updated_at' => '2015-10-06 11:34:09',
 ),
 28 => 
 array (
@@ -1351,8 +1351,8 @@ array (
 ',
 'date' => '2015-09-28 17:46:41',
 'status' => 1,
-'created_at' => '2015-09-30 15:04:15',
-'updated_at' => '2015-10-07 22:10:23',
+'created_at' => '2015-10-01 03:34:15',
+'updated_at' => '2015-10-08 10:40:23',
 ),
 29 => 
 array (
@@ -1401,8 +1401,8 @@ array (
 ',
 'date' => '2015-10-01 07:46:41',
 'status' => 1,
-'created_at' => '2015-09-30 15:04:42',
-'updated_at' => '2015-10-07 22:08:59',
+'created_at' => '2015-10-01 03:34:42',
+'updated_at' => '2015-10-08 10:38:59',
 ),
 30 => 
 array (
@@ -1435,8 +1435,8 @@ array (
 ',
 'date' => '2015-10-19 10:00:00',
 'status' => 1,
-'created_at' => '2015-11-01 00:20:20',
-'updated_at' => '2015-11-05 15:04:32',
+'created_at' => '2015-11-01 12:50:20',
+'updated_at' => '2015-11-06 03:34:32',
 ),
 31 => 
 array (
@@ -1463,8 +1463,8 @@ array (
 ',
 'date' => '2015-10-23 10:00:00',
 'status' => 1,
-'created_at' => '2015-11-01 00:20:59',
-'updated_at' => '2015-11-05 15:04:55',
+'created_at' => '2015-11-01 12:50:59',
+'updated_at' => '2015-11-06 03:34:55',
 ),
 32 => 
 array (
@@ -1495,8 +1495,8 @@ array (
 ',
 'date' => '2015-11-01 10:00:00',
 'status' => 1,
-'created_at' => '2015-11-01 00:21:24',
-'updated_at' => '2015-11-05 15:05:19',
+'created_at' => '2015-11-01 12:51:24',
+'updated_at' => '2015-11-06 03:35:19',
 ),
 33 => 
 array (
@@ -1529,8 +1529,8 @@ array (
 ',
 'date' => '2015-11-13 00:00:00',
 'status' => 1,
-'created_at' => '2015-11-03 22:30:50',
-'updated_at' => '2015-11-03 22:31:31',
+'created_at' => '2015-11-04 11:00:50',
+'updated_at' => '2015-11-04 11:01:31',
 ),
 34 => 
 array (
@@ -1560,8 +1560,8 @@ array (
 ',
 'date' => '2015-11-15 00:00:00',
 'status' => 1,
-'created_at' => '2015-11-05 13:33:17',
-'updated_at' => '2015-11-05 13:33:53',
+'created_at' => '2015-11-06 02:03:17',
+'updated_at' => '2015-11-06 02:03:53',
 ),
 35 => 
 array (
@@ -1580,8 +1580,8 @@ array (
 ',
 'date' => '2015-11-18 00:00:00',
 'status' => 1,
-'created_at' => '2015-11-13 03:43:04',
-'updated_at' => '2015-11-13 03:45:18',
+'created_at' => '2015-11-13 16:13:04',
+'updated_at' => '2015-11-13 16:15:18',
 ),
 36 => 
 array (
@@ -1618,8 +1618,8 @@ array (
 ',
 'date' => '2016-02-12 10:10:00',
 'status' => 1,
-'created_at' => '2016-02-11 10:40:21',
-'updated_at' => '2016-02-11 10:40:21',
+'created_at' => '2016-02-11 23:10:21',
+'updated_at' => '2016-02-11 23:10:21',
 ),
 37 => 
 array (
@@ -1652,8 +1652,8 @@ array (
 ',
 'date' => '2016-02-20 10:00:00',
 'status' => 1,
-'created_at' => '2016-02-17 09:36:06',
-'updated_at' => '2016-02-17 09:36:06',
+'created_at' => '2016-02-17 22:06:06',
+'updated_at' => '2016-02-17 22:06:06',
 ),
 38 => 
 array (
@@ -1680,8 +1680,8 @@ array (
 ',
 'date' => '2016-03-11 11:00:00',
 'status' => 1,
-'created_at' => '2016-03-08 11:58:03',
-'updated_at' => '2016-03-08 11:58:03',
+'created_at' => '2016-03-09 00:28:03',
+'updated_at' => '2016-03-09 00:28:03',
 ),
 39 => 
 array (
@@ -1711,8 +1711,8 @@ array (
 <p><iframe frameborder="0" height="676" scrolling="no" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fallaudeen.s%2Fposts%2F773653469436795&amp;width=500" style="border:none;overflow:hidden" width="500"></iframe></p>',
 'date' => '2016-04-30 10:00:00',
 'status' => 1,
-'created_at' => '2016-04-28 12:44:04',
-'updated_at' => '2016-04-28 12:48:52',
+'created_at' => '2016-04-29 01:14:04',
+'updated_at' => '2016-04-29 01:18:52',
 ),
 40 => 
 array (
@@ -1735,8 +1735,8 @@ array (
 ',
 'date' => '2016-05-01 10:00:00',
 'status' => 1,
-'created_at' => '2016-04-29 09:20:24',
-'updated_at' => '2016-04-29 09:22:19',
+'created_at' => '2016-04-29 21:50:24',
+'updated_at' => '2016-04-29 21:52:19',
 ),
 41 => 
 array (
@@ -1761,8 +1761,8 @@ array (
 ',
 'date' => '2016-06-21 11:00:00',
 'status' => 1,
-'created_at' => '2016-06-19 12:53:20',
-'updated_at' => '2016-06-19 12:53:50',
+'created_at' => '2016-06-20 01:23:20',
+'updated_at' => '2016-06-20 01:23:50',
 ),
 42 => 
 array (
@@ -1785,8 +1785,8 @@ array (
 ',
 'date' => '2016-06-17 10:00:00',
 'status' => 1,
-'created_at' => '2016-06-19 12:56:39',
-'updated_at' => '2016-06-19 12:56:39',
+'created_at' => '2016-06-20 01:26:39',
+'updated_at' => '2016-06-20 01:26:39',
 ),
 43 => 
 array (
@@ -1803,8 +1803,8 @@ array (
 ',
 'date' => '2016-07-23 11:00:00',
 'status' => 1,
-'created_at' => '2016-07-21 00:47:19',
-'updated_at' => '2016-07-21 00:47:19',
+'created_at' => '2016-07-21 13:17:19',
+'updated_at' => '2016-07-21 13:17:19',
 ),
 44 => 
 array (
@@ -1824,8 +1824,8 @@ array (
 ',
 'date' => '2016-07-28 11:00:00',
 'status' => 1,
-'created_at' => '2016-07-26 11:03:43',
-'updated_at' => '2016-07-26 11:03:43',
+'created_at' => '2016-07-26 23:33:43',
+'updated_at' => '2016-07-26 23:33:43',
 ),
 45 => 
 array (
@@ -1838,8 +1838,8 @@ array (
 ',
 'date' => '2016-07-28 12:00:00',
 'status' => 1,
-'created_at' => '2016-07-26 11:06:57',
-'updated_at' => '2016-07-26 11:06:57',
+'created_at' => '2016-07-26 23:36:57',
+'updated_at' => '2016-07-26 23:36:57',
 ),
 46 => 
 array (
@@ -1853,8 +1853,8 @@ array (
 <p>The work is in progress....</p>',
 'date' => '2012-05-24 00:00:00',
 'status' => 1,
-'created_at' => '2017-10-31 19:56:07',
-'updated_at' => '2017-10-31 19:56:07',
+'created_at' => '2017-11-01 08:26:07',
+'updated_at' => '2017-11-01 08:26:07',
 ),
 47 => 
 array (
@@ -1877,8 +1877,8 @@ array (
 Need to do a workaround for this update</p>',
 'date' => '2017-02-27 00:00:00',
 'status' => 1,
-'created_at' => '2017-10-31 19:58:42',
-'updated_at' => '2017-10-31 19:59:22',
+'created_at' => '2017-11-01 08:28:42',
+'updated_at' => '2017-11-01 08:29:22',
 ),
 48 => 
 array (
@@ -1888,8 +1888,8 @@ array (
 'content' => '<p>After rolling back to Ubuntu OS due to Windows lazy performance and hybrid&#39;s evil update I planned to start learning Android. This time i planned to cover features day by day and let me update the posts once i have done !</p>',
 'date' => '2017-02-22 00:00:00',
 'status' => 1,
-'created_at' => '2017-10-31 20:02:14',
-'updated_at' => '2017-10-31 20:02:14',
+'created_at' => '2017-11-01 08:32:14',
+'updated_at' => '2017-11-01 08:32:14',
 ),
 49 => 
 array (
@@ -1907,8 +1907,8 @@ array (
 <p>To fix this, just download Only the command line tools from Android SDK Website,&nbsp;</p>',
 'date' => '2017-05-25 00:00:00',
 'status' => 1,
-'created_at' => '2017-10-31 20:12:44',
-'updated_at' => '2017-10-31 20:12:44',
+'created_at' => '2017-11-01 08:42:44',
+'updated_at' => '2017-11-01 08:42:44',
 ),
 50 => 
 array (
@@ -1920,8 +1920,8 @@ array (
 <p>Created Login and Register Activity and linked to each other. !</p>',
 'date' => '2017-02-22 00:00:00',
 'status' => 1,
-'created_at' => '2017-10-31 20:13:48',
-'updated_at' => '2017-10-31 20:13:48',
+'created_at' => '2017-11-01 08:43:48',
+'updated_at' => '2017-11-01 08:43:48',
 ),
 51 => 
 array (
@@ -2144,8 +2144,8 @@ queue.add(postRequest);
 </div>',
 'date' => '2017-02-22 00:00:00',
 'status' => 1,
-'created_at' => '2017-10-31 20:14:55',
-'updated_at' => '2017-10-31 20:14:55',
+'created_at' => '2017-11-01 08:44:55',
+'updated_at' => '2017-11-01 08:44:55',
 ),
 52 => 
 array (
@@ -2179,8 +2179,8 @@ Toast.makeText(getApplicationContext(), successMsg, Toast.LENGTH_LONG).show();</
 <p>&nbsp;</p>',
 'date' => '2017-11-01 00:00:00',
 'status' => 1,
-'created_at' => '2017-10-31 20:15:50',
-'updated_at' => '2017-10-31 20:15:50',
+'created_at' => '2017-11-01 08:45:50',
+'updated_at' => '2017-11-01 08:45:50',
 ),
 53 => 
 array (
@@ -2210,8 +2210,8 @@ array (
 <p>&nbsp;</p>',
 'date' => '2017-11-01 00:00:00',
 'status' => 1,
-'created_at' => '2017-10-31 20:17:35',
-'updated_at' => '2017-10-31 20:17:52',
+'created_at' => '2017-11-01 08:47:35',
+'updated_at' => '2017-11-01 08:47:52',
 ),
 54 => 
 array (
@@ -2258,8 +2258,8 @@ fcm.send(message, function(err, response) {<br />
 <p>&nbsp;Now you&#39;re done !&nbsp;</p>',
 'date' => '2017-11-01 00:00:00',
 'status' => 1,
-'created_at' => '2017-10-31 20:18:56',
-'updated_at' => '2017-10-31 20:18:56',
+'created_at' => '2017-11-01 08:48:56',
+'updated_at' => '2017-11-01 08:48:56',
 ),
 55 => 
 array (
@@ -2332,8 +2332,8 @@ console.log(data);
 <p>There you go !&nbsp;</p>',
 'date' => '2017-11-01 00:00:00',
 'status' => 1,
-'created_at' => '2017-10-31 20:27:51',
-'updated_at' => '2017-10-31 20:27:51',
+'created_at' => '2017-11-01 08:57:51',
+'updated_at' => '2017-11-01 08:57:51',
 ),
 56 => 
 array (
@@ -2343,8 +2343,8 @@ array (
 'content' => '<p>Change of Company : Wekancode to TPF</p>',
 'date' => '2017-06-16 00:00:00',
 'status' => 0,
-'created_at' => '2017-10-31 20:35:08',
-'updated_at' => '2017-10-31 20:49:42',
+'created_at' => '2017-11-01 09:05:08',
+'updated_at' => '2017-11-01 09:19:42',
 ),
 57 => 
 array (
@@ -2396,8 +2396,8 @@ echo $data;<br />
 <p><a href="http://notams.herokuapp.com">notams.herokuapp.com</a>&nbsp;</p>',
 'date' => '2017-09-01 00:00:00',
 'status' => 0,
-'created_at' => '2017-10-31 20:41:26',
-'updated_at' => '2017-10-31 20:53:04',
+'created_at' => '2017-11-01 09:11:26',
+'updated_at' => '2017-11-01 09:23:04',
 ),
 58 => 
 array (
@@ -2409,8 +2409,8 @@ array (
 <p>Yes creating chat bot is not a easy process but i set my mind to create bots that atlest solves my real life problems !</p>',
 'date' => '2017-09-01 00:00:00',
 'status' => 0,
-'created_at' => '2017-10-31 20:44:24',
-'updated_at' => '2017-10-31 20:49:57',
+'created_at' => '2017-11-01 09:14:24',
+'updated_at' => '2017-11-01 09:19:57',
 ),
 59 => 
 array (
@@ -2420,8 +2420,8 @@ array (
 'content' => '<p>Just reserved the name&nbsp;<a href="http://my-github-badge">my-github-badge</a>&nbsp;, need to work on in it, will update the same in this blog once the work was done !</p>',
 'date' => '2017-10-12 00:00:00',
 'status' => 1,
-'created_at' => '2017-10-31 20:47:22',
-'updated_at' => '2017-10-31 20:47:22',
+'created_at' => '2017-11-01 09:17:22',
+'updated_at' => '2017-11-01 09:17:22',
 ),
 ));
         

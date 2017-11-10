@@ -14,15 +14,16 @@ Load Seed
 php artisan db:seed
 php artisan cache:clear
 Generate Seed :
-php artisan iseed blog,blog_tag,mail,tag,users --force
+php artisan iseed blog,blog_tag,cron,mail,tag,users --force
 Drop Tables
-DROP TABLE blog,blog_tag,cat,mail,tag,users;
+DROP TABLE blog,blog_tag,cron,mail,tag,users;
 #Creating Migration
 php artisan make:migration all_tables
 #Controller
 php artisan make:controller PublicController
 php artisan make:controller AdminController
 php artisan make:controller CronController
+php artisan make:controller ApiController
 #Model
 php artisan make:model Blog
 php artisan make:model Cron
@@ -32,6 +33,7 @@ php artisan make:model Tag
 #Create Seed
 php artisan make:seeder BlogTableSeeder
 php artisan make:seeder BlogTagTableSeeder
+php artisan make:seeder CronTableSeeder
 php artisan make:seeder MailTableSeeder
 php artisan make:seeder TagTableSeeder
 Access Composer

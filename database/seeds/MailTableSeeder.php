@@ -24,8 +24,8 @@ class MailTableSeeder extends Seeder
                 'message' => 'hey',
                 'read' => 0,
                 'status' => 0,
-                'created_at' => '2017-09-03 06:09:11',
-                'updated_at' => '2017-09-03 06:09:11',
+                'created_at' => '2017-09-03 18:39:11',
+                'updated_at' => '2017-09-03 18:39:11',
             ),
             1 => 
             array (
@@ -34,8 +34,8 @@ class MailTableSeeder extends Seeder
                 'message' => 'hey',
                 'read' => 0,
                 'status' => 0,
-                'created_at' => '2017-09-03 06:09:17',
-                'updated_at' => '2017-09-03 06:09:17',
+                'created_at' => '2017-09-03 18:39:17',
+                'updated_at' => '2017-09-03 18:39:17',
             ),
             2 => 
             array (
@@ -44,8 +44,8 @@ class MailTableSeeder extends Seeder
                 'message' => 'yey',
                 'read' => 0,
                 'status' => 0,
-                'created_at' => '2017-09-03 07:55:12',
-                'updated_at' => '2017-09-03 07:55:12',
+                'created_at' => '2017-09-03 20:25:12',
+                'updated_at' => '2017-09-03 20:25:12',
             ),
             3 => 
             array (
@@ -54,8 +54,8 @@ class MailTableSeeder extends Seeder
                 'message' => 'indian',
                 'read' => 0,
                 'status' => 0,
-                'created_at' => '2017-09-03 08:06:53',
-                'updated_at' => '2017-09-03 08:06:53',
+                'created_at' => '2017-09-03 20:36:53',
+                'updated_at' => '2017-09-03 20:36:53',
             ),
             4 => 
             array (
@@ -64,8 +64,8 @@ class MailTableSeeder extends Seeder
                 'message' => 'bdsfasdfds',
                 'read' => 0,
                 'status' => 0,
-                'created_at' => '2017-09-03 08:08:04',
-                'updated_at' => '2017-09-03 08:08:04',
+                'created_at' => '2017-09-03 20:38:04',
+                'updated_at' => '2017-09-03 20:38:04',
             ),
             5 => 
             array (
@@ -74,8 +74,8 @@ class MailTableSeeder extends Seeder
                 'message' => 'asdffs',
                 'read' => 0,
                 'status' => 0,
-                'created_at' => '2017-09-03 08:08:29',
-                'updated_at' => '2017-09-03 08:08:29',
+                'created_at' => '2017-09-03 20:38:29',
+                'updated_at' => '2017-09-03 20:38:29',
             ),
             6 => 
             array (
@@ -84,8 +84,8 @@ class MailTableSeeder extends Seeder
                 'message' => 'asdf',
                 'read' => 0,
                 'status' => 0,
-                'created_at' => '2017-09-03 08:09:06',
-                'updated_at' => '2017-09-03 08:09:06',
+                'created_at' => '2017-09-03 20:39:06',
+                'updated_at' => '2017-09-03 20:39:06',
             ),
             7 => 
             array (
@@ -94,8 +94,8 @@ class MailTableSeeder extends Seeder
                 'message' => 'hey',
                 'read' => 0,
                 'status' => 0,
-                'created_at' => '2017-09-03 08:09:28',
-                'updated_at' => '2017-09-03 08:09:28',
+                'created_at' => '2017-09-03 20:39:28',
+                'updated_at' => '2017-09-03 20:39:28',
             ),
             8 => 
             array (
@@ -104,8 +104,8 @@ class MailTableSeeder extends Seeder
                 'message' => 'hey',
                 'read' => 0,
                 'status' => 0,
-                'created_at' => '2017-09-03 09:55:44',
-                'updated_at' => '2017-09-03 09:55:44',
+                'created_at' => '2017-09-03 22:25:44',
+                'updated_at' => '2017-09-03 22:25:44',
             ),
             9 => 
             array (
@@ -114,8 +114,8 @@ class MailTableSeeder extends Seeder
                 'message' => 'heyy',
                 'read' => 0,
                 'status' => 0,
-                'created_at' => '2017-09-03 14:41:42',
-                'updated_at' => '2017-09-03 14:41:42',
+                'created_at' => '2017-09-04 03:11:42',
+                'updated_at' => '2017-09-04 03:11:42',
             ),
             10 => 
             array (
@@ -124,8 +124,8 @@ class MailTableSeeder extends Seeder
                 'message' => 'heyy',
                 'read' => 8,
                 'status' => 0,
-                'created_at' => '2017-09-11 07:34:02',
-                'updated_at' => '2017-09-11 07:34:02',
+                'created_at' => '2017-09-11 20:04:02',
+                'updated_at' => '2017-09-11 20:04:02',
             ),
             11 => 
             array (
@@ -134,8 +134,8 @@ class MailTableSeeder extends Seeder
                 'message' => 'Test Msg',
                 'read' => 8,
                 'status' => 0,
-                'created_at' => '2017-09-12 00:32:45',
-                'updated_at' => '2017-09-12 00:32:45',
+                'created_at' => '2017-09-12 13:02:45',
+                'updated_at' => '2017-09-12 13:02:45',
             ),
             12 => 
             array (
@@ -144,8 +144,8 @@ class MailTableSeeder extends Seeder
                 'message' => 'heyy !',
                 'read' => 8,
                 'status' => 0,
-                'created_at' => '2017-10-05 20:11:31',
-                'updated_at' => '2017-10-05 20:11:31',
+                'created_at' => '2017-10-06 08:41:31',
+                'updated_at' => '2017-10-06 08:41:31',
             ),
         ));
         

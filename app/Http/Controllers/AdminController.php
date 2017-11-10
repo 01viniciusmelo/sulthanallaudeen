@@ -193,10 +193,4 @@ class AdminController extends Controller
         return $Response;
     }
 
-    #Logout Function
-    
-    public function logout(){
-        Auth::logout();
-        return redirect('login');
-    }
 }

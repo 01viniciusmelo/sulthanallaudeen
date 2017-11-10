@@ -114,6 +114,32 @@ class PublicController extends Controller
 
     }
 
+    #Mobile Api for Authentication
+    public function authUser(){
+        $userData = Input::all();
+        $userExist = User::where('email', $userData['email'])->first();
+        if ($userData) {
+            if (Hash::check($userData['password'], $userExist['password'])) {
+                Auth::loginUsingId($userExist['id']);
+                #Auth::loginUsingId(1, true); to Remember
+                $token = csrf_token();
+                $Response = array('success' => 1, 'userId' => $userExist['id'], 'userName' => $userExist['name'], '_token' => $token);
+            } else {
+                $Response = array('success' => 0, 'message' => Config::get('constants.error.INVALID_PASSWORD'));
+            }
+        } else {
+            $Response = array('success' => 0, 'message' => Config::get('constants.error.USER_NOT_EXIST'));
+        }
+        return $Response;
+    }
+
+    #user logout
+    public function logout(){
+        Auth::logout();
+        $Response = array('success' => '1', 'message' => 'User logout success');
+        return $Response;
+    }
+
     #getToken
     public function getToken(){
         $token = csrf_token();
