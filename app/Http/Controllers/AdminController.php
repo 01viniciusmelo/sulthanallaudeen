@@ -180,6 +180,15 @@ class AdminController extends Controller
 
     //End of Tag Section
 
+    //Start of Contact Mail Function
+
+    public function contacts(){
+        $mails = Mail::all();
+        return view('admin.contacts.index')->with('mails', $mails);
+    }
+
+    //End of Contact Mail Function
+
 
     #Maintenance Functions
 

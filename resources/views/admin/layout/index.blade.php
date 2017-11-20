@@ -328,7 +328,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="pages/typography.html">
+                        <a href="{{ URL::to('admin/contacts') }}">
                             <i class="material-icons">text_fields</i>
                             <span>Contacts</span>
                         </a>

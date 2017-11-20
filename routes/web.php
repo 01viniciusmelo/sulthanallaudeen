@@ -44,6 +44,9 @@ Route::get('admin/tag/edit/{id}', 'AdminController@tagEdit');
 Route::post('admin/tag/edit/update', 'AdminController@tagUpdateData');
 Route::get('admin/tag/delete/{id}', 'AdminController@tagDelete');
 #End of Tag
+#Start of Contact Mail
+Route::get('admin/contacts', 'AdminController@contacts');
+#End of Contact Mail
 #End of Admin Panel
 #Start of API
 Route::post('api/authUser', 'PublicController@authUser');

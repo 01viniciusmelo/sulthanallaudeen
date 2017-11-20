@@ -32,4 +32,11 @@ $(document).ready(function() {
         console.log('Other page than list page');
     }
 
+
+    $('.readContact').on('click', function() {
+        var id = this.id;
+        $(".modal-title").html("Email from " + $(".email_" + id).val())
+        $(".modal-body").html($(".message_" + id).val())
+    });
+
 });
