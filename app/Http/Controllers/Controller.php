@@ -31,13 +31,13 @@ class Controller extends BaseController
         // echo $response->body();
     }
 
-    public function test($key,$to,$title,$body){
+    public function sendFCM($key,$to,$title,$body){
         $url = 'https://fcm-push.herokuapp.com/sendPush';
         $fields = array(
-            'key' => 'AAAADgkZ9Cc:APA91bHzJTedM77-RtZlpbT77U6frrU_MZa5P9s0i0ZhKk1hGQBxQhEd_oNh4lEj3IzXtXS8HeEZU8Gk3EHDjdLTkhrDwRoJKDyAJX9-ckqzZnUl6MW6g40IuxDLUd-ITl7yjyJAhdvp',
-            'to' => 'cMlvyeQu76E:APA91bGbKRn4ChFYh_OU7KLqTpHK2kbfA8fMCartLr7_NvDj550lFL32B5dSFRqgLRXm5FAzcoYx9uSln2ZSMntauTW6wd3Ek-BsXeaHxQIStJ7aZLCbVXCkj2qiI-v97z9vYGG6yTK8',
-            'title' => 'Laravel Test',
-            'body' => 'Super!'
+            'key' => $key,
+            'to' => $to,
+            'title' => $title,
+            'body' => $body
         );
         $fields_string = '';
         foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
