@@ -93,7 +93,8 @@ class PublicController extends Controller
             $create = Mail::create($mailData);
             $server = Configuration::where('name','firebase-server-key')->first();
             $key = Configuration::where('name','android-device-token')->first();
-            $this->sendFCM($server->desc,$key->desc,$subject,$unsentMails[$i]->message);
+            return $server->desc.$key->desc.'Contact from '.$mailData['email'].$mailData['message'];
+            $this->sendFCM($server->desc,$key->desc,'Contact from '.$mailData['email'],$mailData['message']);
             $Response = array('success' => '1', 'id' => $create->id);
         }
         else{
