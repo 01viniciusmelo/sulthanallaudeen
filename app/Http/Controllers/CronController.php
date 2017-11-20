@@ -36,7 +36,8 @@ class CronController extends Controller
     }
 
     public function executeCron(){
-        return $this->backupDB();
+        $this->backupDB();
+        $this->contactMailTrigger();
         //return $this->subCron();
     }
 
@@ -105,10 +106,7 @@ class CronController extends Controller
         $subject = Config::get('constants.slogan.dbbackup'). ' '.date("Y-m-d");
         $to = new SendGrid\Email(Config::get('constants.config.name'), Config::get('constants.email.personal'));
         $content = new SendGrid\Content("text/plain", Config::get('constants.slogan.dbbackuptxt'));
-        $mail = new SendGrid\Mail($from, $subject, $to, $content);
-        $apiKey = base64_decode(Config::get('constants.keys.sendgrid'));
-        $sg = new \SendGrid($apiKey);
-
+        $this->sendMail($from,$subject,$to,$content);
         // Start of Attachment 
         // $file = Config::get('constants.path.app').'/backup/'.date("Y-m-d").'.zip';
         // $file_encoded = base64_encode(file_get_contents($file));
@@ -119,11 +117,6 @@ class CronController extends Controller
         // $attachment->setFilename($file);
         // $mail = new SendGrid\Mail($from, $subject, $to, $content);
         // $mail->addAttachment($attachment);
-
-        $response = $sg->client->mail()->send()->post($mail);
-        echo $response->statusCode();
-        print_r($response->headers());
-        echo $response->body();
     }
 
     public function deleteFile(){
@@ -150,5 +143,16 @@ class CronController extends Controller
             rmdir($dir);
         }
         
+    }
+
+    public function contactMailTrigger(){
+        $unsentMails = Mail::where('read','0')->get();
+        for ($i=0; $i < count($unsentMails); $i++) { 
+            $from = new SendGrid\Email(Config::get('constants.config.name'), Config::get('constants.email.official'));
+            $subject = 'Contact Mail from '.$unsentMails[$i]->email;
+            $to = new SendGrid\Email(Config::get('constants.config.name'), Config::get('constants.email.personal'));
+            $content = new SendGrid\Content("text/plain", $unsentMails[$i]->message);
+            $this->sendMail($from,$subject,$to,$content);
+        }
     }
 }
