@@ -10,7 +10,7 @@ use Validator;
 #Models
 use App\Blog;
 use App\BlogTag;
-use App\Config;
+use App\Configuration;
 use App\Mail;
 use App\Tag;
 use App\User;
@@ -190,15 +190,15 @@ class AdminController extends Controller
 
     //End of Contact Mail Function
 
-    //Start of Config
+    //Start of Configuration
 
     public function config(){
-        $configs = Config::all();
+        $configs = Configuration::all();
         return view('admin.config.index')->with('configs', $configs);
     }
 
     public function configCreate(){
-        Config::create(['name' => Input::get('key'),'desc' => Input::get('value'),'status' => 1]);
+        Configuration::create(['name' => Input::get('key'),'desc' => Input::get('value'),'status' => 1]);
         $Response = array('success' => 1,'message' => 'Config Created Succesfully !');
         return $Response;
     }
@@ -206,18 +206,18 @@ class AdminController extends Controller
     public function configEdit(){
         $data['name'] = Input::get('key');
         $data['desc'] = Input::get('value');
-        Config::where('id', Input::get('id'))->update($data);
+        Configuration::where('id', Input::get('id'))->update($data);
         $Response = array('success' => 1,'message' => 'Config Edited Succesfully !');
         return $Response;
     }
 
     public function configDelete(){
-        Config::where('blog_id', Input::get('id'))->delete();
+        Configuration::where('blog_id', Input::get('id'))->delete();
         $Response = array('success' => 1,'message' => 'Config Deleted Succesfully !');
         return $Response;
     }
 
-    //End of Config
+    //End of Configuration
 
 
     #Maintenance Functions

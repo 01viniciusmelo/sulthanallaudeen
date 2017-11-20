@@ -31,7 +31,7 @@ class Controller extends BaseController
         // echo $response->body();
     }
 
-    public function test(){
+    public function test($key,$to,$title,$body){
         $url = 'https://fcm-push.herokuapp.com/sendPush';
         $fields = array(
             'key' => 'AAAADgkZ9Cc:APA91bHzJTedM77-RtZlpbT77U6frrU_MZa5P9s0i0ZhKk1hGQBxQhEd_oNh4lEj3IzXtXS8HeEZU8Gk3EHDjdLTkhrDwRoJKDyAJX9-ckqzZnUl6MW6g40IuxDLUd-ITl7yjyJAhdvp',
