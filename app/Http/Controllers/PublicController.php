@@ -12,6 +12,7 @@ use Validator;
 #Models
 use App\Blog;
 use App\BlogTag;
+use App\Configuration;
 use App\Mail;
 use App\MailTemplate;
 use App\Tag;
@@ -90,6 +91,9 @@ class PublicController extends Controller
         $validation = Validator::make($mailData, Mail::$mailData);
         if ($validation->passes()){
             $create = Mail::create($mailData);
+            $server = Configuration::where('name','firebase-server-key')->first();
+            $key = Configuration::where('name','android-device-token')->first();
+            $this->sendFCM($server->desc,$key->desc,$subject,$unsentMails[$i]->message);
             $Response = array('success' => '1', 'id' => $create->id);
         }
         else{

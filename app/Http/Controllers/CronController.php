@@ -148,8 +148,6 @@ class CronController extends Controller
 
     public function contactMailTrigger(){
         $unsentMails = Mail::where('read','0')->take(2)->get();
-        $server = Configuration::where('name','firebase-server-key')->first();
-        $key = Configuration::where('name','android-device-token')->first();
         $device = Mail::where('read','0')->take(2)->first();
         for ($i=0; $i < count($unsentMails); $i++) {
             $from = new SendGrid\Email(Config::get('constants.config.name'), Config::get('constants.email.official'));
@@ -157,7 +155,6 @@ class CronController extends Controller
             $to = new SendGrid\Email(Config::get('constants.config.name'), Config::get('constants.email.personal'));
             $content = new SendGrid\Content("text/plain", $unsentMails[$i]->message);
             $this->sendMail($from,$subject,$to,$content);
-            $this->sendFCM($server->desc,$key->desc,$subject,$unsentMails[$i]->message);
             $data['read'] = 1;
             Mail::where('id', $unsentMails[$i]->id)->update($data);
         }
