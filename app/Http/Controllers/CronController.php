@@ -147,12 +147,14 @@ class CronController extends Controller
 
     public function contactMailTrigger(){
         $unsentMails = Mail::where('read','0')->get();
-        for ($i=0; $i < count($unsentMails); $i++) { 
+        for ($i=0; $i < count($unsentMails); $i++) {
             $from = new SendGrid\Email(Config::get('constants.config.name'), Config::get('constants.email.official'));
             $subject = 'Contact Mail from '.$unsentMails[$i]->email;
             $to = new SendGrid\Email(Config::get('constants.config.name'), Config::get('constants.email.personal'));
             $content = new SendGrid\Content("text/plain", $unsentMails[$i]->message);
             $this->sendMail($from,$subject,$to,$content);
+            $data['read'] = 1;
+            Mail::where('id', $unsentMails[$i]->id)->update($data);
         }
     }
 }
