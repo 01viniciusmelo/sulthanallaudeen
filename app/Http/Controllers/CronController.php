@@ -82,7 +82,7 @@ class CronController extends Controller
 
     public function createBackup(){
         $path = Config::get('constants.path.app');
-        $rootPath = realpath($path);
+        $rootPath = realpath($path).'/backup/';
         $zip = new ZipArchive();
         $zip->open($path.'backup/'.date('Y-m-d').'.zip', ZipArchive::CREATE | ZipArchive::OVERWRITE);
         $files = new RecursiveIteratorIterator(

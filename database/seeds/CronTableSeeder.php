@@ -24,8 +24,8 @@ class CronTableSeeder extends Seeder
                 'desc' => 'Cron job for the day',
                 'flag' => NULL,
                 'status' => 1,
-                'created_at' => '2017-11-03 20:12:02',
-                'updated_at' => '2017-11-03 20:12:02',
+                'created_at' => '2017-11-04 01:42:02',
+                'updated_at' => '2017-11-04 01:42:02',
             ),
             1 => 
             array (
@@ -34,8 +34,8 @@ class CronTableSeeder extends Seeder
                 'desc' => 'Cron job for the day',
                 'flag' => NULL,
                 'status' => 1,
-                'created_at' => '2017-11-04 07:00:03',
-                'updated_at' => '2017-11-04 07:00:03',
+                'created_at' => '2017-11-04 12:30:03',
+                'updated_at' => '2017-11-04 12:30:03',
             ),
             2 => 
             array (
@@ -44,8 +44,8 @@ class CronTableSeeder extends Seeder
                 'desc' => 'Cron job for the day',
                 'flag' => NULL,
                 'status' => 1,
-                'created_at' => '2017-11-05 07:00:05',
-                'updated_at' => '2017-11-05 07:00:05',
+                'created_at' => '2017-11-05 12:30:05',
+                'updated_at' => '2017-11-05 12:30:05',
             ),
             3 => 
             array (
@@ -54,8 +54,8 @@ class CronTableSeeder extends Seeder
                 'desc' => 'Cron job for the day',
                 'flag' => NULL,
                 'status' => 1,
-                'created_at' => '2017-11-06 07:00:03',
-                'updated_at' => '2017-11-06 07:00:03',
+                'created_at' => '2017-11-06 12:30:03',
+                'updated_at' => '2017-11-06 12:30:03',
             ),
             4 => 
             array (
@@ -64,8 +64,8 @@ class CronTableSeeder extends Seeder
                 'desc' => 'Cron job for the day',
                 'flag' => NULL,
                 'status' => 1,
-                'created_at' => '2017-11-07 07:00:09',
-                'updated_at' => '2017-11-07 07:00:09',
+                'created_at' => '2017-11-07 12:30:09',
+                'updated_at' => '2017-11-07 12:30:09',
             ),
             5 => 
             array (
@@ -74,8 +74,8 @@ class CronTableSeeder extends Seeder
                 'desc' => 'Cron job for the day',
                 'flag' => NULL,
                 'status' => 1,
-                'created_at' => '2017-11-08 07:00:07',
-                'updated_at' => '2017-11-08 07:00:07',
+                'created_at' => '2017-11-08 12:30:07',
+                'updated_at' => '2017-11-08 12:30:07',
             ),
             6 => 
             array (
@@ -84,8 +84,8 @@ class CronTableSeeder extends Seeder
                 'desc' => 'Cron job for the day',
                 'flag' => NULL,
                 'status' => 1,
-                'created_at' => '2017-11-09 07:00:11',
-                'updated_at' => '2017-11-09 07:00:11',
+                'created_at' => '2017-11-09 12:30:11',
+                'updated_at' => '2017-11-09 12:30:11',
             ),
             7 => 
             array (
@@ -94,8 +94,78 @@ class CronTableSeeder extends Seeder
                 'desc' => 'Cron job for the day',
                 'flag' => NULL,
                 'status' => 1,
-                'created_at' => '2017-11-10 07:00:27',
-                'updated_at' => '2017-11-10 07:00:27',
+                'created_at' => '2017-11-10 12:30:27',
+                'updated_at' => '2017-11-10 12:30:27',
+            ),
+            8 => 
+            array (
+                'id' => 9,
+                'name' => 'cron',
+                'desc' => 'Cron job for the day',
+                'flag' => NULL,
+                'status' => 1,
+                'created_at' => '2017-11-11 12:31:03',
+                'updated_at' => '2017-11-11 12:31:03',
+            ),
+            9 => 
+            array (
+                'id' => 10,
+                'name' => 'cron',
+                'desc' => 'Cron job for the day',
+                'flag' => NULL,
+                'status' => 1,
+                'created_at' => '2017-11-11 12:32:08',
+                'updated_at' => '2017-11-11 12:32:08',
+            ),
+            10 => 
+            array (
+                'id' => 11,
+                'name' => 'cron',
+                'desc' => 'Cron job for the day',
+                'flag' => NULL,
+                'status' => 1,
+                'created_at' => '2017-11-16 23:43:03',
+                'updated_at' => '2017-11-16 23:43:03',
+            ),
+            11 => 
+            array (
+                'id' => 12,
+                'name' => 'cron',
+                'desc' => 'Cron job for the day',
+                'flag' => NULL,
+                'status' => 1,
+                'created_at' => '2017-11-17 12:30:03',
+                'updated_at' => '2017-11-17 12:30:03',
+            ),
+            12 => 
+            array (
+                'id' => 13,
+                'name' => 'cron',
+                'desc' => 'Cron job for the day',
+                'flag' => NULL,
+                'status' => 1,
+                'created_at' => '2017-11-18 12:30:03',
+                'updated_at' => '2017-11-18 12:30:03',
+            ),
+            13 => 
+            array (
+                'id' => 14,
+                'name' => 'cron',
+                'desc' => 'Cron job for the day',
+                'flag' => NULL,
+                'status' => 1,
+                'created_at' => '2017-11-19 12:30:04',
+                'updated_at' => '2017-11-19 12:30:04',
+            ),
+            14 => 
+            array (
+                'id' => 15,
+                'name' => 'cron',
+                'desc' => 'Cron job for the day',
+                'flag' => NULL,
+                'status' => 1,
+                'created_at' => '2017-11-20 12:30:07',
+                'updated_at' => '2017-11-20 12:30:07',
             ),
         ));
         
