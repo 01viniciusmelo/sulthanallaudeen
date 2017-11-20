@@ -82,7 +82,7 @@ class CronController extends Controller
 
     public function createBackup(){
         $path = Config::get('constants.path.app');
-        $rootPath = realpath($path).'/backup/';
+        $rootPath = realpath($path).'/backup/'.date('Y-m-d');
         $zip = new ZipArchive();
         $zip->open($path.'backup/'.date('Y-m-d').'.zip', ZipArchive::CREATE | ZipArchive::OVERWRITE);
         $files = new RecursiveIteratorIterator(
@@ -128,7 +128,7 @@ class CronController extends Controller
 
     public function deleteFile(){
         $date = date_create(date('Y-m-d'));
-        date_sub($date, date_interval_create_from_date_string('7 days'));
+        date_sub($date, date_interval_create_from_date_string('3 days'));
         $date= date_format($date, 'Y-m-d');
         $file = Config::get('constants.path.app').'backup/'.$date.'.zip';
         if (file_exists($file)) {
