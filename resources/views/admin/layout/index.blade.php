@@ -42,6 +42,7 @@
 </head>
 
 <body class="theme-red">
+<span class="hide" id="csrf_token">{{csrf_token()}}</span>
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
         <div class="loader">
@@ -331,6 +332,12 @@
                         <a href="{{ URL::to('admin/contacts') }}">
                             <i class="material-icons">text_fields</i>
                             <span>Contacts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ URL::to('admin/config') }}">
+                            <i class="material-icons">text_fields</i>
+                            <span>Config</span>
                         </a>
                     </li>
                     <li class="hide">

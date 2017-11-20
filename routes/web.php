@@ -25,6 +25,7 @@ Route::get('getToken', 'PublicController@getToken');
 Route::get('logout', [ 'as' => 'logout', 'uses' => 'Controller@logout']);
 #Cron
 Route::get('cron', 'CronController@index');
+Route::get('test', 'Controller@test');
 #Admin Panel
 Route::get('admin/dashboard', 'AdminController@index');
 #Start of Blog
@@ -47,6 +48,11 @@ Route::get('admin/tag/delete/{id}', 'AdminController@tagDelete');
 #Start of Contact Mail
 Route::get('admin/contacts', 'AdminController@contacts');
 #End of Contact Mail
+#Start of Settings
+Route::get('admin/config', 'AdminController@config');
+Route::post('admin/config/create', 'AdminController@configCreate');
+Route::post('admin/config/edit', 'AdminController@configEdit');
+#End of Settings
 #End of Admin Panel
 #Start of API
 Route::post('api/authUser', 'PublicController@authUser');

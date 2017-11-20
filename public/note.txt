@@ -43,4 +43,5 @@ git fetch origin master
 git reset --hard FETCH_HEAD
 //Fresh Migration
 php artisan make:migration create_cron_table --create=cron
+php artisan make:migration create_config_table --create=config
 php artisan migrate:rollback --step=1
