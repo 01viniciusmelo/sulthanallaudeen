@@ -10,6 +10,8 @@ php artisan key:generate
 Migrate
 #To create Table Structure
 php artisan migrate
+#To refresh Table Structure
+php artisan migrate:refresh
 Load Seed
 php artisan db:seed
 php artisan cache:clear
