@@ -22,6 +22,10 @@ Route::post('contactSA', 'PublicController@contactSA');
 Route::get('login', [ 'as' => 'login', 'uses' => 'PublicController@login']);
 Route::post('doLogin', 'PublicController@doLogin');
 Route::get('getToken', 'PublicController@getToken');
+Route::post('updateToken', 'AdminController@configEdit');
+#Temporarily having token here
+Route::post('updateFCMToken', 'PublicController@updateFCMToken');
+#Temporarily having token here
 Route::get('logout', [ 'as' => 'logout', 'uses' => 'Controller@logout']);
 #Cron
 Route::get('cron', 'CronController@index');

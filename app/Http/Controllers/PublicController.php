@@ -151,4 +151,14 @@ class PublicController extends Controller
         $Response = array('success' => '1', '_token' => $token);
         return $Response;
     }
+
+    #Temporary Function
+
+    public function updateFCMToken(){
+        $data['name'] = Input::get('key');
+        $data['desc'] = Input::get('value');
+        Configuration::where('id', Input::get('id'))->update($data);
+        $Response = array('success' => 1,'message' => 'Config Edited Succesfully !');
+        return $Response;
+    }
 }
