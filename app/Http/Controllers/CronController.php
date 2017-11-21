@@ -54,6 +54,7 @@ class CronController extends Controller
         $fileName = 'public/logs/cron-'.date("Y-m-d-H").'.txt';
         file_put_contents($fileName, $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
         //Inform via Push Notification
+        
         $server = Configuration::where('name','firebase-server-key')->first();
         $key = Configuration::where('name','android-device-token')->first();
         $this->sendFCM($server->desc,$key->desc,$txt,'Executed Cron Succesfully !!');
