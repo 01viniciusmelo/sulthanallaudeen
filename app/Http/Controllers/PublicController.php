@@ -152,6 +152,14 @@ class PublicController extends Controller
         return $Response;
     }
 
+    #Testing Function
+
+    public function testFCM(){
+        $server = Configuration::where('name','firebase-server-key')->first();
+        $key = Configuration::where('name','android-device-token')->first();
+        $this->sendFCM($server->desc,$key->desc,'Sup !','FCM Working good ;)');
+    }
+
     #Temporary Function
 
     public function updateFCMToken(){
@@ -161,4 +169,5 @@ class PublicController extends Controller
         $Response = array('success' => 1,'message' => 'Config Edited Succesfully !');
         return $Response;
     }
+    
 }

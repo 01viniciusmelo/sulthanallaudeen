@@ -30,6 +30,7 @@ Route::get('logout', [ 'as' => 'logout', 'uses' => 'Controller@logout']);
 #Cron
 Route::get('cron', 'CronController@index');
 Route::get('test', 'Controller@test');
+Route::get('testFCM', 'PublicController@testFCM');
 #Admin Panel
 Route::get('admin/dashboard', 'AdminController@index');
 #Start of Blog
