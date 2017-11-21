@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(UsersTableSeeder::class);
         $this->call(CronTableSeeder::class);
         $this->call(ConfigTableSeeder::class);
+        $this->call(ReminderTableSeeder::class);
     }
 }

@@ -14,7 +14,7 @@ Load Seed
 php artisan db:seed
 php artisan cache:clear
 Generate Seed :
-php artisan iseed blog,blog_tag,config,cron,mail,tag,users --force
+php artisan iseed blog,blog_tag,config,cron,mail,reminder,tag,users --force
 Drop Tables
 DROP TABLE blog,blog_tag,cron,mail,tag,users;
 #Creating Migration
@@ -27,15 +27,19 @@ php artisan make:controller ApiController
 #Model
 php artisan make:model Blog
 php artisan make:model Cron
+php artisan make:model Config
 php artisan make:model BlogTag
 php artisan make:model Mail
 php artisan make:model Tag
+php artisan make:model Reminder
 #Create Seed
 php artisan make:seeder BlogTableSeeder
 php artisan make:seeder BlogTagTableSeeder
 php artisan make:seeder CronTableSeeder
+php artisan make:seeder ConfigTableSeeder
 php artisan make:seeder MailTableSeeder
 php artisan make:seeder TagTableSeeder
+php artisan make:seeder ReminderTableSeeder
 Access Composer
 ~/composer
 #Git Force pull from master
@@ -44,4 +48,9 @@ git reset --hard FETCH_HEAD
 //Fresh Migration
 php artisan make:migration create_cron_table --create=cron
 php artisan make:migration create_config_table --create=config
+php artisan make:migration create_reminder_table --create=reminder
 php artisan migrate:rollback --step=1
+//Advanced cleaning
+php artisan clear-compiled 
+composer dump-autoload
+php artisan optimize

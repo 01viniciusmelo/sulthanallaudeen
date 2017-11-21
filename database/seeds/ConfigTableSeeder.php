@@ -33,7 +33,7 @@ class ConfigTableSeeder extends Seeder
                 'desc' => 'cMlvyeQu76E:APA91bGbKRn4ChFYh_OU7KLqTpHK2kbfA8fMCartLr7_NvDj550lFL32B5dSFRqgLRXm5FAzcoYx9uSln2ZSMntauTW6wd3Ek-BsXeaHxQIStJ7aZLCbVXCkj2qiI-v97z9vYGG6yTK8',
                 'status' => 1,
                 'created_at' => '2017-11-20 13:09:11',
-                'updated_at' => '2017-11-20 13:09:11',
+                'updated_at' => '2017-11-21 10:51:17',
             ),
         ));
         

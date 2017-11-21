@@ -57,7 +57,14 @@ Route::get('admin/contacts', 'AdminController@contacts');
 Route::get('admin/config', 'AdminController@config');
 Route::post('admin/config/create', 'AdminController@configCreate');
 Route::post('admin/config/edit', 'AdminController@configEdit');
+Route::post('admin/config/delete', 'AdminController@configDelete');
 #End of Settings
+#Start of Reminder
+Route::get('admin/reminder', 'AdminController@reminder');
+Route::post('admin/reminder/create', 'AdminController@reminderCreate');
+Route::post('admin/reminder/edit', 'AdminController@reminderEdit');
+Route::post('admin/reminder/delete', 'AdminController@reminderDelete');
+#End of Reminder
 #End of Admin Panel
 #Start of API
 Route::post('api/authUser', 'PublicController@authUser');

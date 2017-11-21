@@ -14,6 +14,7 @@ use App\Configuration;
 use App\Mail;
 use App\Tag;
 use App\User;
+use App\Reminder;
 
 
 class AdminController extends Controller
@@ -212,8 +213,44 @@ class AdminController extends Controller
     }
 
     public function configDelete(){
-        Configuration::where('blog_id', Input::get('id'))->delete();
+        Configuration::where('id', Input::get('id'))->delete();
         $Response = array('success' => 1,'message' => 'Config Deleted Succesfully !');
+        return $Response;
+    }
+
+    //End of Configuration
+
+    //Start of Reminder
+
+    public function reminder(){
+        $data = Reminder::all();
+        return view('admin.reminder.index')->with('datas', $data);
+    }
+
+    public function reminderCreate(){
+        $data = Input::all();
+        $data['status'] = 1;
+        if(strlen($data['date'])==5){
+            $data['date'] = date("Y-m-d ".$data['date'].':00');
+        }
+        Reminder::create($data);
+        $Response = array('success' => 1,'message' => 'Reminder Created Succesfully !');
+        return $Response;
+    }
+
+    public function reminderEdit(){
+        $data = Input::all();
+        if(strlen($data['date'])==5){
+            $data['date'] = date("Y-m-d ".$data['date'].':00');
+        }
+        Reminder::where('id', Input::get('id'))->update($data);
+        $Response = array('success' => 1,'message' => 'Reminder Edited Succesfully !');
+        return $Response;
+    }
+
+    public function reminderDelete(){
+        Reminder::where('id', Input::get('id'))->delete();
+        $Response = array('success' => 1,'message' => 'Reminder Deleted Succesfully !');
         return $Response;
     }
 

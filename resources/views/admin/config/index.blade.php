@@ -1,6 +1,8 @@
 @extends('admin.layout.index')
 @section('content')
 <link href="{{ asset('/').('public/admin/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css') }}" rel="stylesheet">
+<link href="{{ asset('/').('public/admin/plugins/sweetalert/sweetalert.css') }}" rel="stylesheet">
+
 <section class="content">
         <div class="container-fluid">
             <div class="block-header">
@@ -54,6 +56,7 @@
                                             <td>{{$config->name}}</td>
                                             <td>
                                             <button class="btn btn-danger waves-effect show-form" id='{{$config->id}}' data-toggle="modal" data-target="#largeModal">Read</button>
+                                            <button class="btn btn-danger waves-effect delete-form pull-right" id='{{$config->id}}' page-name="config">X</button>
                                             <input type='hidden' class='id_{{$config->id}}' value='{{$config->id}}'>
                                             <input type='hidden' class='key_{{$config->id}}' value='{{$config->name}}'>
                                             <input type='hidden' class='value_{{$config->id}}' value='{{$config->desc}}'>
@@ -107,4 +110,5 @@
 <script src="{{ asset('/').('public/admin/plugins/jquery-datatable/jquery.dataTables.js') }}"></script>
 <script src="{{ asset('/').('public/admin/js/pages/tables/jquery-datatable.js') }}"></script>
 <script src="{{ asset('/').('public/admin/js/pages/ui/modals.js') }}"></script>
+<script src="{{ asset('/').('public/admin/plugins/sweetalert/sweetalert.min.js') }}"></script>
 @stop

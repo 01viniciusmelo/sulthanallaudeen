@@ -340,6 +340,12 @@
                             <span>Config</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ URL::to('admin/reminder') }}">
+                            <i class="material-icons">text_fields</i>
+                            <span>Reminder</span>
+                        </a>
+                    </li>
                     <li class="hide">
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">widgets</i>
