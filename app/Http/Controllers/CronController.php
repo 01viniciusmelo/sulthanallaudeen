@@ -30,7 +30,7 @@ class CronController extends Controller
     {
         echo 'Initiated Cron...<br>';
         echo $this->executeCron();
-        //$this->logCron();
+        $this->logCron();
         echo 'Finished Cron...<br>';
         /* Logging Cron Job */
         return 'Cron executed Succesfully !';
@@ -53,6 +53,10 @@ class CronController extends Controller
         $txt = 'Cron on '.date("Y-m-d H:i:s").'|';
         $fileName = 'public/logs/cron-'.date("Y-m-d-H").'.txt';
         file_put_contents($fileName, $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+        //Inform via Push Notification
+        $server = Configuration::where('name','firebase-server-key')->first();
+        $key = Configuration::where('name','android-device-token')->first();
+        $this->sendFCM($server->desc,$key->desc,$txt,'Executed Cron Succesfully !!');
     }
 
     public function backupDB(){
