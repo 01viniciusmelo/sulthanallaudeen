@@ -43,6 +43,7 @@ class Controller extends BaseController
         foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
         rtrim($fields_string, '&');
         $ch = curl_init();
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch,CURLOPT_URL, $url);
         curl_setopt($ch,CURLOPT_POST, count($fields));
         curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
@@ -50,8 +51,8 @@ class Controller extends BaseController
         curl_close($ch);
         //$arr = json_decode($result);
         //echo $arr['success'];
-        //$Response = array('success' => 1, 'domainUrl' => Config::get('constants.config.URL'));
-        //return $Response;
+        $Response = array('success' => 1, 'message' => 'Push sent success');
+        return $Response;
     }
 
     #Logout Function
