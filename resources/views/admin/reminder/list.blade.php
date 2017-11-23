@@ -78,7 +78,7 @@
                                             <td>{{$date}}</td>
                                             <td>{{$status}}</td>
                                             <td>
-                                            <a class="btn btn-warning waves-effect" href='reminder/status/{{$reminder->id}}/{{$url}}'>{{$status}}</a>
+                                            <a class="btn btn-warning waves-effect" href='reminder/status/{{$reminder->id}}/{{$url}}'>{{$url}}</a>
                                             <a class="btn btn-warning waves-effect" href='reminder/edit/{{$reminder->id}}'>Edit</a>
                                             <button class="btn btn-danger waves-effect js-sweetalert delete" data-type="confirm" id='{{$reminder->id}}'>Delete</button>
                                             </td>

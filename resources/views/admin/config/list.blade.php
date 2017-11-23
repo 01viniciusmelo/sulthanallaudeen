@@ -66,7 +66,7 @@
                                             ?>
                                             <td>{{$status}}</td>
                                             <td>
-                                            <a class="btn btn-warning waves-effect" href='config/status/{{$config->id}}/{{$url}}'>{{$status}}</a>
+                                            <a class="btn btn-warning waves-effect" href='config/status/{{$config->id}}/{{$url}}'>{{$url}}</a>
                                             <a class="btn btn-warning waves-effect" href='config/edit/{{$config->id}}'>Edit</a>
                                             <button class="btn btn-danger waves-effect js-sweetalert delete" data-type="confirm" id='{{$config->id}}'>Delete</button>
                                             </td>
