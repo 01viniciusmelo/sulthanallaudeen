@@ -54,16 +54,23 @@ Route::get('admin/tag/delete/{id}', 'AdminController@tagDelete');
 Route::get('admin/contacts', 'AdminController@contacts');
 #End of Contact Mail
 #Start of Settings
-Route::get('admin/config', 'AdminController@config');
-Route::post('admin/config/create', 'AdminController@configCreate');
-Route::post('admin/config/edit', 'AdminController@configEdit');
-Route::post('admin/config/delete', 'AdminController@configDelete');
-#End of Settings
+#Start of Config
+Route::get('admin/config', 'AdminController@config')->name('config');
+Route::get('admin/config/create', 'AdminController@configCreate');
+Route::post('admin/config/write', 'AdminController@configCreateData');
+Route::get('admin/config/edit/{id}', 'AdminController@configEdit');
+Route::post('admin/config/edit/update', 'AdminController@configUpdateData');
+Route::get('admin/config/status/{id}/{status}', 'AdminController@configStatus');
+Route::get('admin/config/delete/{id}', 'AdminController@configDelete');
+#End of Config
 #Start of Reminder
-Route::get('admin/reminder', 'AdminController@reminder');
-Route::post('admin/reminder/create', 'AdminController@reminderCreate');
-Route::post('admin/reminder/edit', 'AdminController@reminderEdit');
-Route::post('admin/reminder/delete', 'AdminController@reminderDelete');
+Route::get('admin/reminder', 'AdminController@reminder')->name('reminder');
+Route::get('admin/reminder/create', 'AdminController@reminderCreate');
+Route::post('admin/reminder/write', 'AdminController@reminderCreateData');
+Route::get('admin/reminder/edit/{id}', 'AdminController@reminderEdit');
+Route::post('admin/reminder/edit/update', 'AdminController@reminderUpdateData');
+Route::get('admin/reminder/status/{id}/{status}', 'AdminController@reminderStatus');
+Route::get('admin/reminder/delete/{id}', 'AdminController@reminderDelete');
 #End of Reminder
 #End of Admin Panel
 #Start of API

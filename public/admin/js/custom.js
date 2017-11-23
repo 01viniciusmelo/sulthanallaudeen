@@ -230,8 +230,7 @@ $(document).ready(function() {
     //Generic Rest Calls
 
     function postCall(url, data) {
-        var headers = { 'X-CSRF-Token': $('input[name="_token"]').val() }
-        $.post(appUrl + url, data, headers)
+        $.post(appUrl + url, data)
             .done(function(data) {
                 if (data.success == '1') {
                     alert(data.message);
@@ -250,15 +249,15 @@ $(document).ready(function() {
     // }
 
     //Other Util Functions
-    $("#datetime").hide();
-    $("#time").hide();
-    $("#reminder_type").change(function() {
-        if ($(".show-tick option:selected").text() == 'Once') {
-            $("#datetime").show();
-            $("#time").hide();
-        } else {
-            $("#datetime").hide();
-            $("#time").show();
-        }
-    });
+    // $("#datetime").hide();
+    // $("#time").hide();
+    // $("#reminder_type").change(function() {
+    //     if ($(".show-tick option:selected").text() == 'Once') {
+    //         $("#datetime").show();
+    //         $("#time").hide();
+    //     } else {
+    //         $("#datetime").hide();
+    //         $("#time").show();
+    //     }
+    // });
 });

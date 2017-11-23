@@ -112,12 +112,11 @@ class AdminController extends Controller
         if($status=='Active')
         {
             $data['status'] = 0;
-            Blog::where('id', $tagData['id'])->update($data);
+            Blog::where('id', $id)->update($data);
             return redirect()->route('blog')->with('success', 'Blog Deactivated Success');
         }else if($status=='InActive'){
-            $data['status'] = 0;
-            $data['status'] = $tagData['status'];
-            Blog::where('id', $tagData['id'])->update($data);
+            $data['status'] = 1;
+            Blog::where('id', $id)->update($data);
             return redirect()->route('blog')->with('success', 'Blog Activated Success');
         }else{
             return redirect()->route('blog')->with('error', 'Invalid Action');
@@ -191,68 +190,203 @@ class AdminController extends Controller
 
     //End of Contact Mail Function
 
-    //Start of Configuration
+    //Start of Config Section
 
     public function config(){
-        $configs = Configuration::all();
-        return view('admin.config.index')->with('configs', $configs);
+        $configs = Configuration::orderBy('id', 'desc')->get();
+        return view('admin.config.list')->with('configs', $configs);
     }
 
     public function configCreate(){
-        Configuration::create(['name' => Input::get('key'),'desc' => Input::get('value'),'status' => 1]);
-        $Response = array('success' => 1,'message' => 'Config Created Succesfully !');
-        return $Response;
+        return view('admin.config.create');
     }
 
-    public function configEdit(){
-        $data['name'] = Input::get('key');
-        $data['desc'] = Input::get('value');
-        Configuration::where('id', Input::get('id'))->update($data);
-        $Response = array('success' => 1,'message' => 'Config Edited Succesfully !');
-        return $Response;
+    public function configCreateData(){
+        $configData = Input::except('_token');
+        //return $configData;
+        $validation = Validator::make($configData, Configuration::$createConfig);
+        if ($validation->passes()) {
+            Configuration::create($configData);
+            return redirect()->route('config')->with('success', 'Config created Success');
+        }
+        else{
+            return back()->withInput()->with('errors', $validation->messages());
+        }
     }
 
-    public function configDelete(){
-        Configuration::where('id', Input::get('id'))->delete();
-        $Response = array('success' => 1,'message' => 'Config Deleted Succesfully !');
-        return $Response;
+    public function configEdit($id){
+        $config = Configuration::where('id', $id)->first();
+        return view('admin.config.edit')->with('config', $config);
     }
 
-    //End of Configuration
+    public function configUpdateData(){
+        $configData = Input::except('_token');
+        $configExist = Configuration::where('id', $configData['id'])->first();
+        if($configExist){
+            $validation = Validator::make($configData, Configuration::$updateConfig);
+        if ($validation->passes()) {
+            $data['name'] = $configData['name'];
+            $data['desc'] = $configData['desc'];
+            $data['status'] = $configData['status'];
+            Configuration::where('id', $configData['id'])->update($data);
+            return redirect()->route('config')->with('success', 'Configuration updated Success');
+        }
+        else{
+            return back()->withInput()->with('errors', $validation->messages());
+        }
+        }else{
+            return back()->withInput()->with('error', 'Invalid Config Id');
+        }
+    }
+
+    public function configDelete($id){
+        Configuration::destroy($id);
+        return redirect()->route('config')->with('success', 'Config deleted Success');
+    }
+
+    public function configStatus($id,$status){
+        if($status=='Active')
+        {
+            $data['status'] = 1;
+            Configuration::where('id', $id)->update($data);
+            return redirect()->route('config')->with('success', 'Configuration Activated Success');
+        }else if($status=='InActive'){
+            $data['status'] = 0;
+            Configuration::where('id', $id)->update($data);
+            return redirect()->route('config')->with('success', 'Config DeActivated Success');
+        }else{
+            return redirect()->route('config')->with('error', 'Invalid Action');
+        }
+    }
+
+    //End of Config Section
+
 
     //Start of Reminder
 
     public function reminder(){
-        $data = Reminder::all();
-        return view('admin.reminder.index')->with('datas', $data);
+        $reminders = Reminder::orderBy('id', 'desc')->get();
+        return view('admin.reminder.list')->with('reminders', $reminders);
     }
 
     public function reminderCreate(){
-        $data = Input::all();
-        $data['status'] = 1;
-        if(strlen($data['date'])==5){
-            $data['date'] = date("Y-m-d ".$data['date'].':00');
-        }
-        Reminder::create($data);
-        $Response = array('success' => 1,'message' => 'Reminder Created Succesfully !');
-        return $Response;
+        return view('admin.reminder.create');
     }
 
-    public function reminderEdit(){
-        $data = Input::all();
-        if(strlen($data['date'])==5){
-            $data['date'] = date("Y-m-d ".$data['date'].':00');
+    public function reminderCreateData(){
+        $reminderData = Input::except('_token');
+        if($reminderData['type']=='1'){
+            $reminderData['date'] = Input::get('datetime');
+        }else{
+            $reminderData['date'] = Input::get('time');
         }
-        Reminder::where('id', Input::get('id'))->update($data);
-        $Response = array('success' => 1,'message' => 'Reminder Edited Succesfully !');
-        return $Response;
+        unset($reminderData['datetime']);
+        unset($reminderData['time']);
+        //return $reminderData;
+        $validation = Validator::make($reminderData, Reminder::$createReminder);
+        if ($validation->passes()) {
+            if(strlen($reminderData['date'])==5){
+                $reminderData['date'] = date("Y-m-d ".$reminderData['date'].':00');
+            }
+            Reminder::create($reminderData);
+            return redirect()->route('reminder')->with('success', 'Reminder created Success');
+        }
+        else{
+            return back()->withInput()->with('errors', $validation->messages());
+        }
     }
 
-    public function reminderDelete(){
-        Reminder::where('id', Input::get('id'))->delete();
-        $Response = array('success' => 1,'message' => 'Reminder Deleted Succesfully !');
-        return $Response;
+    public function reminderEdit($id){
+        $reminder = Reminder::where('id', $id)->first();
+        return view('admin.reminder.edit')->with('reminder', $reminder);
     }
+
+    public function reminderUpdateData(){
+        $reminderData = Input::except('_token');
+        if($reminderData['type']=='1'){
+            $reminderData['date'] = Input::get('datetime');
+        }else{
+            $reminderData['date'] = Input::get('time');
+        }
+        unset($reminderData['datetime']);
+        unset($reminderData['time']);
+        if(strlen($reminderData['date'])==5){
+                $reminderData['date'] = date("Y-m-d ".$reminderData['date'].':00');
+        }
+        //return $reminderData;
+        $reminderExist = Reminder::where('id', $reminderData['id'])->first();
+        if($reminderExist){
+            $validation = Validator::make($reminderData, Reminder::$updateReminder);
+        if ($validation->passes()) {
+            $data['title'] = $reminderData['title'];
+            $data['message'] = $reminderData['message'];
+            $data['date'] = $reminderData['date'];
+            $data['type'] = $reminderData['type'];
+            $data['status'] = $reminderData['status'];
+            Reminder::where('id', $reminderData['id'])->update($data);
+            return redirect()->route('reminder')->with('success', 'Reminder updated Success');
+        }
+        else{
+            return back()->withInput()->with('errors', $validation->messages());
+        }
+        }else{
+            return back()->withInput()->with('error', 'Invalid Reminder Id');
+        }
+    }
+
+    public function reminderDelete($id){
+        Reminder::destroy($id);
+        return redirect()->route('reminder')->with('success', 'Reminder deleted Success');
+    }
+
+    public function reminderStatus($id,$status){
+        if($status=='Active')
+        {
+            $data['status'] = 1;
+            Reminder::where('id', $id)->update($data);
+            return redirect()->route('reminder')->with('success', 'Reminder Activated Success');
+        }else if($status=='InActive'){
+            $data['status'] = 0;
+            Reminder::where('id', $id)->update($data);
+            return redirect()->route('reminder')->with('success', 'Reminder DeActivated Success');
+        }else{
+            return redirect()->route('reminder')->with('error', 'Invalid Action');
+        }
+    }
+
+    //End of Reminder
+
+    // public function reminder(){
+    //     $data = Reminder::all();
+    //     return view('admin.reminder.index')->with('datas', $data);
+    // }
+
+    // public function reminderCreate(){
+    //     $data = Input::all();
+    //     $data['status'] = 1;
+    //     if(strlen($data['date'])==5){
+    //         $data['date'] = date("Y-m-d ".$data['date'].':00');
+    //     }
+    //     Reminder::create($data);
+    //     $Response = array('success' => 1,'message' => 'Reminder Created Succesfully !');
+    //     return $Response;
+    // }
+
+    // public function reminderEdit(){
+    //     $data = Input::all();
+    //     if(strlen($data['date'])==5){
+    //         $data['date'] = date("Y-m-d ".$data['date'].':00');
+    //     }
+    //     Reminder::where('id', Input::get('id'))->update($data);
+    //     $Response = array('success' => 1,'message' => 'Reminder Edited Succesfully !');
+    //     return $Response;
+    // }
+
+    // public function reminderDelete(){
+    //     Reminder::where('id', Input::get('id'))->delete();
+    //     $Response = array('success' => 1,'message' => 'Reminder Deleted Succesfully !');
+    //     return $Response;
+    // }
 
     //End of Configuration
 

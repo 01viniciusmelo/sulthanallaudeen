@@ -6,9 +6,9 @@
         <div class="container-fluid">
             <div class="block-header">
                 <h2>
-                <a type="button" class="btn btn-primary pull-right" href='{{ URL::to('admin/blog/create') }}'>Create Blog</a>
-                    Blog
-                    <small>Manage Blog List</small>
+                <a type="button" class="btn btn-primary pull-right" href='{{ URL::to('admin/reminder/create') }}'>Create Reminder</a>
+                    Reminder
+                    <small>Manage Reminder List</small>
                 </h2>
             </div>
             @if (session('success'))
@@ -23,7 +23,7 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Blogs
+                                Reminders
                             </h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
@@ -45,31 +45,42 @@
                                         <tr>
                                             <th>S.No</th>
                                             <th>Title</th>
-                                            <th>Date</th>
+                                            <th>Type</th>
+                                            <th>Date Time</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($blogs as $blog)
+                                    @foreach($reminders as $reminder)
                                         <tr>
-                                            <td>{{$blog->id}}</td>
-                                            <td>{{$blog->title}}</td>
-                                            <td>{{ date('Y-m-d', strtotime($blog->date)) }}</td>
+                                            <td>{{$reminder->id}}</td>
+                                            <td>{{$reminder->title}}</td>
                                             <?php
-                                            if($blog->status==1){
+                                            if($reminder->status==1){
                                                 $status = 'Active';
                                                 $url = 'InActive';
+                                                
                                             }else{
                                                 $status = 'InActive';
                                                 $url = 'Active';
                                             }
                                             ?>
+                                            <td><?php
+                                                if($reminder->type=='1'){
+                                                    echo 'Once';
+                                                    $date = $reminder->date;
+                                                }else{
+                                                    $date = date("H:i", strtotime($reminder->date));
+                                                    echo 'Daily';
+                                                }
+                                            ?></td>
+                                            <td>{{$date}}</td>
                                             <td>{{$status}}</td>
                                             <td>
-                                            <a class="btn btn-warning waves-effect" href='blog/status/{{$blog->id}}/{{$url}}'>{{$status}}</a>
-                                            <a class="btn btn-warning waves-effect" href='blog/edit/{{$blog->id}}'>Edit</a>
-                                            <button class="btn btn-danger waves-effect js-sweetalert delete" data-type="confirm" id='{{$blog->id}}'>Delete</button>
+                                            <a class="btn btn-warning waves-effect" href='reminder/status/{{$reminder->id}}/{{$url}}'>{{$status}}</a>
+                                            <a class="btn btn-warning waves-effect" href='reminder/edit/{{$reminder->id}}'>Edit</a>
+                                            <button class="btn btn-danger waves-effect js-sweetalert delete" data-type="confirm" id='{{$reminder->id}}'>Delete</button>
                                             </td>
                                         </tr>
                                     @endforeach    
