@@ -171,6 +171,7 @@ class CronController extends Controller
         //$reminders = Reminder::whereDate('date', '=', date('Y-m-d'))->whereTime('date', '<=', '14:00:00')->get();
         //Executing Once reminder
         $onceReminder = Reminder::where('date', '=', date('Y-m-d H:i:00'))->where('type' , '=', '1')->where('status' , '=', '1')->get();
+        print_r($onceReminder);
 
         
         //echo count($onceReminder).'s,'.date('Y-m-d H:i');
@@ -181,7 +182,7 @@ class CronController extends Controller
         }
         //Executing Daily reminder        
         $dailyReminder = Reminder::whereTime('date', '=', date('H:i'))->where('type' , '=', '2')->where('status' , '=', '1')->get();
-        // print_r($dailyReminder);
+        print_r($dailyReminder);
         // return 1;
         for ($i=0; $i < count($dailyReminder); $i++) { 
             //echo $dailyReminder[$i]->title;
