@@ -63,6 +63,7 @@
                                             <option value="">Reminder Type</option>
                                             <option value="1" <?php if($reminder['type']=='1') { echo 'selected'; } ?>>Once</option>
                                             <option value="2" <?php if($reminder['type']=='2') { echo 'selected'; } ?>>Daily</option>
+                                            <option value="3" <?php if($reminder['type']=='3') { echo 'selected'; } ?>>Call</option>
                                         </select>
                                     </div>
                                 </div>
@@ -139,7 +140,15 @@
         if ($(".show-tick option:selected").text() == 'Once') {
             $("#datetime").show();
             $("#time").hide();
-        } else {
+            $(".ckeditor").attr("placeholder", "Description");
+        } else if ($(".show-tick option:selected").text() == 'Call')
+            {
+            $("#datetime").show();
+            $("#time").hide();
+            $(".ckeditor").attr("placeholder", "Enter Phone Number");
+        }
+        else {
+            $(".ckeditor").attr("placeholder", "Description");
             $("#datetime").hide();
             $("#time").show();
         }

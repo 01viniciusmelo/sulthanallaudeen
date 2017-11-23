@@ -17,6 +17,7 @@ use App\Mail;
 use App\MailTemplate;
 use App\Tag;
 use App\User;
+use Plivo\RestAPI;
 
 class PublicController extends Controller
 {
@@ -154,6 +155,7 @@ class PublicController extends Controller
     #Testing Function
 
     public function testFCM(){
+        
         $server = Configuration::where('name','firebase-server-key')->first();
         $key = Configuration::where('name','android-device-token')->first();
         return $this->sendFCM($server->desc,$key->desc,'Sup !','FCM Working good ;)');

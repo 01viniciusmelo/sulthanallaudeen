@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Auth;
 use Config;
 use SendGrid;
+use Plivo\RestAPI;
 
 
 class Controller extends BaseController
@@ -52,6 +53,18 @@ class Controller extends BaseController
         //$arr = json_decode($result);
         //echo $arr['success'];
         $Response = array('success' => 1, 'message' => 'Push sent success');
+        return $Response;
+    }
+
+    public function sendSMS($txt){
+        $params = array(
+            'src' => '917010609203', // Sender's phone number with country code
+            'dst' => '919042445010', // Receiver's phone number with country code
+            'text' => $txt, // Your SMS text message
+            'method' => 'POST' // The method used to call the url
+        );
+        $p = new RestAPI('MANZA1OTU4ODVLYWFINW', 'ZDgwMGVmZjJjYzg2NTljOGJhZTE3M2E1ZDRlMTQ4');
+        $Response = $p->send_message($params);
         return $Response;
     }
 

@@ -70,9 +70,14 @@
                                                 if($reminder->type=='1'){
                                                     echo 'Once';
                                                     $date = $reminder->date;
-                                                }else{
-                                                    $date = date("H:i", strtotime($reminder->date));
+                                                }else if($reminder->type=='2')
+                                                {
                                                     echo 'Daily';
+                                                    $date = date("H:i", strtotime($reminder->date));
+                                                }
+                                                {
+                                                    $date = $reminder->date;
+                                                    echo 'Call';
                                                 }
                                             ?></td>
                                             <td>{{$date}}</td>

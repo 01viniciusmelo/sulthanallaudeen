@@ -57,6 +57,7 @@
                                                 <option value="">Reminder Type</option>
                                                 <option value="1">Once</option>
                                                 <option value="2">Daily</option>
+                                                <option value="3">Call</option>
                                             </select>
                                     </div>
                                 </div>
