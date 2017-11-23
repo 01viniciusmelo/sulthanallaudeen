@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://www.sulthanallaudeen.com'),
+    'url' => env('APP_URL', 'https://sulthanallaudeen.com'),
 
     /*
     |--------------------------------------------------------------------------
