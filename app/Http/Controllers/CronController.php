@@ -170,7 +170,7 @@ class CronController extends Controller
         $key = Configuration::where('name','android-device-token')->first();
         //$reminders = Reminder::whereDate('date', '=', date('Y-m-d'))->whereTime('date', '<=', '14:00:00')->get();
         //Executing Once reminder
-        $onceReminder = Reminder::where('date', '=', date('Y-m-d H:i'))->where('type' , '=', '1')->where('status' , '=', '1')->get();
+        $onceReminder = Reminder::where('date', '=', date('Y-m-d H:i:00'))->where('type' , '=', '1')->where('status' , '=', '1')->get();
         print_r($onceReminder);
 
         
