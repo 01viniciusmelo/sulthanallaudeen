@@ -173,7 +173,6 @@ class CronController extends Controller
         $onceReminder = Reminder::where('date', '=', date('Y-m-d H:i:00'))->where('type' , '=', '1')->where('status' , '=', '1')->get();
         print_r($onceReminder);
 
-        
         //echo count($onceReminder).'s,'.date('Y-m-d H:i');
         for ($i=0; $i < count($onceReminder); $i++) { 
             $this->sendFCM($server->desc,$key->desc,$onceReminder[$i]->title,$onceReminder[$i]->message);
