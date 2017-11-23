@@ -163,6 +163,7 @@ class CronController extends Controller
 
     public function sendReminder(){
         //To fetch date
+        echo date('Y-m-d H:i');
         //return $this->resetDailyReminder();
         //Inform via Push Notification
         $server = Configuration::where('name','firebase-server-key')->first();
