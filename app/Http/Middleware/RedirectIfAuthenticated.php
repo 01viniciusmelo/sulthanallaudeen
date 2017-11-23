@@ -21,6 +21,6 @@ class RedirectIfAuthenticated
             //return redirect('admin/dashboard');
         }
 
-        return $next($request);
+//        return $next($request);
     }
 }
