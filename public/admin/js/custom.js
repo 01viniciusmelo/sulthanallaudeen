@@ -175,7 +175,7 @@ $(document).ready(function() {
             var type = '2';
             var date = $('#time').val();
         }
-        var data = { title: title, message: message, date: date, type: type }
+        var data = { title: title, message: message, date: date, type: type, _token: _token }
         var url = 'admin/reminder/create';
         postCall(url, data)
             // postCall(url, data, function(data) {
