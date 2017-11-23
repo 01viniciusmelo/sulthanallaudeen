@@ -67,7 +67,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input name='datetime' type="text" id='datetime' class="datetimepicker form-control" placeholder="Please choose a date and time..." value='<?php echo date("Y-m-d H:i:s", strtotime($reminder->date)); ?>'>
+                                    <input name='datetime' type="text" id='datetime' class="datetimepicker form-control" placeholder="Please choose a date and time..." value='<?php echo date("Y-m-d H:i", strtotime($reminder->date)); ?>'>
                                     <input name='time' type="text" id='time' class="timepicker form-control" placeholder="Please choose a time..." value='<?php echo date("H:i", strtotime($reminder->date)); ?>'>
                                 </div>
                                 <div class="demo-radio-button">
