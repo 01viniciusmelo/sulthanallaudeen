@@ -230,7 +230,8 @@ $(document).ready(function() {
     //Generic Rest Calls
 
     function postCall(url, data) {
-        $.post(appUrl + url, data)
+        var headers = { 'X-CSRF-Token': $('input[name="_token"]').val() }
+        $.post(appUrl + url, data, headers)
             .done(function(data) {
                 if (data.success == '1') {
                     alert(data.message);
