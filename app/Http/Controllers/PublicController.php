@@ -183,9 +183,9 @@ class PublicController extends Controller
         // $p = new RestAPI('MANZA1OTU4ODVLYWFINW', 'ZDgwMGVmZjJjYzg2NTljOGJhZTE3M2E1ZDRlMTQ4');
         // $Response = $p->send_message($params);
         // return $Response;
-        // $server = Configuration::where('name','firebase-server-key')->first();
-        // $key = Configuration::where('name','android-device-token')->first();
-        // return $this->sendFCM($server->desc,$key->desc,'Sup !','FCM Working good ;)');
+        $server = Configuration::where('name','firebase-server-key')->first();
+        $key = Configuration::where('name','android-device-token')->first();
+        return $this->sendFCM($server->desc,$key->desc,'Sup !','FCM Working good ;)');
     }
 
     #Temporary Function
