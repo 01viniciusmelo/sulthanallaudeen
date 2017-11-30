@@ -155,10 +155,37 @@ class PublicController extends Controller
     #Testing Function
 
     public function testFCM(){
+
+        // $client = new RestAPI('https://localhost/sulthanallaudeen', 'MANZA1OTU4ODVLYWFINW', 'ZDgwMGVmZjJjYzg2NTljOGJhZTE3M2E1ZDRlMTQ4', '1.0');
+        // $call_params = array(
+        //     'From' => '919191919191', # Caller Id
+        //     'To' => '919042445010', # User Number to Call
+        //     'Gateways' => "user/", # Gateway string to try dialing our separated by comma. First in list will be tried first
+        //     'GatewayCodecs' => "'PCMA,PCMU'", # Codec string as needed by FS for each gateway separated by comma
+        //     'GatewayTimeouts' => "60",      # Seconds to timeout in string for each gateway separated by comma
+        //     'GatewayRetries' => "1", # Retry String for Gateways separated by comma, on how many times each gateway should be retried
+        //     'AnswerUrl' => "http://127.0.0.1:5000/answered/",
+        //     'HangupUrl' => "http://127.0.0.1:5000/hangup/",
+        //     'RingUrl' => "http://127.0.0.1:5000/ringing/"
+        // );
+        // $response = $client->call($call_params);        
         
-        $server = Configuration::where('name','firebase-server-key')->first();
-        $key = Configuration::where('name','android-device-token')->first();
-        return $this->sendFCM($server->desc,$key->desc,'Sup !','FCM Working good ;)');
+        
+        
+
+
+        // $params = array(
+        //     'src' => '917010609203', // Sender's phone number with country code
+        //     'dst' => '919042445010', // Receiver's phone number with country code
+        //     'text' => 'Super..', // Your SMS text message
+        //     'method' => 'POST' // The method used to call the url
+        // );
+        // $p = new RestAPI('MANZA1OTU4ODVLYWFINW', 'ZDgwMGVmZjJjYzg2NTljOGJhZTE3M2E1ZDRlMTQ4');
+        // $Response = $p->send_message($params);
+        // return $Response;
+        // $server = Configuration::where('name','firebase-server-key')->first();
+        // $key = Configuration::where('name','android-device-token')->first();
+        // return $this->sendFCM($server->desc,$key->desc,'Sup !','FCM Working good ;)');
     }
 
     #Temporary Function

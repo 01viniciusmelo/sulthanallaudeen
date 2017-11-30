@@ -39,10 +39,10 @@ class CronController extends Controller
     }
 
     public function executeCron(){
-        // $this->backupDB();
-        // $this->contactMailTrigger();
+        $this->backupDB();
+        $this->contactMailTrigger();
         $this->sendReminder();
-        //return $this->subCron();
+        $this->subCron();
     }
 
     
