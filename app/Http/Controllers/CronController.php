@@ -42,7 +42,7 @@ class CronController extends Controller
         $this->backupDB();
         $this->contactMailTrigger();
         $this->sendReminder();
-        $this->subCron();
+        //$this->subCron();
     }
 
     
