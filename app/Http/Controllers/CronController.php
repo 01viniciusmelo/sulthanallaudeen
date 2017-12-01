@@ -177,7 +177,7 @@ class CronController extends Controller
         //echo count($onceReminder).'s,'.date('Y-m-d H:i');
         for ($i=0; $i < count($onceReminder); $i++) { 
             $this->sendFCM($server->desc,$key->desc,$onceReminder[$i]->title,$onceReminder[$i]->message);
-            $this->sendSMS($onceReminder[$i]->title+' '+$onceReminder[$i]->message);
+            $this->sendSMS($onceReminder[$i]->title.' '.$onceReminder[$i]->message);
             $data['status'] = 2;
             Reminder::where('id', $onceReminder[$i]->id)->update($data);
         }

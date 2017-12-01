@@ -65,7 +65,6 @@ class Controller extends BaseController
         );
         $p = new RestAPI('MANZA1OTU4ODVLYWFINW', 'ZDgwMGVmZjJjYzg2NTljOGJhZTE3M2E1ZDRlMTQ4');
         $Response = $p->send_message($params);
-        return $Response;
     }
 
     #Logout Function
