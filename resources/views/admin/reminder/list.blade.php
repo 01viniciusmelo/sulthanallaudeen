@@ -61,9 +61,12 @@
                                                 $status = 'Active';
                                                 $url = 'InActive';
                                                 
+                                            } else if ($reminder->status==2){
+                                                $status = 'Active';
+                                                $url = 'InActive';
                                             }else{
-                                                $status = 'InActive';
-                                                $url = 'Active';
+                                                $status = 'Finished';
+                                                $url = 'Renew';
                                             }
                                             ?>
                                             <td><?php

@@ -349,6 +349,10 @@ class AdminController extends Controller
             $data['status'] = 0;
             Reminder::where('id', $id)->update($data);
             return redirect()->route('reminder')->with('success', 'Reminder DeActivated Success');
+        }else if ($status=='Renew'){
+            $data['status'] = 1;
+            Reminder::where('id', $id)->update($data);
+            return redirect()->route('reminder')->with('success', 'Reminder Renewed Success');
         }else{
             return redirect()->route('reminder')->with('error', 'Invalid Action');
         }
