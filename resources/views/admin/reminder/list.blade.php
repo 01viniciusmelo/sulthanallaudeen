@@ -77,10 +77,12 @@
                                                 {
                                                     echo 'Daily';
                                                     $date = date("H:i", strtotime($reminder->date));
-                                                }
-                                                {
+                                                }else if($reminder->type=='3'){
+                                                    $date = date("H:i", strtotime($reminder->date));
+                                                    echo 'Periodic';
+                                                }else{
+                                                    echo 'Invalid';
                                                     $date = $reminder->date;
-                                                    echo 'Call';
                                                 }
                                             ?></td>
                                             <td>{{$date}}</td>

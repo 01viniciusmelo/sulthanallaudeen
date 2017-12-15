@@ -57,7 +57,7 @@
                                                 <option value="">Reminder Type</option>
                                                 <option value="1">Once</option>
                                                 <option value="2">Daily</option>
-                                                <option value="3">Call</option>
+                                                <option value="3">Periodic</option>
                                             </select>
                                     </div>
                                 </div>
@@ -106,9 +106,14 @@
         if ($(".show-tick option:selected").text() == 'Once') {
             $("#datetime").show();
             $("#time").hide();
-        } else {
+        } else if ($(".show-tick option:selected").text() == 'Daily'){
             $("#datetime").hide();
             $("#time").show();
+        } else if ($(".show-tick option:selected").text() == 'Periodic'){
+            $("#datetime").hide();
+            $("#time").show();
+        }else {
+            alert("Invalid Selection");
         }
     });
      //Datetimepicker plugin

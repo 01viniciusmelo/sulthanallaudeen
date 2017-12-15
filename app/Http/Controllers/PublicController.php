@@ -152,7 +152,13 @@ class PublicController extends Controller
         return $Response;
     }
 
+    
+
     #Testing Function
+
+    public function pingTwitter(){
+        return $this->sendTweet('Ping from sulthanallaudeen.com at .'.date('Y-m-d H:i:s'));
+    }
 
     public function testFCM(){
 

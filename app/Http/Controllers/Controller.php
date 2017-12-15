@@ -73,4 +73,44 @@ class Controller extends BaseController
         Auth::logout();
         return redirect('login');
     }
+
+    #Tweet Util
+
+    public function sendTweet($message){
+        $params = [
+            'consumer_key' => base64_decode('SVU3TVd0T3NWRERQSWI1TzBKbDdwOFVURg=='),
+            'consumer_secret'=> base64_decode('dFF2TkNNV0NHejFRaFdVdmNQdnZReHBkWHNrM3lSbXlzaHBPVDBXbEpleFlPYjZwb28='),
+            'access_token_key'=> base64_decode('Nzg5MDM3ODA3NTQ1MTM1MTA0LThBWU9kZGhaaXdBNjdpTHRjTGRLYzNKZWlKU2pCWWw='),
+            'access_token_secret'=> base64_decode('aURmWWxYckhJMEZxWFA5b05PWDlHeGk1VFlWMmozQWpvaTMwOGcyWHJuc1Zx'),
+            'tweet'=> $message
+        ];
+        $url ='https://sa-twitter-bot.herokuapp.com';
+        $postData = '';
+        foreach($params as $k => $v) 
+        { 
+           $postData .= $k . '='.$v.'&'; 
+        }
+        $postData = rtrim($postData, '&');
+        $ch = curl_init();  
+        curl_setopt($ch,CURLOPT_URL,$url);
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+        curl_setopt($ch,CURLOPT_HEADER, false); 
+        curl_setopt($ch, CURLOPT_POST, count($postData));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+        $output=curl_exec($ch);
+        curl_close($ch);
+        return $output;
+    }
+
+    #Other utility function
+
+    public function encrypt($data){
+        //$Response = array('success' => '1', 'data' => base64_encode($data));
+        return base64_encode($data);
+    }
+
+    public function decrypt($data){
+        $Response = array('success' => '1', 'data' => base64_decode($data));
+        return base64_decode($data);
+    }
 }

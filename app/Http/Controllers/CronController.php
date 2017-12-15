@@ -107,6 +107,7 @@ class CronController extends Controller
     public function mailBackup(){
         $from = new SendGrid\Email(Config::get('constants.config.name'), Config::get('constants.email.official'));
         $subject = Config::get('constants.slogan.dbbackup'). ' '.date("Y-m-d");
+        $this->sendTweet($subject);
         $to = new SendGrid\Email(Config::get('constants.config.name'), Config::get('constants.email.personal'));
         $content = new SendGrid\Content("text/plain", Config::get('constants.slogan.dbbackuptxt'));
         $this->sendMail($from,$subject,$to,$content);
@@ -165,7 +166,7 @@ class CronController extends Controller
     public function sendReminder(){
         //To fetch date
         echo date('Y-m-d H:i:s');
-        //return $this->resetDailyReminder();
+        $this->resetDailyReminder();
         //Inform via Push Notification
         $server = Configuration::where('name','firebase-server-key')->first();
         $key = Configuration::where('name','android-device-token')->first();
@@ -173,17 +174,16 @@ class CronController extends Controller
         //Executing Once reminder
         $onceReminder = Reminder::where('date', '=', date('Y-m-d H:i:00'))->where('type' , '=', '1')->where('status' , '=', '1')->get();
         //print_r($onceReminder);
-
         //echo count($onceReminder).'s,'.date('Y-m-d H:i');
         for ($i=0; $i < count($onceReminder); $i++) { 
             $this->sendFCM($server->desc,$key->desc,$onceReminder[$i]->title,$onceReminder[$i]->message);
             $this->sendSMS($onceReminder[$i]->title.' '.$onceReminder[$i]->message);
-            $data['status'] = 2;
+            $data['status'] = 0;
             Reminder::where('id', $onceReminder[$i]->id)->update($data);
         }
         //Executing Daily reminder        
         $dailyReminder = Reminder::whereTime('date', '=', date('H:i:00'))->where('type' , '=', '2')->where('status' , '=', '1')->get();
-        print_r($dailyReminder);
+        //print_r($dailyReminder);
         // return 1;
         for ($i=0; $i < count($dailyReminder); $i++) { 
             //echo $dailyReminder[$i]->title;
@@ -191,12 +191,29 @@ class CronController extends Controller
             $data['status'] = 2;
             Reminder::where('id', $dailyReminder[$i]->id)->update($data);
         }
-        
+        //Executing Periodic reminder        
+        $periodicReminder = Reminder::whereTime('date', '=', date('H:i:00'))->where('type' , '=', '3')->where('status' , '=', '1')->get();
+        for ($i=0; $i < count($periodicReminder); $i++) { 
+            //echo $dailyReminder[$i]->title;
+            $this->sendFCM($server->desc,$key->desc,$dailyReminder[$i]->title,$dailyReminder[$i]->message);
+            $data['status'] = 2;
+            Reminder::where('id', $dailyReminder[$i]->id)->update($data);
+        }
     }
 
     function resetDailyReminder(){
-        if(date('H:i') == '16:28'){//Reset Daily Reminder Status
-            $dailyReminder = Reminder::whereTime('date', '=', date('H:i'))->where('type' , '=', '1')->get();
+        //Reset Daily Reminder Status
+        if(date('H:i') == '00:00'){
+            //$dailyReminder = Reminder::whereTime('date', '=', date('H:i'))->where('type' , '=', '2')->where('type' , '=', '2')->get();
+            $dailyReminder = Reminder::where('type' , '=', '2')->where('status' , '=', '2')->get();
+            for ($i=0; $i < count($dailyReminder); $i++) { 
+                $data['status'] = 1;
+                Reminder::where('id', $dailyReminder[$i]->id)->update($data);
+            }
+        }
+        //Reset Periodic Reminder Status
+        if(date('i') == '00:00'){
+            $dailyReminder = Reminder::where('type' , '=', '3')->where('status' , '=', '2')->get();
             for ($i=0; $i < count($dailyReminder); $i++) { 
                 $data['status'] = 1;
                 Reminder::where('id', $dailyReminder[$i]->id)->update($data);
