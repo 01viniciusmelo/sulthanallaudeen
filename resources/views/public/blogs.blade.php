@@ -12,7 +12,7 @@
             @foreach($blogs as $blog)
             <div class="col-9 col-lg-9">
               <h2>{{$blog->title}}</h2>
-              <p><?php echo substr($blog->content, 0, 20); ?></p>
+              <p class='hide'><?php echo substr($blog->content, 0, 20); ?></p>
               <p><a class="btn btn-primary" href="{{ URL::to('blog/'.$blog->url) }}" role="button">Read more »</a></p>
             </div>
             @endforeach
