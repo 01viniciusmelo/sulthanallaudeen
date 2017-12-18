@@ -84,7 +84,7 @@ class Controller extends BaseController
             'access_token_secret'=> base64_decode('aURmWWxYckhJMEZxWFA5b05PWDlHeGk1VFlWMmozQWpvaTMwOGcyWHJuc1Zx'),
             'tweet'=> $message
         ];
-        $url ='https://sa-social-bot.herokuapp.com';
+        $url ='https://sa-social-bot.herokuapp.com/updateTwitter';
         $postData = '';
         foreach($params as $k => $v) 
         { 
