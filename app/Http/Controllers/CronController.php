@@ -156,7 +156,7 @@ class CronController extends Controller
         for ($i=0; $i < count($unsentMails); $i++) {
             $from = new SendGrid\Email(Config::get('constants.config.name'), Config::get('constants.email.official'));
             $subject = 'Contact Mail from '.$unsentMails[$i]->email;
-            $to = new SendGrid\Email(Config::get('constants.config.name'), Config::get('constants.email.personal'));
+            $to = new SendGrid\Email(Config::get('constants.config.name'), Config::get('constants.email.bot'));
             $content = new SendGrid\Content("text/plain", $unsentMails[$i]->message);
             $this->sendMail($from,$subject,$to,$content);
             $data['read'] = 1;

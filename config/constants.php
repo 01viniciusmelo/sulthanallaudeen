@@ -19,6 +19,7 @@ return [
     ],
     'email' => [
         'personal' => 'allaudeen.s@gmail.com',
+        'bot' => 'allaudeen.bot@gmail.com',
         'official' => 'sa@sulthanallaudeen.com',
         'backup' => 'allaudeendata@gmail.com',
     ],
