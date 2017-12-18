@@ -112,6 +112,7 @@ class CronController extends Controller
         $content = new SendGrid\Content("text/plain", Config::get('constants.slogan.dbbackuptxt'));
         $this->sendMail($from,$subject,$to,$content);
         // Start of Attachment 
+        // $rediff = 'allaudeens_bot@rediffmail.com';
         // $file = Config::get('constants.path.app').'/backup/'.date("Y-m-d").'.zip';
         // $file_encoded = base64_encode(file_get_contents($file));
         // $attachment = new SendGrid\Attachment();
