@@ -63,7 +63,7 @@
                                             <option value="">Reminder Type</option>
                                             <option value="1" <?php if($reminder['type']=='1') { echo 'selected'; } ?>>Once</option>
                                             <option value="2" <?php if($reminder['type']=='2') { echo 'selected'; } ?>>Daily</option>
-                                            <option value="3" <?php if($reminder['type']=='3') { echo 'selected'; } ?>>Call</option>
+                                            <option value="3" <?php if($reminder['type']=='3') { echo 'selected'; } ?>>Periodic</option>
                                         </select>
                                     </div>
                                 </div>

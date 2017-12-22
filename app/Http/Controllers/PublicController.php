@@ -18,6 +18,8 @@ use App\MailTemplate;
 use App\Tag;
 use App\User;
 use Plivo\RestAPI;
+use Google_Client;
+use Google_Service_Drive;
 
 class PublicController extends Controller
 {
@@ -158,6 +160,20 @@ class PublicController extends Controller
 
     public function pingTwitter(){
         return $this->sendTweet('Ping from sulthanallaudeen.com at .'.date('Y-m-d H:i:s'));
+    }
+
+    public function testGoogle(){
+        $client = new Google_Client();
+        $client->setApplicationName("Client_Library_Examples");
+        $client->setDeveloperKey("YOUR_APP_KEY");
+        
+        $service = new Google_Service_Books($client);
+        $optParams = array('filter' => 'free-ebooks');
+        $results = $service->volumes->listVolumes('Henry David Thoreau', $optParams);
+        
+        foreach ($results as $item) {
+          echo $item['volumeInfo']['title'], "<br /> \n";
+        }
     }
 
     public function testFCM(){

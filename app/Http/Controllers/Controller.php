@@ -63,7 +63,9 @@ class Controller extends BaseController
             'text' => $txt, // Your SMS text message
             'method' => 'POST' // The method used to call the url
         );
-        $p = new RestAPI('MANZA1OTU4ODVLYWFINW', 'ZDgwMGVmZjJjYzg2NTljOGJhZTE3M2E1ZDRlMTQ4');
+        $plivo = Configuration::where('name','plivo')->first();
+        $key = explode('||', $plivo);
+        $p = new RestAPI($key[0], $key[1]);
         $Response = $p->send_message($params);
     }
 

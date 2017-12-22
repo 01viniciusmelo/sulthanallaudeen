@@ -34,6 +34,7 @@ Route::get('encrypt/{data}', 'Controller@encrypt');
 Route::get('decrypt/{data}', 'Controller@decrypt');
 Route::get('testFCM', 'PublicController@testFCM');
 Route::get('pingTwitter', 'PublicController@pingTwitter');
+Route::get('testGoogle', 'PublicController@testGoogle');
 #Admin Panel
 Route::get('admin/dashboard', 'AdminController@index');
 #Start of Blog
