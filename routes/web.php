@@ -32,6 +32,7 @@ Route::get('cron', 'CronController@index');
 Route::get('test', 'Controller@test');
 Route::get('encrypt/{data}', 'Controller@encrypt');
 Route::get('decrypt/{data}', 'Controller@decrypt');
+Route::get('test', 'PublicController@test');
 Route::get('testFCM', 'PublicController@testFCM');
 Route::get('pingTwitter', 'PublicController@pingTwitter');
 Route::get('testGoogle', 'PublicController@testGoogle');
@@ -83,5 +84,5 @@ Route::get('api/getBlog', 'ApiController@getBlog');
 Route::get('api/logout', 'PublicController@logout');
 #End of API
 
-#Maintenance 
+#Maintenance
 Route::get('SyncBlogCount', 'AdminController@SyncBlogCount');

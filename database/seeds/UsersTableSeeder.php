@@ -23,9 +23,9 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Sulthan Allaudeen',
                 'email' => 'sa@sulthanallaudeen.com',
                 'password' => '$2y$10$IGf5IQYECcXasTyehDgv4ONh4Rap16RX/amsYHK/w.DZcKwYaP6C6',
-                'remember_token' => 'oy1EVOOw8MXXqAENSPf5D3WHu5YNsVSisoSJa9zaigcXhVCLHwZlFzwKD7UY',
-                'created_at' => '2017-09-12 15:20:14',
-                'updated_at' => '2017-09-12 15:20:14',
+                'remember_token' => 'GVBU3P0Oioep5LVqhdcM2orO8VsMOLf1IQ719ArMTyyAG0qS1pKZytyWf0Ft',
+                'created_at' => '2017-09-13 03:50:14',
+                'updated_at' => '2017-09-13 03:50:14',
             ),
         ));
         

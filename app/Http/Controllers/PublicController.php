@@ -47,7 +47,7 @@ class PublicController extends Controller
     public function getRelatedTags($id){
         $blog_tags = BlogTag::where('blog_id',$id)->get();
         $tags = [];
-        for ($i=0; $i < count($blog_tags) ; $i++) { 
+        for ($i=0; $i < count($blog_tags) ; $i++) {
             $tag = Tag::where('id',$blog_tags[$i]->tag_id)->first();
             array_push($tags,$tag);
         }
@@ -68,7 +68,7 @@ class PublicController extends Controller
         $tag = Tag::where('title', $query)->first();
         $blog_tagged = BlogTag::where('tag_id', $tag->id)->get();
         $blogList = [];
-        for ($i=0; $i < count($blog_tagged) ; $i++) { 
+        for ($i=0; $i < count($blog_tagged) ; $i++) {
             array_push($blogList,$blog_tagged[$i]->blog_id);
         }
         $blogs = Blog::whereIn('id',$blogList)->where('status', 1)->orderBy('id', 'desc')->paginate(10);
@@ -154,9 +154,13 @@ class PublicController extends Controller
         return $Response;
     }
 
-    
+
 
     #Testing Function
+
+    public function test(){
+      return Hash::make('shifa');
+    }
 
     public function pingTwitter(){
         return $this->sendTweet('Ping from sulthanallaudeen.com at .'.date('Y-m-d H:i:s'));
@@ -166,11 +170,11 @@ class PublicController extends Controller
         $client = new Google_Client();
         $client->setApplicationName("Client_Library_Examples");
         $client->setDeveloperKey("YOUR_APP_KEY");
-        
+
         $service = new Google_Service_Books($client);
         $optParams = array('filter' => 'free-ebooks');
         $results = $service->volumes->listVolumes('Henry David Thoreau', $optParams);
-        
+
         foreach ($results as $item) {
           echo $item['volumeInfo']['title'], "<br /> \n";
         }
@@ -190,10 +194,10 @@ class PublicController extends Controller
         //     'HangupUrl' => "http://127.0.0.1:5000/hangup/",
         //     'RingUrl' => "http://127.0.0.1:5000/ringing/"
         // );
-        // $response = $client->call($call_params);        
-        
-        
-        
+        // $response = $client->call($call_params);
+
+
+
 
 
         // $params = array(
@@ -219,5 +223,5 @@ class PublicController extends Controller
         $Response = array('success' => 1,'message' => 'Config Edited Succesfully !');
         return $Response;
     }
-    
+
 }
